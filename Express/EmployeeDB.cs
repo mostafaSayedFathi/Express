@@ -18,6 +18,14 @@ class EmployeeDB
         connection.close();
     }
 
+    public void update(Employee employee)
+    {
+        connection.open();
+        command = new SqlCommand("update Employee set name='"+employee.getName()+"' , employDate='"+employee.getEmployDate()+"' , salary='"+employee.getSalary()+"' , position='"+employee.getPosition()+"' , nationalID='"+employee.getNationalID()+"' , locationID='"+employee.getLocationID()+"' , sourceID='"+employee.getSourceID()+"' where ID='"+employee.getID()+"'", connection.getConnection());
+        command.ExecuteNonQuery();
+        connection.close();
+    }
+
     public void countSecurityInLocation(Employee employee)
     {
         connection.open();
@@ -54,6 +62,62 @@ class EmployeeDB
         {
             employee.setID(0);
         }
+        connection.close();
+    }
+
+    public void selectEmployeeName(Employee employee)
+    {
+        connection.open();
+        command = new SqlCommand("select name from Employee where ID='"+employee.getID()+"'", connection.getConnection());
+        employee.setName(command.ExecuteScalar() as string);
+        connection.close();
+    }
+
+    public void selectEmployDate(Employee employee)
+    {
+        connection.open();
+        command = new SqlCommand("select employDate from Employee where ID='" + employee.getID() + "'", connection.getConnection());
+        employee.setEmployDate(command.ExecuteScalar().ToString());
+        connection.close();
+    }
+
+    public void selectSalary(Employee employee)
+    {
+        connection.open();
+        command = new SqlCommand("select salary from Employee where ID='" + employee.getID() + "'", connection.getConnection());
+        employee.setSalary((double)command.ExecuteScalar());
+        connection.close();
+    }
+
+    public void selectPosition(Employee employee)
+    {
+        connection.open();
+        command = new SqlCommand("select position from Employee where ID='" + employee.getID() + "'", connection.getConnection());
+        employee.setPosition(command.ExecuteScalar() as string);
+        connection.close();
+    }
+
+    public void selectNationalID(Employee employee)
+    {
+        connection.open();
+        command = new SqlCommand("select nationalID from Employee where ID='" + employee.getID() + "'", connection.getConnection());
+        employee.setNationalID(command.ExecuteScalar() as string);
+        connection.close();
+    }
+
+    public void selectLocationID(Employee employee)
+    {
+        connection.open();
+        command = new SqlCommand("select locationID from Employee where ID='" + employee.getID() + "'", connection.getConnection());
+        employee.setLocationID((int)command.ExecuteScalar());
+        connection.close();
+    }
+
+    public void selectSourceID(Employee employee)
+    {
+        connection.open();
+        command = new SqlCommand("select sourceID from Employee where ID='" + employee.getID() + "'", connection.getConnection());
+        employee.setSourceID((int)command.ExecuteScalar());
         connection.close();
     }
 }

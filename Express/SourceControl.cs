@@ -56,5 +56,14 @@ class SourceControl
         }
         connection.close();
     }
+
+    public string selectSourceName(int ID)
+    {
+        source = new Source();
+        sourceDB = new SourceDB();
+        source.setID(ID);
+        sourceDB.selectSourceName(source);
+        return source.getName();
+    }
 }
 

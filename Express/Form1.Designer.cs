@@ -40,6 +40,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.تعيينجديدToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تعديلبياناتموظفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.اضافةمصدرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -363,6 +364,27 @@
             this.btnUpdateLocationCost = new System.Windows.Forms.Button();
             this.label97 = new System.Windows.Forms.Label();
             this.comboBoxUpdateCostLocationName = new System.Windows.Forms.ComboBox();
+            this.panelUpdateEmployee = new System.Windows.Forms.Panel();
+            this.btnupdateEmployeeCancel = new System.Windows.Forms.Button();
+            this.label98 = new System.Windows.Forms.Label();
+            this.comboBoxUpdateEmployeeSource = new System.Windows.Forms.ComboBox();
+            this.txtUpdateEmployeeAvailableNumbers = new System.Windows.Forms.TextBox();
+            this.label99 = new System.Windows.Forms.Label();
+            this.btnUpdateEmployee = new System.Windows.Forms.Button();
+            this.txtUpdateEmployeeSalary = new System.Windows.Forms.TextBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.comboboxUpdateEmployeePosition = new System.Windows.Forms.ComboBox();
+            this.label102 = new System.Windows.Forms.Label();
+            this.ComboBoxUpdateEmployeeLocation = new System.Windows.Forms.ComboBox();
+            this.txtUpdateEmployeeCode = new System.Windows.Forms.TextBox();
+            this.label103 = new System.Windows.Forms.Label();
+            this.dtpUpdateEmployeeDate = new System.Windows.Forms.DateTimePicker();
+            this.label104 = new System.Windows.Forms.Label();
+            this.txtUpdateEmployeeName = new System.Windows.Forms.TextBox();
+            this.label105 = new System.Windows.Forms.Label();
+            this.txtUpdateEmployeeNationalID = new System.Windows.Forms.TextBox();
+            this.label106 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panelNewLocation.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -405,6 +427,7 @@
             this.groupBox26.SuspendLayout();
             this.groupBox27.SuspendLayout();
             this.groupBox28.SuspendLayout();
+            this.panelUpdateEmployee.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -447,7 +470,7 @@
             this.اضافةبياناتToolStripMenuItem,
             this.تعديلToolStripMenuItem2});
             this.موقعجديدToolStripMenuItem.Name = "موقعجديدToolStripMenuItem";
-            this.موقعجديدToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.موقعجديدToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.موقعجديدToolStripMenuItem.Text = "المواقع";
             // 
             // اضافةبياناتToolStripMenuItem
@@ -470,7 +493,7 @@
             this.اضافةتكاليفموقعToolStripMenuItem,
             this.تعديلتكاليفموقعToolStripMenuItem});
             this.التكاليفToolStripMenuItem.Name = "التكاليفToolStripMenuItem";
-            this.التكاليفToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.التكاليفToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.التكاليفToolStripMenuItem.Text = "تكاليف الموقع";
             this.التكاليفToolStripMenuItem.Click += new System.EventHandler(this.التكاليفToolStripMenuItem_Click);
             // 
@@ -498,7 +521,8 @@
             this.toolStripDropDownButton2.AutoSize = false;
             this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.تعيينجديدToolStripMenuItem});
+            this.تعيينجديدToolStripMenuItem,
+            this.تعديلبياناتموظفToolStripMenuItem});
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
@@ -508,9 +532,16 @@
             // تعيينجديدToolStripMenuItem
             // 
             this.تعيينجديدToolStripMenuItem.Name = "تعيينجديدToolStripMenuItem";
-            this.تعيينجديدToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.تعيينجديدToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.تعيينجديدToolStripMenuItem.Text = "تعيين جديد";
             this.تعيينجديدToolStripMenuItem.Click += new System.EventHandler(this.تعيينجديدToolStripMenuItem_Click);
+            // 
+            // تعديلبياناتموظفToolStripMenuItem
+            // 
+            this.تعديلبياناتموظفToolStripMenuItem.Name = "تعديلبياناتموظفToolStripMenuItem";
+            this.تعديلبياناتموظفToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.تعديلبياناتموظفToolStripMenuItem.Text = "تعديل بيانات موظف";
+            this.تعديلبياناتموظفToolStripMenuItem.Click += new System.EventHandler(this.تعديلبياناتموظفToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -3975,15 +4006,269 @@
             this.comboBoxUpdateCostLocationName.TabIndex = 0;
             this.comboBoxUpdateCostLocationName.SelectedIndexChanged += new System.EventHandler(this.comboBoxUpdateCostLocationName_SelectedIndexChanged);
             // 
+            // panelUpdateEmployee
+            // 
+            this.panelUpdateEmployee.Controls.Add(this.btnupdateEmployeeCancel);
+            this.panelUpdateEmployee.Controls.Add(this.label98);
+            this.panelUpdateEmployee.Controls.Add(this.comboBoxUpdateEmployeeSource);
+            this.panelUpdateEmployee.Controls.Add(this.txtUpdateEmployeeAvailableNumbers);
+            this.panelUpdateEmployee.Controls.Add(this.label99);
+            this.panelUpdateEmployee.Controls.Add(this.btnUpdateEmployee);
+            this.panelUpdateEmployee.Controls.Add(this.txtUpdateEmployeeSalary);
+            this.panelUpdateEmployee.Controls.Add(this.label100);
+            this.panelUpdateEmployee.Controls.Add(this.label101);
+            this.panelUpdateEmployee.Controls.Add(this.comboboxUpdateEmployeePosition);
+            this.panelUpdateEmployee.Controls.Add(this.label102);
+            this.panelUpdateEmployee.Controls.Add(this.ComboBoxUpdateEmployeeLocation);
+            this.panelUpdateEmployee.Controls.Add(this.txtUpdateEmployeeCode);
+            this.panelUpdateEmployee.Controls.Add(this.label103);
+            this.panelUpdateEmployee.Controls.Add(this.dtpUpdateEmployeeDate);
+            this.panelUpdateEmployee.Controls.Add(this.label104);
+            this.panelUpdateEmployee.Controls.Add(this.txtUpdateEmployeeName);
+            this.panelUpdateEmployee.Controls.Add(this.label105);
+            this.panelUpdateEmployee.Controls.Add(this.txtUpdateEmployeeNationalID);
+            this.panelUpdateEmployee.Controls.Add(this.label106);
+            this.panelUpdateEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelUpdateEmployee.Location = new System.Drawing.Point(0, 0);
+            this.panelUpdateEmployee.Name = "panelUpdateEmployee";
+            this.panelUpdateEmployee.Size = new System.Drawing.Size(885, 817);
+            this.panelUpdateEmployee.TabIndex = 35;
+            // 
+            // btnupdateEmployeeCancel
+            // 
+            this.btnupdateEmployeeCancel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdateEmployeeCancel.Location = new System.Drawing.Point(65, 559);
+            this.btnupdateEmployeeCancel.Name = "btnupdateEmployeeCancel";
+            this.btnupdateEmployeeCancel.Size = new System.Drawing.Size(123, 33);
+            this.btnupdateEmployeeCancel.TabIndex = 54;
+            this.btnupdateEmployeeCancel.Text = "إلغاء";
+            this.btnupdateEmployeeCancel.UseVisualStyleBackColor = true;
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.Location = new System.Drawing.Point(787, 379);
+            this.label98.Name = "label98";
+            this.label98.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label98.Size = new System.Drawing.Size(50, 16);
+            this.label98.TabIndex = 53;
+            this.label98.Text = "المصدر:";
+            // 
+            // comboBoxUpdateEmployeeSource
+            // 
+            this.comboBoxUpdateEmployeeSource.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUpdateEmployeeSource.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBoxUpdateEmployeeSource.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUpdateEmployeeSource.FormattingEnabled = true;
+            this.comboBoxUpdateEmployeeSource.Location = new System.Drawing.Point(581, 376);
+            this.comboBoxUpdateEmployeeSource.Name = "comboBoxUpdateEmployeeSource";
+            this.comboBoxUpdateEmployeeSource.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboBoxUpdateEmployeeSource.Size = new System.Drawing.Size(200, 27);
+            this.comboBoxUpdateEmployeeSource.TabIndex = 52;
+            // 
+            // txtUpdateEmployeeAvailableNumbers
+            // 
+            this.txtUpdateEmployeeAvailableNumbers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateEmployeeAvailableNumbers.Enabled = false;
+            this.txtUpdateEmployeeAvailableNumbers.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateEmployeeAvailableNumbers.Location = new System.Drawing.Point(121, 291);
+            this.txtUpdateEmployeeAvailableNumbers.Name = "txtUpdateEmployeeAvailableNumbers";
+            this.txtUpdateEmployeeAvailableNumbers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtUpdateEmployeeAvailableNumbers.Size = new System.Drawing.Size(123, 27);
+            this.txtUpdateEmployeeAvailableNumbers.TabIndex = 50;
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.Location = new System.Drawing.Point(250, 296);
+            this.label99.Name = "label99";
+            this.label99.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label99.Size = new System.Drawing.Size(220, 16);
+            this.label99.TabIndex = 51;
+            this.label99.Text = "عدد الأفراد المتاح بالموقع لهذه الوظيفة:";
+            // 
+            // btnUpdateEmployee
+            // 
+            this.btnUpdateEmployee.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateEmployee.Location = new System.Drawing.Point(194, 559);
+            this.btnUpdateEmployee.Name = "btnUpdateEmployee";
+            this.btnUpdateEmployee.Size = new System.Drawing.Size(123, 33);
+            this.btnUpdateEmployee.TabIndex = 49;
+            this.btnUpdateEmployee.Text = "تعديل البيانات";
+            this.btnUpdateEmployee.UseVisualStyleBackColor = true;
+            this.btnUpdateEmployee.Click += new System.EventHandler(this.btnUpdateEmployee_Click);
+            // 
+            // txtUpdateEmployeeSalary
+            // 
+            this.txtUpdateEmployeeSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateEmployeeSalary.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateEmployeeSalary.Location = new System.Drawing.Point(658, 332);
+            this.txtUpdateEmployeeSalary.Name = "txtUpdateEmployeeSalary";
+            this.txtUpdateEmployeeSalary.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtUpdateEmployeeSalary.Size = new System.Drawing.Size(123, 27);
+            this.txtUpdateEmployeeSalary.TabIndex = 47;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.Location = new System.Drawing.Point(787, 334);
+            this.label100.Name = "label100";
+            this.label100.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label100.Size = new System.Drawing.Size(44, 16);
+            this.label100.TabIndex = 48;
+            this.label100.Text = "الراتب:";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.Location = new System.Drawing.Point(787, 293);
+            this.label101.Name = "label101";
+            this.label101.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label101.Size = new System.Drawing.Size(54, 16);
+            this.label101.TabIndex = 46;
+            this.label101.Text = "الوظيفة:";
+            // 
+            // comboboxUpdateEmployeePosition
+            // 
+            this.comboboxUpdateEmployeePosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxUpdateEmployeePosition.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboboxUpdateEmployeePosition.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboboxUpdateEmployeePosition.FormattingEnabled = true;
+            this.comboboxUpdateEmployeePosition.Items.AddRange(new object[] {
+            "موظف امن",
+            "مشرف امن",
+            "مدير موقع"});
+            this.comboboxUpdateEmployeePosition.Location = new System.Drawing.Point(581, 290);
+            this.comboboxUpdateEmployeePosition.Name = "comboboxUpdateEmployeePosition";
+            this.comboboxUpdateEmployeePosition.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboboxUpdateEmployeePosition.Size = new System.Drawing.Size(200, 27);
+            this.comboboxUpdateEmployeePosition.TabIndex = 45;
+            this.comboboxUpdateEmployeePosition.SelectedIndexChanged += new System.EventHandler(this.comboboxUpdateEmployeePosition_SelectedIndexChanged);
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label102.Location = new System.Drawing.Point(787, 244);
+            this.label102.Name = "label102";
+            this.label102.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label102.Size = new System.Drawing.Size(76, 16);
+            this.label102.TabIndex = 44;
+            this.label102.Text = "اسم الموقع:";
+            // 
+            // ComboBoxUpdateEmployeeLocation
+            // 
+            this.ComboBoxUpdateEmployeeLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxUpdateEmployeeLocation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ComboBoxUpdateEmployeeLocation.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBoxUpdateEmployeeLocation.FormattingEnabled = true;
+            this.ComboBoxUpdateEmployeeLocation.Location = new System.Drawing.Point(469, 243);
+            this.ComboBoxUpdateEmployeeLocation.Name = "ComboBoxUpdateEmployeeLocation";
+            this.ComboBoxUpdateEmployeeLocation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ComboBoxUpdateEmployeeLocation.Size = new System.Drawing.Size(312, 27);
+            this.ComboBoxUpdateEmployeeLocation.TabIndex = 43;
+            this.ComboBoxUpdateEmployeeLocation.SelectedIndexChanged += new System.EventHandler(this.ComboBoxUpdateEmployeeLocation_SelectedIndexChanged);
+            // 
+            // txtUpdateEmployeeCode
+            // 
+            this.txtUpdateEmployeeCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateEmployeeCode.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateEmployeeCode.Location = new System.Drawing.Point(658, 46);
+            this.txtUpdateEmployeeCode.Name = "txtUpdateEmployeeCode";
+            this.txtUpdateEmployeeCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtUpdateEmployeeCode.Size = new System.Drawing.Size(123, 27);
+            this.txtUpdateEmployeeCode.TabIndex = 41;
+            this.txtUpdateEmployeeCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateEmployeeCode_KeyDown);
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label103.Location = new System.Drawing.Point(787, 48);
+            this.label103.Name = "label103";
+            this.label103.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label103.Size = new System.Drawing.Size(39, 16);
+            this.label103.TabIndex = 42;
+            this.label103.Text = "الكود:";
+            // 
+            // dtpUpdateEmployeeDate
+            // 
+            this.dtpUpdateEmployeeDate.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpUpdateEmployeeDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpUpdateEmployeeDate.Location = new System.Drawing.Point(581, 202);
+            this.dtpUpdateEmployeeDate.Name = "dtpUpdateEmployeeDate";
+            this.dtpUpdateEmployeeDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dtpUpdateEmployeeDate.RightToLeftLayout = true;
+            this.dtpUpdateEmployeeDate.Size = new System.Drawing.Size(200, 27);
+            this.dtpUpdateEmployeeDate.TabIndex = 39;
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label104.Location = new System.Drawing.Point(787, 207);
+            this.label104.Name = "label104";
+            this.label104.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label104.Size = new System.Drawing.Size(81, 16);
+            this.label104.TabIndex = 40;
+            this.label104.Text = "تاريخ التعيين:";
+            // 
+            // txtUpdateEmployeeName
+            // 
+            this.txtUpdateEmployeeName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateEmployeeName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateEmployeeName.Location = new System.Drawing.Point(469, 156);
+            this.txtUpdateEmployeeName.Name = "txtUpdateEmployeeName";
+            this.txtUpdateEmployeeName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtUpdateEmployeeName.Size = new System.Drawing.Size(312, 27);
+            this.txtUpdateEmployeeName.TabIndex = 37;
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label105.Location = new System.Drawing.Point(787, 158);
+            this.label105.Name = "label105";
+            this.label105.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label105.Size = new System.Drawing.Size(84, 16);
+            this.label105.TabIndex = 38;
+            this.label105.Text = "اسم الموظف:";
+            // 
+            // txtUpdateEmployeeNationalID
+            // 
+            this.txtUpdateEmployeeNationalID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateEmployeeNationalID.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateEmployeeNationalID.Location = new System.Drawing.Point(469, 113);
+            this.txtUpdateEmployeeNationalID.Name = "txtUpdateEmployeeNationalID";
+            this.txtUpdateEmployeeNationalID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtUpdateEmployeeNationalID.Size = new System.Drawing.Size(312, 27);
+            this.txtUpdateEmployeeNationalID.TabIndex = 35;
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label106.Location = new System.Drawing.Point(787, 115);
+            this.label106.Name = "label106";
+            this.label106.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label106.Size = new System.Drawing.Size(83, 16);
+            this.label106.TabIndex = 36;
+            this.label106.Text = "الرقم القومي:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(984, 682);
+            this.Controls.Add(this.panelUpdateEmployee);
             this.Controls.Add(this.panelNewEmployee);
-            this.Controls.Add(this.panelUpdateLocationCosts);
             this.Controls.Add(this.panelUpdateLocation);
+            this.Controls.Add(this.panelUpdateLocationCosts);
             this.Controls.Add(this.panelLocationCosts);
             this.Controls.Add(this.PanelDeleteFromDevicesStore);
             this.Controls.Add(this.PanelUpdateDeviceStore);
@@ -4073,6 +4358,8 @@
             this.groupBox27.PerformLayout();
             this.groupBox28.ResumeLayout(false);
             this.groupBox28.PerformLayout();
+            this.panelUpdateEmployee.ResumeLayout(false);
+            this.panelUpdateEmployee.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4413,6 +4700,28 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.Panel panelUpdateEmployee;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.ComboBox comboBoxUpdateEmployeeSource;
+        private System.Windows.Forms.TextBox txtUpdateEmployeeAvailableNumbers;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Button btnUpdateEmployee;
+        private System.Windows.Forms.TextBox txtUpdateEmployeeSalary;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.ComboBox comboboxUpdateEmployeePosition;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.ComboBox ComboBoxUpdateEmployeeLocation;
+        private System.Windows.Forms.TextBox txtUpdateEmployeeCode;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.DateTimePicker dtpUpdateEmployeeDate;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.TextBox txtUpdateEmployeeName;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.TextBox txtUpdateEmployeeNationalID;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.ToolStripMenuItem تعديلبياناتموظفToolStripMenuItem;
+        private System.Windows.Forms.Button btnupdateEmployeeCancel;
 
 
 

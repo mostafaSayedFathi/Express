@@ -57,5 +57,13 @@ class SourceDB
         SqlDataReader reader = command.ExecuteReader();
         return reader;
     }
+
+    public void selectSourceName(Source source)
+    {
+        connection.open();
+        command = new SqlCommand("select sourceName from Source where ID='" + source.getID() + "'", connection.getConnection());
+        source.setName(command.ExecuteScalar() as string);
+        connection.close();
+    }
 }
 

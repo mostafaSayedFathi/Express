@@ -224,4 +224,12 @@ class LocationControl
         return location.getID();
     }
 
+    public string getLocationName(int ID)
+    {
+        locationDB = new LocationDB();
+        location = new Location();
+        location.setID(ID);
+        locationDB.selectLocationName(location);
+        return location.getName();
+    }
 }

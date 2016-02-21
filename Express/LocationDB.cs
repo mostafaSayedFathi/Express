@@ -138,4 +138,12 @@ class LocationDB
         connection.close();
     }
 
+    public void selectLocationName(Location location)
+    {
+        connection.open();
+        command = new SqlCommand("select name from Location where ID='" + location.getID() + "'", connection.getConnection());
+        location.setName(command.ExecuteScalar() as string);
+        connection.close();
+    }
+
 }

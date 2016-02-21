@@ -55,6 +55,7 @@ namespace Express
             PanelDeleteFromDevicesStore.Visible = false;
             panelUpdateLocation.Visible = false;
             panelUpdateLocationCosts.Visible = false;
+            panelUpdateEmployee.Visible = false;
         }
 
         private void btnStartOperation_Click(object sender, EventArgs e)
@@ -218,6 +219,7 @@ namespace Express
                 PanelDeleteFromDevicesStore.Visible = false;
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = false;
+                panelUpdateEmployee.Visible = false;
                 employeeControl = new EmployeeControl();
                 locationControl = new LocationControl();
                 sourceControl = new SourceControl();
@@ -371,6 +373,7 @@ namespace Express
                 PanelDeleteFromDevicesStore.Visible = false;
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = false;
+                panelUpdateEmployee.Visible = false;
                 applicationControl = new ApplicationControl();
                 //InitializeComponent();
                 applicationControl.fillComboboxSex(comboBoxAppSex);
@@ -837,6 +840,7 @@ namespace Express
             PanelDeleteFromDevicesStore.Visible = false;
             panelUpdateLocation.Visible = false;
             panelUpdateLocationCosts.Visible = false;
+            panelUpdateEmployee.Visible = false;
         }
 
         private void تعديلToolStripMenuItem_Click(object sender, EventArgs e)
@@ -855,6 +859,7 @@ namespace Express
                 PanelDeleteFromDevicesStore.Visible = false;
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = false;
+                panelUpdateEmployee.Visible = false;
                 clothesStoreControl = new ClothesStoreControl();
                 clothesStoreControl.fillListViewClothesStore(listViewUpdateClothesStore);
                 txtUpdateTotalAllClothesStore.Text = clothesStoreControl.totalAllUpdate(listViewUpdateClothesStore).ToString();
@@ -962,6 +967,7 @@ namespace Express
                 PanelDeleteFromDevicesStore.Visible = false;
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = false;
+                panelUpdateEmployee.Visible = false;
                 clothesStoreControl = new ClothesStoreControl();
                 clothesStoreControl.fillListViewClothesStore(listViewDeleteClotheStore);
             }
@@ -1227,6 +1233,7 @@ namespace Express
             PanelDeleteFromDevicesStore.Visible = false;
             panelUpdateLocation.Visible = false;
             panelUpdateLocationCosts.Visible = false;
+            panelUpdateEmployee.Visible = false;
         }
 
         private void txtUpdateDevicePrice_TextChanged(object sender, EventArgs e)
@@ -1336,6 +1343,7 @@ namespace Express
                 PanelDeleteFromDevicesStore.Visible = false;
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = false;
+                panelUpdateEmployee.Visible = false;
                 devicesStoreControl = new DevicesStoreControl();
                 devicesStoreControl.fillListViewDevicesStore(listViewUpdateDeviceStore);
                 txtUpdateAllTotalDeviceStore.Text = devicesStoreControl.totalAllUpdate(listViewUpdateDeviceStore).ToString();
@@ -1489,6 +1497,7 @@ namespace Express
             PanelDeleteFromDevicesStore.Visible = false;
             panelUpdateLocation.Visible = false;
             panelUpdateLocationCosts.Visible = false;
+            panelUpdateEmployee.Visible = false;
         }
 
         private void تعديلToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -1524,7 +1533,7 @@ namespace Express
                 PanelDeleteFromDevicesStore.Visible = false;
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = false;
-
+                panelUpdateEmployee.Visible = false;
                 locationControl = new LocationControl();
                 locationControl.fillComboboxLocationName(comboBoxLocationName);
             }
@@ -2081,6 +2090,178 @@ namespace Express
                 else
                 {
                     txtUpdateCostTotalManager.Text = (int.Parse(txtUpdateCostManagerNumbers.Text) * int.Parse(txtUpdateCostManagerCost.Text)).ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void تعديلبياناتموظفToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                panelNewEmployee.Visible = false;
+                panelNewLocation.Visible = false;
+                panelLocationCosts.Visible = false;
+                PanelNewApplication.Visible = false;
+                PanelUpdateClotheStore.Visible = false;
+                PanelAddClothe.Visible = false;
+                PanelDeleteFromclothesStore.Visible = false;
+                PanelAddDevices.Visible = false;
+                PanelUpdateDeviceStore.Visible = false;
+                PanelDeleteFromDevicesStore.Visible = false;
+                panelUpdateLocation.Visible = false;
+                panelUpdateLocationCosts.Visible = false;
+                panelUpdateEmployee.Visible = true;
+                sourceControl = new SourceControl();
+                locationControl = new LocationControl();
+                locationControl.fillComboboxLocationNameReady(ComboBoxUpdateEmployeeLocation);
+                sourceControl.fillComboboxSourceName(comboBoxUpdateEmployeeSource);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message)
+;
+            }
+        }
+
+        private void txtUpdateEmployeeCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    employeeControl = new EmployeeControl();
+                    int ID = int.Parse(txtUpdateEmployeeCode.Text);
+                    string employeeName = employeeControl.getEmployeeName(ID);
+                    string salary = employeeControl.getSalary(ID).ToString();
+                    string position = employeeControl.getPosition(ID);
+                    string nationalID = employeeControl.getNationalID(ID);
+                    string location = employeeControl.getLocationName(ID);
+                    string source = employeeControl.getSourceName(ID);
+                    string employDate = employeeControl.getEmployDate(ID);
+
+                    txtUpdateEmployeeName.Text = employeeName;
+                    txtUpdateEmployeeSalary.Text = salary;
+                    comboBoxUpdateEmployeeSource.Text = source;
+                    ComboBoxUpdateEmployeeLocation.Text = location;
+                    txtUpdateEmployeeNationalID.Text = nationalID;
+                    dtpUpdateEmployeeDate.Value = Convert.ToDateTime(employDate);
+                    comboboxUpdateEmployeePosition.Text = position;
+                    e.SuppressKeyPress = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void comboboxUpdateEmployeePosition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ComboBoxUpdateEmployeeLocation.Text == "")
+                {
+                    MessageBox.Show("من فضلك اختر اسم الموقع اولاً", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    comboboxUpdateEmployeePosition.Items.Clear();
+                    comboboxUpdateEmployeePosition.Items.Add("موظف امن");
+                    comboboxUpdateEmployeePosition.Items.Add("مشرف امن");
+                    comboboxUpdateEmployeePosition.Items.Add("مدير موقع");
+                }
+                else
+                {
+                    locationControl = new LocationControl();
+                    employeeControl = new EmployeeControl();
+                    string locationName = ComboBoxUpdateEmployeeLocation.Text;
+                    if (comboboxUpdateEmployeePosition.Text == "موظف امن")
+                    {
+                        string securitySalary = locationControl.getSecuritySalary(locationName).ToString();
+                        txtUpdateEmployeeSalary.Text = securitySalary;
+                        txtUpdateEmployeeAvailableNumbers.Text = employeeControl.availableSecurityInLocation(locationName).ToString();
+                    }
+                    else if (comboboxUpdateEmployeePosition.Text == "مشرف امن")
+                    {
+                        string supervisorSalary = locationControl.getSupervisorSalary(locationName).ToString();
+                        txtUpdateEmployeeSalary.Text = supervisorSalary;
+                        txtUpdateEmployeeAvailableNumbers.Text = employeeControl.availableSupervisorInLocation(locationName).ToString();
+                    }
+                    else if (comboboxUpdateEmployeePosition.Text == "مدير موقع")
+                    {
+                        string managerSalary = locationControl.getManagerSalary(locationName).ToString(); ;
+                        txtUpdateEmployeeSalary.Text = managerSalary;
+                        txtUpdateEmployeeAvailableNumbers.Text = employeeControl.availableManagerInLocation(locationName).ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ComboBoxUpdateEmployeeLocation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboboxUpdateEmployeePosition.Items.Clear();
+            comboboxUpdateEmployeePosition.Items.Add("موظف امن");
+            comboboxUpdateEmployeePosition.Items.Add("مشرف امن");
+            comboboxUpdateEmployeePosition.Items.Add("مدير موقع");
+            txtUpdateEmployeeSalary.Text = "";
+            txtUpdateEmployeeAvailableNumbers.Text = "";
+        }
+
+        private void btnUpdateEmployee_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtUpdateEmployeeNationalID.Text == "")
+                {
+                    MessageBox.Show("من فضلك ادخل الرقم القومي", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtUpdateEmployeeName.Text == "")
+                {
+                    MessageBox.Show("من فضلك ادخل اسم الموظف", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (ComboBoxUpdateEmployeeLocation.Text == "")
+                {
+                    MessageBox.Show("من فضلك اختر اسم الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (comboboxUpdateEmployeePosition.Text == "")
+                {
+                    MessageBox.Show("من فضلك اختر الوظيفة", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtUpdateEmployeeSalary.Text == "")
+                {
+                    MessageBox.Show("من فضلك ادخل المرتب", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (comboBoxUpdateEmployeeSource.Text == "")
+                {
+                    MessageBox.Show("من فضلك  اختر المصدر", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("هل قمت بمراجعة البيانات؟", "سؤال", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.No)
+                    {
+                        MessageBox.Show("من فضلك قم بمراجعة البيانات", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (result == DialogResult.Yes)
+                    {
+                        employeeControl = new EmployeeControl();
+                        string nationalID = txtUpdateEmployeeNationalID.Text;
+                        string name = txtUpdateEmployeeName.Text;
+                        string location = ComboBoxUpdateEmployeeLocation.Text;
+                        string position = comboboxUpdateEmployeePosition.Text;
+                        double salary = double.Parse(txtUpdateEmployeeSalary.Text);
+                        int ID = int.Parse(txtUpdateEmployeeCode.Text);
+                        string source = comboBoxUpdateEmployeeSource.Text;
+                        DateTime employDate = dtpUpdateEmployeeDate.Value;
+                        string employDateSQL = employDate.ToString("yyyy-MM-dd");
+                        employeeControl.update(nationalID, name, employDateSQL, position, salary, location, source, ID);
+                        MessageBox.Show("تم تعديل البيانات" + Environment.NewLine + "اسم الموظف: " + name + Environment.NewLine + "الكود: " + ID + Environment.NewLine + "الموقع: " + location, "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
             catch (Exception ex)
