@@ -24,6 +24,7 @@ namespace Express
         private LocationEquipsContentControl locationEquipsContentControl;
         private LocationClothesControl locationClothesControl;
         private LocationEquipsConrol locationEquipsConrol;
+        private SourceControl sourceControl;
         private byte[] imageByte = null;
         private ArrayList listCheck = new ArrayList();
         private ArrayList listCheckDevices = new ArrayList();
@@ -219,7 +220,9 @@ namespace Express
                 panelUpdateLocationCosts.Visible = false;
                 employeeControl = new EmployeeControl();
                 locationControl = new LocationControl();
+                sourceControl = new SourceControl();
                 locationControl.fillComboboxLocationNameReady(comboBoxNewEmployeeLocation);
+                sourceControl.fillComboboxSourceName(comboBoxNewEmployeeSource);
                 txtNewEmployeeID.Text = employeeControl.lastIDPlusOne().ToString();
             }
             catch (Exception ex)

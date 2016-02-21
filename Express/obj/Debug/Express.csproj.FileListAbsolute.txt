@@ -36,3 +36,13 @@ D:\Others\C#\Express Project\Integration v1\Express\Express\Express\bin\Debug\Ex
 D:\Others\C#\Express Project\Integration v1\Express\Express\Express\bin\Debug\Express.pdb
 D:\Others\C#\Express Project\Integration v1\Express\Express\Express\obj\Debug\Express.exe
 D:\Others\C#\Express Project\Integration v1\Express\Express\Express\obj\Debug\Express.pdb
+D:\Others\C#\Express Project\Integration\Express-Project\Express\bin\Debug\Express.exe.config
+D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express.exe
+D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express.pdb
+D:\Others\C#\Express Project\Integration\Express-Project\Express\bin\Debug\Express.exe
+D:\Others\C#\Express Project\Integration\Express-Project\Express\bin\Debug\Express.pdb
+D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express.csprojResolveAssemblyReference.cache
+D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express_Project.AddSource.resources
+D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express.Form1.resources
+D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express.Properties.Resources.resources
+D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express.csproj.GenerateResource.Cache

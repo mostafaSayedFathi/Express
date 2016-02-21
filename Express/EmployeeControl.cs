@@ -12,21 +12,23 @@ namespace Express
         Employee employee;
         EmployeeDB employeeDB;
         LocationControl locationControl;
-        //object from sourceControl
+        SourceControl sourceControl;
 
-        public void insertEmployee(string nationalID , string employeeName , string date  , string position , double salary , string locationName , string source)
+        public void insertEmployee(string nationalID , string employeeName , string date  , string position , double salary , string locationName , string sourceName)
         {
             employee = new Employee();
             employeeDB = new EmployeeDB();
             locationControl = new LocationControl();
+            sourceControl = new SourceControl();
             employee.setNationalID(nationalID);
             employee.setName(employeeName);
             employee.setEmployDate(date);
             employee.setPosition(position);
             employee.setSalary(salary);
             int locationID = locationControl.getEmployeeLocationID(locationName);
+            int sourceID = sourceControl.selectID(sourceName);
             employee.setLocationID(locationID);
-            employee.setSourceID(1);
+            employee.setSourceID(sourceID);
             employeeDB.insertEmployee(employee);
         }
 

@@ -40,9 +40,11 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.تعيينجديدToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.اضافةمصدرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.تقيممصدرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
             this.مخزنالملابسToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.اضافةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +54,7 @@
             this.اضافةToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.تعديلToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.حذفToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripDropDownButton();
             this.تقديمطلبتوظيفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelStart = new System.Windows.Forms.Panel();
@@ -360,9 +363,6 @@
             this.btnUpdateLocationCost = new System.Windows.Forms.Button();
             this.label97 = new System.Windows.Forms.Label();
             this.comboBoxUpdateCostLocationName = new System.Windows.Forms.ComboBox();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.panelNewLocation.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -421,7 +421,7 @@
             this.toolStripDropDownButton4,
             this.toolStripSeparator4,
             this.toolStripDropDownButton5});
-            this.toolStrip1.Location = new System.Drawing.Point(868, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(885, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(99, 817);
             this.toolStrip1.TabIndex = 0;
@@ -447,7 +447,7 @@
             this.اضافةبياناتToolStripMenuItem,
             this.تعديلToolStripMenuItem2});
             this.موقعجديدToolStripMenuItem.Name = "موقعجديدToolStripMenuItem";
-            this.موقعجديدToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.موقعجديدToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.موقعجديدToolStripMenuItem.Text = "المواقع";
             // 
             // اضافةبياناتToolStripMenuItem
@@ -470,7 +470,7 @@
             this.اضافةتكاليفموقعToolStripMenuItem,
             this.تعديلتكاليفموقعToolStripMenuItem});
             this.التكاليفToolStripMenuItem.Name = "التكاليفToolStripMenuItem";
-            this.التكاليفToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.التكاليفToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.التكاليفToolStripMenuItem.Text = "تكاليف الموقع";
             this.التكاليفToolStripMenuItem.Click += new System.EventHandler(this.التكاليفToolStripMenuItem_Click);
             // 
@@ -508,9 +508,14 @@
             // تعيينجديدToolStripMenuItem
             // 
             this.تعيينجديدToolStripMenuItem.Name = "تعيينجديدToolStripMenuItem";
-            this.تعيينجديدToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.تعيينجديدToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.تعيينجديدToolStripMenuItem.Text = "تعيين جديد";
             this.تعيينجديدToolStripMenuItem.Click += new System.EventHandler(this.تعيينجديدToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(97, 6);
             // 
             // toolStripDropDownButton3
             // 
@@ -539,6 +544,11 @@
             this.تقيممصدرToolStripMenuItem.Name = "تقيممصدرToolStripMenuItem";
             this.تقيممصدرToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.تقيممصدرToolStripMenuItem.Text = "تقيم مصدر";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(97, 6);
             // 
             // toolStripDropDownButton4
             // 
@@ -619,6 +629,11 @@
             this.حذفToolStripMenuItem1.Text = "حذف";
             this.حذفToolStripMenuItem1.Click += new System.EventHandler(this.حذفToolStripMenuItem1_Click);
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(97, 6);
+            // 
             // toolStripDropDownButton5
             // 
             this.toolStripDropDownButton5.AutoSize = false;
@@ -643,7 +658,7 @@
             this.panelStart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelStart.Location = new System.Drawing.Point(0, 0);
             this.panelStart.Name = "panelStart";
-            this.panelStart.Size = new System.Drawing.Size(868, 817);
+            this.panelStart.Size = new System.Drawing.Size(885, 817);
             this.panelStart.TabIndex = 1;
             // 
             // panelNewLocation
@@ -656,7 +671,7 @@
             this.panelNewLocation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNewLocation.Location = new System.Drawing.Point(0, 0);
             this.panelNewLocation.Name = "panelNewLocation";
-            this.panelNewLocation.Size = new System.Drawing.Size(868, 817);
+            this.panelNewLocation.Size = new System.Drawing.Size(885, 817);
             this.panelNewLocation.TabIndex = 0;
             // 
             // groupBox8
@@ -668,7 +683,7 @@
             this.groupBox8.Location = new System.Drawing.Point(0, 423);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox8.Size = new System.Drawing.Size(868, 100);
+            this.groupBox8.Size = new System.Drawing.Size(885, 100);
             this.groupBox8.TabIndex = 12;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "ساعات العمل";
@@ -721,7 +736,7 @@
             this.groupBox3.Location = new System.Drawing.Point(0, 254);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(868, 169);
+            this.groupBox3.Size = new System.Drawing.Size(885, 169);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "عدد افراد التشغيل";
@@ -794,7 +809,7 @@
             this.groupBox2.Location = new System.Drawing.Point(0, 127);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(868, 127);
+            this.groupBox2.Size = new System.Drawing.Size(885, 127);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "فترة التعاقد";
@@ -850,7 +865,7 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(868, 127);
+            this.groupBox1.Size = new System.Drawing.Size(885, 127);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "بيانات الموقع";
@@ -902,7 +917,7 @@
             this.panelLocationCosts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLocationCosts.Location = new System.Drawing.Point(0, 0);
             this.panelLocationCosts.Name = "panelLocationCosts";
-            this.panelLocationCosts.Size = new System.Drawing.Size(868, 817);
+            this.panelLocationCosts.Size = new System.Drawing.Size(885, 817);
             this.panelLocationCosts.TabIndex = 11;
             // 
             // groupBox7
@@ -1057,7 +1072,7 @@
             this.groupBox5.Controls.Add(this.comboBox2);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(428, 248);
+            this.groupBox5.Location = new System.Drawing.Point(445, 248);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox5.Size = new System.Drawing.Size(440, 569);
@@ -1208,7 +1223,7 @@
             this.groupBox6.Location = new System.Drawing.Point(0, 90);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox6.Size = new System.Drawing.Size(868, 158);
+            this.groupBox6.Size = new System.Drawing.Size(885, 158);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "تكلفة الأفراد";
@@ -1417,7 +1432,7 @@
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox4.Size = new System.Drawing.Size(868, 90);
+            this.groupBox4.Size = new System.Drawing.Size(885, 90);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "تكلفة الفرد";
@@ -1500,7 +1515,7 @@
             this.panelNewEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNewEmployee.Location = new System.Drawing.Point(0, 0);
             this.panelNewEmployee.Name = "panelNewEmployee";
-            this.panelNewEmployee.Size = new System.Drawing.Size(868, 817);
+            this.panelNewEmployee.Size = new System.Drawing.Size(885, 817);
             this.panelNewEmployee.TabIndex = 24;
             // 
             // label36
@@ -3052,7 +3067,7 @@
             this.panelUpdateLocation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateLocation.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateLocation.Name = "panelUpdateLocation";
-            this.panelUpdateLocation.Size = new System.Drawing.Size(868, 817);
+            this.panelUpdateLocation.Size = new System.Drawing.Size(885, 817);
             this.panelUpdateLocation.TabIndex = 32;
             // 
             // groupBox20
@@ -3064,7 +3079,7 @@
             this.groupBox20.Location = new System.Drawing.Point(0, 523);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox20.Size = new System.Drawing.Size(868, 100);
+            this.groupBox20.Size = new System.Drawing.Size(885, 100);
             this.groupBox20.TabIndex = 17;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "ساعات العمل";
@@ -3117,7 +3132,7 @@
             this.groupBox21.Location = new System.Drawing.Point(0, 354);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox21.Size = new System.Drawing.Size(868, 169);
+            this.groupBox21.Size = new System.Drawing.Size(885, 169);
             this.groupBox21.TabIndex = 16;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "عدد افراد التشغيل";
@@ -3190,7 +3205,7 @@
             this.groupBox22.Location = new System.Drawing.Point(0, 227);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox22.Size = new System.Drawing.Size(868, 127);
+            this.groupBox22.Size = new System.Drawing.Size(885, 127);
             this.groupBox22.TabIndex = 15;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "فترة التعاقد";
@@ -3246,7 +3261,7 @@
             this.groupBox23.Location = new System.Drawing.Point(0, 100);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox23.Size = new System.Drawing.Size(868, 127);
+            this.groupBox23.Size = new System.Drawing.Size(885, 127);
             this.groupBox23.TabIndex = 14;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "بيانات الموقع";
@@ -3298,7 +3313,7 @@
             this.groupBox24.Location = new System.Drawing.Point(0, 0);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox24.Size = new System.Drawing.Size(868, 100);
+            this.groupBox24.Size = new System.Drawing.Size(885, 100);
             this.groupBox24.TabIndex = 0;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "الموقع";
@@ -3334,7 +3349,7 @@
             this.panelUpdateLocationCosts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateLocationCosts.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateLocationCosts.Name = "panelUpdateLocationCosts";
-            this.panelUpdateLocationCosts.Size = new System.Drawing.Size(868, 817);
+            this.panelUpdateLocationCosts.Size = new System.Drawing.Size(885, 817);
             this.panelUpdateLocationCosts.TabIndex = 33;
             // 
             // groupBox25
@@ -3524,7 +3539,7 @@
             this.groupBox26.Controls.Add(this.comboBoxUpdateCostClothesName);
             this.groupBox26.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox26.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox26.Location = new System.Drawing.Point(428, 248);
+            this.groupBox26.Location = new System.Drawing.Point(445, 248);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox26.Size = new System.Drawing.Size(440, 569);
@@ -3706,7 +3721,7 @@
             this.groupBox27.Location = new System.Drawing.Point(0, 90);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox27.Size = new System.Drawing.Size(868, 158);
+            this.groupBox27.Size = new System.Drawing.Size(885, 158);
             this.groupBox27.TabIndex = 17;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "تكلفة الأفراد";
@@ -3922,7 +3937,7 @@
             this.groupBox28.Location = new System.Drawing.Point(0, 0);
             this.groupBox28.Name = "groupBox28";
             this.groupBox28.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox28.Size = new System.Drawing.Size(868, 90);
+            this.groupBox28.Size = new System.Drawing.Size(885, 90);
             this.groupBox28.TabIndex = 16;
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "الموقع";
@@ -3960,27 +3975,13 @@
             this.comboBoxUpdateCostLocationName.TabIndex = 0;
             this.comboBoxUpdateCostLocationName.SelectedIndexChanged += new System.EventHandler(this.comboBoxUpdateCostLocationName_SelectedIndexChanged);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(97, 6);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(97, 6);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(97, 6);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(984, 682);
+            this.Controls.Add(this.panelNewEmployee);
             this.Controls.Add(this.panelUpdateLocationCosts);
             this.Controls.Add(this.panelUpdateLocation);
             this.Controls.Add(this.panelLocationCosts);
@@ -3991,7 +3992,6 @@
             this.Controls.Add(this.PanelUpdateClotheStore);
             this.Controls.Add(this.PanelAddClothe);
             this.Controls.Add(this.PanelNewApplication);
-            this.Controls.Add(this.panelNewEmployee);
             this.Controls.Add(this.panelNewLocation);
             this.Controls.Add(this.panelStart);
             this.Controls.Add(this.toolStrip1);

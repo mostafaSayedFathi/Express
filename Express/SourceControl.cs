@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
 
 class SourceControl
 {
     Source source;
     SourceDB sourceDB;
     private Boolean check;
+    DBConnection connection;
 
     public Boolean insertSource(string name, string address, string EmployeeName1, string EmployeeName2, int phone1, int phone2, int phone3)
     {
@@ -39,6 +42,19 @@ class SourceControl
         source = new Source();
         source.setName(sourceName);
         return sourceDB.selectSourceId(source);
+    }
+
+    public void fillComboboxSourceName(ComboBox combobox)
+    {
+        combobox.Items.Clear();
+        connection = new DBConnection();
+        sourceDB = new SourceDB();
+        SqlDataReader reader = sourceDB.fillComboboxSourceName();
+        while (reader.Read())
+        {
+            combobox.Items.Add(reader["sourceName"]);
+        }
+        connection.close();
     }
 }
 
