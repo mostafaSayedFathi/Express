@@ -56,6 +56,7 @@ namespace Express
             panelUpdateLocation.Visible = false;
             panelUpdateLocationCosts.Visible = false;
             panelUpdateEmployee.Visible = false;
+            panelSourceEvaluation.Visible = false;
         }
 
         private void btnStartOperation_Click(object sender, EventArgs e)
@@ -220,6 +221,7 @@ namespace Express
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = false;
+                panelSourceEvaluation.Visible = false;
                 employeeControl = new EmployeeControl();
                 locationControl = new LocationControl();
                 sourceControl = new SourceControl();
@@ -374,6 +376,7 @@ namespace Express
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = false;
+                panelSourceEvaluation.Visible = false;
                 applicationControl = new ApplicationControl();
                 //InitializeComponent();
                 applicationControl.fillComboboxSex(comboBoxAppSex);
@@ -841,6 +844,7 @@ namespace Express
             panelUpdateLocation.Visible = false;
             panelUpdateLocationCosts.Visible = false;
             panelUpdateEmployee.Visible = false;
+            panelSourceEvaluation.Visible = false;
         }
 
         private void تعديلToolStripMenuItem_Click(object sender, EventArgs e)
@@ -860,6 +864,7 @@ namespace Express
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = false;
+                panelSourceEvaluation.Visible = false;
                 clothesStoreControl = new ClothesStoreControl();
                 clothesStoreControl.fillListViewClothesStore(listViewUpdateClothesStore);
                 txtUpdateTotalAllClothesStore.Text = clothesStoreControl.totalAllUpdate(listViewUpdateClothesStore).ToString();
@@ -968,6 +973,7 @@ namespace Express
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = false;
+                panelSourceEvaluation.Visible = false;
                 clothesStoreControl = new ClothesStoreControl();
                 clothesStoreControl.fillListViewClothesStore(listViewDeleteClotheStore);
             }
@@ -1234,6 +1240,7 @@ namespace Express
             panelUpdateLocation.Visible = false;
             panelUpdateLocationCosts.Visible = false;
             panelUpdateEmployee.Visible = false;
+            panelSourceEvaluation.Visible = false;
         }
 
         private void txtUpdateDevicePrice_TextChanged(object sender, EventArgs e)
@@ -1344,6 +1351,7 @@ namespace Express
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = false;
+                panelSourceEvaluation.Visible = false;
                 devicesStoreControl = new DevicesStoreControl();
                 devicesStoreControl.fillListViewDevicesStore(listViewUpdateDeviceStore);
                 txtUpdateAllTotalDeviceStore.Text = devicesStoreControl.totalAllUpdate(listViewUpdateDeviceStore).ToString();
@@ -1498,6 +1506,7 @@ namespace Express
             panelUpdateLocation.Visible = false;
             panelUpdateLocationCosts.Visible = false;
             panelUpdateEmployee.Visible = false;
+            panelSourceEvaluation.Visible = false;
         }
 
         private void تعديلToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -1513,6 +1522,8 @@ namespace Express
             PanelUpdateDeviceStore.Visible = false;
             PanelDeleteFromDevicesStore.Visible = false;
             panelUpdateLocation.Visible = true;
+            panelUpdateEmployee.Visible = false;
+            panelSourceEvaluation.Visible = false;
             locationControl = new LocationControl();
             locationControl.fillComboboxLocationName(comboBoxUpdateLocationName);
         }
@@ -1534,6 +1545,7 @@ namespace Express
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = false;
+                panelSourceEvaluation.Visible = false;
                 locationControl = new LocationControl();
                 locationControl.fillComboboxLocationName(comboBoxLocationName);
             }
@@ -1559,6 +1571,8 @@ namespace Express
                 PanelDeleteFromDevicesStore.Visible = false;
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = true;
+                panelUpdateEmployee.Visible = false;
+                panelSourceEvaluation.Visible = false;
                 locationControl = new LocationControl();
                 devicesStoreControl = new DevicesStoreControl();
                 clothesStoreControl = new ClothesStoreControl();
@@ -2115,6 +2129,7 @@ namespace Express
                 panelUpdateLocation.Visible = false;
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = true;
+                panelSourceEvaluation.Visible = false;
                 sourceControl = new SourceControl();
                 locationControl = new LocationControl();
                 locationControl.fillComboboxLocationNameReady(ComboBoxUpdateEmployeeLocation);
@@ -2270,6 +2285,109 @@ namespace Express
             }
         }
 
+        private void تقييمToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                panelNewEmployee.Visible = false;
+                panelNewLocation.Visible = false;
+                panelLocationCosts.Visible = false;
+                PanelNewApplication.Visible = false;
+                PanelUpdateClotheStore.Visible = false;
+                PanelAddClothe.Visible = false;
+                PanelDeleteFromclothesStore.Visible = false;
+                PanelAddDevices.Visible = false;
+                PanelUpdateDeviceStore.Visible = false;
+                PanelDeleteFromDevicesStore.Visible = false;
+                panelUpdateLocation.Visible = false;
+                panelUpdateLocationCosts.Visible = false;
+                panelUpdateEmployee.Visible = false;
+                panelSourceEvaluation.Visible = true;
+                sourceControl = new SourceControl();
+                sourceControl.fillComboboxSourceName(comboBoxEvaluateSourceName);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void comboBoxEvaluateSourceName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                sourceControl = new SourceControl();
+                employeeControl = new EmployeeControl();
+                string sourceName = comboBoxEvaluateSourceName.Text;
+                DateTime dateFrom = dtpEvaluateFrom.Value;
+                string dateFromSQL = dateFrom.ToString("yyyy-MM-dd");
+                DateTime dateTo = dtpEvaluateTo.Value;
+                string dateToSQL = dateTo.ToString("yyyy-MM-dd");
+                int count = employeeControl.countEmployeeNumbersRelatedToSource(sourceName, dateFromSQL, dateToSQL);
+                txtEvaluateNumbers.Text = count.ToString();
+                employeeControl.fillListViewForEvaluation(listViewEvaluate, sourceName, dateFromSQL, dateToSQL);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dtpEvaluateFrom_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxEvaluateSourceName.Text == "")
+                {
+                    MessageBox.Show("من فضلك اختر اسم المكتب", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    sourceControl = new SourceControl();
+                    employeeControl = new EmployeeControl();
+                    string sourceName = comboBoxEvaluateSourceName.Text;
+                    DateTime dateFrom = dtpEvaluateFrom.Value;
+                    string dateFromSQL = dateFrom.ToString("yyyy-MM-dd");
+                    DateTime dateTo = dtpEvaluateTo.Value;
+                    string dateToSQL = dateTo.ToString("yyyy-MM-dd");
+                    int count = employeeControl.countEmployeeNumbersRelatedToSource(sourceName, dateFromSQL, dateToSQL);
+                    txtEvaluateNumbers.Text = count.ToString();
+                    employeeControl.fillListViewForEvaluation(listViewEvaluate, sourceName, dateFromSQL, dateToSQL);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dtpEvaluateTo_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxEvaluateSourceName.Text == "")
+                {
+                    MessageBox.Show("من فضلك اختر اسم المكتب", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    sourceControl = new SourceControl();
+                    employeeControl = new EmployeeControl();
+                    string sourceName = comboBoxEvaluateSourceName.Text;
+                    DateTime dateFrom = dtpEvaluateFrom.Value;
+                    string dateFromSQL = dateFrom.ToString("yyyy-MM-dd");
+                    DateTime dateTo = dtpEvaluateTo.Value;
+                    string dateToSQL = dateTo.ToString("yyyy-MM-dd");
+                    int count = employeeControl.countEmployeeNumbersRelatedToSource(sourceName, dateFromSQL, dateToSQL);
+                    txtEvaluateNumbers.Text = count.ToString();
+                    employeeControl.fillListViewForEvaluation(listViewEvaluate, sourceName, dateFromSQL, dateToSQL);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
     }
 }

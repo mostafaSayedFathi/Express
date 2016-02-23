@@ -385,6 +385,22 @@
             this.label105 = new System.Windows.Forms.Label();
             this.txtUpdateEmployeeNationalID = new System.Windows.Forms.TextBox();
             this.label106 = new System.Windows.Forms.Label();
+            this.تقييمToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelSourceEvaluation = new System.Windows.Forms.Panel();
+            this.label107 = new System.Windows.Forms.Label();
+            this.comboBoxEvaluateSourceName = new System.Windows.Forms.ComboBox();
+            this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.listViewEvaluate = new System.Windows.Forms.ListView();
+            this.columnHeader41 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader42 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader43 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader44 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dtpEvaluateTo = new System.Windows.Forms.DateTimePicker();
+            this.txtEvaluateNumbers = new System.Windows.Forms.TextBox();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
+            this.dtpEvaluateFrom = new System.Windows.Forms.DateTimePicker();
+            this.label108 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panelNewLocation.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -428,6 +444,8 @@
             this.groupBox27.SuspendLayout();
             this.groupBox28.SuspendLayout();
             this.panelUpdateEmployee.SuspendLayout();
+            this.panelSourceEvaluation.SuspendLayout();
+            this.groupBox29.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -470,20 +488,20 @@
             this.اضافةبياناتToolStripMenuItem,
             this.تعديلToolStripMenuItem2});
             this.موقعجديدToolStripMenuItem.Name = "موقعجديدToolStripMenuItem";
-            this.موقعجديدToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.موقعجديدToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.موقعجديدToolStripMenuItem.Text = "المواقع";
             // 
             // اضافةبياناتToolStripMenuItem
             // 
             this.اضافةبياناتToolStripMenuItem.Name = "اضافةبياناتToolStripMenuItem";
-            this.اضافةبياناتToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.اضافةبياناتToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.اضافةبياناتToolStripMenuItem.Text = "اضافة موقع";
             this.اضافةبياناتToolStripMenuItem.Click += new System.EventHandler(this.اضافةبياناتToolStripMenuItem_Click);
             // 
             // تعديلToolStripMenuItem2
             // 
             this.تعديلToolStripMenuItem2.Name = "تعديلToolStripMenuItem2";
-            this.تعديلToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.تعديلToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.تعديلToolStripMenuItem2.Text = "تعديل بيانات";
             this.تعديلToolStripMenuItem2.Click += new System.EventHandler(this.تعديلToolStripMenuItem2_Click);
             // 
@@ -493,7 +511,7 @@
             this.اضافةتكاليفموقعToolStripMenuItem,
             this.تعديلتكاليفموقعToolStripMenuItem});
             this.التكاليفToolStripMenuItem.Name = "التكاليفToolStripMenuItem";
-            this.التكاليفToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.التكاليفToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.التكاليفToolStripMenuItem.Text = "تكاليف الموقع";
             this.التكاليفToolStripMenuItem.Click += new System.EventHandler(this.التكاليفToolStripMenuItem_Click);
             // 
@@ -554,7 +572,8 @@
             this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.اضافةمصدرToolStripMenuItem,
-            this.تقيممصدرToolStripMenuItem});
+            this.تقيممصدرToolStripMenuItem,
+            this.تقييمToolStripMenuItem});
             this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
             this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
@@ -566,15 +585,15 @@
             // اضافةمصدرToolStripMenuItem
             // 
             this.اضافةمصدرToolStripMenuItem.Name = "اضافةمصدرToolStripMenuItem";
-            this.اضافةمصدرToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.اضافةمصدرToolStripMenuItem.Text = "اضافة مصدر";
+            this.اضافةمصدرToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.اضافةمصدرToolStripMenuItem.Text = "مصدر جديد";
             this.اضافةمصدرToolStripMenuItem.Click += new System.EventHandler(this.اضافةمصدرToolStripMenuItem_Click);
             // 
             // تقيممصدرToolStripMenuItem
             // 
             this.تقيممصدرToolStripMenuItem.Name = "تقيممصدرToolStripMenuItem";
-            this.تقيممصدرToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.تقيممصدرToolStripMenuItem.Text = "تقيم مصدر";
+            this.تقيممصدرToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.تقيممصدرToolStripMenuItem.Text = "تعديل بيانات";
             // 
             // toolStripSeparator3
             // 
@@ -604,7 +623,7 @@
             this.حذفToolStripMenuItem});
             this.مخزنالملابسToolStripMenuItem.Name = "مخزنالملابسToolStripMenuItem";
             this.مخزنالملابسToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.مخزنالملابسToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.مخزنالملابسToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.مخزنالملابسToolStripMenuItem.Text = "مخزن الملابس";
             // 
             // اضافةToolStripMenuItem
@@ -636,7 +655,7 @@
             this.تعديلToolStripMenuItem1,
             this.حذفToolStripMenuItem1});
             this.مخزنالاجهزهToolStripMenuItem.Name = "مخزنالاجهزهToolStripMenuItem";
-            this.مخزنالاجهزهToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.مخزنالاجهزهToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.مخزنالاجهزهToolStripMenuItem.Text = "مخزن الاجهزه";
             // 
             // اضافةToolStripMenuItem1
@@ -4153,7 +4172,7 @@
             // 
             this.label102.AutoSize = true;
             this.label102.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label102.Location = new System.Drawing.Point(787, 244);
+            this.label102.Location = new System.Drawing.Point(787, 249);
             this.label102.Name = "label102";
             this.label102.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label102.Size = new System.Drawing.Size(76, 16);
@@ -4188,7 +4207,7 @@
             // 
             this.label103.AutoSize = true;
             this.label103.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label103.Location = new System.Drawing.Point(787, 48);
+            this.label103.Location = new System.Drawing.Point(787, 51);
             this.label103.Name = "label103";
             this.label103.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label103.Size = new System.Drawing.Size(39, 16);
@@ -4231,7 +4250,7 @@
             // 
             this.label105.AutoSize = true;
             this.label105.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label105.Location = new System.Drawing.Point(787, 158);
+            this.label105.Location = new System.Drawing.Point(787, 161);
             this.label105.Name = "label105";
             this.label105.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label105.Size = new System.Drawing.Size(84, 16);
@@ -4252,12 +4271,180 @@
             // 
             this.label106.AutoSize = true;
             this.label106.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label106.Location = new System.Drawing.Point(787, 115);
+            this.label106.Location = new System.Drawing.Point(787, 118);
             this.label106.Name = "label106";
             this.label106.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label106.Size = new System.Drawing.Size(83, 16);
             this.label106.TabIndex = 36;
             this.label106.Text = "الرقم القومي:";
+            // 
+            // تقييمToolStripMenuItem
+            // 
+            this.تقييمToolStripMenuItem.Name = "تقييمToolStripMenuItem";
+            this.تقييمToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.تقييمToolStripMenuItem.Text = "تقييم";
+            this.تقييمToolStripMenuItem.Click += new System.EventHandler(this.تقييمToolStripMenuItem_Click);
+            // 
+            // panelSourceEvaluation
+            // 
+            this.panelSourceEvaluation.Controls.Add(this.listViewEvaluate);
+            this.panelSourceEvaluation.Controls.Add(this.groupBox29);
+            this.panelSourceEvaluation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSourceEvaluation.Location = new System.Drawing.Point(0, 0);
+            this.panelSourceEvaluation.Name = "panelSourceEvaluation";
+            this.panelSourceEvaluation.Size = new System.Drawing.Size(885, 817);
+            this.panelSourceEvaluation.TabIndex = 55;
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label107.Location = new System.Drawing.Point(792, 42);
+            this.label107.Name = "label107";
+            this.label107.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label107.Size = new System.Drawing.Size(81, 16);
+            this.label107.TabIndex = 50;
+            this.label107.Text = "اسم المكتب:";
+            // 
+            // comboBoxEvaluateSourceName
+            // 
+            this.comboBoxEvaluateSourceName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEvaluateSourceName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBoxEvaluateSourceName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxEvaluateSourceName.FormattingEnabled = true;
+            this.comboBoxEvaluateSourceName.Location = new System.Drawing.Point(492, 36);
+            this.comboBoxEvaluateSourceName.Name = "comboBoxEvaluateSourceName";
+            this.comboBoxEvaluateSourceName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboBoxEvaluateSourceName.Size = new System.Drawing.Size(294, 27);
+            this.comboBoxEvaluateSourceName.TabIndex = 49;
+            this.comboBoxEvaluateSourceName.SelectedIndexChanged += new System.EventHandler(this.comboBoxEvaluateSourceName_SelectedIndexChanged);
+            // 
+            // groupBox29
+            // 
+            this.groupBox29.Controls.Add(this.dtpEvaluateTo);
+            this.groupBox29.Controls.Add(this.txtEvaluateNumbers);
+            this.groupBox29.Controls.Add(this.label109);
+            this.groupBox29.Controls.Add(this.label110);
+            this.groupBox29.Controls.Add(this.dtpEvaluateFrom);
+            this.groupBox29.Controls.Add(this.label108);
+            this.groupBox29.Controls.Add(this.comboBoxEvaluateSourceName);
+            this.groupBox29.Controls.Add(this.label107);
+            this.groupBox29.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox29.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox29.Location = new System.Drawing.Point(0, 0);
+            this.groupBox29.Name = "groupBox29";
+            this.groupBox29.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox29.Size = new System.Drawing.Size(885, 182);
+            this.groupBox29.TabIndex = 51;
+            this.groupBox29.TabStop = false;
+            this.groupBox29.Text = "البيانات";
+            // 
+            // listViewEvaluate
+            // 
+            this.listViewEvaluate.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader41,
+            this.columnHeader42,
+            this.columnHeader43,
+            this.columnHeader44});
+            this.listViewEvaluate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewEvaluate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewEvaluate.GridLines = true;
+            this.listViewEvaluate.Location = new System.Drawing.Point(0, 182);
+            this.listViewEvaluate.Name = "listViewEvaluate";
+            this.listViewEvaluate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.listViewEvaluate.RightToLeftLayout = true;
+            this.listViewEvaluate.Size = new System.Drawing.Size(885, 635);
+            this.listViewEvaluate.TabIndex = 52;
+            this.listViewEvaluate.UseCompatibleStateImageBehavior = false;
+            this.listViewEvaluate.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader41
+            // 
+            this.columnHeader41.Text = "الكود";
+            this.columnHeader41.Width = 85;
+            // 
+            // columnHeader42
+            // 
+            this.columnHeader42.Text = "اسم الفرد";
+            this.columnHeader42.Width = 338;
+            // 
+            // columnHeader43
+            // 
+            this.columnHeader43.Text = "الوظيفة";
+            this.columnHeader43.Width = 187;
+            // 
+            // columnHeader44
+            // 
+            this.columnHeader44.Text = "الموقع";
+            this.columnHeader44.Width = 271;
+            // 
+            // dtpEvaluateTo
+            // 
+            this.dtpEvaluateTo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEvaluateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEvaluateTo.Location = new System.Drawing.Point(241, 80);
+            this.dtpEvaluateTo.Name = "dtpEvaluateTo";
+            this.dtpEvaluateTo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dtpEvaluateTo.RightToLeftLayout = true;
+            this.dtpEvaluateTo.Size = new System.Drawing.Size(200, 27);
+            this.dtpEvaluateTo.TabIndex = 57;
+            this.dtpEvaluateTo.ValueChanged += new System.EventHandler(this.dtpEvaluateTo_ValueChanged);
+            // 
+            // txtEvaluateNumbers
+            // 
+            this.txtEvaluateNumbers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEvaluateNumbers.Enabled = false;
+            this.txtEvaluateNumbers.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEvaluateNumbers.Location = new System.Drawing.Point(686, 126);
+            this.txtEvaluateNumbers.Name = "txtEvaluateNumbers";
+            this.txtEvaluateNumbers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtEvaluateNumbers.Size = new System.Drawing.Size(100, 27);
+            this.txtEvaluateNumbers.TabIndex = 53;
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label109.Location = new System.Drawing.Point(792, 131);
+            this.label109.Name = "label109";
+            this.label109.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label109.Size = new System.Drawing.Size(68, 16);
+            this.label109.TabIndex = 54;
+            this.label109.Text = "عدد الأفراد:";
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label110.Location = new System.Drawing.Point(447, 85);
+            this.label110.Name = "label110";
+            this.label110.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label110.Size = new System.Drawing.Size(33, 16);
+            this.label110.TabIndex = 58;
+            this.label110.Text = "إلى:";
+            // 
+            // dtpEvaluateFrom
+            // 
+            this.dtpEvaluateFrom.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEvaluateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEvaluateFrom.Location = new System.Drawing.Point(586, 80);
+            this.dtpEvaluateFrom.Name = "dtpEvaluateFrom";
+            this.dtpEvaluateFrom.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dtpEvaluateFrom.RightToLeftLayout = true;
+            this.dtpEvaluateFrom.Size = new System.Drawing.Size(200, 27);
+            this.dtpEvaluateFrom.TabIndex = 55;
+            this.dtpEvaluateFrom.ValueChanged += new System.EventHandler(this.dtpEvaluateFrom_ValueChanged);
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label108.Location = new System.Drawing.Point(792, 85);
+            this.label108.Name = "label108";
+            this.label108.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label108.Size = new System.Drawing.Size(68, 16);
+            this.label108.TabIndex = 56;
+            this.label108.Text = "التاريخ من:";
             // 
             // Form1
             // 
@@ -4265,6 +4452,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(984, 682);
+            this.Controls.Add(this.panelSourceEvaluation);
             this.Controls.Add(this.panelUpdateEmployee);
             this.Controls.Add(this.panelNewEmployee);
             this.Controls.Add(this.panelUpdateLocation);
@@ -4360,6 +4548,9 @@
             this.groupBox28.PerformLayout();
             this.panelUpdateEmployee.ResumeLayout(false);
             this.panelUpdateEmployee.PerformLayout();
+            this.panelSourceEvaluation.ResumeLayout(false);
+            this.groupBox29.ResumeLayout(false);
+            this.groupBox29.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4722,6 +4913,22 @@
         private System.Windows.Forms.Label label106;
         private System.Windows.Forms.ToolStripMenuItem تعديلبياناتموظفToolStripMenuItem;
         private System.Windows.Forms.Button btnupdateEmployeeCancel;
+        private System.Windows.Forms.ToolStripMenuItem تقييمToolStripMenuItem;
+        private System.Windows.Forms.Panel panelSourceEvaluation;
+        private System.Windows.Forms.GroupBox groupBox29;
+        private System.Windows.Forms.ComboBox comboBoxEvaluateSourceName;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.ListView listViewEvaluate;
+        private System.Windows.Forms.ColumnHeader columnHeader41;
+        private System.Windows.Forms.ColumnHeader columnHeader42;
+        private System.Windows.Forms.ColumnHeader columnHeader43;
+        private System.Windows.Forms.ColumnHeader columnHeader44;
+        private System.Windows.Forms.DateTimePicker dtpEvaluateTo;
+        private System.Windows.Forms.TextBox txtEvaluateNumbers;
+        private System.Windows.Forms.Label label109;
+        private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.DateTimePicker dtpEvaluateFrom;
+        private System.Windows.Forms.Label label108;
 
 
 

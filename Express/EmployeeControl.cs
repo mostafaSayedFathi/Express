@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 class EmployeeControl
 {
@@ -11,6 +12,7 @@ class EmployeeControl
     EmployeeDB employeeDB;
     LocationControl locationControl;
     SourceControl sourceControl;
+    DBConnection connection;
 
     public void insertEmployee(string nationalID, string employeeName, string date, string position, double salary, string locationName, string sourceName)
     {
@@ -155,5 +157,44 @@ class EmployeeControl
         employeeDB.selectSourceID(employee);
         int sourceID = employee.getSourceID();
         return sourceControl.selectSourceName(sourceID);
+    }
+
+    public int countEmployeeNumbersRelatedToSource(string sourceName , string dateFrom , string dateTo)
+    {
+        sourceControl = new SourceControl();
+        employee = new Employee();
+        employeeDB = new EmployeeDB();
+        int sourceID = sourceControl.selectID(sourceName);
+        employee.setSourceID(sourceID);
+        employee.setDateFrom(dateFrom);
+        employee.setDateTo(dateTo);
+        employeeDB.countEmployeeNumbersRelatedToSource(employee);
+        return employee.getNumberOfEmployee();
+    }
+
+    public void fillListViewForEvaluation(ListView listView , string sourceName , string dateFrom , string dateTo)
+    {
+        listView.Items.Clear();
+        locationControl = new LocationControl();
+        sourceControl = new SourceControl();
+        employee = new Employee();
+        employeeDB = new EmployeeDB();
+        connection = new DBConnection();
+        int sourceID = sourceControl.selectID(sourceName);
+        employee.setSourceID(sourceID);
+        employee.setDateFrom(dateFrom);
+        employee.setDateTo(dateTo);
+        SqlDataReader reader = employeeDB.fillListViewRelatedToSource(employee);
+        while (reader.Read())
+        {
+            ListViewItem lvi = new ListViewItem(reader["ID"].ToString());
+            lvi.SubItems.Add(reader["name"].ToString());
+            lvi.SubItems.Add(reader["position"].ToString());
+            int locationID = int.Parse(reader["locationID"].ToString());
+            string locationName = locationControl.getLocationName(locationID);
+            lvi.SubItems.Add(locationName);
+            listView.Items.Add(lvi);
+        }
+        connection.close();
     }
 }

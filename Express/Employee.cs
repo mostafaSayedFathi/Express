@@ -9,6 +9,8 @@
     private int locationID;
     private int sourceID;
     private int numberOfEmployee;
+    private string dateFrom;
+    private string dateTo;
 
     public void setID(int ID)
     {
@@ -89,6 +91,24 @@
     public int getNumberOfEmployee()
     {
         return numberOfEmployee;
+    }
+
+    public void setDateFrom(string dateFrom)
+    {
+        this.dateFrom = dateFrom;
+    }
+    public string getDateFrom()
+    {
+        return dateFrom;
+    }
+
+    public void setDateTo(string dateTo)
+    {
+        this.dateTo = dateTo;
+    }
+    public string getDateTo()
+    {
+        return dateTo;
     }
 
 }

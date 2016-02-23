@@ -120,4 +120,20 @@ class EmployeeDB
         employee.setSourceID((int)command.ExecuteScalar());
         connection.close();
     }
+
+    public void countEmployeeNumbersRelatedToSource(Employee employee)
+    {
+        connection.open();
+        command = new SqlCommand("select COUNT(*) from Employee where sourceID='"+employee.getSourceID()+"' and employDate between '"+employee.getDateFrom()+"' and '"+employee.getDateTo()+"'", connection.getConnection());
+        employee.setNumberOfEmployee((int)command.ExecuteScalar());
+        connection.close();
+    }
+
+    public SqlDataReader fillListViewRelatedToSource(Employee employee)
+    {
+        connection.open();
+        command = new SqlCommand("select * from Employee where sourceID='" + employee.getSourceID() + "' and employDate between '" + employee.getDateFrom() + "' and '" + employee.getDateTo() + "'", connection.getConnection());
+        SqlDataReader reader = command.ExecuteReader();
+        return reader;
+    }
 }
