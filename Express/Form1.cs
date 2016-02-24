@@ -2389,5 +2389,19 @@ namespace Express
             }
         }
 
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.CurrentCell.Value.ToString() != "p")
+            {
+                MessageBox.Show("Error");
+                dataGridView1.CurrentCell.Value = "";
+                dataGridView1.AllowUserToAddRows = false;
+            }
+            else
+            {
+                dataGridView1.AllowUserToAddRows = true;
+            }
+        }
+
     }
 }

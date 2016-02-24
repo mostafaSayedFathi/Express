@@ -401,6 +401,40 @@
             this.label108 = new System.Windows.Forms.Label();
             this.comboBoxEvaluateSourceName = new System.Windows.Forms.ComboBox();
             this.label107 = new System.Windows.Forms.Label();
+            this.panelAttendance = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.d30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.panelNewLocation.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -446,6 +480,8 @@
             this.panelUpdateEmployee.SuspendLayout();
             this.panelSourceEvaluation.SuspendLayout();
             this.groupBox29.SuspendLayout();
+            this.panelAttendance.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -462,7 +498,7 @@
             this.toolStripDropDownButton4,
             this.toolStripSeparator4,
             this.toolStripDropDownButton5});
-            this.toolStrip1.Location = new System.Drawing.Point(885, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(919, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(99, 817);
             this.toolStrip1.TabIndex = 0;
@@ -715,7 +751,7 @@
             this.panelStart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelStart.Location = new System.Drawing.Point(0, 0);
             this.panelStart.Name = "panelStart";
-            this.panelStart.Size = new System.Drawing.Size(885, 817);
+            this.panelStart.Size = new System.Drawing.Size(919, 817);
             this.panelStart.TabIndex = 1;
             // 
             // panelNewLocation
@@ -728,7 +764,7 @@
             this.panelNewLocation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNewLocation.Location = new System.Drawing.Point(0, 0);
             this.panelNewLocation.Name = "panelNewLocation";
-            this.panelNewLocation.Size = new System.Drawing.Size(885, 817);
+            this.panelNewLocation.Size = new System.Drawing.Size(919, 817);
             this.panelNewLocation.TabIndex = 0;
             // 
             // groupBox8
@@ -740,7 +776,7 @@
             this.groupBox8.Location = new System.Drawing.Point(0, 423);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox8.Size = new System.Drawing.Size(885, 100);
+            this.groupBox8.Size = new System.Drawing.Size(919, 100);
             this.groupBox8.TabIndex = 12;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "ساعات العمل";
@@ -793,7 +829,7 @@
             this.groupBox3.Location = new System.Drawing.Point(0, 254);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(885, 169);
+            this.groupBox3.Size = new System.Drawing.Size(919, 169);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "عدد افراد التشغيل";
@@ -866,7 +902,7 @@
             this.groupBox2.Location = new System.Drawing.Point(0, 127);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(885, 127);
+            this.groupBox2.Size = new System.Drawing.Size(919, 127);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "فترة التعاقد";
@@ -922,7 +958,7 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(885, 127);
+            this.groupBox1.Size = new System.Drawing.Size(919, 127);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "بيانات الموقع";
@@ -974,7 +1010,7 @@
             this.panelLocationCosts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLocationCosts.Location = new System.Drawing.Point(0, 0);
             this.panelLocationCosts.Name = "panelLocationCosts";
-            this.panelLocationCosts.Size = new System.Drawing.Size(885, 817);
+            this.panelLocationCosts.Size = new System.Drawing.Size(919, 817);
             this.panelLocationCosts.TabIndex = 11;
             // 
             // groupBox7
@@ -1129,7 +1165,7 @@
             this.groupBox5.Controls.Add(this.comboBox2);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(445, 248);
+            this.groupBox5.Location = new System.Drawing.Point(479, 248);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox5.Size = new System.Drawing.Size(440, 569);
@@ -1280,7 +1316,7 @@
             this.groupBox6.Location = new System.Drawing.Point(0, 90);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox6.Size = new System.Drawing.Size(885, 158);
+            this.groupBox6.Size = new System.Drawing.Size(919, 158);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "تكلفة الأفراد";
@@ -1489,7 +1525,7 @@
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox4.Size = new System.Drawing.Size(885, 90);
+            this.groupBox4.Size = new System.Drawing.Size(919, 90);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "تكلفة الفرد";
@@ -1572,7 +1608,7 @@
             this.panelNewEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNewEmployee.Location = new System.Drawing.Point(0, 0);
             this.panelNewEmployee.Name = "panelNewEmployee";
-            this.panelNewEmployee.Size = new System.Drawing.Size(885, 817);
+            this.panelNewEmployee.Size = new System.Drawing.Size(919, 817);
             this.panelNewEmployee.TabIndex = 24;
             // 
             // label36
@@ -3124,7 +3160,7 @@
             this.panelUpdateLocation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateLocation.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateLocation.Name = "panelUpdateLocation";
-            this.panelUpdateLocation.Size = new System.Drawing.Size(885, 817);
+            this.panelUpdateLocation.Size = new System.Drawing.Size(919, 817);
             this.panelUpdateLocation.TabIndex = 32;
             // 
             // groupBox20
@@ -3136,7 +3172,7 @@
             this.groupBox20.Location = new System.Drawing.Point(0, 523);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox20.Size = new System.Drawing.Size(885, 100);
+            this.groupBox20.Size = new System.Drawing.Size(919, 100);
             this.groupBox20.TabIndex = 17;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "ساعات العمل";
@@ -3189,7 +3225,7 @@
             this.groupBox21.Location = new System.Drawing.Point(0, 354);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox21.Size = new System.Drawing.Size(885, 169);
+            this.groupBox21.Size = new System.Drawing.Size(919, 169);
             this.groupBox21.TabIndex = 16;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "عدد افراد التشغيل";
@@ -3262,7 +3298,7 @@
             this.groupBox22.Location = new System.Drawing.Point(0, 227);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox22.Size = new System.Drawing.Size(885, 127);
+            this.groupBox22.Size = new System.Drawing.Size(919, 127);
             this.groupBox22.TabIndex = 15;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "فترة التعاقد";
@@ -3318,7 +3354,7 @@
             this.groupBox23.Location = new System.Drawing.Point(0, 100);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox23.Size = new System.Drawing.Size(885, 127);
+            this.groupBox23.Size = new System.Drawing.Size(919, 127);
             this.groupBox23.TabIndex = 14;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "بيانات الموقع";
@@ -3370,7 +3406,7 @@
             this.groupBox24.Location = new System.Drawing.Point(0, 0);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox24.Size = new System.Drawing.Size(885, 100);
+            this.groupBox24.Size = new System.Drawing.Size(919, 100);
             this.groupBox24.TabIndex = 0;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "الموقع";
@@ -3406,7 +3442,7 @@
             this.panelUpdateLocationCosts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateLocationCosts.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateLocationCosts.Name = "panelUpdateLocationCosts";
-            this.panelUpdateLocationCosts.Size = new System.Drawing.Size(885, 817);
+            this.panelUpdateLocationCosts.Size = new System.Drawing.Size(919, 817);
             this.panelUpdateLocationCosts.TabIndex = 33;
             // 
             // groupBox25
@@ -3596,7 +3632,7 @@
             this.groupBox26.Controls.Add(this.comboBoxUpdateCostClothesName);
             this.groupBox26.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox26.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox26.Location = new System.Drawing.Point(445, 248);
+            this.groupBox26.Location = new System.Drawing.Point(479, 248);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox26.Size = new System.Drawing.Size(440, 569);
@@ -3778,7 +3814,7 @@
             this.groupBox27.Location = new System.Drawing.Point(0, 90);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox27.Size = new System.Drawing.Size(885, 158);
+            this.groupBox27.Size = new System.Drawing.Size(919, 158);
             this.groupBox27.TabIndex = 17;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "تكلفة الأفراد";
@@ -3994,7 +4030,7 @@
             this.groupBox28.Location = new System.Drawing.Point(0, 0);
             this.groupBox28.Name = "groupBox28";
             this.groupBox28.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox28.Size = new System.Drawing.Size(885, 90);
+            this.groupBox28.Size = new System.Drawing.Size(919, 90);
             this.groupBox28.TabIndex = 16;
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "الموقع";
@@ -4057,7 +4093,7 @@
             this.panelUpdateEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateEmployee.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateEmployee.Name = "panelUpdateEmployee";
-            this.panelUpdateEmployee.Size = new System.Drawing.Size(885, 817);
+            this.panelUpdateEmployee.Size = new System.Drawing.Size(919, 817);
             this.panelUpdateEmployee.TabIndex = 35;
             // 
             // btnupdateEmployeeCancel
@@ -4292,7 +4328,7 @@
             this.panelSourceEvaluation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSourceEvaluation.Location = new System.Drawing.Point(0, 0);
             this.panelSourceEvaluation.Name = "panelSourceEvaluation";
-            this.panelSourceEvaluation.Size = new System.Drawing.Size(885, 817);
+            this.panelSourceEvaluation.Size = new System.Drawing.Size(919, 817);
             this.panelSourceEvaluation.TabIndex = 55;
             // 
             // listViewEvaluate
@@ -4309,7 +4345,7 @@
             this.listViewEvaluate.Name = "listViewEvaluate";
             this.listViewEvaluate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.listViewEvaluate.RightToLeftLayout = true;
-            this.listViewEvaluate.Size = new System.Drawing.Size(885, 635);
+            this.listViewEvaluate.Size = new System.Drawing.Size(919, 635);
             this.listViewEvaluate.TabIndex = 52;
             this.listViewEvaluate.UseCompatibleStateImageBehavior = false;
             this.listViewEvaluate.View = System.Windows.Forms.View.Details;
@@ -4349,7 +4385,7 @@
             this.groupBox29.Location = new System.Drawing.Point(0, 0);
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox29.Size = new System.Drawing.Size(885, 182);
+            this.groupBox29.Size = new System.Drawing.Size(919, 182);
             this.groupBox29.TabIndex = 51;
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "البيانات";
@@ -4446,12 +4482,262 @@
             this.label107.TabIndex = 50;
             this.label107.Text = "اسم المكتب:";
             // 
+            // panelAttendance
+            // 
+            this.panelAttendance.Controls.Add(this.dataGridView1);
+            this.panelAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAttendance.Location = new System.Drawing.Point(0, 0);
+            this.panelAttendance.Name = "panelAttendance";
+            this.panelAttendance.Size = new System.Drawing.Size(919, 817);
+            this.panelAttendance.TabIndex = 59;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.code,
+            this.name,
+            this.d1,
+            this.d2,
+            this.d3,
+            this.d4,
+            this.d5,
+            this.d6,
+            this.d7,
+            this.d8,
+            this.d9,
+            this.d10,
+            this.d11,
+            this.d12,
+            this.d13,
+            this.d14,
+            this.d15,
+            this.d16,
+            this.d17,
+            this.d18,
+            this.d19,
+            this.d20,
+            this.d21,
+            this.d22,
+            this.d23,
+            this.d24,
+            this.d25,
+            this.d26,
+            this.d27,
+            this.d28,
+            this.d29,
+            this.d30});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dataGridView1.Size = new System.Drawing.Size(919, 817);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
+            // 
+            // code
+            // 
+            this.code.HeaderText = "الكود";
+            this.code.Name = "code";
+            this.code.Width = 50;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "الأسم";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.name.Width = 240;
+            // 
+            // d1
+            // 
+            this.d1.HeaderText = "1";
+            this.d1.Name = "d1";
+            this.d1.Width = 20;
+            // 
+            // d2
+            // 
+            this.d2.HeaderText = "2";
+            this.d2.Name = "d2";
+            this.d2.Width = 20;
+            // 
+            // d3
+            // 
+            this.d3.HeaderText = "3";
+            this.d3.Name = "d3";
+            this.d3.Width = 20;
+            // 
+            // d4
+            // 
+            this.d4.HeaderText = "4";
+            this.d4.Name = "d4";
+            this.d4.Width = 20;
+            // 
+            // d5
+            // 
+            this.d5.HeaderText = "5";
+            this.d5.Name = "d5";
+            this.d5.Width = 20;
+            // 
+            // d6
+            // 
+            this.d6.HeaderText = "6";
+            this.d6.Name = "d6";
+            this.d6.Width = 20;
+            // 
+            // d7
+            // 
+            this.d7.HeaderText = "7";
+            this.d7.Name = "d7";
+            this.d7.Width = 20;
+            // 
+            // d8
+            // 
+            this.d8.HeaderText = "8";
+            this.d8.Name = "d8";
+            this.d8.Width = 20;
+            // 
+            // d9
+            // 
+            this.d9.HeaderText = "9";
+            this.d9.Name = "d9";
+            this.d9.Width = 20;
+            // 
+            // d10
+            // 
+            this.d10.HeaderText = "10";
+            this.d10.Name = "d10";
+            this.d10.Width = 20;
+            // 
+            // d11
+            // 
+            this.d11.HeaderText = "11";
+            this.d11.Name = "d11";
+            this.d11.Width = 20;
+            // 
+            // d12
+            // 
+            this.d12.HeaderText = "12";
+            this.d12.Name = "d12";
+            this.d12.Width = 20;
+            // 
+            // d13
+            // 
+            this.d13.HeaderText = "13";
+            this.d13.Name = "d13";
+            this.d13.Width = 20;
+            // 
+            // d14
+            // 
+            this.d14.HeaderText = "14";
+            this.d14.Name = "d14";
+            this.d14.Width = 20;
+            // 
+            // d15
+            // 
+            this.d15.HeaderText = "15";
+            this.d15.Name = "d15";
+            this.d15.Width = 20;
+            // 
+            // d16
+            // 
+            this.d16.HeaderText = "16";
+            this.d16.Name = "d16";
+            this.d16.Width = 20;
+            // 
+            // d17
+            // 
+            this.d17.HeaderText = "17";
+            this.d17.Name = "d17";
+            this.d17.Width = 20;
+            // 
+            // d18
+            // 
+            this.d18.HeaderText = "18";
+            this.d18.Name = "d18";
+            this.d18.Width = 20;
+            // 
+            // d19
+            // 
+            this.d19.HeaderText = "19";
+            this.d19.Name = "d19";
+            this.d19.Width = 20;
+            // 
+            // d20
+            // 
+            this.d20.HeaderText = "20";
+            this.d20.Name = "d20";
+            this.d20.Width = 20;
+            // 
+            // d21
+            // 
+            this.d21.HeaderText = "21";
+            this.d21.Name = "d21";
+            this.d21.Width = 20;
+            // 
+            // d22
+            // 
+            this.d22.HeaderText = "22";
+            this.d22.Name = "d22";
+            this.d22.Width = 20;
+            // 
+            // d23
+            // 
+            this.d23.HeaderText = "23";
+            this.d23.Name = "d23";
+            this.d23.Width = 20;
+            // 
+            // d24
+            // 
+            this.d24.HeaderText = "24";
+            this.d24.Name = "d24";
+            this.d24.Width = 20;
+            // 
+            // d25
+            // 
+            this.d25.HeaderText = "25";
+            this.d25.Name = "d25";
+            this.d25.Width = 20;
+            // 
+            // d26
+            // 
+            this.d26.HeaderText = "26";
+            this.d26.Name = "d26";
+            this.d26.Width = 20;
+            // 
+            // d27
+            // 
+            this.d27.HeaderText = "27";
+            this.d27.Name = "d27";
+            this.d27.Width = 20;
+            // 
+            // d28
+            // 
+            this.d28.HeaderText = "28";
+            this.d28.Name = "d28";
+            this.d28.Width = 20;
+            // 
+            // d29
+            // 
+            this.d29.HeaderText = "29";
+            this.d29.Name = "d29";
+            this.d29.Width = 20;
+            // 
+            // d30
+            // 
+            this.d30.HeaderText = "30";
+            this.d30.Name = "d30";
+            this.d30.Width = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 682);
+            this.ClientSize = new System.Drawing.Size(1035, 682);
+            this.Controls.Add(this.panelAttendance);
             this.Controls.Add(this.panelSourceEvaluation);
             this.Controls.Add(this.panelUpdateEmployee);
             this.Controls.Add(this.panelNewEmployee);
@@ -4551,6 +4837,8 @@
             this.panelSourceEvaluation.ResumeLayout(false);
             this.groupBox29.ResumeLayout(false);
             this.groupBox29.PerformLayout();
+            this.panelAttendance.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4929,6 +5217,40 @@
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.DateTimePicker dtpEvaluateFrom;
         private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.Panel panelAttendance;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d30;
 
 
 
