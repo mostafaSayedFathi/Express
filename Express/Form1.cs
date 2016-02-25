@@ -25,6 +25,8 @@ namespace Express
         private LocationClothesControl locationClothesControl;
         private LocationEquipsConrol locationEquipsConrol;
         private SourceControl sourceControl;
+        private AttendanceControl attendanceControl;
+        private AttendanceContentControl attendanceContentControl;
         private byte[] imageByte = null;
         private ArrayList listCheck = new ArrayList();
         private ArrayList listCheckDevices = new ArrayList();
@@ -57,6 +59,7 @@ namespace Express
             panelUpdateLocationCosts.Visible = false;
             panelUpdateEmployee.Visible = false;
             panelSourceEvaluation.Visible = false;
+            panelAttendance.Visible = false;
         }
 
         private void btnStartOperation_Click(object sender, EventArgs e)
@@ -222,6 +225,7 @@ namespace Express
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
+                panelAttendance.Visible = false;
                 employeeControl = new EmployeeControl();
                 locationControl = new LocationControl();
                 sourceControl = new SourceControl();
@@ -377,6 +381,7 @@ namespace Express
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
+                panelAttendance.Visible = false;
                 applicationControl = new ApplicationControl();
                 //InitializeComponent();
                 applicationControl.fillComboboxSex(comboBoxAppSex);
@@ -845,6 +850,7 @@ namespace Express
             panelUpdateLocationCosts.Visible = false;
             panelUpdateEmployee.Visible = false;
             panelSourceEvaluation.Visible = false;
+            panelAttendance.Visible = false;
         }
 
         private void تعديلToolStripMenuItem_Click(object sender, EventArgs e)
@@ -865,6 +871,7 @@ namespace Express
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
+                panelAttendance.Visible = false;
                 clothesStoreControl = new ClothesStoreControl();
                 clothesStoreControl.fillListViewClothesStore(listViewUpdateClothesStore);
                 txtUpdateTotalAllClothesStore.Text = clothesStoreControl.totalAllUpdate(listViewUpdateClothesStore).ToString();
@@ -974,6 +981,7 @@ namespace Express
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
+                panelAttendance.Visible = false;
                 clothesStoreControl = new ClothesStoreControl();
                 clothesStoreControl.fillListViewClothesStore(listViewDeleteClotheStore);
             }
@@ -1241,6 +1249,7 @@ namespace Express
             panelUpdateLocationCosts.Visible = false;
             panelUpdateEmployee.Visible = false;
             panelSourceEvaluation.Visible = false;
+            panelAttendance.Visible = false;
         }
 
         private void txtUpdateDevicePrice_TextChanged(object sender, EventArgs e)
@@ -1352,6 +1361,7 @@ namespace Express
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
+                panelAttendance.Visible = false;
                 devicesStoreControl = new DevicesStoreControl();
                 devicesStoreControl.fillListViewDevicesStore(listViewUpdateDeviceStore);
                 txtUpdateAllTotalDeviceStore.Text = devicesStoreControl.totalAllUpdate(listViewUpdateDeviceStore).ToString();
@@ -1507,6 +1517,7 @@ namespace Express
             panelUpdateLocationCosts.Visible = false;
             panelUpdateEmployee.Visible = false;
             panelSourceEvaluation.Visible = false;
+            panelAttendance.Visible = false;
         }
 
         private void تعديلToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -1524,6 +1535,7 @@ namespace Express
             panelUpdateLocation.Visible = true;
             panelUpdateEmployee.Visible = false;
             panelSourceEvaluation.Visible = false;
+            panelAttendance.Visible = false;
             locationControl = new LocationControl();
             locationControl.fillComboboxLocationName(comboBoxUpdateLocationName);
         }
@@ -1546,6 +1558,7 @@ namespace Express
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
+                panelAttendance.Visible = false;
                 locationControl = new LocationControl();
                 locationControl.fillComboboxLocationName(comboBoxLocationName);
             }
@@ -1573,6 +1586,7 @@ namespace Express
                 panelUpdateLocationCosts.Visible = true;
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
+                panelAttendance.Visible = false;
                 locationControl = new LocationControl();
                 devicesStoreControl = new DevicesStoreControl();
                 clothesStoreControl = new ClothesStoreControl();
@@ -2130,6 +2144,7 @@ namespace Express
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = true;
                 panelSourceEvaluation.Visible = false;
+                panelAttendance.Visible = false;
                 sourceControl = new SourceControl();
                 locationControl = new LocationControl();
                 locationControl.fillComboboxLocationNameReady(ComboBoxUpdateEmployeeLocation);
@@ -2389,17 +2404,92 @@ namespace Express
             }
         }
 
-        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void حضوروانصرافToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentCell.Value.ToString() != "p")
+            try
             {
-                MessageBox.Show("Error");
-                dataGridView1.CurrentCell.Value = "";
-                dataGridView1.AllowUserToAddRows = false;
+                panelNewEmployee.Visible = false;
+                panelNewLocation.Visible = false;
+                panelLocationCosts.Visible = false;
+                PanelNewApplication.Visible = false;
+                PanelUpdateClotheStore.Visible = false;
+                PanelAddClothe.Visible = false;
+                PanelDeleteFromclothesStore.Visible = false;
+                PanelAddDevices.Visible = false;
+                PanelUpdateDeviceStore.Visible = false;
+                PanelDeleteFromDevicesStore.Visible = false;
+                panelUpdateLocation.Visible = false;
+                panelUpdateLocationCosts.Visible = false;
+                panelUpdateEmployee.Visible = false;
+                panelSourceEvaluation.Visible = false;
+                panelAttendance.Visible = true;
+                locationControl = new LocationControl();
+                locationControl.fillComboboxLocationNameReady(comboBoxAttendanceLocationName);
+                domainUpDownAttendanceMonth.Text = DateTime.Now.Month.ToString();
+                domainUpDownAttendanceYear.Text = DateTime.Now.Year.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void comboBoxAttendanceLocationName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                locationControl = new LocationControl();
+                string locationName = comboBoxAttendanceLocationName.Text;
+                
+                locationControl.fillDataGridViewLocationAttendance(dataGridViewAttendance, locationName);
+                dataGridViewAttendance.Columns[0].HeaderText = "الكود";
+                dataGridViewAttendance.Columns[0].Width = 50;
+                dataGridViewAttendance.Columns[1].HeaderText = "الأسم";
+                dataGridViewAttendance.Columns[1].Width = 160;
+                for (int i = 2; i < 33; i++)
+                {
+                    dataGridViewAttendance.Columns[i].HeaderText = (i - 1).ToString(); ;
+                    dataGridViewAttendance.Columns[i].Width = 22;
+                }
+                //disable autogenerating new rows automatically
+                dataGridViewAttendance.AllowUserToAddRows = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSaveAttendance_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxAttendanceLocationName.Text == "")
+                {
+                    MessageBox.Show("من فضلك اختر اسم الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    employeeControl = new EmployeeControl();
+                    applicationControl = new ApplicationControl();
+                    attendanceContentControl = new AttendanceContentControl();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dataGridViewAttendance_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewAttendance.SelectedCells[0].Value.ToString() == "p" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "2p" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "3p" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "a" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "2a" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "3a" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "s" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "2s" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "3s" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "l" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "2l" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "3l" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "o" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "2o" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "3o")
+            {
             }
             else
             {
-                dataGridView1.AllowUserToAddRows = true;
+                MessageBox.Show("خطأ", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dataGridViewAttendance.SelectedCells[0].Value = "";
             }
         }
 

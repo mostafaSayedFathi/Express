@@ -55,6 +55,12 @@
     <Compile Include="ApplicationControl.cs" />
     <Compile Include="ApplicationDB.cs" />
     <Compile Include="ApplicationForm.cs" />
+    <Compile Include="Attendance.cs" />
+    <Compile Include="AttendanceContent.cs" />
+    <Compile Include="AttendanceContentControl.cs" />
+    <Compile Include="AttendanceContentDB.cs" />
+    <Compile Include="AttendanceControl.cs" />
+    <Compile Include="AttendanceDB.cs" />
     <Compile Include="ClothesStore.cs" />
     <Compile Include="ClothesStoreControl.cs" />
     <Compile Include="ClothesStoreDB.cs" />

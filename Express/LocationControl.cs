@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data;
 
 class LocationControl
 {
@@ -231,5 +232,16 @@ class LocationControl
         location.setID(ID);
         locationDB.selectLocationName(location);
         return location.getName();
+    }
+
+    public void fillDataGridViewLocationAttendance(DataGridView dataGridView , string locationName)
+    {
+        location = new Location();
+        locationDB = new LocationDB();
+        this.getLocationID(locationName);
+        SqlDataAdapter adapter = locationDB.fillDataGridViewLocationAttendance(location);
+        DataTable dataTable = new DataTable();
+        adapter.Fill(dataTable);
+        dataGridView.DataSource = dataTable;
     }
 }

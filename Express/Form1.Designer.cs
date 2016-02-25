@@ -402,39 +402,18 @@
             this.comboBoxEvaluateSourceName = new System.Windows.Forms.ComboBox();
             this.label107 = new System.Windows.Forms.Label();
             this.panelAttendance = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.d30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewAttendance = new System.Windows.Forms.DataGridView();
+            this.comboBoxAttendanceLocationName = new System.Windows.Forms.ComboBox();
+            this.label111 = new System.Windows.Forms.Label();
+            this.domainUpDownAttendanceYear = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDownAttendanceMonth = new System.Windows.Forms.DomainUpDown();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.حضوروانصرافToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSaveAttendance = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panelNewLocation.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -481,7 +460,8 @@
             this.panelSourceEvaluation.SuspendLayout();
             this.groupBox29.SuspendLayout();
             this.panelAttendance.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox30.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -497,7 +477,9 @@
             this.toolStripSeparator3,
             this.toolStripDropDownButton4,
             this.toolStripSeparator4,
-            this.toolStripDropDownButton5});
+            this.toolStripDropDownButton5,
+            this.toolStripSeparator5,
+            this.toolStripDropDownButton6});
             this.toolStrip1.Location = new System.Drawing.Point(919, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(99, 817);
@@ -524,7 +506,7 @@
             this.اضافةبياناتToolStripMenuItem,
             this.تعديلToolStripMenuItem2});
             this.موقعجديدToolStripMenuItem.Name = "موقعجديدToolStripMenuItem";
-            this.موقعجديدToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.موقعجديدToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.موقعجديدToolStripMenuItem.Text = "المواقع";
             // 
             // اضافةبياناتToolStripMenuItem
@@ -547,7 +529,7 @@
             this.اضافةتكاليفموقعToolStripMenuItem,
             this.تعديلتكاليفموقعToolStripMenuItem});
             this.التكاليفToolStripMenuItem.Name = "التكاليفToolStripMenuItem";
-            this.التكاليفToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.التكاليفToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.التكاليفToolStripMenuItem.Text = "تكاليف الموقع";
             this.التكاليفToolStripMenuItem.Click += new System.EventHandler(this.التكاليفToolStripMenuItem_Click);
             // 
@@ -4484,252 +4466,156 @@
             // 
             // panelAttendance
             // 
-            this.panelAttendance.Controls.Add(this.dataGridView1);
+            this.panelAttendance.Controls.Add(this.dataGridViewAttendance);
+            this.panelAttendance.Controls.Add(this.groupBox30);
             this.panelAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAttendance.Location = new System.Drawing.Point(0, 0);
             this.panelAttendance.Name = "panelAttendance";
             this.panelAttendance.Size = new System.Drawing.Size(919, 817);
             this.panelAttendance.TabIndex = 59;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.code,
-            this.name,
-            this.d1,
-            this.d2,
-            this.d3,
-            this.d4,
-            this.d5,
-            this.d6,
-            this.d7,
-            this.d8,
-            this.d9,
-            this.d10,
-            this.d11,
-            this.d12,
-            this.d13,
-            this.d14,
-            this.d15,
-            this.d16,
-            this.d17,
-            this.d18,
-            this.d19,
-            this.d20,
-            this.d21,
-            this.d22,
-            this.d23,
-            this.d24,
-            this.d25,
-            this.d26,
-            this.d27,
-            this.d28,
-            this.d29,
-            this.d30});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView1.Size = new System.Drawing.Size(919, 817);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
-            // 
-            // code
-            // 
-            this.code.HeaderText = "الكود";
-            this.code.Name = "code";
-            this.code.Width = 50;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "الأسم";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.name.Width = 240;
-            // 
-            // d1
-            // 
-            this.d1.HeaderText = "1";
-            this.d1.Name = "d1";
-            this.d1.Width = 20;
-            // 
-            // d2
-            // 
-            this.d2.HeaderText = "2";
-            this.d2.Name = "d2";
-            this.d2.Width = 20;
-            // 
-            // d3
-            // 
-            this.d3.HeaderText = "3";
-            this.d3.Name = "d3";
-            this.d3.Width = 20;
-            // 
-            // d4
-            // 
-            this.d4.HeaderText = "4";
-            this.d4.Name = "d4";
-            this.d4.Width = 20;
-            // 
-            // d5
-            // 
-            this.d5.HeaderText = "5";
-            this.d5.Name = "d5";
-            this.d5.Width = 20;
-            // 
-            // d6
-            // 
-            this.d6.HeaderText = "6";
-            this.d6.Name = "d6";
-            this.d6.Width = 20;
-            // 
-            // d7
-            // 
-            this.d7.HeaderText = "7";
-            this.d7.Name = "d7";
-            this.d7.Width = 20;
-            // 
-            // d8
-            // 
-            this.d8.HeaderText = "8";
-            this.d8.Name = "d8";
-            this.d8.Width = 20;
-            // 
-            // d9
-            // 
-            this.d9.HeaderText = "9";
-            this.d9.Name = "d9";
-            this.d9.Width = 20;
-            // 
-            // d10
-            // 
-            this.d10.HeaderText = "10";
-            this.d10.Name = "d10";
-            this.d10.Width = 20;
-            // 
-            // d11
-            // 
-            this.d11.HeaderText = "11";
-            this.d11.Name = "d11";
-            this.d11.Width = 20;
-            // 
-            // d12
-            // 
-            this.d12.HeaderText = "12";
-            this.d12.Name = "d12";
-            this.d12.Width = 20;
-            // 
-            // d13
-            // 
-            this.d13.HeaderText = "13";
-            this.d13.Name = "d13";
-            this.d13.Width = 20;
-            // 
-            // d14
-            // 
-            this.d14.HeaderText = "14";
-            this.d14.Name = "d14";
-            this.d14.Width = 20;
-            // 
-            // d15
-            // 
-            this.d15.HeaderText = "15";
-            this.d15.Name = "d15";
-            this.d15.Width = 20;
-            // 
-            // d16
-            // 
-            this.d16.HeaderText = "16";
-            this.d16.Name = "d16";
-            this.d16.Width = 20;
-            // 
-            // d17
-            // 
-            this.d17.HeaderText = "17";
-            this.d17.Name = "d17";
-            this.d17.Width = 20;
-            // 
-            // d18
-            // 
-            this.d18.HeaderText = "18";
-            this.d18.Name = "d18";
-            this.d18.Width = 20;
-            // 
-            // d19
-            // 
-            this.d19.HeaderText = "19";
-            this.d19.Name = "d19";
-            this.d19.Width = 20;
-            // 
-            // d20
-            // 
-            this.d20.HeaderText = "20";
-            this.d20.Name = "d20";
-            this.d20.Width = 20;
-            // 
-            // d21
-            // 
-            this.d21.HeaderText = "21";
-            this.d21.Name = "d21";
-            this.d21.Width = 20;
-            // 
-            // d22
-            // 
-            this.d22.HeaderText = "22";
-            this.d22.Name = "d22";
-            this.d22.Width = 20;
-            // 
-            // d23
-            // 
-            this.d23.HeaderText = "23";
-            this.d23.Name = "d23";
-            this.d23.Width = 20;
-            // 
-            // d24
-            // 
-            this.d24.HeaderText = "24";
-            this.d24.Name = "d24";
-            this.d24.Width = 20;
-            // 
-            // d25
-            // 
-            this.d25.HeaderText = "25";
-            this.d25.Name = "d25";
-            this.d25.Width = 20;
-            // 
-            // d26
-            // 
-            this.d26.HeaderText = "26";
-            this.d26.Name = "d26";
-            this.d26.Width = 20;
-            // 
-            // d27
-            // 
-            this.d27.HeaderText = "27";
-            this.d27.Name = "d27";
-            this.d27.Width = 20;
-            // 
-            // d28
-            // 
-            this.d28.HeaderText = "28";
-            this.d28.Name = "d28";
-            this.d28.Width = 20;
-            // 
-            // d29
-            // 
-            this.d29.HeaderText = "29";
-            this.d29.Name = "d29";
-            this.d29.Width = 20;
-            // 
-            // d30
-            // 
-            this.d30.HeaderText = "30";
-            this.d30.Name = "d30";
-            this.d30.Width = 20;
+            // groupBox30
+            // 
+            this.groupBox30.Controls.Add(this.btnSaveAttendance);
+            this.groupBox30.Controls.Add(this.label113);
+            this.groupBox30.Controls.Add(this.label112);
+            this.groupBox30.Controls.Add(this.domainUpDownAttendanceMonth);
+            this.groupBox30.Controls.Add(this.domainUpDownAttendanceYear);
+            this.groupBox30.Controls.Add(this.comboBoxAttendanceLocationName);
+            this.groupBox30.Controls.Add(this.label111);
+            this.groupBox30.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox30.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox30.Location = new System.Drawing.Point(0, 0);
+            this.groupBox30.Name = "groupBox30";
+            this.groupBox30.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox30.Size = new System.Drawing.Size(919, 100);
+            this.groupBox30.TabIndex = 1;
+            this.groupBox30.TabStop = false;
+            this.groupBox30.Text = "بيانات الموقع";
+            // 
+            // dataGridViewAttendance
+            // 
+            this.dataGridViewAttendance.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewAttendance.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridViewAttendance.Location = new System.Drawing.Point(0, 100);
+            this.dataGridViewAttendance.Name = "dataGridViewAttendance";
+            this.dataGridViewAttendance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dataGridViewAttendance.Size = new System.Drawing.Size(919, 717);
+            this.dataGridViewAttendance.TabIndex = 2;
+            this.dataGridViewAttendance.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAttendance_CellEndEdit);
+            // 
+            // comboBoxAttendanceLocationName
+            // 
+            this.comboBoxAttendanceLocationName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAttendanceLocationName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBoxAttendanceLocationName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxAttendanceLocationName.FormattingEnabled = true;
+            this.comboBoxAttendanceLocationName.Location = new System.Drawing.Point(526, 40);
+            this.comboBoxAttendanceLocationName.Name = "comboBoxAttendanceLocationName";
+            this.comboBoxAttendanceLocationName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboBoxAttendanceLocationName.Size = new System.Drawing.Size(294, 27);
+            this.comboBoxAttendanceLocationName.TabIndex = 51;
+            this.comboBoxAttendanceLocationName.SelectedIndexChanged += new System.EventHandler(this.comboBoxAttendanceLocationName_SelectedIndexChanged);
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label111.Location = new System.Drawing.Point(826, 46);
+            this.label111.Name = "label111";
+            this.label111.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label111.Size = new System.Drawing.Size(47, 16);
+            this.label111.TabIndex = 52;
+            this.label111.Text = "الموقع:";
+            // 
+            // domainUpDownAttendanceYear
+            // 
+            this.domainUpDownAttendanceYear.Enabled = false;
+            this.domainUpDownAttendanceYear.Location = new System.Drawing.Point(255, 58);
+            this.domainUpDownAttendanceYear.Name = "domainUpDownAttendanceYear";
+            this.domainUpDownAttendanceYear.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.domainUpDownAttendanceYear.Size = new System.Drawing.Size(93, 26);
+            this.domainUpDownAttendanceYear.TabIndex = 53;
+            // 
+            // domainUpDownAttendanceMonth
+            // 
+            this.domainUpDownAttendanceMonth.Items.Add("1");
+            this.domainUpDownAttendanceMonth.Items.Add("2");
+            this.domainUpDownAttendanceMonth.Items.Add("3");
+            this.domainUpDownAttendanceMonth.Items.Add("4");
+            this.domainUpDownAttendanceMonth.Items.Add("5");
+            this.domainUpDownAttendanceMonth.Items.Add("6");
+            this.domainUpDownAttendanceMonth.Items.Add("7");
+            this.domainUpDownAttendanceMonth.Items.Add("8");
+            this.domainUpDownAttendanceMonth.Items.Add("9");
+            this.domainUpDownAttendanceMonth.Items.Add("10");
+            this.domainUpDownAttendanceMonth.Items.Add("11");
+            this.domainUpDownAttendanceMonth.Items.Add("12");
+            this.domainUpDownAttendanceMonth.Location = new System.Drawing.Point(255, 26);
+            this.domainUpDownAttendanceMonth.Name = "domainUpDownAttendanceMonth";
+            this.domainUpDownAttendanceMonth.ReadOnly = true;
+            this.domainUpDownAttendanceMonth.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.domainUpDownAttendanceMonth.Size = new System.Drawing.Size(93, 26);
+            this.domainUpDownAttendanceMonth.TabIndex = 54;
+            // 
+            // label112
+            // 
+            this.label112.AutoSize = true;
+            this.label112.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label112.Location = new System.Drawing.Point(354, 30);
+            this.label112.Name = "label112";
+            this.label112.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label112.Size = new System.Drawing.Size(38, 16);
+            this.label112.TabIndex = 55;
+            this.label112.Text = "شهر:";
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label113.Location = new System.Drawing.Point(354, 62);
+            this.label113.Name = "label113";
+            this.label113.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label113.Size = new System.Drawing.Size(38, 16);
+            this.label113.TabIndex = 56;
+            this.label113.Text = "سنة:";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(97, 6);
+            // 
+            // toolStripDropDownButton6
+            // 
+            this.toolStripDropDownButton6.AutoSize = false;
+            this.toolStripDropDownButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton6.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.حضوروانصرافToolStripMenuItem});
+            this.toolStripDropDownButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton6.Image")));
+            this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
+            this.toolStripDropDownButton6.Size = new System.Drawing.Size(80, 80);
+            this.toolStripDropDownButton6.Text = "حضور و انصراف";
+            // 
+            // حضوروانصرافToolStripMenuItem
+            // 
+            this.حضوروانصرافToolStripMenuItem.Name = "حضوروانصرافToolStripMenuItem";
+            this.حضوروانصرافToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.حضوروانصرافToolStripMenuItem.Text = "حضور و انصراف المواقع";
+            this.حضوروانصرافToolStripMenuItem.Click += new System.EventHandler(this.حضوروانصرافToolStripMenuItem_Click);
+            // 
+            // btnSaveAttendance
+            // 
+            this.btnSaveAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSaveAttendance.Location = new System.Drawing.Point(49, 41);
+            this.btnSaveAttendance.Name = "btnSaveAttendance";
+            this.btnSaveAttendance.Size = new System.Drawing.Size(120, 29);
+            this.btnSaveAttendance.TabIndex = 57;
+            this.btnSaveAttendance.Text = "تسجيل";
+            this.btnSaveAttendance.UseVisualStyleBackColor = true;
+            this.btnSaveAttendance.Click += new System.EventHandler(this.btnSaveAttendance_Click);
             // 
             // Form1
             // 
@@ -4838,7 +4724,9 @@
             this.groupBox29.ResumeLayout(false);
             this.groupBox29.PerformLayout();
             this.panelAttendance.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox30.ResumeLayout(false);
+            this.groupBox30.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5218,39 +5106,18 @@
         private System.Windows.Forms.DateTimePicker dtpEvaluateFrom;
         private System.Windows.Forms.Label label108;
         private System.Windows.Forms.Panel panelAttendance;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d30;
+        private System.Windows.Forms.GroupBox groupBox30;
+        private System.Windows.Forms.DataGridView dataGridViewAttendance;
+        private System.Windows.Forms.Label label113;
+        private System.Windows.Forms.Label label112;
+        private System.Windows.Forms.DomainUpDown domainUpDownAttendanceMonth;
+        private System.Windows.Forms.DomainUpDown domainUpDownAttendanceYear;
+        private System.Windows.Forms.ComboBox comboBoxAttendanceLocationName;
+        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton6;
+        private System.Windows.Forms.ToolStripMenuItem حضوروانصرافToolStripMenuItem;
+        private System.Windows.Forms.Button btnSaveAttendance;
 
 
 
