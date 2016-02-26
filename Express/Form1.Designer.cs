@@ -199,7 +199,6 @@
             this.txtAppName = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
             this.btnChooseImageApp = new System.Windows.Forms.Button();
-            this.label52 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelAddClothe = new System.Windows.Forms.Panel();
             this.btnDeleteClothStore = new System.Windows.Forms.Button();
@@ -482,9 +481,9 @@
             this.toolStripDropDownButton5,
             this.toolStripSeparator5,
             this.toolStripDropDownButton6});
-            this.toolStrip1.Location = new System.Drawing.Point(953, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(885, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(99, 817);
+            this.toolStrip1.Size = new System.Drawing.Size(99, 687);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -759,7 +758,7 @@
             this.panelStart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelStart.Location = new System.Drawing.Point(0, 0);
             this.panelStart.Name = "panelStart";
-            this.panelStart.Size = new System.Drawing.Size(953, 817);
+            this.panelStart.Size = new System.Drawing.Size(885, 687);
             this.panelStart.TabIndex = 1;
             // 
             // panelNewLocation
@@ -772,7 +771,7 @@
             this.panelNewLocation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNewLocation.Location = new System.Drawing.Point(0, 0);
             this.panelNewLocation.Name = "panelNewLocation";
-            this.panelNewLocation.Size = new System.Drawing.Size(953, 817);
+            this.panelNewLocation.Size = new System.Drawing.Size(885, 687);
             this.panelNewLocation.TabIndex = 0;
             // 
             // groupBox8
@@ -784,7 +783,7 @@
             this.groupBox8.Location = new System.Drawing.Point(0, 423);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox8.Size = new System.Drawing.Size(953, 100);
+            this.groupBox8.Size = new System.Drawing.Size(885, 100);
             this.groupBox8.TabIndex = 12;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "ساعات العمل";
@@ -837,7 +836,7 @@
             this.groupBox3.Location = new System.Drawing.Point(0, 254);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(953, 169);
+            this.groupBox3.Size = new System.Drawing.Size(885, 169);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "عدد افراد التشغيل";
@@ -910,7 +909,7 @@
             this.groupBox2.Location = new System.Drawing.Point(0, 127);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(953, 127);
+            this.groupBox2.Size = new System.Drawing.Size(885, 127);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "فترة التعاقد";
@@ -966,7 +965,7 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(953, 127);
+            this.groupBox1.Size = new System.Drawing.Size(885, 127);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "بيانات الموقع";
@@ -1018,7 +1017,7 @@
             this.panelLocationCosts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLocationCosts.Location = new System.Drawing.Point(0, 0);
             this.panelLocationCosts.Name = "panelLocationCosts";
-            this.panelLocationCosts.Size = new System.Drawing.Size(953, 817);
+            this.panelLocationCosts.Size = new System.Drawing.Size(885, 687);
             this.panelLocationCosts.TabIndex = 11;
             // 
             // groupBox7
@@ -1038,7 +1037,7 @@
             this.groupBox7.Location = new System.Drawing.Point(0, 248);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox7.Size = new System.Drawing.Size(440, 569);
+            this.groupBox7.Size = new System.Drawing.Size(440, 439);
             this.groupBox7.TabIndex = 15;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "الأجهزة";
@@ -1189,10 +1188,10 @@
             this.groupBox5.Controls.Add(this.comboBoxCostClothesName);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(513, 248);
+            this.groupBox5.Location = new System.Drawing.Point(445, 248);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox5.Size = new System.Drawing.Size(440, 569);
+            this.groupBox5.Size = new System.Drawing.Size(440, 439);
             this.groupBox5.TabIndex = 14;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "الملابس";
@@ -1354,7 +1353,7 @@
             this.groupBox6.Location = new System.Drawing.Point(0, 90);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox6.Size = new System.Drawing.Size(953, 158);
+            this.groupBox6.Size = new System.Drawing.Size(885, 158);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "تكلفة الأفراد";
@@ -1563,7 +1562,7 @@
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox4.Size = new System.Drawing.Size(953, 90);
+            this.groupBox4.Size = new System.Drawing.Size(885, 90);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "تكلفة الفرد";
@@ -1647,7 +1646,7 @@
             this.panelNewEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNewEmployee.Location = new System.Drawing.Point(0, 0);
             this.panelNewEmployee.Name = "panelNewEmployee";
-            this.panelNewEmployee.Size = new System.Drawing.Size(953, 817);
+            this.panelNewEmployee.Size = new System.Drawing.Size(885, 687);
             this.panelNewEmployee.TabIndex = 24;
             // 
             // label36
@@ -1873,24 +1872,23 @@
             // 
             this.PanelNewApplication.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelNewApplication.Controls.Add(this.btnClossImageApplication);
-            this.PanelNewApplication.Controls.Add(this.btnAppAdd);
             this.PanelNewApplication.Controls.Add(this.groupBox9);
             this.PanelNewApplication.Controls.Add(this.groupBox10);
             this.PanelNewApplication.Controls.Add(this.dateTimePickerApplayDate);
             this.PanelNewApplication.Controls.Add(this.label41);
             this.PanelNewApplication.Controls.Add(this.groupBox11);
             this.PanelNewApplication.Controls.Add(this.btnChooseImageApp);
-            this.PanelNewApplication.Controls.Add(this.label52);
             this.PanelNewApplication.Controls.Add(this.pictureBox1);
+            this.PanelNewApplication.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelNewApplication.Location = new System.Drawing.Point(0, 0);
             this.PanelNewApplication.Name = "PanelNewApplication";
-            this.PanelNewApplication.Size = new System.Drawing.Size(885, 817);
+            this.PanelNewApplication.Size = new System.Drawing.Size(885, 687);
             this.PanelNewApplication.TabIndex = 25;
             // 
             // btnClossImageApplication
             // 
             this.btnClossImageApplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClossImageApplication.Location = new System.Drawing.Point(156, 37);
+            this.btnClossImageApplication.Location = new System.Drawing.Point(155, 11);
             this.btnClossImageApplication.Name = "btnClossImageApplication";
             this.btnClossImageApplication.Size = new System.Drawing.Size(30, 30);
             this.btnClossImageApplication.TabIndex = 22;
@@ -1901,10 +1899,10 @@
             // btnAppAdd
             // 
             this.btnAppAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAppAdd.Location = new System.Drawing.Point(215, 751);
+            this.btnAppAdd.Location = new System.Drawing.Point(29, 129);
             this.btnAppAdd.Name = "btnAppAdd";
             this.btnAppAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnAppAdd.Size = new System.Drawing.Size(482, 53);
+            this.btnAppAdd.Size = new System.Drawing.Size(216, 53);
             this.btnAppAdd.TabIndex = 21;
             this.btnAppAdd.Text = "إضافة طلب";
             this.btnAppAdd.UseVisualStyleBackColor = true;
@@ -1913,12 +1911,13 @@
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.label37);
+            this.groupBox9.Controls.Add(this.btnAppAdd);
             this.groupBox9.Controls.Add(this.richTextBoxAppComent);
             this.groupBox9.Controls.Add(this.radioButtonAppRejected);
             this.groupBox9.Controls.Add(this.radioButtonAppAccepted);
             this.groupBox9.Controls.Add(this.label38);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(3, 548);
+            this.groupBox9.Location = new System.Drawing.Point(11, 402);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox9.Size = new System.Drawing.Size(838, 197);
@@ -1938,9 +1937,9 @@
             // 
             // richTextBoxAppComent
             // 
-            this.richTextBoxAppComent.Location = new System.Drawing.Point(213, 73);
+            this.richTextBoxAppComent.Location = new System.Drawing.Point(400, 73);
             this.richTextBoxAppComent.Name = "richTextBoxAppComent";
-            this.richTextBoxAppComent.Size = new System.Drawing.Size(543, 114);
+            this.richTextBoxAppComent.Size = new System.Drawing.Size(356, 114);
             this.richTextBoxAppComent.TabIndex = 22;
             this.richTextBoxAppComent.Text = "";
             // 
@@ -1986,7 +1985,7 @@
             this.groupBox10.Controls.Add(this.txtAppSalary);
             this.groupBox10.Controls.Add(this.label40);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox10.Location = new System.Drawing.Point(3, 462);
+            this.groupBox10.Location = new System.Drawing.Point(12, 320);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox10.Size = new System.Drawing.Size(838, 80);
@@ -2036,7 +2035,7 @@
             // 
             this.dateTimePickerApplayDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerApplayDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerApplayDate.Location = new System.Drawing.Point(634, 243);
+            this.dateTimePickerApplayDate.Location = new System.Drawing.Point(690, 11);
             this.dateTimePickerApplayDate.Name = "dateTimePickerApplayDate";
             this.dateTimePickerApplayDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateTimePickerApplayDate.RightToLeftLayout = true;
@@ -2047,7 +2046,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(772, 248);
+            this.label41.Location = new System.Drawing.Point(828, 16);
             this.label41.Name = "label41";
             this.label41.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label41.Size = new System.Drawing.Size(49, 20);
@@ -2077,7 +2076,7 @@
             this.groupBox11.Controls.Add(this.txtAppName);
             this.groupBox11.Controls.Add(this.label51);
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox11.Location = new System.Drawing.Point(3, 275);
+            this.groupBox11.Location = new System.Drawing.Point(12, 133);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox11.Size = new System.Drawing.Size(838, 181);
@@ -2281,7 +2280,7 @@
             // btnChooseImageApp
             // 
             this.btnChooseImageApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChooseImageApp.Location = new System.Drawing.Point(19, 182);
+            this.btnChooseImageApp.Location = new System.Drawing.Point(141, 95);
             this.btnChooseImageApp.Name = "btnChooseImageApp";
             this.btnChooseImageApp.Size = new System.Drawing.Size(131, 32);
             this.btnChooseImageApp.TabIndex = 2;
@@ -2289,22 +2288,12 @@
             this.btnChooseImageApp.UseVisualStyleBackColor = true;
             this.btnChooseImageApp.Click += new System.EventHandler(this.btnChooseImageApp_Click);
             // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(323, 54);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(154, 42);
-            this.label52.TabIndex = 1;
-            this.label52.Text = "طلب وظيفة";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 37);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 139);
+            this.pictureBox1.Size = new System.Drawing.Size(116, 116);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -2316,9 +2305,10 @@
             this.PanelAddClothe.Controls.Add(this.ListViewClothesStore);
             this.PanelAddClothe.Controls.Add(this.groupBox12);
             this.PanelAddClothe.Controls.Add(this.groupBox13);
+            this.PanelAddClothe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelAddClothe.Location = new System.Drawing.Point(0, 0);
             this.PanelAddClothe.Name = "PanelAddClothe";
-            this.PanelAddClothe.Size = new System.Drawing.Size(885, 817);
+            this.PanelAddClothe.Size = new System.Drawing.Size(885, 687);
             this.PanelAddClothe.TabIndex = 26;
             // 
             // btnDeleteClothStore
@@ -2508,9 +2498,10 @@
             this.PanelUpdateClotheStore.Controls.Add(this.listViewUpdateClothesStore);
             this.PanelUpdateClotheStore.Controls.Add(this.groupBox14);
             this.PanelUpdateClotheStore.Controls.Add(this.groupBox15);
+            this.PanelUpdateClotheStore.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelUpdateClotheStore.Location = new System.Drawing.Point(0, 0);
             this.PanelUpdateClotheStore.Name = "PanelUpdateClotheStore";
-            this.PanelUpdateClotheStore.Size = new System.Drawing.Size(885, 817);
+            this.PanelUpdateClotheStore.Size = new System.Drawing.Size(885, 687);
             this.PanelUpdateClotheStore.TabIndex = 27;
             // 
             // btnUpdateClothesStore
@@ -2678,9 +2669,10 @@
             this.PanelDeleteFromclothesStore.Controls.Add(this.label61);
             this.PanelDeleteFromclothesStore.Controls.Add(this.btnDeleteFromStors);
             this.PanelDeleteFromclothesStore.Controls.Add(this.listViewDeleteClotheStore);
+            this.PanelDeleteFromclothesStore.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelDeleteFromclothesStore.Location = new System.Drawing.Point(0, 0);
             this.PanelDeleteFromclothesStore.Name = "PanelDeleteFromclothesStore";
-            this.PanelDeleteFromclothesStore.Size = new System.Drawing.Size(885, 817);
+            this.PanelDeleteFromclothesStore.Size = new System.Drawing.Size(885, 687);
             this.PanelDeleteFromclothesStore.TabIndex = 28;
             // 
             // label61
@@ -2755,9 +2747,10 @@
             this.PanelAddDevices.Controls.Add(this.ListViewDeviceStore);
             this.PanelAddDevices.Controls.Add(this.groupBox16);
             this.PanelAddDevices.Controls.Add(this.groupBox17);
+            this.PanelAddDevices.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelAddDevices.Location = new System.Drawing.Point(0, 0);
             this.PanelAddDevices.Name = "PanelAddDevices";
-            this.PanelAddDevices.Size = new System.Drawing.Size(885, 817);
+            this.PanelAddDevices.Size = new System.Drawing.Size(885, 687);
             this.PanelAddDevices.TabIndex = 29;
             // 
             // btnDeleteAlItemsDeviceStore
@@ -2948,9 +2941,10 @@
             this.PanelUpdateDeviceStore.Controls.Add(this.listViewUpdateDeviceStore);
             this.PanelUpdateDeviceStore.Controls.Add(this.groupBox18);
             this.PanelUpdateDeviceStore.Controls.Add(this.groupBox19);
+            this.PanelUpdateDeviceStore.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelUpdateDeviceStore.Location = new System.Drawing.Point(0, 0);
             this.PanelUpdateDeviceStore.Name = "PanelUpdateDeviceStore";
-            this.PanelUpdateDeviceStore.Size = new System.Drawing.Size(885, 817);
+            this.PanelUpdateDeviceStore.Size = new System.Drawing.Size(885, 687);
             this.PanelUpdateDeviceStore.TabIndex = 30;
             // 
             // btnUpdateDeviceStore
@@ -3120,9 +3114,10 @@
             this.PanelDeleteFromDevicesStore.Controls.Add(this.label70);
             this.PanelDeleteFromDevicesStore.Controls.Add(this.btnDeleteFromDevicesStore);
             this.PanelDeleteFromDevicesStore.Controls.Add(this.listViewDeleteDevicesStoree);
+            this.PanelDeleteFromDevicesStore.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelDeleteFromDevicesStore.Location = new System.Drawing.Point(0, 0);
             this.PanelDeleteFromDevicesStore.Name = "PanelDeleteFromDevicesStore";
-            this.PanelDeleteFromDevicesStore.Size = new System.Drawing.Size(885, 817);
+            this.PanelDeleteFromDevicesStore.Size = new System.Drawing.Size(885, 687);
             this.PanelDeleteFromDevicesStore.TabIndex = 31;
             // 
             // label70
@@ -3199,7 +3194,7 @@
             this.panelUpdateLocation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateLocation.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateLocation.Name = "panelUpdateLocation";
-            this.panelUpdateLocation.Size = new System.Drawing.Size(953, 817);
+            this.panelUpdateLocation.Size = new System.Drawing.Size(885, 687);
             this.panelUpdateLocation.TabIndex = 32;
             // 
             // groupBox20
@@ -3211,7 +3206,7 @@
             this.groupBox20.Location = new System.Drawing.Point(0, 523);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox20.Size = new System.Drawing.Size(953, 100);
+            this.groupBox20.Size = new System.Drawing.Size(885, 100);
             this.groupBox20.TabIndex = 17;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "ساعات العمل";
@@ -3264,7 +3259,7 @@
             this.groupBox21.Location = new System.Drawing.Point(0, 354);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox21.Size = new System.Drawing.Size(953, 169);
+            this.groupBox21.Size = new System.Drawing.Size(885, 169);
             this.groupBox21.TabIndex = 16;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "عدد افراد التشغيل";
@@ -3337,7 +3332,7 @@
             this.groupBox22.Location = new System.Drawing.Point(0, 227);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox22.Size = new System.Drawing.Size(953, 127);
+            this.groupBox22.Size = new System.Drawing.Size(885, 127);
             this.groupBox22.TabIndex = 15;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "فترة التعاقد";
@@ -3393,7 +3388,7 @@
             this.groupBox23.Location = new System.Drawing.Point(0, 100);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox23.Size = new System.Drawing.Size(953, 127);
+            this.groupBox23.Size = new System.Drawing.Size(885, 127);
             this.groupBox23.TabIndex = 14;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "بيانات الموقع";
@@ -3445,7 +3440,7 @@
             this.groupBox24.Location = new System.Drawing.Point(0, 0);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox24.Size = new System.Drawing.Size(953, 100);
+            this.groupBox24.Size = new System.Drawing.Size(885, 100);
             this.groupBox24.TabIndex = 0;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "الموقع";
@@ -3481,7 +3476,7 @@
             this.panelUpdateLocationCosts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateLocationCosts.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateLocationCosts.Name = "panelUpdateLocationCosts";
-            this.panelUpdateLocationCosts.Size = new System.Drawing.Size(953, 817);
+            this.panelUpdateLocationCosts.Size = new System.Drawing.Size(885, 687);
             this.panelUpdateLocationCosts.TabIndex = 33;
             // 
             // groupBox25
@@ -3502,7 +3497,7 @@
             this.groupBox25.Location = new System.Drawing.Point(0, 248);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox25.Size = new System.Drawing.Size(440, 569);
+            this.groupBox25.Size = new System.Drawing.Size(440, 439);
             this.groupBox25.TabIndex = 19;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "الأجهزة";
@@ -3671,10 +3666,10 @@
             this.groupBox26.Controls.Add(this.comboBoxUpdateCostClothesName);
             this.groupBox26.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox26.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox26.Location = new System.Drawing.Point(513, 248);
+            this.groupBox26.Location = new System.Drawing.Point(445, 248);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox26.Size = new System.Drawing.Size(440, 569);
+            this.groupBox26.Size = new System.Drawing.Size(440, 439);
             this.groupBox26.TabIndex = 18;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "الملابس";
@@ -3853,7 +3848,7 @@
             this.groupBox27.Location = new System.Drawing.Point(0, 90);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox27.Size = new System.Drawing.Size(953, 158);
+            this.groupBox27.Size = new System.Drawing.Size(885, 158);
             this.groupBox27.TabIndex = 17;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "تكلفة الأفراد";
@@ -4069,7 +4064,7 @@
             this.groupBox28.Location = new System.Drawing.Point(0, 0);
             this.groupBox28.Name = "groupBox28";
             this.groupBox28.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox28.Size = new System.Drawing.Size(953, 90);
+            this.groupBox28.Size = new System.Drawing.Size(885, 90);
             this.groupBox28.TabIndex = 16;
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "الموقع";
@@ -4132,7 +4127,7 @@
             this.panelUpdateEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateEmployee.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateEmployee.Name = "panelUpdateEmployee";
-            this.panelUpdateEmployee.Size = new System.Drawing.Size(953, 817);
+            this.panelUpdateEmployee.Size = new System.Drawing.Size(885, 687);
             this.panelUpdateEmployee.TabIndex = 35;
             // 
             // btnupdateEmployeeCancel
@@ -4367,7 +4362,7 @@
             this.panelSourceEvaluation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSourceEvaluation.Location = new System.Drawing.Point(0, 0);
             this.panelSourceEvaluation.Name = "panelSourceEvaluation";
-            this.panelSourceEvaluation.Size = new System.Drawing.Size(953, 817);
+            this.panelSourceEvaluation.Size = new System.Drawing.Size(885, 687);
             this.panelSourceEvaluation.TabIndex = 55;
             // 
             // listViewEvaluate
@@ -4384,7 +4379,7 @@
             this.listViewEvaluate.Name = "listViewEvaluate";
             this.listViewEvaluate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.listViewEvaluate.RightToLeftLayout = true;
-            this.listViewEvaluate.Size = new System.Drawing.Size(953, 635);
+            this.listViewEvaluate.Size = new System.Drawing.Size(885, 505);
             this.listViewEvaluate.TabIndex = 52;
             this.listViewEvaluate.UseCompatibleStateImageBehavior = false;
             this.listViewEvaluate.View = System.Windows.Forms.View.Details;
@@ -4424,7 +4419,7 @@
             this.groupBox29.Location = new System.Drawing.Point(0, 0);
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox29.Size = new System.Drawing.Size(953, 182);
+            this.groupBox29.Size = new System.Drawing.Size(885, 182);
             this.groupBox29.TabIndex = 51;
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "البيانات";
@@ -4528,7 +4523,7 @@
             this.panelAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAttendance.Location = new System.Drawing.Point(0, 0);
             this.panelAttendance.Name = "panelAttendance";
-            this.panelAttendance.Size = new System.Drawing.Size(953, 817);
+            this.panelAttendance.Size = new System.Drawing.Size(885, 687);
             this.panelAttendance.TabIndex = 59;
             // 
             // dataGridViewAttendance
@@ -4540,7 +4535,7 @@
             this.dataGridViewAttendance.Location = new System.Drawing.Point(0, 100);
             this.dataGridViewAttendance.Name = "dataGridViewAttendance";
             this.dataGridViewAttendance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridViewAttendance.Size = new System.Drawing.Size(953, 717);
+            this.dataGridViewAttendance.Size = new System.Drawing.Size(885, 587);
             this.dataGridViewAttendance.TabIndex = 2;
             this.dataGridViewAttendance.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAttendance_CellEndEdit);
             // 
@@ -4558,7 +4553,7 @@
             this.groupBox30.Location = new System.Drawing.Point(0, 0);
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox30.Size = new System.Drawing.Size(953, 100);
+            this.groupBox30.Size = new System.Drawing.Size(885, 100);
             this.groupBox30.TabIndex = 1;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "بيانات الموقع";
@@ -4655,21 +4650,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1069, 687);
+            this.ClientSize = new System.Drawing.Size(984, 687);
+            this.Controls.Add(this.PanelAddClothe);
+            this.Controls.Add(this.PanelNewApplication);
+            this.Controls.Add(this.PanelDeleteFromclothesStore);
+            this.Controls.Add(this.PanelDeleteFromDevicesStore);
+            this.Controls.Add(this.PanelUpdateClotheStore);
+            this.Controls.Add(this.PanelAddDevices);
+            this.Controls.Add(this.PanelUpdateDeviceStore);
+            this.Controls.Add(this.panelUpdateLocationCosts);
             this.Controls.Add(this.panelLocationCosts);
             this.Controls.Add(this.panelAttendance);
             this.Controls.Add(this.panelSourceEvaluation);
             this.Controls.Add(this.panelUpdateEmployee);
             this.Controls.Add(this.panelNewEmployee);
             this.Controls.Add(this.panelUpdateLocation);
-            this.Controls.Add(this.panelUpdateLocationCosts);
-            this.Controls.Add(this.PanelDeleteFromDevicesStore);
-            this.Controls.Add(this.PanelUpdateDeviceStore);
-            this.Controls.Add(this.PanelAddDevices);
-            this.Controls.Add(this.PanelDeleteFromclothesStore);
-            this.Controls.Add(this.PanelUpdateClotheStore);
-            this.Controls.Add(this.PanelAddClothe);
-            this.Controls.Add(this.PanelNewApplication);
             this.Controls.Add(this.panelNewLocation);
             this.Controls.Add(this.panelStart);
             this.Controls.Add(this.toolStrip1);
@@ -4922,7 +4917,6 @@
         private System.Windows.Forms.TextBox txtAppName;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Button btnChooseImageApp;
-        private System.Windows.Forms.Label label52;
         private System.Windows.Forms.PictureBox pictureBox1;
         internal System.Windows.Forms.Panel PanelAddClothe;
         internal System.Windows.Forms.Button btnDeleteClothStore;

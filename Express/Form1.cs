@@ -1782,6 +1782,7 @@ namespace Express
                     locationEquipsContentControl.deletedDevicesItems(deletedDevices, locationName);
                     deletedDevices.Clear();
                     deletedClothes.Clear();
+                    MessageBox.Show("تم تعديل بيانات التكلفة بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
