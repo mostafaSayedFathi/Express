@@ -43,6 +43,20 @@ namespace Express
             deletedDevices = new HashSet<string>();
         }
 
+        public List<string> getCompinations(int s)
+        {
+            List<string> c = new List<string>();
+            var alphabet = "APS";
+            var q = alphabet.Select(x => x.ToString());
+            int size = s;
+            for (int i = 0; i < size - 1; i++)
+                q = q.SelectMany(x => alphabet, (x, y) => x + y);
+
+            foreach (var item in q)
+                c.Add(item);
+            return c;
+        }
+
         public void disaplePanels()
         {
             panelNewEmployee.Visible = false;
@@ -2470,7 +2484,13 @@ namespace Express
                 }
                 else
                 {
-
+                    //attendanceControl = new AttendanceControl();
+                    attendanceContentControl = new AttendanceContentControl();
+                    int month = int.Parse(domainUpDownAttendanceMonth.Text);
+                    int year = int.Parse(domainUpDownAttendanceYear.Text);
+                    string locationName = comboBoxAttendanceLocationName.Text;
+                    attendanceContentControl.insertUpdate(month, year, locationName, dataGridViewAttendance);
+                    MessageBox.Show("تم تسجيل غياب و حضور الموقع", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -2481,8 +2501,43 @@ namespace Express
 
         private void dataGridViewAttendance_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridViewAttendance.SelectedCells[0].Value.ToString() == "p" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "2p" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "3p" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "a" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "2a" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "3a" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "s" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "2s" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "3s" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "l" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "2l" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "3l" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "o" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "2o" || dataGridViewAttendance.SelectedCells[0].Value.ToString() == "3o")
+            string value = dataGridViewAttendance.SelectedCells[0].Value.ToString().ToUpper();
+            dataGridViewAttendance.SelectedCells[0].Value = value;
+            if (value.Length == 1)
             {
+                List<string> c = getCompinations(1);
+                if (c.Contains(value))
+                {
+                }
+                else
+                {
+                    MessageBox.Show("خطأ", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dataGridViewAttendance.SelectedCells[0].Value = "";
+                }
+            }
+            else if (value.Length == 2)
+            {
+                List<string> c = getCompinations(2);
+                if (c.Contains(value))
+                {
+                }
+                else
+                {
+                    MessageBox.Show("خطأ", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dataGridViewAttendance.SelectedCells[0].Value = "";
+                }
+            }
+            else if (value.Length == 3)
+            {
+                List<string> c = getCompinations(3);
+                if (c.Contains(value))
+                {
+                }
+                else
+                {
+                    MessageBox.Show("خطأ", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dataGridViewAttendance.SelectedCells[0].Value = "";
+                }
             }
             else
             {

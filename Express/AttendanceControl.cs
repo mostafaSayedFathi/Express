@@ -42,4 +42,17 @@ class AttendanceControl
         attendanceDB.selectLastID(attendance);
         return attendance.getID();
     }
+
+    public bool checkIfLocationAttendanceSubmitted(int month, int year, string locationName)
+    {
+        locationControl = new LocationControl();
+        attendance = new Attendance();
+        attendanceDB = new AttendanceDB();
+        int locationID = locationControl.getID(locationName);
+        attendance.setMonth(month);
+        attendance.setYear(year);
+        attendance.setLocationID(locationID);
+        bool flag = attendanceDB.checkIfLocationAttendanceSubmitted(attendance);
+        return flag;
+    }
 }

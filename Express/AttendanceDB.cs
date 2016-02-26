@@ -21,7 +21,7 @@ class AttendanceDB
     public void selectLastID(Attendance attendance)
     {
         connection.open();
-        command = new SqlCommand("select top 1 ID from LocationClothes ORDER BY ID DESC", connection.getConnection());
+        command = new SqlCommand("select top 1 ID from Attendance ORDER BY ID DESC", connection.getConnection());
         attendance.setID((int)command.ExecuteScalar());
         connection.close();
     }
@@ -47,7 +47,7 @@ class AttendanceDB
     public void selectID(Attendance attendance)
     {
         connection.open();
-        command = new SqlCommand("select ID from Attendance where month='" + attendance.getMonth() + "' , year='" + attendance.getYear() + "' , locationID='" + attendance.getLocationID() + "'", connection.getConnection());
+        command = new SqlCommand("select ID from Attendance where month='" + attendance.getMonth() + "' and year='" + attendance.getYear() + "' and locationID='" + attendance.getLocationID() + "'", connection.getConnection());
         attendance.setID((int)command.ExecuteScalar());
         connection.close();
     }

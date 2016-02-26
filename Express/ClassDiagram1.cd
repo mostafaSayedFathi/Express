@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Express_Project.AddSource" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAABAADAAABEECACAAAACAAAAAEAAAKAAEABIAAA=</HashCode>
+      <FileName>AddSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApplicationControl" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAEAAAIEAAACAChAAAAAEAAAAAAABIQAAAAAAA=</HashCode>
+      <FileName>ApplicationControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApplicationDB" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABABAAAIACAABAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApplicationDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApplicationForm" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCRAggAEHEAkACIgBRQAAAAAEBIERGBkAAMEYgIACEQ=</HashCode>
+      <FileName>ApplicationForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Attendance" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAAAAAAAAgACAAAAEQAAAAASAAAgAAAAAAAQASAA=</HashCode>
+      <FileName>Attendance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AttendanceContent" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAABAAAAAoAIAAACAAAAAAAAAAAAAAAAAAAAEAAAAg=</HashCode>
+      <FileName>AttendanceContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AttendanceContentControl" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAEAABAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>AttendanceContentControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AttendanceContentDB" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAABAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AttendanceContentDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AttendanceControl" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAAAAAABAAACAAAAAAAAABAAIAAAAAAAAQAAEAAA=</HashCode>
+      <FileName>AttendanceControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AttendanceDB" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABEAAAAAAABAAAAAAQIAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>AttendanceDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClothesStore" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEABAAIAAAAAgACAAAAAARAAAAAEACDAAEAEAAAACAQ=</HashCode>
+      <FileName>ClothesStore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClothesStoreControl" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIRAAAAAAAAMQAAAAAABQAAAAAgAEAGAAEAMAAAAAAA=</HashCode>
+      <FileName>ClothesStoreControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClothesStoreDB" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAABQAAAAAAABAQAAAAQAAAAQAAAABAAEAAA=</HashCode>
+      <FileName>ClothesStoreDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DBConnection" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAACABAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>DBConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DevicesStore" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEABAAIAAAAAgACAAAAAARAAAAAEACDAAEAEAAAACAQ=</HashCode>
+      <FileName>DevicesStore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DevicesStoreControl" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAIAAgAIQAAAAAABAAAAAEAAEAAAAEAMQAAAAAA=</HashCode>
+      <FileName>DevicesStoreControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DevicesStoreDB" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAABQAAAAAAABAQAQAIQAAAAAAAAAQAAEAAA=</HashCode>
+      <FileName>DevicesStoreDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Employee" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQIIAAEAAAggAKgBAAAJAACAACEBAhgAyhUAgAgCAA=</HashCode>
+      <FileName>Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmployeeControl" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoAAIIAAgAAAABIACoAJAAAAAAAADAAAgAAAEgEEAAg=</HashCode>
+      <FileName>EmployeeControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmployeeDB" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAACAAACAAEEAAAAIABAACAAAQAAAAAAAAAICIEYAg=</HashCode>
+      <FileName>EmployeeDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Location" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SQAIBAAQUAigigCAAKAAgEAAEDIEACBAAAEFAggAGAA=</HashCode>
+      <FileName>Location.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationClothes" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAIAAAAAAAAgACAAAAAAAAAAACAAAgAAEAAAAAACAQ=</HashCode>
+      <FileName>LocationClothes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationClothesContent" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEABAAIAAAABkACAAAAAARAAAAAEACDAAUAEAAAACAQ=</HashCode>
+      <FileName>LocationClothesContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationClothesContentControl" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAABAEAABAAAEAAAABAAAAAAAAQAAAAAAACAAAAAA=</HashCode>
+      <FileName>LocationClothesContentControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationClothesContentDB" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAABAAAAAAAABAQAAAAQAAAAAAAAAAAAEAAQ=</HashCode>
+      <FileName>LocationClothesContentDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationClothesControl" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAAAAABAAACAAAAAACAAAAAAAAAAAQAAQAAEAAQ=</HashCode>
+      <FileName>LocationClothesControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationClothesDB" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAABEAAAAAAABAAAAAAQAAAAAAAAAAAhAAAQ=</HashCode>
+      <FileName>LocationClothesDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationControl" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAoAIAAQACAAAKAgoAhCEACAAAYAioAAAEAgAAACAA=</HashCode>
+      <FileName>LocationControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationDB" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgABABAEEgBAAiBCAAAoAQYAgAgAAAAAgAAIAA=</HashCode>
+      <FileName>LocationDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationEquips" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAIAAAAAAAAgACAAAAAAAAAAACAAAgAAEAAAAAACAQ=</HashCode>
+      <FileName>LocationEquips.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationEquipsConrol" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAQAABAAASAAAAAAAAAAAACAAAAAQAAQAAEAAQ=</HashCode>
+      <FileName>LocationEquipsConrol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationEquipsContent" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEABAAIAAAABkACAAAAAARAAAAAEACDAAUAEAAAACAQ=</HashCode>
+      <FileName>LocationEquipsContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationEquipsContentControl" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAABAAAAAAAABgAAAQAAAQAAAQAAQAAAAAAA=</HashCode>
+      <FileName>LocationEquipsContentControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationEquipsContentDB" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAABAAAAAAAABAQAAAAQAAAAAAAAAAAAEAAQ=</HashCode>
+      <FileName>LocationEquipsContentDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocationEquipsDB" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABEAAAAAAABAAAAAAQAAAAAAAAAAAhABAQ=</HashCode>
+      <FileName>LocationEquipsDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Source" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAADAAAAAggACAAAAAAAAAAwIEAABgAAIEIgAACBg=</HashCode>
+      <FileName>Source.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SourceControl" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAIAAgAhAAAAAgAAAAAAAAIAAAgAAAA=</HashCode>
+      <FileName>SourceControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SourceDB" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAQAAgAhAAAAAAQAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>SourceDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Express.Form1" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/68fWf/F++fm8/7z7/+b/av/0/fv+fH1/vn7//v/f7g=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Express.Program" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Express.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAIAAAAAABEAAAARIAAAAgAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Express.Properties.Settings" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
