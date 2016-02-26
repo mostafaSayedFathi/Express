@@ -25,7 +25,6 @@ namespace Express
         private LocationClothesControl locationClothesControl;
         private LocationEquipsConrol locationEquipsConrol;
         private SourceControl sourceControl;
-        private AttendanceControl attendanceControl;
         private AttendanceContentControl attendanceContentControl;
         private byte[] imageByte = null;
         private ArrayList listCheck = new ArrayList();
@@ -1574,7 +1573,11 @@ namespace Express
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
                 locationControl = new LocationControl();
+                clothesStoreControl = new ClothesStoreControl();
+                devicesStoreControl = new DevicesStoreControl();
                 locationControl.fillComboboxLocationName(comboBoxLocationName);
+                clothesStoreControl.fillComboboxClothesName(comboBoxCostClothesName);
+                devicesStoreControl.fillComboboxDevicesName(comboBoxCostDevicesName);
             }
             catch (Exception ex)
             {
@@ -2543,6 +2546,200 @@ namespace Express
             {
                 MessageBox.Show("خطأ", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dataGridViewAttendance.SelectedCells[0].Value = "";
+            }
+        }
+
+        private void comboBoxCostClothesName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                clothesStoreControl = new ClothesStoreControl();
+                txtCostClothePrice.Text = clothesStoreControl.getClothePrice(comboBoxCostClothesName.Text).ToString();
+                txtCostClotheQuantity.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void comboBoxCostDevicesName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                devicesStoreControl = new DevicesStoreControl();
+                txtCostDevicePrice.Text = (devicesStoreControl.getDevicePrice(comboBoxCostDevicesName.Text)).ToString();
+                txtCostDeviceQuantity.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtCostClotheQuantity_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    if (txtCostClotheQuantity.Text == "")
+                    {
+                        MessageBox.Show("من فضلك ادخل الكمية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (comboBoxCostClothesName.Text == "")
+                    {
+                        MessageBox.Show("من فضلك اختر اسم القطعة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        clothesStoreControl = new ClothesStoreControl();
+                        string name = comboBoxCostClothesName.Text;
+                        string price = txtCostClothePrice.Text;
+                        string quantity = txtCostClotheQuantity.Text;
+                        string total = clothesStoreControl.total(double.Parse(price), double.Parse(quantity)).ToString();
+                        bool flag = clothesStoreControl.checkItemExistInListView(listViewCostClothes, name);
+                        double totalAll = double.Parse(txtCostTotalClothes.Text);
+                        if (flag == true)
+                        {
+                            MessageBox.Show("هذه القطعة تم اضافتها للفاتورة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else if (flag == false)
+                        {
+                            ListViewItem lvi = new ListViewItem(name);
+                            lvi.SubItems.Add(price);
+                            lvi.SubItems.Add(quantity);
+                            lvi.SubItems.Add(total);
+                            listViewCostClothes.Items.Add(lvi);
+                            txtCostTotalClothes.Text = clothesStoreControl.totalAll(double.Parse(total), totalAll).ToString();
+                        }
+                    }
+                    e.SuppressKeyPress = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtCostDeviceQuantity_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    if (txtCostDeviceQuantity.Text == "")
+                    {
+                        MessageBox.Show("من فضلك ادخل الكمية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (comboBoxCostDevicesName.Text == "")
+                    {
+                        MessageBox.Show("من فضلك اختر اسم الجهاز", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        devicesStoreControl = new DevicesStoreControl();
+                        string name = comboBoxCostDevicesName.Text;
+                        string price = txtCostDevicePrice.Text;
+                        string quantity = txtCostDeviceQuantity.Text;
+                        string total = devicesStoreControl.total(double.Parse(price), double.Parse(quantity)).ToString();
+                        bool flag = devicesStoreControl.checkItemExistInListView(listViewCostDevices, name);
+                        double totalAll = double.Parse(txtCostTotalDevices.Text);
+                        if (flag == true)
+                        {
+                            MessageBox.Show("هذه القطعة تم اضافتها للفاتورة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else if (flag == false)
+                        {
+                            ListViewItem lvi = new ListViewItem(name);
+                            lvi.SubItems.Add(price);
+                            lvi.SubItems.Add(quantity);
+                            lvi.SubItems.Add(total);
+                            listViewCostDevices.Items.Add(lvi);
+                            txtCostTotalDevices.Text = devicesStoreControl.totalAll(double.Parse(total), totalAll).ToString();
+                        }
+                    }
+                    e.SuppressKeyPress = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnCostDeleteClothesItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                clothesStoreControl = new ClothesStoreControl();
+                txtCostTotalClothes.Text = (clothesStoreControl.deleteListViewItem(listViewCostClothes, double.Parse(txtCostTotalClothes.Text))).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnCostDeleteDevicesItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                devicesStoreControl = new DevicesStoreControl();
+                txtCostTotalDevices.Text = (devicesStoreControl.deleteListViewItem(listViewCostDevices, double.Parse(txtCostTotalDevices.Text))).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSaveLocationCosts_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxLocationName.Text == "")
+                {
+                    MessageBox.Show("من فضلك اختر الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtCostSecuritySalary.Text == "")
+                {
+                    MessageBox.Show("من فضلك ادخل راتب موظف الأمن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtCostSupervisorSalary.Text == "")
+                {
+                    MessageBox.Show("من فضلك ادخل راتب مشرف الأمن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtCostManagerSalary.Text == "")
+                {
+                    MessageBox.Show("من فضلك ادخل راتب مدير الأمن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    locationControl = new LocationControl();
+                    locationClothesControl = new LocationClothesControl();
+                    locationClothesContentControl = new LocationClothesContentControl();
+                    locationEquipsConrol = new LocationEquipsConrol();
+                    locationEquipsContentControl = new LocationEquipsContentControl();
+                    string locationName = comboBoxLocationName.Text;
+                    double securitySalary = double.Parse(txtCostSecuritySalary.Text);
+                    double supervisorSalary = double.Parse(txtCostSupervisorSalary.Text);
+                    double managerSalary = double.Parse(txtCostManagerSalary.Text);
+                    double totalClothes = double.Parse(txtCostTotalClothes.Text);
+                    double totalDevices = double.Parse(txtCostTotalDevices.Text);
+
+                    locationControl.updateLocationCost(locationName, securitySalary, supervisorSalary, managerSalary);
+                    locationClothesControl.insert(totalClothes, locationName);
+                    locationClothesContentControl.insert(listViewCostClothes);
+                    locationEquipsConrol.insert(totalDevices, locationName);
+                    locationEquipsContentControl.insert(listViewCostDevices);
+                    MessageBox.Show("تم حفظ التكاليف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

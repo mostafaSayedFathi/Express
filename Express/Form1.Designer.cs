@@ -87,33 +87,35 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panelLocationCosts = new System.Windows.Forms.Panel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.btnCostDeleteDevicesItem = new System.Windows.Forms.Button();
+            this.txtCostTotalDevices = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.listViewCostDevices = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.txtCostDevicePrice = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.txtCostDeviceQuantity = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCostDevicesName = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.btnCostDeleteClothesItem = new System.Windows.Forms.Button();
+            this.txtCostTotalClothes = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewCostClothes = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txtCostClothePrice = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtCostClotheQuantity = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCostClothesName = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.txtCostTotalSecurity = new System.Windows.Forms.TextBox();
             this.txtCostTotalManager = new System.Windows.Forms.TextBox();
@@ -134,7 +136,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtCostSupervisorSalary = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSaveLocationCosts = new System.Windows.Forms.Button();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -480,7 +482,7 @@
             this.toolStripDropDownButton5,
             this.toolStripSeparator5,
             this.toolStripDropDownButton6});
-            this.toolStrip1.Location = new System.Drawing.Point(936, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(953, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(99, 817);
             this.toolStrip1.TabIndex = 0;
@@ -757,7 +759,7 @@
             this.panelStart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelStart.Location = new System.Drawing.Point(0, 0);
             this.panelStart.Name = "panelStart";
-            this.panelStart.Size = new System.Drawing.Size(936, 817);
+            this.panelStart.Size = new System.Drawing.Size(953, 817);
             this.panelStart.TabIndex = 1;
             // 
             // panelNewLocation
@@ -770,7 +772,7 @@
             this.panelNewLocation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNewLocation.Location = new System.Drawing.Point(0, 0);
             this.panelNewLocation.Name = "panelNewLocation";
-            this.panelNewLocation.Size = new System.Drawing.Size(936, 817);
+            this.panelNewLocation.Size = new System.Drawing.Size(953, 817);
             this.panelNewLocation.TabIndex = 0;
             // 
             // groupBox8
@@ -782,7 +784,7 @@
             this.groupBox8.Location = new System.Drawing.Point(0, 423);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox8.Size = new System.Drawing.Size(936, 100);
+            this.groupBox8.Size = new System.Drawing.Size(953, 100);
             this.groupBox8.TabIndex = 12;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "ساعات العمل";
@@ -835,7 +837,7 @@
             this.groupBox3.Location = new System.Drawing.Point(0, 254);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(936, 169);
+            this.groupBox3.Size = new System.Drawing.Size(953, 169);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "عدد افراد التشغيل";
@@ -908,7 +910,7 @@
             this.groupBox2.Location = new System.Drawing.Point(0, 127);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(936, 127);
+            this.groupBox2.Size = new System.Drawing.Size(953, 127);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "فترة التعاقد";
@@ -964,7 +966,7 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(936, 127);
+            this.groupBox1.Size = new System.Drawing.Size(953, 127);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "بيانات الموقع";
@@ -1016,20 +1018,21 @@
             this.panelLocationCosts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLocationCosts.Location = new System.Drawing.Point(0, 0);
             this.panelLocationCosts.Name = "panelLocationCosts";
-            this.panelLocationCosts.Size = new System.Drawing.Size(936, 817);
+            this.panelLocationCosts.Size = new System.Drawing.Size(953, 817);
             this.panelLocationCosts.TabIndex = 11;
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.textBox19);
+            this.groupBox7.Controls.Add(this.btnCostDeleteDevicesItem);
+            this.groupBox7.Controls.Add(this.txtCostTotalDevices);
             this.groupBox7.Controls.Add(this.label23);
-            this.groupBox7.Controls.Add(this.listView2);
-            this.groupBox7.Controls.Add(this.textBox20);
+            this.groupBox7.Controls.Add(this.listViewCostDevices);
+            this.groupBox7.Controls.Add(this.txtCostDevicePrice);
             this.groupBox7.Controls.Add(this.label24);
-            this.groupBox7.Controls.Add(this.textBox21);
+            this.groupBox7.Controls.Add(this.txtCostDeviceQuantity);
             this.groupBox7.Controls.Add(this.label25);
             this.groupBox7.Controls.Add(this.label26);
-            this.groupBox7.Controls.Add(this.comboBox3);
+            this.groupBox7.Controls.Add(this.comboBoxCostDevicesName);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(0, 248);
@@ -1040,15 +1043,27 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "الأجهزة";
             // 
-            // textBox19
+            // btnCostDeleteDevicesItem
             // 
-            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox19.Enabled = false;
-            this.textBox19.Location = new System.Drawing.Point(173, 393);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox19.Size = new System.Drawing.Size(126, 27);
-            this.textBox19.TabIndex = 16;
+            this.btnCostDeleteDevicesItem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCostDeleteDevicesItem.Location = new System.Drawing.Point(241, 98);
+            this.btnCostDeleteDevicesItem.Name = "btnCostDeleteDevicesItem";
+            this.btnCostDeleteDevicesItem.Size = new System.Drawing.Size(100, 29);
+            this.btnCostDeleteDevicesItem.TabIndex = 24;
+            this.btnCostDeleteDevicesItem.Text = "حذف";
+            this.btnCostDeleteDevicesItem.UseVisualStyleBackColor = true;
+            this.btnCostDeleteDevicesItem.Click += new System.EventHandler(this.btnCostDeleteDevicesItem_Click);
+            // 
+            // txtCostTotalDevices
+            // 
+            this.txtCostTotalDevices.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCostTotalDevices.Enabled = false;
+            this.txtCostTotalDevices.Location = new System.Drawing.Point(173, 393);
+            this.txtCostTotalDevices.Name = "txtCostTotalDevices";
+            this.txtCostTotalDevices.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtCostTotalDevices.Size = new System.Drawing.Size(126, 27);
+            this.txtCostTotalDevices.TabIndex = 16;
+            this.txtCostTotalDevices.Text = "0";
             // 
             // label23
             // 
@@ -1061,21 +1076,21 @@
             this.label23.TabIndex = 17;
             this.label23.Text = "اجمالي تكلفة الأجهزة:";
             // 
-            // listView2
+            // listViewCostDevices
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewCostDevices.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8});
-            this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(6, 117);
-            this.listView2.Name = "listView2";
-            this.listView2.RightToLeftLayout = true;
-            this.listView2.Size = new System.Drawing.Size(428, 270);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listViewCostDevices.GridLines = true;
+            this.listViewCostDevices.Location = new System.Drawing.Point(6, 133);
+            this.listViewCostDevices.Name = "listViewCostDevices";
+            this.listViewCostDevices.RightToLeftLayout = true;
+            this.listViewCostDevices.Size = new System.Drawing.Size(428, 254);
+            this.listViewCostDevices.TabIndex = 0;
+            this.listViewCostDevices.UseCompatibleStateImageBehavior = false;
+            this.listViewCostDevices.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader5
             // 
@@ -1096,15 +1111,15 @@
             this.columnHeader8.Text = "الاجمالي";
             this.columnHeader8.Width = 81;
             // 
-            // textBox20
+            // txtCostDevicePrice
             // 
-            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox20.Enabled = false;
-            this.textBox20.Location = new System.Drawing.Point(241, 65);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox20.Size = new System.Drawing.Size(100, 27);
-            this.textBox20.TabIndex = 14;
+            this.txtCostDevicePrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCostDevicePrice.Enabled = false;
+            this.txtCostDevicePrice.Location = new System.Drawing.Point(241, 65);
+            this.txtCostDevicePrice.Name = "txtCostDevicePrice";
+            this.txtCostDevicePrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtCostDevicePrice.Size = new System.Drawing.Size(100, 27);
+            this.txtCostDevicePrice.TabIndex = 14;
             // 
             // label24
             // 
@@ -1117,14 +1132,15 @@
             this.label24.TabIndex = 15;
             this.label24.Text = "السعر:";
             // 
-            // textBox21
+            // txtCostDeviceQuantity
             // 
-            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox21.Location = new System.Drawing.Point(67, 65);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox21.Size = new System.Drawing.Size(100, 27);
-            this.textBox21.TabIndex = 12;
+            this.txtCostDeviceQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCostDeviceQuantity.Location = new System.Drawing.Point(67, 65);
+            this.txtCostDeviceQuantity.Name = "txtCostDeviceQuantity";
+            this.txtCostDeviceQuantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtCostDeviceQuantity.Size = new System.Drawing.Size(100, 27);
+            this.txtCostDeviceQuantity.TabIndex = 12;
+            this.txtCostDeviceQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCostDeviceQuantity_KeyDown);
             // 
             // label25
             // 
@@ -1148,30 +1164,32 @@
             this.label26.TabIndex = 10;
             this.label26.Text = "اسم الجهاز:";
             // 
-            // comboBox3
+            // comboBoxCostDevicesName
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(67, 32);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(274, 27);
-            this.comboBox3.TabIndex = 9;
+            this.comboBoxCostDevicesName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCostDevicesName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBoxCostDevicesName.FormattingEnabled = true;
+            this.comboBoxCostDevicesName.Location = new System.Drawing.Point(67, 32);
+            this.comboBoxCostDevicesName.Name = "comboBoxCostDevicesName";
+            this.comboBoxCostDevicesName.Size = new System.Drawing.Size(274, 27);
+            this.comboBoxCostDevicesName.TabIndex = 9;
+            this.comboBoxCostDevicesName.SelectedIndexChanged += new System.EventHandler(this.comboBoxCostDevicesName_SelectedIndexChanged);
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox18);
+            this.groupBox5.Controls.Add(this.btnCostDeleteClothesItem);
+            this.groupBox5.Controls.Add(this.txtCostTotalClothes);
             this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.listView1);
-            this.groupBox5.Controls.Add(this.textBox17);
+            this.groupBox5.Controls.Add(this.listViewCostClothes);
+            this.groupBox5.Controls.Add(this.txtCostClothePrice);
             this.groupBox5.Controls.Add(this.label21);
-            this.groupBox5.Controls.Add(this.textBox16);
+            this.groupBox5.Controls.Add(this.txtCostClotheQuantity);
             this.groupBox5.Controls.Add(this.label20);
             this.groupBox5.Controls.Add(this.label19);
-            this.groupBox5.Controls.Add(this.comboBox2);
+            this.groupBox5.Controls.Add(this.comboBoxCostClothesName);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(496, 248);
+            this.groupBox5.Location = new System.Drawing.Point(513, 248);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox5.Size = new System.Drawing.Size(440, 569);
@@ -1179,15 +1197,27 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "الملابس";
             // 
-            // textBox18
+            // btnCostDeleteClothesItem
             // 
-            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox18.Enabled = false;
-            this.textBox18.Location = new System.Drawing.Point(165, 393);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox18.Size = new System.Drawing.Size(126, 27);
-            this.textBox18.TabIndex = 16;
+            this.btnCostDeleteClothesItem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCostDeleteClothesItem.Location = new System.Drawing.Point(241, 98);
+            this.btnCostDeleteClothesItem.Name = "btnCostDeleteClothesItem";
+            this.btnCostDeleteClothesItem.Size = new System.Drawing.Size(100, 29);
+            this.btnCostDeleteClothesItem.TabIndex = 24;
+            this.btnCostDeleteClothesItem.Text = "حذف";
+            this.btnCostDeleteClothesItem.UseVisualStyleBackColor = true;
+            this.btnCostDeleteClothesItem.Click += new System.EventHandler(this.btnCostDeleteClothesItem_Click);
+            // 
+            // txtCostTotalClothes
+            // 
+            this.txtCostTotalClothes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCostTotalClothes.Enabled = false;
+            this.txtCostTotalClothes.Location = new System.Drawing.Point(165, 393);
+            this.txtCostTotalClothes.Name = "txtCostTotalClothes";
+            this.txtCostTotalClothes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtCostTotalClothes.Size = new System.Drawing.Size(126, 27);
+            this.txtCostTotalClothes.TabIndex = 16;
+            this.txtCostTotalClothes.Text = "0";
             // 
             // label22
             // 
@@ -1200,21 +1230,21 @@
             this.label22.TabIndex = 17;
             this.label22.Text = "اجمالي تكلفة الملابس:";
             // 
-            // listView1
+            // listViewCostClothes
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewCostClothes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(6, 117);
-            this.listView1.Name = "listView1";
-            this.listView1.RightToLeftLayout = true;
-            this.listView1.Size = new System.Drawing.Size(428, 270);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewCostClothes.GridLines = true;
+            this.listViewCostClothes.Location = new System.Drawing.Point(6, 133);
+            this.listViewCostClothes.Name = "listViewCostClothes";
+            this.listViewCostClothes.RightToLeftLayout = true;
+            this.listViewCostClothes.Size = new System.Drawing.Size(428, 254);
+            this.listViewCostClothes.TabIndex = 0;
+            this.listViewCostClothes.UseCompatibleStateImageBehavior = false;
+            this.listViewCostClothes.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -1235,15 +1265,15 @@
             this.columnHeader4.Text = "الاجمالي";
             this.columnHeader4.Width = 81;
             // 
-            // textBox17
+            // txtCostClothePrice
             // 
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox17.Enabled = false;
-            this.textBox17.Location = new System.Drawing.Point(241, 65);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox17.Size = new System.Drawing.Size(100, 27);
-            this.textBox17.TabIndex = 14;
+            this.txtCostClothePrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCostClothePrice.Enabled = false;
+            this.txtCostClothePrice.Location = new System.Drawing.Point(241, 65);
+            this.txtCostClothePrice.Name = "txtCostClothePrice";
+            this.txtCostClothePrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtCostClothePrice.Size = new System.Drawing.Size(100, 27);
+            this.txtCostClothePrice.TabIndex = 14;
             // 
             // label21
             // 
@@ -1256,14 +1286,15 @@
             this.label21.TabIndex = 15;
             this.label21.Text = "السعر:";
             // 
-            // textBox16
+            // txtCostClotheQuantity
             // 
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox16.Location = new System.Drawing.Point(67, 65);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox16.Size = new System.Drawing.Size(100, 27);
-            this.textBox16.TabIndex = 12;
+            this.txtCostClotheQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCostClotheQuantity.Location = new System.Drawing.Point(67, 65);
+            this.txtCostClotheQuantity.Name = "txtCostClotheQuantity";
+            this.txtCostClotheQuantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtCostClotheQuantity.Size = new System.Drawing.Size(100, 27);
+            this.txtCostClotheQuantity.TabIndex = 12;
+            this.txtCostClotheQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCostClotheQuantity_KeyDown);
             // 
             // label20
             // 
@@ -1287,15 +1318,16 @@
             this.label19.TabIndex = 10;
             this.label19.Text = "اسم القطعة:";
             // 
-            // comboBox2
+            // comboBoxCostClothesName
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(67, 32);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(274, 27);
-            this.comboBox2.TabIndex = 9;
+            this.comboBoxCostClothesName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCostClothesName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBoxCostClothesName.FormattingEnabled = true;
+            this.comboBoxCostClothesName.Location = new System.Drawing.Point(67, 32);
+            this.comboBoxCostClothesName.Name = "comboBoxCostClothesName";
+            this.comboBoxCostClothesName.Size = new System.Drawing.Size(274, 27);
+            this.comboBoxCostClothesName.TabIndex = 9;
+            this.comboBoxCostClothesName.SelectedIndexChanged += new System.EventHandler(this.comboBoxCostClothesName_SelectedIndexChanged);
             // 
             // groupBox6
             // 
@@ -1322,7 +1354,7 @@
             this.groupBox6.Location = new System.Drawing.Point(0, 90);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox6.Size = new System.Drawing.Size(936, 158);
+            this.groupBox6.Size = new System.Drawing.Size(953, 158);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "تكلفة الأفراد";
@@ -1521,7 +1553,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.btnSaveLocationCosts);
             this.groupBox4.Controls.Add(this.textBox15);
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Controls.Add(this.label8);
@@ -1531,20 +1563,21 @@
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox4.Size = new System.Drawing.Size(936, 90);
+            this.groupBox4.Size = new System.Drawing.Size(953, 90);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "تكلفة الفرد";
             // 
-            // button1
+            // btnSaveLocationCosts
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(13, 55);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 29);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "حفظ التكاليف";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSaveLocationCosts.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveLocationCosts.Location = new System.Drawing.Point(13, 55);
+            this.btnSaveLocationCosts.Name = "btnSaveLocationCosts";
+            this.btnSaveLocationCosts.Size = new System.Drawing.Size(137, 29);
+            this.btnSaveLocationCosts.TabIndex = 22;
+            this.btnSaveLocationCosts.Text = "حفظ التكاليف";
+            this.btnSaveLocationCosts.UseVisualStyleBackColor = true;
+            this.btnSaveLocationCosts.Click += new System.EventHandler(this.btnSaveLocationCosts_Click);
             // 
             // textBox15
             // 
@@ -1614,7 +1647,7 @@
             this.panelNewEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNewEmployee.Location = new System.Drawing.Point(0, 0);
             this.panelNewEmployee.Name = "panelNewEmployee";
-            this.panelNewEmployee.Size = new System.Drawing.Size(936, 817);
+            this.panelNewEmployee.Size = new System.Drawing.Size(953, 817);
             this.panelNewEmployee.TabIndex = 24;
             // 
             // label36
@@ -3166,7 +3199,7 @@
             this.panelUpdateLocation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateLocation.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateLocation.Name = "panelUpdateLocation";
-            this.panelUpdateLocation.Size = new System.Drawing.Size(936, 817);
+            this.panelUpdateLocation.Size = new System.Drawing.Size(953, 817);
             this.panelUpdateLocation.TabIndex = 32;
             // 
             // groupBox20
@@ -3178,7 +3211,7 @@
             this.groupBox20.Location = new System.Drawing.Point(0, 523);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox20.Size = new System.Drawing.Size(936, 100);
+            this.groupBox20.Size = new System.Drawing.Size(953, 100);
             this.groupBox20.TabIndex = 17;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "ساعات العمل";
@@ -3231,7 +3264,7 @@
             this.groupBox21.Location = new System.Drawing.Point(0, 354);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox21.Size = new System.Drawing.Size(936, 169);
+            this.groupBox21.Size = new System.Drawing.Size(953, 169);
             this.groupBox21.TabIndex = 16;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "عدد افراد التشغيل";
@@ -3304,7 +3337,7 @@
             this.groupBox22.Location = new System.Drawing.Point(0, 227);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox22.Size = new System.Drawing.Size(936, 127);
+            this.groupBox22.Size = new System.Drawing.Size(953, 127);
             this.groupBox22.TabIndex = 15;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "فترة التعاقد";
@@ -3360,7 +3393,7 @@
             this.groupBox23.Location = new System.Drawing.Point(0, 100);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox23.Size = new System.Drawing.Size(936, 127);
+            this.groupBox23.Size = new System.Drawing.Size(953, 127);
             this.groupBox23.TabIndex = 14;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "بيانات الموقع";
@@ -3412,7 +3445,7 @@
             this.groupBox24.Location = new System.Drawing.Point(0, 0);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox24.Size = new System.Drawing.Size(936, 100);
+            this.groupBox24.Size = new System.Drawing.Size(953, 100);
             this.groupBox24.TabIndex = 0;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "الموقع";
@@ -3448,7 +3481,7 @@
             this.panelUpdateLocationCosts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateLocationCosts.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateLocationCosts.Name = "panelUpdateLocationCosts";
-            this.panelUpdateLocationCosts.Size = new System.Drawing.Size(936, 817);
+            this.panelUpdateLocationCosts.Size = new System.Drawing.Size(953, 817);
             this.panelUpdateLocationCosts.TabIndex = 33;
             // 
             // groupBox25
@@ -3638,7 +3671,7 @@
             this.groupBox26.Controls.Add(this.comboBoxUpdateCostClothesName);
             this.groupBox26.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox26.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox26.Location = new System.Drawing.Point(496, 248);
+            this.groupBox26.Location = new System.Drawing.Point(513, 248);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox26.Size = new System.Drawing.Size(440, 569);
@@ -3820,7 +3853,7 @@
             this.groupBox27.Location = new System.Drawing.Point(0, 90);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox27.Size = new System.Drawing.Size(936, 158);
+            this.groupBox27.Size = new System.Drawing.Size(953, 158);
             this.groupBox27.TabIndex = 17;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "تكلفة الأفراد";
@@ -4036,7 +4069,7 @@
             this.groupBox28.Location = new System.Drawing.Point(0, 0);
             this.groupBox28.Name = "groupBox28";
             this.groupBox28.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox28.Size = new System.Drawing.Size(936, 90);
+            this.groupBox28.Size = new System.Drawing.Size(953, 90);
             this.groupBox28.TabIndex = 16;
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "الموقع";
@@ -4099,7 +4132,7 @@
             this.panelUpdateEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateEmployee.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateEmployee.Name = "panelUpdateEmployee";
-            this.panelUpdateEmployee.Size = new System.Drawing.Size(936, 817);
+            this.panelUpdateEmployee.Size = new System.Drawing.Size(953, 817);
             this.panelUpdateEmployee.TabIndex = 35;
             // 
             // btnupdateEmployeeCancel
@@ -4334,7 +4367,7 @@
             this.panelSourceEvaluation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSourceEvaluation.Location = new System.Drawing.Point(0, 0);
             this.panelSourceEvaluation.Name = "panelSourceEvaluation";
-            this.panelSourceEvaluation.Size = new System.Drawing.Size(936, 817);
+            this.panelSourceEvaluation.Size = new System.Drawing.Size(953, 817);
             this.panelSourceEvaluation.TabIndex = 55;
             // 
             // listViewEvaluate
@@ -4351,7 +4384,7 @@
             this.listViewEvaluate.Name = "listViewEvaluate";
             this.listViewEvaluate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.listViewEvaluate.RightToLeftLayout = true;
-            this.listViewEvaluate.Size = new System.Drawing.Size(936, 635);
+            this.listViewEvaluate.Size = new System.Drawing.Size(953, 635);
             this.listViewEvaluate.TabIndex = 52;
             this.listViewEvaluate.UseCompatibleStateImageBehavior = false;
             this.listViewEvaluate.View = System.Windows.Forms.View.Details;
@@ -4391,7 +4424,7 @@
             this.groupBox29.Location = new System.Drawing.Point(0, 0);
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox29.Size = new System.Drawing.Size(936, 182);
+            this.groupBox29.Size = new System.Drawing.Size(953, 182);
             this.groupBox29.TabIndex = 51;
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "البيانات";
@@ -4495,7 +4528,7 @@
             this.panelAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAttendance.Location = new System.Drawing.Point(0, 0);
             this.panelAttendance.Name = "panelAttendance";
-            this.panelAttendance.Size = new System.Drawing.Size(936, 817);
+            this.panelAttendance.Size = new System.Drawing.Size(953, 817);
             this.panelAttendance.TabIndex = 59;
             // 
             // dataGridViewAttendance
@@ -4507,7 +4540,7 @@
             this.dataGridViewAttendance.Location = new System.Drawing.Point(0, 100);
             this.dataGridViewAttendance.Name = "dataGridViewAttendance";
             this.dataGridViewAttendance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridViewAttendance.Size = new System.Drawing.Size(936, 717);
+            this.dataGridViewAttendance.Size = new System.Drawing.Size(953, 717);
             this.dataGridViewAttendance.TabIndex = 2;
             this.dataGridViewAttendance.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAttendance_CellEndEdit);
             // 
@@ -4525,7 +4558,7 @@
             this.groupBox30.Location = new System.Drawing.Point(0, 0);
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox30.Size = new System.Drawing.Size(936, 100);
+            this.groupBox30.Size = new System.Drawing.Size(953, 100);
             this.groupBox30.TabIndex = 1;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "بيانات الموقع";
@@ -4622,14 +4655,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1052, 682);
+            this.ClientSize = new System.Drawing.Size(1069, 687);
+            this.Controls.Add(this.panelLocationCosts);
             this.Controls.Add(this.panelAttendance);
             this.Controls.Add(this.panelSourceEvaluation);
             this.Controls.Add(this.panelUpdateEmployee);
             this.Controls.Add(this.panelNewEmployee);
             this.Controls.Add(this.panelUpdateLocation);
             this.Controls.Add(this.panelUpdateLocationCosts);
-            this.Controls.Add(this.panelLocationCosts);
             this.Controls.Add(this.PanelDeleteFromDevicesStore);
             this.Controls.Add(this.PanelUpdateDeviceStore);
             this.Controls.Add(this.PanelAddDevices);
@@ -4781,36 +4814,36 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtCostTotalSupervisor;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewCostClothes;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox txtCostClothePrice;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtCostClotheQuantity;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxCostClothesName;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtCostTotalClothes;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox txtCostTotalDevices;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView listViewCostDevices;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox txtCostDevicePrice;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox txtCostDeviceQuantity;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBoxCostDevicesName;
+        private System.Windows.Forms.Button btnSaveLocationCosts;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripMenuItem تعيينجديدToolStripMenuItem;
         private System.Windows.Forms.Panel panelNewEmployee;
@@ -5118,6 +5151,8 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton6;
         private System.Windows.Forms.ToolStripMenuItem حضوروانصرافToolStripMenuItem;
         private System.Windows.Forms.Button btnSaveAttendance;
+        private System.Windows.Forms.Button btnCostDeleteDevicesItem;
+        private System.Windows.Forms.Button btnCostDeleteClothesItem;
 
 
 
