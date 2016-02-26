@@ -59,6 +59,9 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripDropDownButton();
             this.تقديمطلبتوظيفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.حضوروانصرافToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelStart = new System.Windows.Forms.Panel();
             this.panelNewLocation = new System.Windows.Forms.Panel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -402,18 +405,15 @@
             this.comboBoxEvaluateSourceName = new System.Windows.Forms.ComboBox();
             this.label107 = new System.Windows.Forms.Label();
             this.panelAttendance = new System.Windows.Forms.Panel();
-            this.groupBox30 = new System.Windows.Forms.GroupBox();
             this.dataGridViewAttendance = new System.Windows.Forms.DataGridView();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.btnSaveAttendance = new System.Windows.Forms.Button();
+            this.label113 = new System.Windows.Forms.Label();
+            this.label112 = new System.Windows.Forms.Label();
+            this.domainUpDownAttendanceMonth = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDownAttendanceYear = new System.Windows.Forms.DomainUpDown();
             this.comboBoxAttendanceLocationName = new System.Windows.Forms.ComboBox();
             this.label111 = new System.Windows.Forms.Label();
-            this.domainUpDownAttendanceYear = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDownAttendanceMonth = new System.Windows.Forms.DomainUpDown();
-            this.label112 = new System.Windows.Forms.Label();
-            this.label113 = new System.Windows.Forms.Label();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.حضوروانصرافToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSaveAttendance = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panelNewLocation.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -460,8 +460,8 @@
             this.panelSourceEvaluation.SuspendLayout();
             this.groupBox29.SuspendLayout();
             this.panelAttendance.SuspendLayout();
-            this.groupBox30.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).BeginInit();
+            this.groupBox30.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -480,7 +480,7 @@
             this.toolStripDropDownButton5,
             this.toolStripSeparator5,
             this.toolStripDropDownButton6});
-            this.toolStrip1.Location = new System.Drawing.Point(919, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(936, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(99, 817);
             this.toolStrip1.TabIndex = 0;
@@ -506,7 +506,7 @@
             this.اضافةبياناتToolStripMenuItem,
             this.تعديلToolStripMenuItem2});
             this.موقعجديدToolStripMenuItem.Name = "موقعجديدToolStripMenuItem";
-            this.موقعجديدToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.موقعجديدToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.موقعجديدToolStripMenuItem.Text = "المواقع";
             // 
             // اضافةبياناتToolStripMenuItem
@@ -529,7 +529,7 @@
             this.اضافةتكاليفموقعToolStripMenuItem,
             this.تعديلتكاليفموقعToolStripMenuItem});
             this.التكاليفToolStripMenuItem.Name = "التكاليفToolStripMenuItem";
-            this.التكاليفToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.التكاليفToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.التكاليفToolStripMenuItem.Text = "تكاليف الموقع";
             this.التكاليفToolStripMenuItem.Click += new System.EventHandler(this.التكاليفToolStripMenuItem_Click);
             // 
@@ -728,12 +728,36 @@
             this.تقديمطلبتوظيفToolStripMenuItem.Text = "طلب توظيف";
             this.تقديمطلبتوظيفToolStripMenuItem.Click += new System.EventHandler(this.تقديمطلبتوظيفToolStripMenuItem_Click);
             // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(97, 6);
+            // 
+            // toolStripDropDownButton6
+            // 
+            this.toolStripDropDownButton6.AutoSize = false;
+            this.toolStripDropDownButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton6.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.حضوروانصرافToolStripMenuItem});
+            this.toolStripDropDownButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton6.Image")));
+            this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
+            this.toolStripDropDownButton6.Size = new System.Drawing.Size(80, 80);
+            this.toolStripDropDownButton6.Text = "حضور و انصراف";
+            // 
+            // حضوروانصرافToolStripMenuItem
+            // 
+            this.حضوروانصرافToolStripMenuItem.Name = "حضوروانصرافToolStripMenuItem";
+            this.حضوروانصرافToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.حضوروانصرافToolStripMenuItem.Text = "حضور و انصراف المواقع";
+            this.حضوروانصرافToolStripMenuItem.Click += new System.EventHandler(this.حضوروانصرافToolStripMenuItem_Click);
+            // 
             // panelStart
             // 
             this.panelStart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelStart.Location = new System.Drawing.Point(0, 0);
             this.panelStart.Name = "panelStart";
-            this.panelStart.Size = new System.Drawing.Size(919, 817);
+            this.panelStart.Size = new System.Drawing.Size(936, 817);
             this.panelStart.TabIndex = 1;
             // 
             // panelNewLocation
@@ -746,7 +770,7 @@
             this.panelNewLocation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNewLocation.Location = new System.Drawing.Point(0, 0);
             this.panelNewLocation.Name = "panelNewLocation";
-            this.panelNewLocation.Size = new System.Drawing.Size(919, 817);
+            this.panelNewLocation.Size = new System.Drawing.Size(936, 817);
             this.panelNewLocation.TabIndex = 0;
             // 
             // groupBox8
@@ -758,7 +782,7 @@
             this.groupBox8.Location = new System.Drawing.Point(0, 423);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox8.Size = new System.Drawing.Size(919, 100);
+            this.groupBox8.Size = new System.Drawing.Size(936, 100);
             this.groupBox8.TabIndex = 12;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "ساعات العمل";
@@ -811,7 +835,7 @@
             this.groupBox3.Location = new System.Drawing.Point(0, 254);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(919, 169);
+            this.groupBox3.Size = new System.Drawing.Size(936, 169);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "عدد افراد التشغيل";
@@ -884,7 +908,7 @@
             this.groupBox2.Location = new System.Drawing.Point(0, 127);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(919, 127);
+            this.groupBox2.Size = new System.Drawing.Size(936, 127);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "فترة التعاقد";
@@ -940,7 +964,7 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(919, 127);
+            this.groupBox1.Size = new System.Drawing.Size(936, 127);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "بيانات الموقع";
@@ -992,7 +1016,7 @@
             this.panelLocationCosts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLocationCosts.Location = new System.Drawing.Point(0, 0);
             this.panelLocationCosts.Name = "panelLocationCosts";
-            this.panelLocationCosts.Size = new System.Drawing.Size(919, 817);
+            this.panelLocationCosts.Size = new System.Drawing.Size(936, 817);
             this.panelLocationCosts.TabIndex = 11;
             // 
             // groupBox7
@@ -1147,7 +1171,7 @@
             this.groupBox5.Controls.Add(this.comboBox2);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(479, 248);
+            this.groupBox5.Location = new System.Drawing.Point(496, 248);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox5.Size = new System.Drawing.Size(440, 569);
@@ -1298,7 +1322,7 @@
             this.groupBox6.Location = new System.Drawing.Point(0, 90);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox6.Size = new System.Drawing.Size(919, 158);
+            this.groupBox6.Size = new System.Drawing.Size(936, 158);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "تكلفة الأفراد";
@@ -1507,7 +1531,7 @@
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox4.Size = new System.Drawing.Size(919, 90);
+            this.groupBox4.Size = new System.Drawing.Size(936, 90);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "تكلفة الفرد";
@@ -1590,7 +1614,7 @@
             this.panelNewEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNewEmployee.Location = new System.Drawing.Point(0, 0);
             this.panelNewEmployee.Name = "panelNewEmployee";
-            this.panelNewEmployee.Size = new System.Drawing.Size(919, 817);
+            this.panelNewEmployee.Size = new System.Drawing.Size(936, 817);
             this.panelNewEmployee.TabIndex = 24;
             // 
             // label36
@@ -3142,7 +3166,7 @@
             this.panelUpdateLocation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateLocation.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateLocation.Name = "panelUpdateLocation";
-            this.panelUpdateLocation.Size = new System.Drawing.Size(919, 817);
+            this.panelUpdateLocation.Size = new System.Drawing.Size(936, 817);
             this.panelUpdateLocation.TabIndex = 32;
             // 
             // groupBox20
@@ -3154,7 +3178,7 @@
             this.groupBox20.Location = new System.Drawing.Point(0, 523);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox20.Size = new System.Drawing.Size(919, 100);
+            this.groupBox20.Size = new System.Drawing.Size(936, 100);
             this.groupBox20.TabIndex = 17;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "ساعات العمل";
@@ -3207,7 +3231,7 @@
             this.groupBox21.Location = new System.Drawing.Point(0, 354);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox21.Size = new System.Drawing.Size(919, 169);
+            this.groupBox21.Size = new System.Drawing.Size(936, 169);
             this.groupBox21.TabIndex = 16;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "عدد افراد التشغيل";
@@ -3280,7 +3304,7 @@
             this.groupBox22.Location = new System.Drawing.Point(0, 227);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox22.Size = new System.Drawing.Size(919, 127);
+            this.groupBox22.Size = new System.Drawing.Size(936, 127);
             this.groupBox22.TabIndex = 15;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "فترة التعاقد";
@@ -3336,7 +3360,7 @@
             this.groupBox23.Location = new System.Drawing.Point(0, 100);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox23.Size = new System.Drawing.Size(919, 127);
+            this.groupBox23.Size = new System.Drawing.Size(936, 127);
             this.groupBox23.TabIndex = 14;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "بيانات الموقع";
@@ -3388,7 +3412,7 @@
             this.groupBox24.Location = new System.Drawing.Point(0, 0);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox24.Size = new System.Drawing.Size(919, 100);
+            this.groupBox24.Size = new System.Drawing.Size(936, 100);
             this.groupBox24.TabIndex = 0;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "الموقع";
@@ -3424,7 +3448,7 @@
             this.panelUpdateLocationCosts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateLocationCosts.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateLocationCosts.Name = "panelUpdateLocationCosts";
-            this.panelUpdateLocationCosts.Size = new System.Drawing.Size(919, 817);
+            this.panelUpdateLocationCosts.Size = new System.Drawing.Size(936, 817);
             this.panelUpdateLocationCosts.TabIndex = 33;
             // 
             // groupBox25
@@ -3614,7 +3638,7 @@
             this.groupBox26.Controls.Add(this.comboBoxUpdateCostClothesName);
             this.groupBox26.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox26.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox26.Location = new System.Drawing.Point(479, 248);
+            this.groupBox26.Location = new System.Drawing.Point(496, 248);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox26.Size = new System.Drawing.Size(440, 569);
@@ -3796,7 +3820,7 @@
             this.groupBox27.Location = new System.Drawing.Point(0, 90);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox27.Size = new System.Drawing.Size(919, 158);
+            this.groupBox27.Size = new System.Drawing.Size(936, 158);
             this.groupBox27.TabIndex = 17;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "تكلفة الأفراد";
@@ -4012,7 +4036,7 @@
             this.groupBox28.Location = new System.Drawing.Point(0, 0);
             this.groupBox28.Name = "groupBox28";
             this.groupBox28.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox28.Size = new System.Drawing.Size(919, 90);
+            this.groupBox28.Size = new System.Drawing.Size(936, 90);
             this.groupBox28.TabIndex = 16;
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "الموقع";
@@ -4075,7 +4099,7 @@
             this.panelUpdateEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUpdateEmployee.Location = new System.Drawing.Point(0, 0);
             this.panelUpdateEmployee.Name = "panelUpdateEmployee";
-            this.panelUpdateEmployee.Size = new System.Drawing.Size(919, 817);
+            this.panelUpdateEmployee.Size = new System.Drawing.Size(936, 817);
             this.panelUpdateEmployee.TabIndex = 35;
             // 
             // btnupdateEmployeeCancel
@@ -4310,7 +4334,7 @@
             this.panelSourceEvaluation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSourceEvaluation.Location = new System.Drawing.Point(0, 0);
             this.panelSourceEvaluation.Name = "panelSourceEvaluation";
-            this.panelSourceEvaluation.Size = new System.Drawing.Size(919, 817);
+            this.panelSourceEvaluation.Size = new System.Drawing.Size(936, 817);
             this.panelSourceEvaluation.TabIndex = 55;
             // 
             // listViewEvaluate
@@ -4327,7 +4351,7 @@
             this.listViewEvaluate.Name = "listViewEvaluate";
             this.listViewEvaluate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.listViewEvaluate.RightToLeftLayout = true;
-            this.listViewEvaluate.Size = new System.Drawing.Size(919, 635);
+            this.listViewEvaluate.Size = new System.Drawing.Size(936, 635);
             this.listViewEvaluate.TabIndex = 52;
             this.listViewEvaluate.UseCompatibleStateImageBehavior = false;
             this.listViewEvaluate.View = System.Windows.Forms.View.Details;
@@ -4367,7 +4391,7 @@
             this.groupBox29.Location = new System.Drawing.Point(0, 0);
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox29.Size = new System.Drawing.Size(919, 182);
+            this.groupBox29.Size = new System.Drawing.Size(936, 182);
             this.groupBox29.TabIndex = 51;
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "البيانات";
@@ -4471,8 +4495,21 @@
             this.panelAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAttendance.Location = new System.Drawing.Point(0, 0);
             this.panelAttendance.Name = "panelAttendance";
-            this.panelAttendance.Size = new System.Drawing.Size(919, 817);
+            this.panelAttendance.Size = new System.Drawing.Size(936, 817);
             this.panelAttendance.TabIndex = 59;
+            // 
+            // dataGridViewAttendance
+            // 
+            this.dataGridViewAttendance.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewAttendance.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridViewAttendance.Location = new System.Drawing.Point(0, 100);
+            this.dataGridViewAttendance.Name = "dataGridViewAttendance";
+            this.dataGridViewAttendance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dataGridViewAttendance.Size = new System.Drawing.Size(936, 717);
+            this.dataGridViewAttendance.TabIndex = 2;
+            this.dataGridViewAttendance.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAttendance_CellEndEdit);
             // 
             // groupBox30
             // 
@@ -4488,23 +4525,73 @@
             this.groupBox30.Location = new System.Drawing.Point(0, 0);
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox30.Size = new System.Drawing.Size(919, 100);
+            this.groupBox30.Size = new System.Drawing.Size(936, 100);
             this.groupBox30.TabIndex = 1;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "بيانات الموقع";
             // 
-            // dataGridViewAttendance
+            // btnSaveAttendance
             // 
-            this.dataGridViewAttendance.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridViewAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewAttendance.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridViewAttendance.Location = new System.Drawing.Point(0, 100);
-            this.dataGridViewAttendance.Name = "dataGridViewAttendance";
-            this.dataGridViewAttendance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridViewAttendance.Size = new System.Drawing.Size(919, 717);
-            this.dataGridViewAttendance.TabIndex = 2;
-            this.dataGridViewAttendance.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAttendance_CellEndEdit);
+            this.btnSaveAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSaveAttendance.Location = new System.Drawing.Point(49, 41);
+            this.btnSaveAttendance.Name = "btnSaveAttendance";
+            this.btnSaveAttendance.Size = new System.Drawing.Size(120, 29);
+            this.btnSaveAttendance.TabIndex = 57;
+            this.btnSaveAttendance.Text = "تسجيل";
+            this.btnSaveAttendance.UseVisualStyleBackColor = true;
+            this.btnSaveAttendance.Click += new System.EventHandler(this.btnSaveAttendance_Click);
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label113.Location = new System.Drawing.Point(354, 62);
+            this.label113.Name = "label113";
+            this.label113.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label113.Size = new System.Drawing.Size(38, 16);
+            this.label113.TabIndex = 56;
+            this.label113.Text = "سنة:";
+            // 
+            // label112
+            // 
+            this.label112.AutoSize = true;
+            this.label112.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label112.Location = new System.Drawing.Point(354, 30);
+            this.label112.Name = "label112";
+            this.label112.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label112.Size = new System.Drawing.Size(38, 16);
+            this.label112.TabIndex = 55;
+            this.label112.Text = "شهر:";
+            // 
+            // domainUpDownAttendanceMonth
+            // 
+            this.domainUpDownAttendanceMonth.Items.Add("1");
+            this.domainUpDownAttendanceMonth.Items.Add("2");
+            this.domainUpDownAttendanceMonth.Items.Add("3");
+            this.domainUpDownAttendanceMonth.Items.Add("4");
+            this.domainUpDownAttendanceMonth.Items.Add("5");
+            this.domainUpDownAttendanceMonth.Items.Add("6");
+            this.domainUpDownAttendanceMonth.Items.Add("7");
+            this.domainUpDownAttendanceMonth.Items.Add("8");
+            this.domainUpDownAttendanceMonth.Items.Add("9");
+            this.domainUpDownAttendanceMonth.Items.Add("10");
+            this.domainUpDownAttendanceMonth.Items.Add("11");
+            this.domainUpDownAttendanceMonth.Items.Add("12");
+            this.domainUpDownAttendanceMonth.Location = new System.Drawing.Point(255, 26);
+            this.domainUpDownAttendanceMonth.Name = "domainUpDownAttendanceMonth";
+            this.domainUpDownAttendanceMonth.ReadOnly = true;
+            this.domainUpDownAttendanceMonth.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.domainUpDownAttendanceMonth.Size = new System.Drawing.Size(93, 26);
+            this.domainUpDownAttendanceMonth.TabIndex = 54;
+            // 
+            // domainUpDownAttendanceYear
+            // 
+            this.domainUpDownAttendanceYear.Enabled = false;
+            this.domainUpDownAttendanceYear.Location = new System.Drawing.Point(255, 58);
+            this.domainUpDownAttendanceYear.Name = "domainUpDownAttendanceYear";
+            this.domainUpDownAttendanceYear.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.domainUpDownAttendanceYear.Size = new System.Drawing.Size(93, 26);
+            this.domainUpDownAttendanceYear.TabIndex = 53;
             // 
             // comboBoxAttendanceLocationName
             // 
@@ -4530,99 +4617,12 @@
             this.label111.TabIndex = 52;
             this.label111.Text = "الموقع:";
             // 
-            // domainUpDownAttendanceYear
-            // 
-            this.domainUpDownAttendanceYear.Enabled = false;
-            this.domainUpDownAttendanceYear.Location = new System.Drawing.Point(255, 58);
-            this.domainUpDownAttendanceYear.Name = "domainUpDownAttendanceYear";
-            this.domainUpDownAttendanceYear.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.domainUpDownAttendanceYear.Size = new System.Drawing.Size(93, 26);
-            this.domainUpDownAttendanceYear.TabIndex = 53;
-            // 
-            // domainUpDownAttendanceMonth
-            // 
-            this.domainUpDownAttendanceMonth.Items.Add("1");
-            this.domainUpDownAttendanceMonth.Items.Add("2");
-            this.domainUpDownAttendanceMonth.Items.Add("3");
-            this.domainUpDownAttendanceMonth.Items.Add("4");
-            this.domainUpDownAttendanceMonth.Items.Add("5");
-            this.domainUpDownAttendanceMonth.Items.Add("6");
-            this.domainUpDownAttendanceMonth.Items.Add("7");
-            this.domainUpDownAttendanceMonth.Items.Add("8");
-            this.domainUpDownAttendanceMonth.Items.Add("9");
-            this.domainUpDownAttendanceMonth.Items.Add("10");
-            this.domainUpDownAttendanceMonth.Items.Add("11");
-            this.domainUpDownAttendanceMonth.Items.Add("12");
-            this.domainUpDownAttendanceMonth.Location = new System.Drawing.Point(255, 26);
-            this.domainUpDownAttendanceMonth.Name = "domainUpDownAttendanceMonth";
-            this.domainUpDownAttendanceMonth.ReadOnly = true;
-            this.domainUpDownAttendanceMonth.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.domainUpDownAttendanceMonth.Size = new System.Drawing.Size(93, 26);
-            this.domainUpDownAttendanceMonth.TabIndex = 54;
-            // 
-            // label112
-            // 
-            this.label112.AutoSize = true;
-            this.label112.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label112.Location = new System.Drawing.Point(354, 30);
-            this.label112.Name = "label112";
-            this.label112.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label112.Size = new System.Drawing.Size(38, 16);
-            this.label112.TabIndex = 55;
-            this.label112.Text = "شهر:";
-            // 
-            // label113
-            // 
-            this.label113.AutoSize = true;
-            this.label113.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label113.Location = new System.Drawing.Point(354, 62);
-            this.label113.Name = "label113";
-            this.label113.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label113.Size = new System.Drawing.Size(38, 16);
-            this.label113.TabIndex = 56;
-            this.label113.Text = "سنة:";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(97, 6);
-            // 
-            // toolStripDropDownButton6
-            // 
-            this.toolStripDropDownButton6.AutoSize = false;
-            this.toolStripDropDownButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton6.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.حضوروانصرافToolStripMenuItem});
-            this.toolStripDropDownButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton6.Image")));
-            this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
-            this.toolStripDropDownButton6.Size = new System.Drawing.Size(80, 80);
-            this.toolStripDropDownButton6.Text = "حضور و انصراف";
-            // 
-            // حضوروانصرافToolStripMenuItem
-            // 
-            this.حضوروانصرافToolStripMenuItem.Name = "حضوروانصرافToolStripMenuItem";
-            this.حضوروانصرافToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.حضوروانصرافToolStripMenuItem.Text = "حضور و انصراف المواقع";
-            this.حضوروانصرافToolStripMenuItem.Click += new System.EventHandler(this.حضوروانصرافToolStripMenuItem_Click);
-            // 
-            // btnSaveAttendance
-            // 
-            this.btnSaveAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSaveAttendance.Location = new System.Drawing.Point(49, 41);
-            this.btnSaveAttendance.Name = "btnSaveAttendance";
-            this.btnSaveAttendance.Size = new System.Drawing.Size(120, 29);
-            this.btnSaveAttendance.TabIndex = 57;
-            this.btnSaveAttendance.Text = "تسجيل";
-            this.btnSaveAttendance.UseVisualStyleBackColor = true;
-            this.btnSaveAttendance.Click += new System.EventHandler(this.btnSaveAttendance_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1035, 682);
+            this.ClientSize = new System.Drawing.Size(1052, 682);
             this.Controls.Add(this.panelAttendance);
             this.Controls.Add(this.panelSourceEvaluation);
             this.Controls.Add(this.panelUpdateEmployee);
@@ -4724,9 +4724,9 @@
             this.groupBox29.ResumeLayout(false);
             this.groupBox29.PerformLayout();
             this.panelAttendance.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).EndInit();
             this.groupBox30.ResumeLayout(false);
             this.groupBox30.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).EndInit();
             this.ResumeLayout(false);
 
         }

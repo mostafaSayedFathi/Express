@@ -2445,7 +2445,7 @@ namespace Express
                 dataGridViewAttendance.Columns[0].HeaderText = "الكود";
                 dataGridViewAttendance.Columns[0].Width = 50;
                 dataGridViewAttendance.Columns[1].HeaderText = "الأسم";
-                dataGridViewAttendance.Columns[1].Width = 160;
+                dataGridViewAttendance.Columns[1].Width = 177;
                 for (int i = 2; i < 33; i++)
                 {
                     dataGridViewAttendance.Columns[i].HeaderText = (i - 1).ToString(); ;
@@ -2470,9 +2470,7 @@ namespace Express
                 }
                 else
                 {
-                    employeeControl = new EmployeeControl();
-                    applicationControl = new ApplicationControl();
-                    attendanceContentControl = new AttendanceContentControl();
+
                 }
             }
             catch (Exception ex)
