@@ -111,14 +111,28 @@ class AttendanceContentControl
         }
     }
 
+
+
     public void insertUpdate(int month , int year , string locationName , DataGridView dataGridView)
     {
+        attendanceContent = new AttendanceContent();
+        attendanceContentDB = new AttendanceContentDB();
         attendanceControl = new AttendanceControl();
         bool flag = attendanceControl.checkIfLocationAttendanceSubmitted(month, year, locationName);
+        int attendanceID = attendanceControl.getID(month, year, locationName);
+        attendanceContent.setAttendanceID(attendanceID);
+        bool flag1 = attendanceContentDB.checkIfAttendanceContentIsSubmitted(attendanceContent);
         if (flag == true)
         {
             //submitted //update
-            this.update(month, year, locationName, dataGridView);
+            if (flag1 == true)
+            {
+                this.update(month, year, locationName, dataGridView);
+            }
+            else if (flag1 == false)
+            {
+                this.insert(dataGridView);
+            }
         }
         else if (flag == false)
         {

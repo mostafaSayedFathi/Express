@@ -25,4 +25,22 @@ class AttendanceContentDB
         command.ExecuteNonQuery();
         connection.close();
     }
+
+    public bool checkIfAttendanceContentIsSubmitted(AttendanceContent attendanceContent)
+    {
+        connection.open();
+        command = new SqlCommand("select count(*) from AttendanceContent where attendanceID='" + attendanceContent .getAttendanceID()+ "'", connection.getConnection());
+
+        int count = (int)command.ExecuteScalar();
+        connection.close();
+
+        if (count > 0)
+        {
+            return true; // submitted before.
+        }
+        else
+        {
+            return false; // not submited before.
+        }
+    }
 }

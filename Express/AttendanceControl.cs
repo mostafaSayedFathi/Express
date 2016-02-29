@@ -1,4 +1,6 @@
 ﻿using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
 
 class AttendanceControl
 {
@@ -54,5 +56,20 @@ class AttendanceControl
         attendance.setLocationID(locationID);
         bool flag = attendanceDB.checkIfLocationAttendanceSubmitted(attendance);
         return flag;
+    }
+
+    public void fillDataGridViewLocationAttendance(DataGridView dataGridView, string locationName , int month , int year)
+    {
+        locationControl = new LocationControl();
+        attendance = new Attendance();
+        attendanceDB = new AttendanceDB();
+        int locationID = locationControl.getID(locationName);
+        attendance.setLocationID(locationID);
+        attendance.setMonth(month);
+        attendance.setYear(year);
+        SqlDataAdapter adapter = attendanceDB.fillDataGridViewLocationAttendance(attendance);
+        DataTable dataTable = new DataTable();
+        adapter.Fill(dataTable);
+        dataGridView.DataSource = dataTable;
     }
 }

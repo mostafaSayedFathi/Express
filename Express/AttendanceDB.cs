@@ -51,4 +51,19 @@ class AttendanceDB
         attendance.setID((int)command.ExecuteScalar());
         connection.close();
     }
+
+    public SqlDataAdapter fillDataGridViewLocationAttendance(Attendance attendance)
+    {
+        connection.open();
+        string query = "select Employee.ID,Employee.name,AttendanceContent.d1,AttendanceContent.d2,AttendanceContent.d3,AttendanceContent.d4,AttendanceContent.d5,AttendanceContent.d6,AttendanceContent.d7,AttendanceContent.d8,AttendanceContent.d9,AttendanceContent.d10,AttendanceContent.d11,AttendanceContent.d12,AttendanceContent.d13,AttendanceContent.d14,AttendanceContent.d15,AttendanceContent.d16,AttendanceContent.d17,AttendanceContent.d18,AttendanceContent.d19,AttendanceContent.d20,AttendanceContent.d21,AttendanceContent.d22,AttendanceContent.d23,AttendanceContent.d24,AttendanceContent.d25,AttendanceContent.d26,AttendanceContent.d27,AttendanceContent.d28,AttendanceContent.d29,AttendanceContent.d30,AttendanceContent.d31" +
+            " from Employee" +
+            " left join AttendanceContent" +
+            " on Employee.ID = AttendanceContent.empID" +
+            " join Attendance"+
+            " on Employee.locationID = Attendance.locationID" +
+            " where Employee.locationID='" + attendance.getLocationID() + "' and Attendance.month='" + attendance.getMonth() + "' and Attendance.year='"+attendance.getYear()+"'";
+        command = new SqlCommand(query, connection.getConnection());
+        SqlDataAdapter adapter = new SqlDataAdapter(command);
+        return adapter;
+    }
 }

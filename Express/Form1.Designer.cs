@@ -163,9 +163,9 @@
             this.label27 = new System.Windows.Forms.Label();
             this.PanelNewApplication = new System.Windows.Forms.Panel();
             this.btnClossImageApplication = new System.Windows.Forms.Button();
-            this.btnAppAdd = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label37 = new System.Windows.Forms.Label();
+            this.btnAppAdd = new System.Windows.Forms.Button();
             this.richTextBoxAppComent = new System.Windows.Forms.RichTextBox();
             this.radioButtonAppRejected = new System.Windows.Forms.RadioButton();
             this.radioButtonAppAccepted = new System.Windows.Forms.RadioButton();
@@ -1896,18 +1896,6 @@
             this.btnClossImageApplication.UseVisualStyleBackColor = true;
             this.btnClossImageApplication.Click += new System.EventHandler(this.btnClossImageApplication_Click);
             // 
-            // btnAppAdd
-            // 
-            this.btnAppAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAppAdd.Location = new System.Drawing.Point(29, 129);
-            this.btnAppAdd.Name = "btnAppAdd";
-            this.btnAppAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnAppAdd.Size = new System.Drawing.Size(216, 53);
-            this.btnAppAdd.TabIndex = 21;
-            this.btnAppAdd.Text = "إضافة طلب";
-            this.btnAppAdd.UseVisualStyleBackColor = true;
-            this.btnAppAdd.Click += new System.EventHandler(this.btnAppAdd_Click);
-            // 
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.label37);
@@ -1934,6 +1922,18 @@
             this.label37.Size = new System.Drawing.Size(39, 20);
             this.label37.TabIndex = 23;
             this.label37.Text = "تعليق:";
+            // 
+            // btnAppAdd
+            // 
+            this.btnAppAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAppAdd.Location = new System.Drawing.Point(29, 129);
+            this.btnAppAdd.Name = "btnAppAdd";
+            this.btnAppAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnAppAdd.Size = new System.Drawing.Size(216, 53);
+            this.btnAppAdd.TabIndex = 21;
+            this.btnAppAdd.Text = "إضافة طلب";
+            this.btnAppAdd.UseVisualStyleBackColor = true;
+            this.btnAppAdd.Click += new System.EventHandler(this.btnAppAdd_Click);
             // 
             // richTextBoxAppComent
             // 
@@ -4651,6 +4651,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(984, 687);
+            this.Controls.Add(this.panelAttendance);
             this.Controls.Add(this.PanelAddClothe);
             this.Controls.Add(this.PanelNewApplication);
             this.Controls.Add(this.PanelDeleteFromclothesStore);
@@ -4660,7 +4661,6 @@
             this.Controls.Add(this.PanelUpdateDeviceStore);
             this.Controls.Add(this.panelUpdateLocationCosts);
             this.Controls.Add(this.panelLocationCosts);
-            this.Controls.Add(this.panelAttendance);
             this.Controls.Add(this.panelSourceEvaluation);
             this.Controls.Add(this.panelUpdateEmployee);
             this.Controls.Add(this.panelNewEmployee);

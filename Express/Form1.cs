@@ -25,6 +25,7 @@ namespace Express
         private LocationClothesControl locationClothesControl;
         private LocationEquipsConrol locationEquipsConrol;
         private SourceControl sourceControl;
+        private AttendanceControl attendanceControl;
         private AttendanceContentControl attendanceContentControl;
         private byte[] imageByte = null;
         private ArrayList listCheck = new ArrayList();
@@ -372,7 +373,7 @@ namespace Express
         private void اضافةمصدرToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddSource form = new AddSource();
-            form.Show();
+            form.ShowDialog();
 
         }
 
@@ -2456,10 +2457,21 @@ namespace Express
         {
             try
             {
-                locationControl = new LocationControl();
+                attendanceControl = new AttendanceControl();
                 string locationName = comboBoxAttendanceLocationName.Text;
-                
-                locationControl.fillDataGridViewLocationAttendance(dataGridViewAttendance, locationName);
+                int month = int.Parse(domainUpDownAttendanceMonth.Text);
+                int year = int.Parse(domainUpDownAttendanceYear.Text);
+                bool flag = attendanceControl.checkIfLocationAttendanceSubmitted(month, year, locationName);
+                if (flag == false && DateTime.Now.Month == int.Parse(domainUpDownAttendanceMonth.Text) && DateTime.Now.Year == int.Parse(domainUpDownAttendanceYear.Text))
+                {
+                    attendanceControl.insert(month, year, locationName);
+                }
+                else
+                {
+                    
+                }
+
+                attendanceControl.fillDataGridViewLocationAttendance(dataGridViewAttendance, locationName, month, year);
                 dataGridViewAttendance.Columns[0].HeaderText = "الكود";
                 dataGridViewAttendance.Columns[0].Width = 50;
                 dataGridViewAttendance.Columns[1].HeaderText = "الأسم";
