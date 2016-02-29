@@ -46,3 +46,4 @@ D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Expre
 D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express.Form1.resources
 D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express.Properties.Resources.resources
 D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express.csproj.GenerateResource.Cache
+D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express.FormUpdateSource.resources

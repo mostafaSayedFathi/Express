@@ -65,5 +65,47 @@ class SourceControl
         sourceDB.selectSourceName(source);
         return source.getName();
     }
+
+    public string getSourceAddress(string sourceName)
+    {
+        source = new Source();
+        sourceDB = new SourceDB();
+        int ID = this.selectID(sourceName);
+        source.setID(ID);
+        sourceDB.selectSourceAdress(source);
+        return source.getAddress();
+    }
+
+    public string getSourceEmployee1(string sourceName)
+    {
+        source = new Source();
+        sourceDB = new SourceDB();
+        int ID = this.selectID(sourceName);
+        source.setID(ID);
+        sourceDB.selectEmployeeName1(source);
+        return source.getEmployeeName1();
+    }
+
+    public string getSourceEmployee2(string sourceName)
+    {
+        source = new Source();
+        sourceDB = new SourceDB();
+        int ID = this.selectID(sourceName);
+        source.setID(ID);
+        sourceDB.selectEmployeeName2(source);
+        return source.getEmployeeName2();
+    }
+
+    public void getSourcePhone1(string sourceName)
+    {
+    }
+
+    public void getSourcePhone2(string sourceName)
+    {
+    }
+
+    public void getSourcePhone3(string sourceName)
+    {
+    }
 }
 

@@ -598,26 +598,27 @@
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
             this.toolStripDropDownButton3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.toolStripDropDownButton3.Size = new System.Drawing.Size(80, 80);
-            this.toolStripDropDownButton3.Text = "toolStripDropDownButton3";
+            this.toolStripDropDownButton3.Text = "المصادر";
             this.toolStripDropDownButton3.Click += new System.EventHandler(this.toolStripDropDownButton3_Click);
             // 
             // اضافةمصدرToolStripMenuItem
             // 
             this.اضافةمصدرToolStripMenuItem.Name = "اضافةمصدرToolStripMenuItem";
-            this.اضافةمصدرToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.اضافةمصدرToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.اضافةمصدرToolStripMenuItem.Text = "مصدر جديد";
             this.اضافةمصدرToolStripMenuItem.Click += new System.EventHandler(this.اضافةمصدرToolStripMenuItem_Click);
             // 
             // تقيممصدرToolStripMenuItem
             // 
             this.تقيممصدرToolStripMenuItem.Name = "تقيممصدرToolStripMenuItem";
-            this.تقيممصدرToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.تقيممصدرToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.تقيممصدرToolStripMenuItem.Text = "تعديل بيانات";
+            this.تقيممصدرToolStripMenuItem.Click += new System.EventHandler(this.تقيممصدرToolStripMenuItem_Click);
             // 
             // تقييمToolStripMenuItem
             // 
             this.تقييمToolStripMenuItem.Name = "تقييمToolStripMenuItem";
-            this.تقييمToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.تقييمToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.تقييمToolStripMenuItem.Text = "تقييم";
             this.تقييمToolStripMenuItem.Click += new System.EventHandler(this.تقييمToolStripMenuItem_Click);
             // 

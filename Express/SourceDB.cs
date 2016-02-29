@@ -65,5 +65,29 @@ class SourceDB
         source.setName(command.ExecuteScalar() as string);
         connection.close();
     }
+
+    public void selectSourceAdress(Source source)
+    {
+        connection.open();
+        command = new SqlCommand("select address from Source where ID='" + source.getID() + "'", connection.getConnection());
+        source.setAddress(command.ExecuteScalar() as string);
+        connection.close();
+    }
+
+    public void selectEmployeeName1(Source source)
+    {
+        connection.open();
+        command = new SqlCommand("select employee1 from Source where ID='" + source.getID() + "'", connection.getConnection());
+        source.setEmployeeName1(command.ExecuteScalar() as string);
+        connection.close();
+    }
+
+    public void selectEmployeeName2(Source source)
+    {
+        connection.open();
+        command = new SqlCommand("select employee2 from Source where ID='" + source.getID() + "'", connection.getConnection());
+        source.setEmployeeName2(command.ExecuteScalar() as string);
+        connection.close();
+    }
 }
 
