@@ -46,7 +46,7 @@ namespace Express
         public List<string> getCompinations(int s)
         {
             List<string> c = new List<string>();
-            var alphabet = "APS";
+            var alphabet = "APSLO";
             var q = alphabet.Select(x => x.ToString());
             int size = s;
             for (int i = 0; i < size - 1; i++)

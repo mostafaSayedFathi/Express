@@ -12,9 +12,9 @@ class Source
     private string EmployeeName1;
     private string EmployeeName2;
     private string address;
-    private int phone1;
-    private int phone2;
-    private int phone3;
+    private string phone1;
+    private string phone2;
+    private string phone3;
 
     public Source()
     {
@@ -23,9 +23,9 @@ class Source
         EmployeeName1 = "";
         EmployeeName2 = "";
         address = "";
-        phone1 = 0;
-        phone2 = 0;
-        phone3 = 0;
+        phone1 = "";
+        phone2 = "";
+        phone3 = "";
     }
 
     public void setID(int ID)
@@ -78,32 +78,32 @@ class Source
         return address;
     }
 
-    public void setPhone1(int phone1)
+    public void setPhone1(string phone1)
     {
         this.phone1 = phone1;
     }
 
-    public int getPhone1()
+    public string getPhone1()
     {
         return phone1;
     }
 
-    public void setPhone2(int phone2)
+    public void setPhone2(string phone2)
     {
         this.phone2 = phone2;
     }
 
-    public int getPhone2()
+    public string getPhone2()
     {
         return phone2;
     }
 
-    public void setPhone3(int phone3)
+    public void setPhone3(string phone3)
     {
         this.phone3 = phone3;
     }
 
-    public int getPhone3()
+    public string getPhone3()
     {
         return phone3;
     }

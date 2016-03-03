@@ -250,6 +250,7 @@
             this.btnUpdateSource.TabIndex = 23;
             this.btnUpdateSource.Text = "تعديل";
             this.btnUpdateSource.UseVisualStyleBackColor = true;
+            this.btnUpdateSource.Click += new System.EventHandler(this.btnUpdateSource_Click);
             // 
             // comboBoxSorceName
             // 

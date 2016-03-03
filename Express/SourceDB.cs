@@ -23,6 +23,14 @@ class SourceDB
         connection.close();
     }
 
+    public void update(Source source)
+    {
+        connection.open();
+        command = new SqlCommand("update Source set sourceName='" + source.getName() + "' , phone1='" + source.getPhone1() + "' , phone2='" + source.getPhone2() + "' , phone3='" + source.getPhone3() + "' , employee1='" + source.getEmployeeName1() + "' , employee2='" + source.getEmployeeName2() + "' , address='"+source.getAddress()+"' where ID='"+source.getID()+"'", connection.getConnection());
+        command.ExecuteNonQuery();
+        connection.close();
+    }
+
     public Boolean checkSource(Source source)
     {
         connection.open();
@@ -87,6 +95,30 @@ class SourceDB
         connection.open();
         command = new SqlCommand("select employee2 from Source where ID='" + source.getID() + "'", connection.getConnection());
         source.setEmployeeName2(command.ExecuteScalar() as string);
+        connection.close();
+    }
+
+    public void selectPhone1(Source source)
+    {
+        connection.open();
+        command = new SqlCommand("select phone1 from Source where ID='" + source.getID() + "'", connection.getConnection());
+        source.setPhone1(command.ExecuteScalar() as string);
+        connection.close();
+    }
+
+    public void selectPhone2(Source source)
+    {
+        connection.open();
+        command = new SqlCommand("select phone2 from Source where ID='" + source.getID() + "'", connection.getConnection());
+        source.setPhone2(command.ExecuteScalar() as string);
+        connection.close();
+    }
+
+    public void selectPhone3(Source source)
+    {
+        connection.open();
+        command = new SqlCommand("select phone3 from Source where ID='" + source.getID() + "'", connection.getConnection());
+        source.setPhone3(command.ExecuteScalar() as string);
         connection.close();
     }
 }

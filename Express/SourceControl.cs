@@ -13,7 +13,7 @@ class SourceControl
     private Boolean check;
     DBConnection connection;
 
-    public Boolean insertSource(string name, string address, string EmployeeName1, string EmployeeName2, int phone1, int phone2, int phone3)
+    public Boolean insertSource(string name, string address, string EmployeeName1, string EmployeeName2, string phone1, string phone2, string phone3)
     {
         source = new Source();
         sourceDB = new SourceDB();
@@ -34,6 +34,22 @@ class SourceControl
             sourceDB.insert(source);
             return true;
         }
+    }
+
+    public void updateSource(string previousName ,string name, string address, string EmployeeName1, string EmployeeName2, string phone1, string phone2, string phone3)
+    {
+        source = new Source();
+        sourceDB = new SourceDB();
+        int ID = this.selectID(previousName);
+        source.setID(ID);
+        source.setName(name);
+        source.setEmployeeName1(EmployeeName1);
+        source.setEmployeeName2(EmployeeName2);
+        source.setAddress(address);
+        source.setPhone1(phone1);
+        source.setPhone2(phone2);
+        source.setPhone3(phone3);
+        sourceDB.update(source);
     }
 
     public int selectID(string sourceName)
@@ -96,16 +112,34 @@ class SourceControl
         return source.getEmployeeName2();
     }
 
-    public void getSourcePhone1(string sourceName)
+    public string getSourcePhone1(string sourceName)
     {
+        source = new Source();
+        sourceDB = new SourceDB();
+        int ID = this.selectID(sourceName);
+        source.setID(ID);
+        sourceDB.selectPhone1(source);
+        return source.getPhone1();
     }
 
-    public void getSourcePhone2(string sourceName)
+    public string getSourcePhone2(string sourceName)
     {
+        source = new Source();
+        sourceDB = new SourceDB();
+        int ID = this.selectID(sourceName);
+        source.setID(ID);
+        sourceDB.selectPhone2(source);
+        return source.getPhone2();
     }
 
-    public void getSourcePhone3(string sourceName)
+    public string getSourcePhone3(string sourceName)
     {
+        source = new Source();
+        sourceDB = new SourceDB();
+        int ID = this.selectID(sourceName);
+        source.setID(ID);
+        sourceDB.selectPhone3(source);
+        return source.getPhone3();
     }
 }
 

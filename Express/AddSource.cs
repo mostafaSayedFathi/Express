@@ -52,9 +52,9 @@ namespace Express_Project
                     string EmployeeName1 = txtSourceEmployee1.Text;
                     string EmployeeName2 = txtSourceEmployee2.Text;
                     setZero();
-                    int phone1 = Int32.Parse(txtSourcePhone1.Text);
-                    int phone2 = Int32.Parse(txtSourcePhone2.Text);
-                    int phone3 = Int32.Parse(txtSourcePhone3.Text);
+                    string phone1 = txtSourcePhone1.Text;
+                    string phone2 = txtSourcePhone2.Text;
+                    string phone3 = txtSourcePhone3.Text;
 
                     check = sourceControl.insertSource(name, address, EmployeeName1, EmployeeName2, phone1, phone2, phone3);
                     if (check == false)
