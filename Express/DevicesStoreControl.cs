@@ -181,6 +181,31 @@ class DevicesStoreControl
         return newTotal;
     }
 
+    public void updateQuantityMinus(string deviceName , double quantity)
+    {
+        devicesStore = new DevicesStore();
+        devicesStoreDB = new DevicesStoreDB();
+        devicesStore.setName(deviceName);
+        devicesStore.setQuantity(quantity);
+        devicesStoreDB.updateQuantityMinus(devicesStore);
+    }
+
+    public bool checkItemQuantity(string itemName, double quantity)
+    {
+        devicesStore = new DevicesStore();
+        devicesStoreDB = new DevicesStoreDB();
+        devicesStore.setName(itemName);
+        devicesStoreDB.selectQuantity(devicesStore);
+        if (quantity > devicesStore.getQuantity())
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
 }
 
 

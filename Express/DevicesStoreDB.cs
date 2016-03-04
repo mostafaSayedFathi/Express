@@ -89,5 +89,21 @@ class DevicesStoreDB
         SqlDataReader reader = command.ExecuteReader();
         return reader;
     }
+
+    public void updateQuantityMinus(DevicesStore devicesStore)
+    {
+        connection.open();
+        command = new SqlCommand("update EquipsStore set quantity=quantity-'"+devicesStore.getQuantity()+"' where name='" + devicesStore.getName() + "'", connection.getConnection());
+        command.ExecuteNonQuery();
+        connection.close();
+    }
+
+    public void selectQuantity(DevicesStore devicesStore)
+    {
+        connection.open();
+        command = new SqlCommand("select quantity from EquipsStore where name='"+devicesStore.getName()+"'", connection.getConnection());
+        devicesStore.setQuantity(double.Parse(command.ExecuteScalar().ToString()));
+        connection.close();
+    }
 }
 

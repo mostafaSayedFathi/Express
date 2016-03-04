@@ -96,26 +96,32 @@ namespace Express
                 if (txtLocationName.Text == "")
                 {
                     MessageBox.Show("من فضلك ادخل اسم الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtLocationName.Focus();
                 }
                 else if (txtLocationAddress.Text == "")
                 {
                     MessageBox.Show("من فضلك ادخل عنوان الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtLocationAddress.Focus();
                 }
                 else if (txtSecurityNumbers.Text == "")
                 {
                     MessageBox.Show("من فضلك ادخل عدد فرد امن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtSecurityNumbers.Focus();
                 }
                 else if (txtSupervisorNumbers.Text == "")
                 {
                     MessageBox.Show("من فضلك ادخل عدد مشرف موقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtSupervisorNumbers.Focus();
                 }
                 else if (txtManagerNumbers.Text == "")
                 {
                     MessageBox.Show("من فضلك ادخل عدد مدير موقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtManagerNumbers.Focus();
                 }
                 else if (comboBoxWorkHours.Text == "")
                 {
                     MessageBox.Show("من فضلك اختر عدد ساعات العمل بالموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    comboBoxWorkHours.Focus();
                 }
                 else
                 {
@@ -130,6 +136,14 @@ namespace Express
                         workHours = int.Parse(comboBoxWorkHours.Text);
                         locationControl.insertLocation(locationName, locationAdress, startDateSQL, endDateSQL, securityNumbers, supervisorNumbers, managerNumbers, workHours);
                         MessageBox.Show("تم بدأ تشغيل الموقع بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtLocationName.Text = "";
+                        txtLocationAddress.Text = "";
+                        txtSecurityNumbers.Text = "";
+                        txtSupervisorNumbers.Text = "";
+                        txtManagerNumbers.Text = "";
+                        comboBoxWorkHours.Text = "";
+                        dtpStartdate.Value = DateTime.Now;
+                        dtpEndDate.Value = DateTime.Now;
                     }
                     else if (result == DialogResult.No)
                     {
@@ -1517,21 +1531,29 @@ namespace Express
 
         private void اضافةبياناتToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panelNewEmployee.Visible = false;
-            panelNewLocation.Visible = true;
-            panelLocationCosts.Visible = false;
-            PanelNewApplication.Visible = false;
-            PanelUpdateClotheStore.Visible = false;
-            PanelAddClothe.Visible = false;
-            PanelDeleteFromclothesStore.Visible = false;
-            PanelAddDevices.Visible = false;
-            PanelUpdateDeviceStore.Visible = false;
-            PanelDeleteFromDevicesStore.Visible = false;
-            panelUpdateLocation.Visible = false;
-            panelUpdateLocationCosts.Visible = false;
-            panelUpdateEmployee.Visible = false;
-            panelSourceEvaluation.Visible = false;
-            panelAttendance.Visible = false;
+            try
+            {
+                panelNewEmployee.Visible = false;
+                panelNewLocation.Visible = true;
+                panelLocationCosts.Visible = false;
+                PanelNewApplication.Visible = false;
+                PanelUpdateClotheStore.Visible = false;
+                PanelAddClothe.Visible = false;
+                PanelDeleteFromclothesStore.Visible = false;
+                PanelAddDevices.Visible = false;
+                PanelUpdateDeviceStore.Visible = false;
+                PanelDeleteFromDevicesStore.Visible = false;
+                panelUpdateLocation.Visible = false;
+                panelUpdateLocationCosts.Visible = false;
+                panelUpdateEmployee.Visible = false;
+                panelSourceEvaluation.Visible = false;
+                panelAttendance.Visible = false;
+                txtLocationName.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void تعديلToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -1539,6 +1561,7 @@ namespace Express
             panelNewEmployee.Visible = false;
             panelNewLocation.Visible = false;
             panelLocationCosts.Visible = false;
+            panelUpdateLocationCosts.Visible = false;
             PanelNewApplication.Visible = false;
             PanelUpdateClotheStore.Visible = false;
             PanelAddClothe.Visible = false;
@@ -1576,7 +1599,7 @@ namespace Express
                 locationControl = new LocationControl();
                 clothesStoreControl = new ClothesStoreControl();
                 devicesStoreControl = new DevicesStoreControl();
-                locationControl.fillComboboxLocationName(comboBoxLocationName);
+                locationControl.fillComboboxLocationNameWithoutCost(comboBoxLocationName);
                 clothesStoreControl.fillComboboxClothesName(comboBoxCostClothesName);
                 devicesStoreControl.fillComboboxDevicesName(comboBoxCostDevicesName);
             }
@@ -1650,29 +1673,40 @@ namespace Express
         {
             try
             {
-                if (txtUpdateLocationName.Text == "")
+                if (comboBoxUpdateLocationName.Text == "")
+                {
+                    MessageBox.Show("من فضلك اختر اسم الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    comboBoxUpdateLocationName.Focus();
+                }
+                else if (txtUpdateLocationName.Text == "")
                 {
                     MessageBox.Show("من فضلك ادخل اسم الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUpdateLocationName.Focus();
                 }
                 else if (txtUpdateLocationAddress.Text == "")
                 {
                     MessageBox.Show("من فضلك ادخل العنوان", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUpdateLocationAddress.Focus();
                 }
                 else if (txtUpdateSecurityNumbers.Text == "")
                 {
                     MessageBox.Show("من فضلك ادخل عدد فرد امن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUpdateSecurityNumbers.Focus();
                 }
                 else if (txtUpdateSupervisorNumbers.Text == "")
                 {
                     MessageBox.Show("من فضلك ادخل عدد مشرف موقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUpdateSupervisorNumbers.Focus();
                 }
                 else if (txtUpdateManagerNumbers.Text == "")
                 {
                     MessageBox.Show("من فضلك ادخل عدد مدير موقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUpdateManagerNumbers.Focus();
                 }
                 else if (comboBoxUpdateWorkHours.Text == "")
                 {
                     MessageBox.Show("من فضلك ادخل عدد ساعات العمل ", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    comboBoxUpdateWorkHours.Focus();
                 }
                 else
                 {
@@ -1690,6 +1724,15 @@ namespace Express
                     int workHours = int.Parse(comboBoxUpdateWorkHours.Text);
                     locationControl.updateLocation(previousLoctionName, name, address, startDateSQL, endDateSQL, securityNumbers, supervisourNumbers, managerNumbers, workHours);
                     MessageBox.Show("تم تعديل بيانات الموقع بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtUpdateLocationName.Text = "";
+                    txtUpdateLocationAddress.Text = "";
+                    dtpUpdateStartDate.Value = DateTime.Now;
+                    dtpUpdateEndDate.Value = DateTime.Now;
+                    txtUpdateSecurityNumbers.Text = "";
+                    txtUpdateSupervisorNumbers.Text = "";
+                    txtUpdateManagerNumbers.Text = "";
+                    comboBoxUpdateWorkHours.Text = "";
+                    locationControl.fillComboboxLocationName(comboBoxUpdateLocationName);
                 }
             }
             catch (Exception ex)
@@ -2619,12 +2662,21 @@ namespace Express
                         }
                         else if (flag == false)
                         {
-                            ListViewItem lvi = new ListViewItem(name);
-                            lvi.SubItems.Add(price);
-                            lvi.SubItems.Add(quantity);
-                            lvi.SubItems.Add(total);
-                            listViewCostClothes.Items.Add(lvi);
-                            txtCostTotalClothes.Text = clothesStoreControl.totalAll(double.Parse(total), totalAll).ToString();
+                            clothesStoreControl = new ClothesStoreControl();
+                            bool check = clothesStoreControl.checkItemQuantity(name, double.Parse(quantity));
+                            if (check == true)
+                            {
+                                ListViewItem lvi = new ListViewItem(name);
+                                lvi.SubItems.Add(price);
+                                lvi.SubItems.Add(quantity);
+                                lvi.SubItems.Add(total);
+                                listViewCostClothes.Items.Add(lvi);
+                                txtCostTotalClothes.Text = clothesStoreControl.totalAll(double.Parse(total), totalAll).ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("هذه الكمية غير متوفرة", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                     e.SuppressKeyPress = true;
@@ -2665,12 +2717,21 @@ namespace Express
                         }
                         else if (flag == false)
                         {
-                            ListViewItem lvi = new ListViewItem(name);
-                            lvi.SubItems.Add(price);
-                            lvi.SubItems.Add(quantity);
-                            lvi.SubItems.Add(total);
-                            listViewCostDevices.Items.Add(lvi);
-                            txtCostTotalDevices.Text = devicesStoreControl.totalAll(double.Parse(total), totalAll).ToString();
+                            devicesStoreControl = new DevicesStoreControl();
+                            bool check = devicesStoreControl.checkItemQuantity(name, double.Parse(quantity));
+                            if (check == true)
+                            {
+                                ListViewItem lvi = new ListViewItem(name);
+                                lvi.SubItems.Add(price);
+                                lvi.SubItems.Add(quantity);
+                                lvi.SubItems.Add(total);
+                                listViewCostDevices.Items.Add(lvi);
+                                txtCostTotalDevices.Text = devicesStoreControl.totalAll(double.Parse(total), totalAll).ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("هذه الكمية غير متوفرة بالمخزن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                     e.SuppressKeyPress = true;
@@ -2760,6 +2821,54 @@ namespace Express
         {
             FormUpdateSource f = new FormUpdateSource();
             f.ShowDialog();
+        }
+
+        private void txtUpdateSecurityNumbers_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtUpdateSupervisorNumbers_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtUpdateManagerNumbers_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSecurityNumbers_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSupervisorNumbers_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtManagerNumbers_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
     }

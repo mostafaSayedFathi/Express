@@ -92,5 +92,20 @@ class ClothesStoreDB
         return reader;
     }
 
+    public void updateQuantityMinus(ClothesStore clothesStore)
+    {
+        connection.open();
+        command = new SqlCommand("update ClothesStore set quantity=quantity-'"+clothesStore.getQuantity()+"' where name='" + clothesStore.getName() + "'", connection.getConnection());
+        command.ExecuteNonQuery();
+        connection.close();
+    }
+
+    public void selectQuantity(ClothesStore clothesStore)
+    {
+        connection.open();
+        command = new SqlCommand("select quantity from ClothesStore where name='"+clothesStore.getName()+"'", connection.getConnection());
+        clothesStore.setQuantity(double.Parse(command.ExecuteScalar().ToString()));
+        connection.close();
+    }
 
 }

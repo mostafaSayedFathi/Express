@@ -11,6 +11,7 @@ class LocationEquipsContentControl
     LocationEquipsContent locationEquipsContent;
     LocationEquipsContentDB locationEquipsContentDB;
     LocationEquipsConrol locationEquipsConrol;
+    DevicesStoreControl devicesStoreControl;
     DBConnection connection;
 
     public void insert(ListView listView)
@@ -23,6 +24,7 @@ class LocationEquipsContentControl
             locationEquipsContent = new LocationEquipsContent();
             locationEquipsContentDB = new LocationEquipsContentDB();
             locationEquipsConrol = new LocationEquipsConrol();
+            devicesStoreControl = new DevicesStoreControl();
             int locationClothesID = locationEquipsConrol.getLastID();
             foreach (ListViewItem lvi in listView.Items)
             {
@@ -35,6 +37,7 @@ class LocationEquipsContentControl
                 locationEquipsContent.setQuantity(quantity);
                 locationEquipsContent.setTotal(total);
                 locationEquipsContent.setLocationClothesID(locationClothesID);
+                devicesStoreControl.updateQuantityMinus(name, quantity);
                 locationEquipsContentDB.insert(locationEquipsContent);
             }
         }

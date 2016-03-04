@@ -182,6 +182,29 @@ class ClothesStoreControl
         return newTotal;
     }
 
+    public void updateQuantityMinus(string clothesName, double quantity)
+    {
+        clothesStore = new ClothesStore();
+        clothesStoreDB = new ClothesStoreDB();
+        clothesStore.setName(clothesName);
+        clothesStore.setQuantity(quantity);
+        clothesStoreDB.updateQuantityMinus(clothesStore);
+    }
 
+    public bool checkItemQuantity(string itemName , double quantity)
+    {
+        clothesStore = new ClothesStore();
+        clothesStoreDB = new ClothesStoreDB();
+        clothesStore.setName(itemName);
+        clothesStoreDB.selectQuantity(clothesStore);
+        if (quantity > clothesStore.getQuantity())
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 
 }

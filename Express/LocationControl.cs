@@ -82,6 +82,19 @@ class LocationControl
         connection.close();
     }
 
+    public void fillComboboxLocationNameWithoutCost(ComboBox comboBox)
+    {
+        comboBox.Items.Clear();
+        locationDB = new LocationDB();
+        connection = new DBConnection();
+        SqlDataReader reader = locationDB.fillComboboxLocationNameWithoutCost();
+        while (reader.Read())
+        {
+            comboBox.Items.Add(reader["name"]);
+        }
+        connection.close();
+    }
+
     public void getLocationID(string locationName)
     {
         locationDB = new LocationDB();

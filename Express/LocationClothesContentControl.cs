@@ -11,6 +11,7 @@ class LocationClothesContentControl
     LocationClothesContent locationClothesContent;
     LocationClothesContentDB locationClothesContentDB;
     LocationClothesControl locationClothesControl;
+    ClothesStoreControl clothesStoreControl;
     DBConnection connection;
 
     public void insert(ListView listView)
@@ -24,6 +25,7 @@ class LocationClothesContentControl
             locationClothesContent = new LocationClothesContent();
             locationClothesContentDB = new LocationClothesContentDB();
             locationClothesControl = new LocationClothesControl();
+            clothesStoreControl = new ClothesStoreControl();
             int locationClothesID = locationClothesControl.getLastID();
             foreach (ListViewItem lvi in listView.Items)
             {
@@ -36,6 +38,7 @@ class LocationClothesContentControl
                 locationClothesContent.setQuantity(quantity);
                 locationClothesContent.setTotal(total);
                 locationClothesContent.setLocationClothesID(locationClothesID);
+                clothesStoreControl.updateQuantityMinus(name, quantity);
                 locationClothesContentDB.insert(locationClothesContent);
             }
         }
