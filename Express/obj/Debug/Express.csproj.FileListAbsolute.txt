@@ -47,3 +47,14 @@ D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Expre
 D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express.Properties.Resources.resources
 D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express.csproj.GenerateResource.Cache
 D:\Others\C#\Express Project\Integration\Express-Project\Express\obj\Debug\Express.FormUpdateSource.resources
+E:\3-4-2016Project\Express-Project\Express\bin\Debug\Express.exe.config
+E:\3-4-2016Project\Express-Project\Express\obj\Debug\Express.exe
+E:\3-4-2016Project\Express-Project\Express\obj\Debug\Express.pdb
+E:\3-4-2016Project\Express-Project\Express\bin\Debug\Express.exe
+E:\3-4-2016Project\Express-Project\Express\bin\Debug\Express.pdb
+E:\3-4-2016Project\Express-Project\Express\obj\Debug\Express.csprojResolveAssemblyReference.cache
+E:\3-4-2016Project\Express-Project\Express\obj\Debug\Express_Project.AddSource.resources
+E:\3-4-2016Project\Express-Project\Express\obj\Debug\Express.Form1.resources
+E:\3-4-2016Project\Express-Project\Express\obj\Debug\Express.FormUpdateSource.resources
+E:\3-4-2016Project\Express-Project\Express\obj\Debug\Express.Properties.Resources.resources
+E:\3-4-2016Project\Express-Project\Express\obj\Debug\Express.csproj.GenerateResource.Cache
