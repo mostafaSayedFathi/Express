@@ -32,15 +32,11 @@ namespace Express
         private ArrayList listCheckDevices = new ArrayList();
         private string PreviousUpdateDeviceName = "";
         private string PreviousUpdateClotheType = "";
-        private HashSet<string> deletedClothes;
-        private HashSet<string> deletedDevices;
 
         public Form1()
         {
             InitializeComponent();
             disaplePanels();
-            deletedClothes = new HashSet<string>();
-            deletedDevices = new HashSet<string>();
         }
 
         public List<string> getCompinations(int s)
@@ -188,7 +184,7 @@ namespace Express
                 }
                 else
                 {
-                    txtCostTotalSecurity.Text = (int.Parse(txtCostSecurityNumbers.Text) * int.Parse(txtCostSecuritySalary.Text)).ToString();
+                    txtCostTotalSecurity.Text = (int.Parse(txtCostSecurityNumbers.Text) * double.Parse(txtCostSecuritySalary.Text)).ToString();
                 }
             }
             catch(Exception ex)
@@ -207,7 +203,7 @@ namespace Express
                 }
                 else
                 {
-                    txtCostTotalSupervisor.Text = (int.Parse(txtCostSupervisorNumbers.Text) * int.Parse(txtCostSupervisorSalary.Text)).ToString();
+                    txtCostTotalSupervisor.Text = (int.Parse(txtCostSupervisorNumbers.Text) * double.Parse(txtCostSupervisorSalary.Text)).ToString();
                 }
             }
             catch (Exception ex)
@@ -226,7 +222,7 @@ namespace Express
                 }
                 else
                 {
-                    txtCostTotalManager.Text = (int.Parse(txtCostManagerNumbers.Text) * int.Parse(txtCostManagerSalary.Text)).ToString();
+                    txtCostTotalManager.Text = (int.Parse(txtCostManagerNumbers.Text) * double.Parse(txtCostManagerSalary.Text)).ToString();
                 }
             }
             catch (Exception ex)
@@ -1558,23 +1554,30 @@ namespace Express
 
         private void تعديلToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            panelNewEmployee.Visible = false;
-            panelNewLocation.Visible = false;
-            panelLocationCosts.Visible = false;
-            panelUpdateLocationCosts.Visible = false;
-            PanelNewApplication.Visible = false;
-            PanelUpdateClotheStore.Visible = false;
-            PanelAddClothe.Visible = false;
-            PanelDeleteFromclothesStore.Visible = false;
-            PanelAddDevices.Visible = false;
-            PanelUpdateDeviceStore.Visible = false;
-            PanelDeleteFromDevicesStore.Visible = false;
-            panelUpdateLocation.Visible = true;
-            panelUpdateEmployee.Visible = false;
-            panelSourceEvaluation.Visible = false;
-            panelAttendance.Visible = false;
-            locationControl = new LocationControl();
-            locationControl.fillComboboxLocationName(comboBoxUpdateLocationName);
+            try
+            {
+                panelNewEmployee.Visible = false;
+                panelNewLocation.Visible = false;
+                panelLocationCosts.Visible = false;
+                panelUpdateLocationCosts.Visible = false;
+                PanelNewApplication.Visible = false;
+                PanelUpdateClotheStore.Visible = false;
+                PanelAddClothe.Visible = false;
+                PanelDeleteFromclothesStore.Visible = false;
+                PanelAddDevices.Visible = false;
+                PanelUpdateDeviceStore.Visible = false;
+                PanelDeleteFromDevicesStore.Visible = false;
+                panelUpdateLocation.Visible = true;
+                panelUpdateEmployee.Visible = false;
+                panelSourceEvaluation.Visible = false;
+                panelAttendance.Visible = false;
+                locationControl = new LocationControl();
+                locationControl.fillComboboxLocationName(comboBoxUpdateLocationName);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void اضافةتكاليفموقعToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1599,7 +1602,7 @@ namespace Express
                 locationControl = new LocationControl();
                 clothesStoreControl = new ClothesStoreControl();
                 devicesStoreControl = new DevicesStoreControl();
-                locationControl.fillComboboxLocationNameWithoutCost(comboBoxLocationName);
+                locationControl.fillComboboxLocationNameWithSalaryNull(comboBoxLocationName);
                 clothesStoreControl.fillComboboxClothesName(comboBoxCostClothesName);
                 devicesStoreControl.fillComboboxDevicesName(comboBoxCostDevicesName);
             }
@@ -1631,7 +1634,7 @@ namespace Express
                 locationControl = new LocationControl();
                 devicesStoreControl = new DevicesStoreControl();
                 clothesStoreControl = new ClothesStoreControl();
-                locationControl.fillComboboxLocationName(comboBoxUpdateCostLocationName);
+                locationControl.fillComboboxLocationNameReady(comboBoxUpdateCostLocationName);
                 clothesStoreControl.fillComboboxClothesName(comboBoxUpdateCostClothesName);
                 devicesStoreControl.fillComboboxDevicesName(comboBoxUpdateCostDevicesName);
             }
@@ -1806,26 +1809,13 @@ namespace Express
                 else
                 {
                     locationControl = new LocationControl();
-                    locationClothesControl = new LocationClothesControl();
-                    locationClothesContentControl = new LocationClothesContentControl();
-                    locationEquipsConrol = new LocationEquipsConrol();
-                    locationEquipsContentControl = new LocationEquipsContentControl();
                     string locationName = comboBoxUpdateCostLocationName.Text;
                     double securitySalary = double.Parse(txtUpdateCostSecurityCost.Text);
                     double supervisorSalary = double.Parse(txtUpdateCostSupervisorCost.Text);
                     double managerSalary = double.Parse(txtUpdateCostManagerCost.Text);
-                    double totalClothes = double.Parse(txtUpdateCostTotalClothes.Text);
-                    double totalDevices = double.Parse(txtUpdateCostTotalDevices.Text);
 
                     locationControl.updateLocationCost(locationName, securitySalary, supervisorSalary, managerSalary);
-                    locationClothesControl.update(totalClothes, locationName);
-                    locationClothesContentControl.updateInsert(locationName, listViewUpdateCostClothes);
-                    locationClothesContentControl.deletedClothesItems(deletedClothes, locationName);
-                    locationEquipsConrol.update(totalDevices, locationName);
-                    locationEquipsContentControl.updateInsert(locationName, listViewUpdateCostDevices);
-                    locationEquipsContentControl.deletedDevicesItems(deletedDevices, locationName);
-                    deletedDevices.Clear();
-                    deletedClothes.Clear();
+                    
                     MessageBox.Show("تم تعديل بيانات التكلفة بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -1863,112 +1853,6 @@ namespace Express
             }
         }
 
-        private void txtUpdateCostClothesQuantity_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-
-                    if (txtUpdateCostClothesQuantity.Text == "")
-                    {
-                        MessageBox.Show("من فضلك ادخل الكمية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else if (comboBoxUpdateCostClothesName.Text == "")
-                    {
-                        MessageBox.Show("من فضلك اختر اسم القطعة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else
-                    {
-                        clothesStoreControl = new ClothesStoreControl();
-                        locationClothesControl = new LocationClothesControl();
-                        string name = comboBoxUpdateCostClothesName.Text;
-                        string price = txtUpdateCostClothesPrice.Text;
-                        string quantity = txtUpdateCostClothesQuantity.Text;
-                        string total = clothesStoreControl.total(double.Parse(price), double.Parse(quantity)).ToString();
-                        bool flag = clothesStoreControl.checkItemExistInListView(listViewUpdateCostClothes, name);
-                        double totalAll = double.Parse(txtUpdateCostTotalClothes.Text);
-                        if (flag == true)
-                        {
-                            MessageBox.Show("هذه القطعة تم اضافتها للفاتورة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        else if (flag == false)
-                        {
-                            ListViewItem lvi = new ListViewItem(name);
-                            lvi.SubItems.Add(price);
-                            lvi.SubItems.Add(quantity);
-                            lvi.SubItems.Add(total);
-                            listViewUpdateCostClothes.Items.Add(lvi);
-                            double totalClothes = locationClothesControl.updateListViewTotal(listViewUpdateCostClothes);
-                            txtUpdateCostTotalClothes.Text = totalClothes.ToString();
-                            if (deletedClothes.Contains(name))
-                            {
-                                deletedClothes.Remove(name);
-                            }
-                        }
-                    }
-                    e.SuppressKeyPress = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void txtUpdateCostDeviceQuantity_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-
-                    if (txtUpdateCostDeviceQuantity.Text == "")
-                    {
-                        MessageBox.Show("من فضلك ادخل الكمية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else if (comboBoxUpdateCostDevicesName.Text == "")
-                    {
-                        MessageBox.Show("من فضلك اختر اسم الجهاز", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else
-                    {
-                        devicesStoreControl = new DevicesStoreControl();
-                        locationEquipsConrol = new LocationEquipsConrol();
-                        string name = comboBoxUpdateCostDevicesName.Text;
-                        string price = txtUpdateCostDevicePrice.Text;
-                        string quantity = txtUpdateCostDeviceQuantity.Text;
-                        string total = devicesStoreControl.total(double.Parse(price), double.Parse(quantity)).ToString();
-                        bool flag = devicesStoreControl.checkItemExistInListView(listViewUpdateCostDevices, name);
-                        double totalAll = double.Parse(txtUpdateCostTotalDevices.Text);
-                        if (flag == true)
-                        {
-                            MessageBox.Show("هذه الجهاز تم اضافته للفاتورة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        else if (flag == false)
-                        {
-                            ListViewItem lvi = new ListViewItem(name);
-                            lvi.SubItems.Add(price);
-                            lvi.SubItems.Add(quantity);
-                            lvi.SubItems.Add(total);
-                            listViewUpdateCostDevices.Items.Add(lvi);
-                            double totalDevices = locationEquipsConrol.updateListViewTotal(listViewUpdateCostDevices);
-                            txtUpdateCostTotalDevices.Text = totalDevices.ToString();
-                            if (deletedDevices.Contains(name))
-                            {
-                                deletedDevices.Remove(name);
-                            }
-                        }
-                    }
-                    e.SuppressKeyPress = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void btnUpdateCostUpdateClothes_Click(object sender, EventArgs e)
         {
             try
@@ -1984,19 +1868,71 @@ namespace Express
                 else
                 {
                     locationClothesControl = new LocationClothesControl();
+                    locationClothesContentControl = new LocationClothesContentControl();
+                    clothesStoreControl = new ClothesStoreControl();
+                    string locationName = comboBoxUpdateCostLocationName.Text;
                     foreach (ListViewItem item in listViewUpdateCostClothes.Items)
                     {
-                        if (item.SubItems[0].Text == comboBoxUpdateCostClothesName.Text)
+                        string itemName = item.SubItems[0].Text;
+                        if (itemName == comboBoxUpdateCostClothesName.Text)
                         {
                             double price = double.Parse(item.SubItems[1].Text);
                             double quantity = double.Parse(txtUpdateCostClothesQuantity.Text);
-                            double total = price * quantity;
-                            item.SubItems[2].Text = txtUpdateCostClothesQuantity.Text;
-                            item.SubItems[3].Text = total.ToString();
+                            double quantityInList = double.Parse(item.SubItems[2].Text);
+                            double difference;
+                            double total;
+                            bool check;
+                            if (quantity > quantityInList)
+                            {
+                                //decrease store quantity
+                                difference = quantity - quantityInList;
+                                check = clothesStoreControl.checkUpdatedQuantity(itemName, difference);
+                                if (check == true)
+                                {
+                                    //update listView
+                                    total = price * quantity;
+                                    item.SubItems[2].Text = txtUpdateCostClothesQuantity.Text;
+                                    item.SubItems[3].Text = total.ToString();
+                                    //update total listView
+                                    double totalClothes = locationClothesControl.updateListViewTotal(listViewUpdateCostClothes);
+                                    txtUpdateCostTotalClothes.Text = totalClothes.ToString();
+                                    //update store quantity
+                                    clothesStoreControl.updateQuantityMinus(itemName, difference);
+                                    //update location clothes
+                                    locationClothesControl.update(totalClothes, locationName);
+                                    //update location clothes content
+                                    locationClothesContentControl.updateItem(itemName, quantity, total, locationName);
+                                    MessageBox.Show("تم حفظ التعديل", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("هذه الكمية غير متوفرة بالمخزن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else if (quantityInList > quantity)
+                            {
+                                //increase store quantity
+                                difference = quantityInList - quantity;
+                                //update listView
+                                total = price * quantity;
+                                item.SubItems[2].Text = txtUpdateCostClothesQuantity.Text;
+                                item.SubItems[3].Text = total.ToString();
+                                //update total listView
+                                double totalClothes = locationClothesControl.updateListViewTotal(listViewUpdateCostClothes);
+                                txtUpdateCostTotalClothes.Text = totalClothes.ToString();
+                                //update store quantity
+                                clothesStoreControl.updateQuantityPlus(itemName, difference);
+                                //update location clothes
+                                locationClothesControl.update(totalClothes, locationName);
+                                //update location clothes content
+                                locationClothesContentControl.updateItem(itemName, quantity,total, locationName);
+                                MessageBox.Show("تم حفظ التعديل", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                            }
                         }
                     }
-                    double totalClothes = locationClothesControl.updateListViewTotal(listViewUpdateCostClothes);
-                    txtUpdateCostTotalClothes.Text = totalClothes.ToString();
                 }
             }
             catch (Exception ex)
@@ -2020,19 +1956,71 @@ namespace Express
                 else
                 {
                     locationEquipsConrol = new LocationEquipsConrol();
+                    locationEquipsContentControl = new LocationEquipsContentControl();
+                    devicesStoreControl = new DevicesStoreControl();
+                    string locationName = comboBoxUpdateCostLocationName.Text;
                     foreach (ListViewItem item in listViewUpdateCostDevices.Items)
                     {
-                        if (item.SubItems[0].Text == comboBoxUpdateCostDevicesName.Text)
+                        string itemName = item.SubItems[0].Text;
+                        if (itemName == comboBoxUpdateCostDevicesName.Text)
                         {
                             double price = double.Parse(item.SubItems[1].Text);
                             double quantity = double.Parse(txtUpdateCostDeviceQuantity.Text);
-                            double total = price * quantity;
-                            item.SubItems[2].Text = txtUpdateCostDeviceQuantity.Text;
-                            item.SubItems[3].Text = total.ToString();
+                            double quantityInList = double.Parse(item.SubItems[2].Text);
+                            double difference;
+                            double total;
+                            bool check;
+                            if (quantity > quantityInList)
+                            {
+                                //decrease store quantity
+                                difference = quantity - quantityInList;
+                                check = devicesStoreControl.checkUpdatedQuantity(itemName, difference);
+                                if (check == true)
+                                {
+                                    //update listView
+                                    total = price * quantity;
+                                    item.SubItems[2].Text = txtUpdateCostDeviceQuantity.Text;
+                                    item.SubItems[3].Text = total.ToString();
+                                    //update total listView
+                                    double totalDevices = locationEquipsConrol.updateListViewTotal(listViewUpdateCostDevices);
+                                    txtUpdateCostTotalDevices.Text = totalDevices.ToString();
+                                    //update store quantity
+                                    devicesStoreControl.updateQuantityMinus(itemName, difference);
+                                    //update location clothes
+                                    locationEquipsConrol.update(totalDevices, locationName);
+                                    //update location clothes content
+                                    locationEquipsContentControl.updateItem(itemName, quantity , total, locationName);
+                                    MessageBox.Show("تم حفظ التعديل", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("هذه الكمية غير متوفرة بالمخزن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else if (quantityInList > quantity)
+                            {
+                                //increase store quantity
+                                difference = quantityInList - quantity;
+                                //update listView
+                                total = price * quantity;
+                                item.SubItems[2].Text = txtUpdateCostDeviceQuantity.Text;
+                                item.SubItems[3].Text = total.ToString();
+                                //update total listView
+                                double totalDevices = locationClothesControl.updateListViewTotal(listViewUpdateCostDevices);
+                                txtUpdateCostTotalDevices.Text = totalDevices.ToString();
+                                //update store quantity
+                                devicesStoreControl.updateQuantityPlus(itemName, difference);
+                                //update location clothes
+                                locationEquipsConrol.update(totalDevices, locationName);
+                                //update location clothes content
+                                locationEquipsContentControl.updateItem(itemName, quantity , total, locationName);
+                                MessageBox.Show("تم حفظ التعديل", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                            }
                         }
                     }
-                    double totalDevices = locationEquipsConrol.updateListViewTotal(listViewUpdateCostDevices);
-                    txtUpdateCostTotalDevices.Text = totalDevices.ToString();
                 }
             }
             catch (Exception ex)
@@ -2045,21 +2033,27 @@ namespace Express
         {
             try
             {
-                if (listViewUpdateCostClothes.CheckedItems.Count == 0)
+                if (comboBoxUpdateCostLocationName.Text == "")
                 {
+                    MessageBox.Show("من فضلك اختر اسم الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    locationClothesControl = new LocationClothesControl();
-                    deletedClothes = new HashSet<string>();
-                    foreach (ListViewItem item in listViewUpdateCostClothes.CheckedItems)
+                    DialogResult result = MessageBox.Show("سيتم حذف العنصر من القائمة"+Environment.NewLine+"تأكيد؟", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
                     {
-                        string name = item.SubItems[0].Text;
-                        deletedClothes.Add(name);
-                        item.Remove();
+                        string locationName = comboBoxUpdateCostLocationName.Text;
+                        locationClothesContentControl = new LocationClothesContentControl();
+                        locationClothesControl = new LocationClothesControl();
+                        locationClothesContentControl.deleteCheckedItems(listViewUpdateCostClothes, locationName);
+                        double total = locationClothesControl.updateListViewTotal(listViewUpdateCostClothes);
+                        txtUpdateCostTotalClothes.Text = total.ToString();
+                        locationClothesControl.update(total, locationName);
+                        MessageBox.Show("تم حذف العنصر من القائمة", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    double total = locationClothesControl.updateListViewTotal(listViewUpdateCostClothes);
-                    txtUpdateCostTotalClothes.Text = total.ToString();
+                    else
+                    {
+                    }
                 }
             }
             catch (Exception ex)
@@ -2072,21 +2066,27 @@ namespace Express
         {
             try
             {
-                if (listViewUpdateCostDevices.CheckedItems.Count == 0)
+                if (comboBoxUpdateCostLocationName.Text == "")
                 {
+                    MessageBox.Show("من فضلك اختر اسم الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    deletedDevices = new HashSet<string>();
-                    locationEquipsConrol = new LocationEquipsConrol();
-                    foreach (ListViewItem item in listViewUpdateCostDevices.CheckedItems)
+                    DialogResult result = MessageBox.Show("سيتم حذف العنصر من القائمة" + Environment.NewLine + "تأكيد؟", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
                     {
-                        string name = item.SubItems[0].Text;
-                        deletedDevices.Add(name);
-                        item.Remove();
+                        string locationName = comboBoxUpdateCostLocationName.Text;
+                        locationEquipsContentControl = new LocationEquipsContentControl();
+                        locationEquipsConrol = new LocationEquipsConrol();
+                        locationEquipsContentControl.deleteCheckedItems(listViewUpdateCostDevices, locationName);
+                        double total = locationEquipsConrol.updateListViewTotal(listViewUpdateCostDevices);
+                        txtUpdateCostTotalDevices.Text = total.ToString();
+                        locationEquipsConrol.update(total, locationName);
+                        MessageBox.Show("تم حذف العنصر من القائمة", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    double total = locationEquipsConrol.updateListViewTotal(listViewUpdateCostDevices);
-                    txtUpdateCostTotalDevices.Text = total.ToString();
+                    else
+                    {
+                    }
                 }
             }
             catch (Exception ex)
@@ -2141,7 +2141,7 @@ namespace Express
                 }
                 else
                 {
-                    txtUpdateCostTotalSecurity.Text = (int.Parse(txtUpdateCostSecurityNumbers.Text) * int.Parse(txtUpdateCostSecurityCost.Text)).ToString();
+                    txtUpdateCostTotalSecurity.Text = (int.Parse(txtUpdateCostSecurityNumbers.Text) * double.Parse(txtUpdateCostSecurityCost.Text)).ToString();
                 }
             }
             catch (Exception ex)
@@ -2160,7 +2160,7 @@ namespace Express
                 }
                 else
                 {
-                    txtUpdateCostTotalSupervisor.Text = (int.Parse(txtUpdateCostSupervisorNumbers.Text) * int.Parse(txtUpdateCostSupervisorCost.Text)).ToString();
+                    txtUpdateCostTotalSupervisor.Text = (int.Parse(txtUpdateCostSupervisorNumbers.Text) * double.Parse(txtUpdateCostSupervisorCost.Text)).ToString();
                 }
             }
             catch (Exception ex)
@@ -2179,7 +2179,7 @@ namespace Express
                 }
                 else
                 {
-                    txtUpdateCostTotalManager.Text = (int.Parse(txtUpdateCostManagerNumbers.Text) * int.Parse(txtUpdateCostManagerCost.Text)).ToString();
+                    txtUpdateCostTotalManager.Text = (int.Parse(txtUpdateCostManagerNumbers.Text) * double.Parse(txtUpdateCostManagerCost.Text)).ToString();
                 }
             }
             catch (Exception ex)
@@ -2809,6 +2809,19 @@ namespace Express
                     locationEquipsConrol.insert(totalDevices, locationName);
                     locationEquipsContentControl.insert(listViewCostDevices);
                     MessageBox.Show("تم حفظ التكاليف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCostTotalClothes.Text = "0";
+                    txtCostTotalDevices.Text = "0";
+                    listViewCostClothes.Items.Clear();
+                    listViewCostDevices.Items.Clear();
+                    txtCostSecurityNumbers.Text = "";
+                    txtCostSupervisorNumbers.Text = "";
+                    txtCostManagerNumbers.Text = "";
+                    txtCostSecuritySalary.Text = "";
+                    txtCostSupervisorSalary.Text = "";
+                    txtCostManagerSalary.Text = "";
+                    txtCostTotalSecurity.Text = "0";
+                    txtCostTotalSupervisor.Text = "0";
+                    txtCostTotalManager.Text = "0";
                 }
             }
             catch (Exception ex)
@@ -2866,6 +2879,250 @@ namespace Express
         private void txtManagerNumbers_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtUpdateCostClothesQuantity_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    if (comboBoxUpdateCostLocationName.Text == "")
+                    {
+                        MessageBox.Show("من فضلك اختر اسم الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if (comboBoxUpdateCostClothesName.Text == "")
+                    {
+                        MessageBox.Show("من فضلك اختر اسم القطعة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (txtUpdateCostClothesQuantity.Text == "")
+                    {
+                        MessageBox.Show("من فضلك ادخل الكمية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        string locationName = comboBoxUpdateCostLocationName.Text;
+                        clothesStoreControl = new ClothesStoreControl();
+                        locationClothesControl = new LocationClothesControl();
+                        locationClothesContentControl = new LocationClothesContentControl();
+                        string itemName = comboBoxUpdateCostClothesName.Text;
+                        double price = double.Parse(txtUpdateCostClothesPrice.Text);
+                        double quantity = double.Parse(txtUpdateCostClothesQuantity.Text);
+                        double total = price * quantity;
+                        bool flag = clothesStoreControl.checkItemExistInListView(listViewUpdateCostClothes, itemName);
+                        if (flag == true)
+                        {
+                            MessageBox.Show("هذه القطعة تم اضافتها للفاتورة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else if (flag == false)
+                        {
+                            //check quantity in store
+                            bool check = clothesStoreControl.checkItemQuantity(itemName, quantity);
+                            if (check == true)
+                            {
+                                //decrease quantity in store
+                                clothesStoreControl.updateQuantityMinus(itemName, quantity);
+                                //add item to location clothes content
+                                locationClothesContentControl.insertItem(itemName, price, quantity, total, locationName, listViewUpdateCostClothes);
+                                //update loction clothes total
+                                txtUpdateCostTotalClothes.Text = (double.Parse(txtUpdateCostTotalClothes.Text) + total).ToString();
+                                locationClothesControl.update(double.Parse(txtUpdateCostTotalClothes.Text), locationName);
+                            }
+                            else
+                            {
+                                MessageBox.Show("هذه الكمية غير متوفرة بالمخزن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    e.SuppressKeyPress = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtUpdateCostDeviceQuantity_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    if (comboBoxUpdateCostLocationName.Text == "")
+                    {
+                        MessageBox.Show("من فضلك اختر اسم الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if (comboBoxUpdateCostDevicesName.Text == "")
+                    {
+                        MessageBox.Show("من فضلك اختر اسم الجهاز", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (txtUpdateCostDeviceQuantity.Text == "")
+                    {
+                        MessageBox.Show("من فضلك ادخل الكمية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        string locationName = comboBoxUpdateCostLocationName.Text;
+                        devicesStoreControl = new DevicesStoreControl();
+                        locationEquipsConrol = new LocationEquipsConrol();
+                        locationEquipsContentControl = new LocationEquipsContentControl();
+                        string itemName = comboBoxUpdateCostDevicesName.Text;
+                        double price = double.Parse(txtUpdateCostDevicePrice.Text);
+                        double quantity = double.Parse(txtUpdateCostDeviceQuantity.Text);
+                        double total = price * quantity;
+                        bool flag = devicesStoreControl.checkItemExistInListView(listViewUpdateCostDevices, itemName);
+                        if (flag == true)
+                        {
+                            MessageBox.Show("هذه القطعة تم اضافتها للفاتورة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else if (flag == false)
+                        {
+                            //check quantity in store
+                            bool check = devicesStoreControl.checkItemQuantity(itemName, quantity);
+                            if (check == true)
+                            {
+                                //decrease quantity in store
+                                devicesStoreControl.updateQuantityMinus(itemName, quantity);
+                                //add item to location clothes content
+                                locationEquipsContentControl.insertItem(itemName, price, quantity, total, locationName, listViewUpdateCostDevices);
+                                //update loction clothes total
+                                txtUpdateCostTotalDevices.Text = (double.Parse(txtUpdateCostTotalDevices.Text) + total).ToString();
+                                locationEquipsConrol.update(double.Parse(txtUpdateCostTotalDevices.Text), locationName);
+                            }
+                            else
+                            {
+                                MessageBox.Show("هذه الكمية غير متوفرة بالمخزن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    e.SuppressKeyPress = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtUpdateCostSecurityCost_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtUpdateCostSupervisorCost_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtUpdateCostManagerCost_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtUpdateCostClothesQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtUpdateCostDeviceQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCostSecuritySalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCostSupervisorSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCostManagerSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCostClotheQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCostDeviceQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }

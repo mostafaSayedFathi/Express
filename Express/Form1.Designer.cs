@@ -30,11 +30,38 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.موقعجديدToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اضافةبياناتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تعديلToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.التكاليفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اضافةتكاليفموقعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تعديلتكاليفموقعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.تعيينجديدToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تعديلبياناتموظفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.اضافةمصدرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تقيممصدرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تقييمToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.مخزنالملابسToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اضافةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تعديلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حذفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.مخزنالاجهزهToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اضافةToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.تعديلToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.حذفToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.تقديمطلبتوظيفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.حضوروانصرافToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelStart = new System.Windows.Forms.Panel();
             this.panelNewLocation = new System.Windows.Forms.Panel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -63,6 +90,11 @@
             this.btnCostDeleteDevicesItem = new System.Windows.Forms.Button();
             this.txtCostTotalDevices = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.listViewCostDevices = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtCostDevicePrice = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.txtCostDeviceQuantity = new System.Windows.Forms.TextBox();
@@ -167,6 +199,7 @@
             this.txtAppName = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
             this.btnChooseImageApp = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelAddClothe = new System.Windows.Forms.Panel();
             this.btnDeleteClothStore = new System.Windows.Forms.Button();
             this.btnSaveClothStore = new System.Windows.Forms.Button();
@@ -382,39 +415,6 @@
             this.domainUpDownAttendanceYear = new System.Windows.Forms.DomainUpDown();
             this.comboBoxAttendanceLocationName = new System.Windows.Forms.ComboBox();
             this.label111 = new System.Windows.Forms.Label();
-            this.listViewCostDevices = new System.Windows.Forms.ListView();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.موقعجديدToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.اضافةبياناتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تعديلToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.التكاليفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.اضافةتكاليفموقعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تعديلتكاليفموقعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.تعيينجديدToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تعديلبياناتموظفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.اضافةمصدرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تقيممصدرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تقييمToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.مخزنالملابسToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.اضافةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تعديلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.حذفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.مخزنالاجهزهToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.اضافةToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.تعديلToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.حذفToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.تقديمطلبتوظيفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.حضوروانصرافToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.panelNewLocation.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -431,6 +431,7 @@
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelAddClothe.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -462,7 +463,6 @@
             this.panelAttendance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).BeginInit();
             this.groupBox30.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -487,30 +487,272 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.AutoSize = false;
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.موقعجديدToolStripMenuItem,
+            this.التكاليفToolStripMenuItem});
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(80, 80);
+            this.toolStripDropDownButton1.Text = "امر تشغيل";
+            // 
+            // موقعجديدToolStripMenuItem
+            // 
+            this.موقعجديدToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.اضافةبياناتToolStripMenuItem,
+            this.تعديلToolStripMenuItem2});
+            this.موقعجديدToolStripMenuItem.Name = "موقعجديدToolStripMenuItem";
+            this.موقعجديدToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.موقعجديدToolStripMenuItem.Text = "المواقع";
+            // 
+            // اضافةبياناتToolStripMenuItem
+            // 
+            this.اضافةبياناتToolStripMenuItem.Name = "اضافةبياناتToolStripMenuItem";
+            this.اضافةبياناتToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.اضافةبياناتToolStripMenuItem.Text = "اضافة موقع";
+            this.اضافةبياناتToolStripMenuItem.Click += new System.EventHandler(this.اضافةبياناتToolStripMenuItem_Click);
+            // 
+            // تعديلToolStripMenuItem2
+            // 
+            this.تعديلToolStripMenuItem2.Name = "تعديلToolStripMenuItem2";
+            this.تعديلToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
+            this.تعديلToolStripMenuItem2.Text = "تعديل بيانات";
+            this.تعديلToolStripMenuItem2.Click += new System.EventHandler(this.تعديلToolStripMenuItem2_Click);
+            // 
+            // التكاليفToolStripMenuItem
+            // 
+            this.التكاليفToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.اضافةتكاليفموقعToolStripMenuItem,
+            this.تعديلتكاليفموقعToolStripMenuItem});
+            this.التكاليفToolStripMenuItem.Name = "التكاليفToolStripMenuItem";
+            this.التكاليفToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.التكاليفToolStripMenuItem.Text = "تكاليف الموقع";
+            this.التكاليفToolStripMenuItem.Click += new System.EventHandler(this.التكاليفToolStripMenuItem_Click);
+            // 
+            // اضافةتكاليفموقعToolStripMenuItem
+            // 
+            this.اضافةتكاليفموقعToolStripMenuItem.Name = "اضافةتكاليفموقعToolStripMenuItem";
+            this.اضافةتكاليفموقعToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.اضافةتكاليفموقعToolStripMenuItem.Text = "اضافة تكاليف موقع";
+            this.اضافةتكاليفموقعToolStripMenuItem.Click += new System.EventHandler(this.اضافةتكاليفموقعToolStripMenuItem_Click);
+            // 
+            // تعديلتكاليفموقعToolStripMenuItem
+            // 
+            this.تعديلتكاليفموقعToolStripMenuItem.Name = "تعديلتكاليفموقعToolStripMenuItem";
+            this.تعديلتكاليفموقعToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.تعديلتكاليفموقعToolStripMenuItem.Text = "تعديل تكاليف موقع";
+            this.تعديلتكاليفموقعToolStripMenuItem.Click += new System.EventHandler(this.تعديلتكاليفموقعToolStripMenuItem_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(97, 6);
+            // 
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.AutoSize = false;
+            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.تعيينجديدToolStripMenuItem,
+            this.تعديلبياناتموظفToolStripMenuItem});
+            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(80, 80);
+            this.toolStripDropDownButton2.Text = "التعيينات";
+            // 
+            // تعيينجديدToolStripMenuItem
+            // 
+            this.تعيينجديدToolStripMenuItem.Name = "تعيينجديدToolStripMenuItem";
+            this.تعيينجديدToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.تعيينجديدToolStripMenuItem.Text = "تعيين جديد";
+            this.تعيينجديدToolStripMenuItem.Click += new System.EventHandler(this.تعيينجديدToolStripMenuItem_Click);
+            // 
+            // تعديلبياناتموظفToolStripMenuItem
+            // 
+            this.تعديلبياناتموظفToolStripMenuItem.Name = "تعديلبياناتموظفToolStripMenuItem";
+            this.تعديلبياناتموظفToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.تعديلبياناتموظفToolStripMenuItem.Text = "تعديل بيانات موظف";
+            this.تعديلبياناتموظفToolStripMenuItem.Click += new System.EventHandler(this.تعديلبياناتموظفToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(97, 6);
             // 
+            // toolStripDropDownButton3
+            // 
+            this.toolStripDropDownButton3.AutoSize = false;
+            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.اضافةمصدرToolStripMenuItem,
+            this.تقيممصدرToolStripMenuItem,
+            this.تقييمToolStripMenuItem});
+            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
+            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
+            this.toolStripDropDownButton3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toolStripDropDownButton3.Size = new System.Drawing.Size(80, 80);
+            this.toolStripDropDownButton3.Text = "المصادر";
+            this.toolStripDropDownButton3.Click += new System.EventHandler(this.toolStripDropDownButton3_Click);
+            // 
+            // اضافةمصدرToolStripMenuItem
+            // 
+            this.اضافةمصدرToolStripMenuItem.Name = "اضافةمصدرToolStripMenuItem";
+            this.اضافةمصدرToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.اضافةمصدرToolStripMenuItem.Text = "مصدر جديد";
+            this.اضافةمصدرToolStripMenuItem.Click += new System.EventHandler(this.اضافةمصدرToolStripMenuItem_Click);
+            // 
+            // تقيممصدرToolStripMenuItem
+            // 
+            this.تقيممصدرToolStripMenuItem.Name = "تقيممصدرToolStripMenuItem";
+            this.تقيممصدرToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.تقيممصدرToolStripMenuItem.Text = "تعديل بيانات";
+            this.تقيممصدرToolStripMenuItem.Click += new System.EventHandler(this.تقيممصدرToolStripMenuItem_Click);
+            // 
+            // تقييمToolStripMenuItem
+            // 
+            this.تقييمToolStripMenuItem.Name = "تقييمToolStripMenuItem";
+            this.تقييمToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.تقييمToolStripMenuItem.Text = "تقييم";
+            this.تقييمToolStripMenuItem.Click += new System.EventHandler(this.تقييمToolStripMenuItem_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(97, 6);
+            // 
+            // toolStripDropDownButton4
+            // 
+            this.toolStripDropDownButton4.AutoSize = false;
+            this.toolStripDropDownButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.مخزنالملابسToolStripMenuItem,
+            this.مخزنالاجهزهToolStripMenuItem});
+            this.toolStripDropDownButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton4.Image")));
+            this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
+            this.toolStripDropDownButton4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toolStripDropDownButton4.Size = new System.Drawing.Size(80, 80);
+            this.toolStripDropDownButton4.Text = "toolStripDropDownButton4";
+            this.toolStripDropDownButton4.Click += new System.EventHandler(this.toolStripDropDownButton4_Click);
+            // 
+            // مخزنالملابسToolStripMenuItem
+            // 
+            this.مخزنالملابسToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.اضافةToolStripMenuItem,
+            this.تعديلToolStripMenuItem,
+            this.حذفToolStripMenuItem});
+            this.مخزنالملابسToolStripMenuItem.Name = "مخزنالملابسToolStripMenuItem";
+            this.مخزنالملابسToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.مخزنالملابسToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.مخزنالملابسToolStripMenuItem.Text = "مخزن الملابس";
+            // 
+            // اضافةToolStripMenuItem
+            // 
+            this.اضافةToolStripMenuItem.Name = "اضافةToolStripMenuItem";
+            this.اضافةToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.اضافةToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.اضافةToolStripMenuItem.Text = "اضافة";
+            this.اضافةToolStripMenuItem.Click += new System.EventHandler(this.اضافةToolStripMenuItem_Click);
+            // 
+            // تعديلToolStripMenuItem
+            // 
+            this.تعديلToolStripMenuItem.Name = "تعديلToolStripMenuItem";
+            this.تعديلToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.تعديلToolStripMenuItem.Text = "تعديل";
+            this.تعديلToolStripMenuItem.Click += new System.EventHandler(this.تعديلToolStripMenuItem_Click);
+            // 
+            // حذفToolStripMenuItem
+            // 
+            this.حذفToolStripMenuItem.Name = "حذفToolStripMenuItem";
+            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.حذفToolStripMenuItem.Text = "حذف";
+            this.حذفToolStripMenuItem.Click += new System.EventHandler(this.حذفToolStripMenuItem_Click);
+            // 
+            // مخزنالاجهزهToolStripMenuItem
+            // 
+            this.مخزنالاجهزهToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.اضافةToolStripMenuItem1,
+            this.تعديلToolStripMenuItem1,
+            this.حذفToolStripMenuItem1});
+            this.مخزنالاجهزهToolStripMenuItem.Name = "مخزنالاجهزهToolStripMenuItem";
+            this.مخزنالاجهزهToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.مخزنالاجهزهToolStripMenuItem.Text = "مخزن الاجهزه";
+            // 
+            // اضافةToolStripMenuItem1
+            // 
+            this.اضافةToolStripMenuItem1.Name = "اضافةToolStripMenuItem1";
+            this.اضافةToolStripMenuItem1.Size = new System.Drawing.Size(101, 22);
+            this.اضافةToolStripMenuItem1.Text = "اضافة";
+            this.اضافةToolStripMenuItem1.Click += new System.EventHandler(this.اضافةToolStripMenuItem1_Click);
+            // 
+            // تعديلToolStripMenuItem1
+            // 
+            this.تعديلToolStripMenuItem1.Name = "تعديلToolStripMenuItem1";
+            this.تعديلToolStripMenuItem1.Size = new System.Drawing.Size(101, 22);
+            this.تعديلToolStripMenuItem1.Text = "تعديل";
+            this.تعديلToolStripMenuItem1.Click += new System.EventHandler(this.تعديلToolStripMenuItem1_Click);
+            // 
+            // حذفToolStripMenuItem1
+            // 
+            this.حذفToolStripMenuItem1.Name = "حذفToolStripMenuItem1";
+            this.حذفToolStripMenuItem1.Size = new System.Drawing.Size(101, 22);
+            this.حذفToolStripMenuItem1.Text = "حذف";
+            this.حذفToolStripMenuItem1.Click += new System.EventHandler(this.حذفToolStripMenuItem1_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(97, 6);
             // 
+            // toolStripDropDownButton5
+            // 
+            this.toolStripDropDownButton5.AutoSize = false;
+            this.toolStripDropDownButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.تقديمطلبتوظيفToolStripMenuItem});
+            this.toolStripDropDownButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton5.Image")));
+            this.toolStripDropDownButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton5.Name = "toolStripDropDownButton5";
+            this.toolStripDropDownButton5.Size = new System.Drawing.Size(80, 80);
+            this.toolStripDropDownButton5.Text = "toolStripDropDownButton5";
+            // 
+            // تقديمطلبتوظيفToolStripMenuItem
+            // 
+            this.تقديمطلبتوظيفToolStripMenuItem.Name = "تقديمطلبتوظيفToolStripMenuItem";
+            this.تقديمطلبتوظيفToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.تقديمطلبتوظيفToolStripMenuItem.Text = "طلب توظيف";
+            this.تقديمطلبتوظيفToolStripMenuItem.Click += new System.EventHandler(this.تقديمطلبتوظيفToolStripMenuItem_Click);
+            // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(97, 6);
+            // 
+            // toolStripDropDownButton6
+            // 
+            this.toolStripDropDownButton6.AutoSize = false;
+            this.toolStripDropDownButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton6.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.حضوروانصرافToolStripMenuItem});
+            this.toolStripDropDownButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton6.Image")));
+            this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
+            this.toolStripDropDownButton6.Size = new System.Drawing.Size(80, 80);
+            this.toolStripDropDownButton6.Text = "حضور و انصراف";
+            // 
+            // حضوروانصرافToolStripMenuItem
+            // 
+            this.حضوروانصرافToolStripMenuItem.Name = "حضوروانصرافToolStripMenuItem";
+            this.حضوروانصرافToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.حضوروانصرافToolStripMenuItem.Text = "حضور و انصراف المواقع";
+            this.حضوروانصرافToolStripMenuItem.Click += new System.EventHandler(this.حضوروانصرافToolStripMenuItem_Click);
             // 
             // panelStart
             // 
@@ -842,6 +1084,42 @@
             this.label23.TabIndex = 17;
             this.label23.Text = "اجمالي تكلفة الأجهزة:";
             // 
+            // listViewCostDevices
+            // 
+            this.listViewCostDevices.CheckBoxes = true;
+            this.listViewCostDevices.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.listViewCostDevices.GridLines = true;
+            this.listViewCostDevices.Location = new System.Drawing.Point(6, 133);
+            this.listViewCostDevices.Name = "listViewCostDevices";
+            this.listViewCostDevices.RightToLeftLayout = true;
+            this.listViewCostDevices.Size = new System.Drawing.Size(428, 254);
+            this.listViewCostDevices.TabIndex = 0;
+            this.listViewCostDevices.UseCompatibleStateImageBehavior = false;
+            this.listViewCostDevices.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "اسم الجهاز";
+            this.columnHeader5.Width = 212;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "السعر";
+            this.columnHeader6.Width = 71;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "الكمية";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "الاجمالي";
+            this.columnHeader8.Width = 81;
+            // 
             // txtCostDevicePrice
             // 
             this.txtCostDevicePrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -872,6 +1150,7 @@
             this.txtCostDeviceQuantity.Size = new System.Drawing.Size(100, 27);
             this.txtCostDeviceQuantity.TabIndex = 12;
             this.txtCostDeviceQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCostDeviceQuantity_KeyDown);
+            this.txtCostDeviceQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCostDeviceQuantity_KeyPress);
             // 
             // label25
             // 
@@ -963,6 +1242,7 @@
             // 
             // listViewCostClothes
             // 
+            this.listViewCostClothes.CheckBoxes = true;
             this.listViewCostClothes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -1026,6 +1306,7 @@
             this.txtCostClotheQuantity.Size = new System.Drawing.Size(100, 27);
             this.txtCostClotheQuantity.TabIndex = 12;
             this.txtCostClotheQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCostClotheQuantity_KeyDown);
+            this.txtCostClotheQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCostClotheQuantity_KeyPress);
             // 
             // label20
             // 
@@ -1165,6 +1446,7 @@
             this.txtCostSecurityNumbers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCostSecurityNumbers.Size = new System.Drawing.Size(138, 27);
             this.txtCostSecurityNumbers.TabIndex = 6;
+            this.txtCostSecurityNumbers.Text = "0";
             // 
             // txtCostManagerNumbers
             // 
@@ -1175,6 +1457,7 @@
             this.txtCostManagerNumbers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCostManagerNumbers.Size = new System.Drawing.Size(138, 27);
             this.txtCostManagerNumbers.TabIndex = 10;
+            this.txtCostManagerNumbers.Text = "0";
             // 
             // txtCostSecuritySalary
             // 
@@ -1185,6 +1468,7 @@
             this.txtCostSecuritySalary.Size = new System.Drawing.Size(138, 27);
             this.txtCostSecuritySalary.TabIndex = 12;
             this.txtCostSecuritySalary.TextChanged += new System.EventHandler(this.txtCostSecuritySalary_TextChanged);
+            this.txtCostSecuritySalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCostSecuritySalary_KeyPress);
             // 
             // label13
             // 
@@ -1206,6 +1490,7 @@
             this.txtCostManagerSalary.Size = new System.Drawing.Size(138, 27);
             this.txtCostManagerSalary.TabIndex = 16;
             this.txtCostManagerSalary.TextChanged += new System.EventHandler(this.txtCostManagerSalary_TextChanged);
+            this.txtCostManagerSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCostManagerSalary_KeyPress);
             // 
             // label12
             // 
@@ -1260,6 +1545,7 @@
             this.txtCostSupervisorNumbers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCostSupervisorNumbers.Size = new System.Drawing.Size(138, 27);
             this.txtCostSupervisorNumbers.TabIndex = 8;
+            this.txtCostSupervisorNumbers.Text = "0";
             // 
             // label14
             // 
@@ -1281,6 +1567,7 @@
             this.txtCostSupervisorSalary.Size = new System.Drawing.Size(138, 27);
             this.txtCostSupervisorSalary.TabIndex = 14;
             this.txtCostSupervisorSalary.TextChanged += new System.EventHandler(this.txtCostSupervisorSalary_TextChanged);
+            this.txtCostSupervisorSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCostSupervisorSalary_KeyPress);
             // 
             // groupBox4
             // 
@@ -2019,6 +2306,15 @@
             this.btnChooseImageApp.Text = "اختر";
             this.btnChooseImageApp.UseVisualStyleBackColor = true;
             this.btnChooseImageApp.Click += new System.EventHandler(this.btnChooseImageApp_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 116);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // PanelAddClothe
             // 
@@ -3348,6 +3644,7 @@
             this.txtUpdateCostDeviceQuantity.Size = new System.Drawing.Size(100, 27);
             this.txtUpdateCostDeviceQuantity.TabIndex = 12;
             this.txtUpdateCostDeviceQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateCostDeviceQuantity_KeyDown);
+            this.txtUpdateCostDeviceQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpdateCostDeviceQuantity_KeyPress);
             // 
             // label82
             // 
@@ -3520,6 +3817,7 @@
             this.txtUpdateCostClothesQuantity.Size = new System.Drawing.Size(100, 27);
             this.txtUpdateCostClothesQuantity.TabIndex = 12;
             this.txtUpdateCostClothesQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateCostClothesQuantity_KeyDown);
+            this.txtUpdateCostClothesQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpdateCostClothesQuantity_KeyPress);
             // 
             // label86
             // 
@@ -3686,6 +3984,7 @@
             this.txtUpdateCostSecurityCost.Size = new System.Drawing.Size(138, 27);
             this.txtUpdateCostSecurityCost.TabIndex = 12;
             this.txtUpdateCostSecurityCost.TextChanged += new System.EventHandler(this.txtUpdateCostSecurityCost_TextChanged);
+            this.txtUpdateCostSecurityCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpdateCostSecurityCost_KeyPress);
             // 
             // label91
             // 
@@ -3707,6 +4006,7 @@
             this.txtUpdateCostManagerCost.Size = new System.Drawing.Size(138, 27);
             this.txtUpdateCostManagerCost.TabIndex = 16;
             this.txtUpdateCostManagerCost.TextChanged += new System.EventHandler(this.txtUpdateCostManagerCost_TextChanged);
+            this.txtUpdateCostManagerCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpdateCostManagerCost_KeyPress);
             // 
             // label92
             // 
@@ -3784,6 +4084,7 @@
             this.txtUpdateCostSupervisorCost.Size = new System.Drawing.Size(138, 27);
             this.txtUpdateCostSupervisorCost.TabIndex = 14;
             this.txtUpdateCostSupervisorCost.TextChanged += new System.EventHandler(this.txtUpdateCostSupervisorCost_TextChanged);
+            this.txtUpdateCostSupervisorCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpdateCostSupervisorCost_KeyPress);
             // 
             // groupBox28
             // 
@@ -4376,301 +4677,16 @@
             this.label111.TabIndex = 52;
             this.label111.Text = "الموقع:";
             // 
-            // listViewCostDevices
-            // 
-            this.listViewCostDevices.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8});
-            this.listViewCostDevices.GridLines = true;
-            this.listViewCostDevices.Location = new System.Drawing.Point(6, 133);
-            this.listViewCostDevices.Name = "listViewCostDevices";
-            this.listViewCostDevices.RightToLeftLayout = true;
-            this.listViewCostDevices.Size = new System.Drawing.Size(428, 254);
-            this.listViewCostDevices.TabIndex = 0;
-            this.listViewCostDevices.UseCompatibleStateImageBehavior = false;
-            this.listViewCostDevices.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "اسم الجهاز";
-            this.columnHeader5.Width = 212;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "السعر";
-            this.columnHeader6.Width = 71;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "الكمية";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "الاجمالي";
-            this.columnHeader8.Width = 81;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 116);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.AutoSize = false;
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.موقعجديدToolStripMenuItem,
-            this.التكاليفToolStripMenuItem});
-            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(80, 80);
-            this.toolStripDropDownButton1.Text = "امر تشغيل";
-            // 
-            // موقعجديدToolStripMenuItem
-            // 
-            this.موقعجديدToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.اضافةبياناتToolStripMenuItem,
-            this.تعديلToolStripMenuItem2});
-            this.موقعجديدToolStripMenuItem.Name = "موقعجديدToolStripMenuItem";
-            this.موقعجديدToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.موقعجديدToolStripMenuItem.Text = "المواقع";
-            // 
-            // اضافةبياناتToolStripMenuItem
-            // 
-            this.اضافةبياناتToolStripMenuItem.Name = "اضافةبياناتToolStripMenuItem";
-            this.اضافةبياناتToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.اضافةبياناتToolStripMenuItem.Text = "اضافة موقع";
-            this.اضافةبياناتToolStripMenuItem.Click += new System.EventHandler(this.اضافةبياناتToolStripMenuItem_Click);
-            // 
-            // تعديلToolStripMenuItem2
-            // 
-            this.تعديلToolStripMenuItem2.Name = "تعديلToolStripMenuItem2";
-            this.تعديلToolStripMenuItem2.Size = new System.Drawing.Size(130, 22);
-            this.تعديلToolStripMenuItem2.Text = "تعديل بيانات";
-            this.تعديلToolStripMenuItem2.Click += new System.EventHandler(this.تعديلToolStripMenuItem2_Click);
-            // 
-            // التكاليفToolStripMenuItem
-            // 
-            this.التكاليفToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.اضافةتكاليفموقعToolStripMenuItem,
-            this.تعديلتكاليفموقعToolStripMenuItem});
-            this.التكاليفToolStripMenuItem.Name = "التكاليفToolStripMenuItem";
-            this.التكاليفToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.التكاليفToolStripMenuItem.Text = "تكاليف الموقع";
-            this.التكاليفToolStripMenuItem.Click += new System.EventHandler(this.التكاليفToolStripMenuItem_Click);
-            // 
-            // اضافةتكاليفموقعToolStripMenuItem
-            // 
-            this.اضافةتكاليفموقعToolStripMenuItem.Name = "اضافةتكاليفموقعToolStripMenuItem";
-            this.اضافةتكاليفموقعToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.اضافةتكاليفموقعToolStripMenuItem.Text = "اضافة تكاليف موقع";
-            this.اضافةتكاليفموقعToolStripMenuItem.Click += new System.EventHandler(this.اضافةتكاليفموقعToolStripMenuItem_Click);
-            // 
-            // تعديلتكاليفموقعToolStripMenuItem
-            // 
-            this.تعديلتكاليفموقعToolStripMenuItem.Name = "تعديلتكاليفموقعToolStripMenuItem";
-            this.تعديلتكاليفموقعToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.تعديلتكاليفموقعToolStripMenuItem.Text = "تعديل تكاليف موقع";
-            this.تعديلتكاليفموقعToolStripMenuItem.Click += new System.EventHandler(this.تعديلتكاليفموقعToolStripMenuItem_Click);
-            // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.AutoSize = false;
-            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.تعيينجديدToolStripMenuItem,
-            this.تعديلبياناتموظفToolStripMenuItem});
-            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(80, 80);
-            this.toolStripDropDownButton2.Text = "التعيينات";
-            // 
-            // تعيينجديدToolStripMenuItem
-            // 
-            this.تعيينجديدToolStripMenuItem.Name = "تعيينجديدToolStripMenuItem";
-            this.تعيينجديدToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.تعيينجديدToolStripMenuItem.Text = "تعيين جديد";
-            this.تعيينجديدToolStripMenuItem.Click += new System.EventHandler(this.تعيينجديدToolStripMenuItem_Click);
-            // 
-            // تعديلبياناتموظفToolStripMenuItem
-            // 
-            this.تعديلبياناتموظفToolStripMenuItem.Name = "تعديلبياناتموظفToolStripMenuItem";
-            this.تعديلبياناتموظفToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.تعديلبياناتموظفToolStripMenuItem.Text = "تعديل بيانات موظف";
-            this.تعديلبياناتموظفToolStripMenuItem.Click += new System.EventHandler(this.تعديلبياناتموظفToolStripMenuItem_Click);
-            // 
-            // toolStripDropDownButton3
-            // 
-            this.toolStripDropDownButton3.AutoSize = false;
-            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.اضافةمصدرToolStripMenuItem,
-            this.تقيممصدرToolStripMenuItem,
-            this.تقييمToolStripMenuItem});
-            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
-            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(80, 80);
-            this.toolStripDropDownButton3.Text = "المصادر";
-            this.toolStripDropDownButton3.Click += new System.EventHandler(this.toolStripDropDownButton3_Click);
-            // 
-            // اضافةمصدرToolStripMenuItem
-            // 
-            this.اضافةمصدرToolStripMenuItem.Name = "اضافةمصدرToolStripMenuItem";
-            this.اضافةمصدرToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.اضافةمصدرToolStripMenuItem.Text = "مصدر جديد";
-            this.اضافةمصدرToolStripMenuItem.Click += new System.EventHandler(this.اضافةمصدرToolStripMenuItem_Click);
-            // 
-            // تقيممصدرToolStripMenuItem
-            // 
-            this.تقيممصدرToolStripMenuItem.Name = "تقيممصدرToolStripMenuItem";
-            this.تقيممصدرToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.تقيممصدرToolStripMenuItem.Text = "تعديل بيانات";
-            this.تقيممصدرToolStripMenuItem.Click += new System.EventHandler(this.تقيممصدرToolStripMenuItem_Click);
-            // 
-            // تقييمToolStripMenuItem
-            // 
-            this.تقييمToolStripMenuItem.Name = "تقييمToolStripMenuItem";
-            this.تقييمToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.تقييمToolStripMenuItem.Text = "تقييم";
-            this.تقييمToolStripMenuItem.Click += new System.EventHandler(this.تقييمToolStripMenuItem_Click);
-            // 
-            // toolStripDropDownButton4
-            // 
-            this.toolStripDropDownButton4.AutoSize = false;
-            this.toolStripDropDownButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.مخزنالملابسToolStripMenuItem,
-            this.مخزنالاجهزهToolStripMenuItem});
-            this.toolStripDropDownButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton4.Image")));
-            this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripDropDownButton4.Size = new System.Drawing.Size(80, 80);
-            this.toolStripDropDownButton4.Text = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.Click += new System.EventHandler(this.toolStripDropDownButton4_Click);
-            // 
-            // مخزنالملابسToolStripMenuItem
-            // 
-            this.مخزنالملابسToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.اضافةToolStripMenuItem,
-            this.تعديلToolStripMenuItem,
-            this.حذفToolStripMenuItem});
-            this.مخزنالملابسToolStripMenuItem.Name = "مخزنالملابسToolStripMenuItem";
-            this.مخزنالملابسToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.مخزنالملابسToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.مخزنالملابسToolStripMenuItem.Text = "مخزن الملابس";
-            // 
-            // اضافةToolStripMenuItem
-            // 
-            this.اضافةToolStripMenuItem.Name = "اضافةToolStripMenuItem";
-            this.اضافةToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.اضافةToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
-            this.اضافةToolStripMenuItem.Text = "اضافة";
-            this.اضافةToolStripMenuItem.Click += new System.EventHandler(this.اضافةToolStripMenuItem_Click);
-            // 
-            // تعديلToolStripMenuItem
-            // 
-            this.تعديلToolStripMenuItem.Name = "تعديلToolStripMenuItem";
-            this.تعديلToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
-            this.تعديلToolStripMenuItem.Text = "تعديل";
-            this.تعديلToolStripMenuItem.Click += new System.EventHandler(this.تعديلToolStripMenuItem_Click);
-            // 
-            // حذفToolStripMenuItem
-            // 
-            this.حذفToolStripMenuItem.Name = "حذفToolStripMenuItem";
-            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
-            this.حذفToolStripMenuItem.Text = "حذف";
-            this.حذفToolStripMenuItem.Click += new System.EventHandler(this.حذفToolStripMenuItem_Click);
-            // 
-            // مخزنالاجهزهToolStripMenuItem
-            // 
-            this.مخزنالاجهزهToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.اضافةToolStripMenuItem1,
-            this.تعديلToolStripMenuItem1,
-            this.حذفToolStripMenuItem1});
-            this.مخزنالاجهزهToolStripMenuItem.Name = "مخزنالاجهزهToolStripMenuItem";
-            this.مخزنالاجهزهToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.مخزنالاجهزهToolStripMenuItem.Text = "مخزن الاجهزه";
-            // 
-            // اضافةToolStripMenuItem1
-            // 
-            this.اضافةToolStripMenuItem1.Name = "اضافةToolStripMenuItem1";
-            this.اضافةToolStripMenuItem1.Size = new System.Drawing.Size(101, 22);
-            this.اضافةToolStripMenuItem1.Text = "اضافة";
-            this.اضافةToolStripMenuItem1.Click += new System.EventHandler(this.اضافةToolStripMenuItem1_Click);
-            // 
-            // تعديلToolStripMenuItem1
-            // 
-            this.تعديلToolStripMenuItem1.Name = "تعديلToolStripMenuItem1";
-            this.تعديلToolStripMenuItem1.Size = new System.Drawing.Size(101, 22);
-            this.تعديلToolStripMenuItem1.Text = "تعديل";
-            this.تعديلToolStripMenuItem1.Click += new System.EventHandler(this.تعديلToolStripMenuItem1_Click);
-            // 
-            // حذفToolStripMenuItem1
-            // 
-            this.حذفToolStripMenuItem1.Name = "حذفToolStripMenuItem1";
-            this.حذفToolStripMenuItem1.Size = new System.Drawing.Size(101, 22);
-            this.حذفToolStripMenuItem1.Text = "حذف";
-            this.حذفToolStripMenuItem1.Click += new System.EventHandler(this.حذفToolStripMenuItem1_Click);
-            // 
-            // toolStripDropDownButton5
-            // 
-            this.toolStripDropDownButton5.AutoSize = false;
-            this.toolStripDropDownButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.تقديمطلبتوظيفToolStripMenuItem});
-            this.toolStripDropDownButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton5.Image")));
-            this.toolStripDropDownButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton5.Name = "toolStripDropDownButton5";
-            this.toolStripDropDownButton5.Size = new System.Drawing.Size(80, 80);
-            this.toolStripDropDownButton5.Text = "toolStripDropDownButton5";
-            // 
-            // تقديمطلبتوظيفToolStripMenuItem
-            // 
-            this.تقديمطلبتوظيفToolStripMenuItem.Name = "تقديمطلبتوظيفToolStripMenuItem";
-            this.تقديمطلبتوظيفToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.تقديمطلبتوظيفToolStripMenuItem.Text = "طلب توظيف";
-            this.تقديمطلبتوظيفToolStripMenuItem.Click += new System.EventHandler(this.تقديمطلبتوظيفToolStripMenuItem_Click);
-            // 
-            // toolStripDropDownButton6
-            // 
-            this.toolStripDropDownButton6.AutoSize = false;
-            this.toolStripDropDownButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton6.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.حضوروانصرافToolStripMenuItem});
-            this.toolStripDropDownButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton6.Image")));
-            this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
-            this.toolStripDropDownButton6.Size = new System.Drawing.Size(80, 80);
-            this.toolStripDropDownButton6.Text = "حضور و انصراف";
-            // 
-            // حضوروانصرافToolStripMenuItem
-            // 
-            this.حضوروانصرافToolStripMenuItem.Name = "حضوروانصرافToolStripMenuItem";
-            this.حضوروانصرافToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.حضوروانصرافToolStripMenuItem.Text = "حضور و انصراف المواقع";
-            this.حضوروانصرافToolStripMenuItem.Click += new System.EventHandler(this.حضوروانصرافToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(984, 687);
+            this.Controls.Add(this.panelLocationCosts);
+            this.Controls.Add(this.panelUpdateLocationCosts);
             this.Controls.Add(this.panelNewLocation);
             this.Controls.Add(this.panelUpdateLocation);
-            this.Controls.Add(this.panelLocationCosts);
             this.Controls.Add(this.panelAttendance);
             this.Controls.Add(this.PanelAddClothe);
             this.Controls.Add(this.PanelNewApplication);
@@ -4679,12 +4695,13 @@
             this.Controls.Add(this.PanelUpdateClotheStore);
             this.Controls.Add(this.PanelAddDevices);
             this.Controls.Add(this.PanelUpdateDeviceStore);
-            this.Controls.Add(this.panelUpdateLocationCosts);
             this.Controls.Add(this.panelSourceEvaluation);
             this.Controls.Add(this.panelUpdateEmployee);
             this.Controls.Add(this.panelNewEmployee);
             this.Controls.Add(this.panelStart);
             this.Controls.Add(this.toolStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Express";
@@ -4718,6 +4735,7 @@
             this.groupBox10.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelAddClothe.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
@@ -4771,7 +4789,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).EndInit();
             this.groupBox30.ResumeLayout(false);
             this.groupBox30.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

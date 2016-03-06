@@ -43,11 +43,11 @@ class ClothesStoreDB
 
         if (PriceCount > 0)
         {
-            return true; // exiting price.
+            return true; // exiting item.
         }
         else
         {
-            return false; // new price.
+            return false; // new item.
         }
     }
 
@@ -96,6 +96,14 @@ class ClothesStoreDB
     {
         connection.open();
         command = new SqlCommand("update ClothesStore set quantity=quantity-'"+clothesStore.getQuantity()+"' where name='" + clothesStore.getName() + "'", connection.getConnection());
+        command.ExecuteNonQuery();
+        connection.close();
+    }
+
+    public void updateQuantityPlus(ClothesStore clothesStore)
+    {
+        connection.open();
+        command = new SqlCommand("update ClothesStore set quantity=quantity+'" + clothesStore.getQuantity() + "' where name='" + clothesStore.getName() + "'", connection.getConnection());
         command.ExecuteNonQuery();
         connection.close();
     }
