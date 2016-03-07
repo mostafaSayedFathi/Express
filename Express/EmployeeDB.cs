@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 
 class EmployeeDB
 {
@@ -137,24 +136,4 @@ class EmployeeDB
         SqlDataReader reader = command.ExecuteReader();
         return reader;
     }
-
-    public Boolean checkEmployee(Employee employee)
-    {
-        connection.open();
-        command = new SqlCommand("select count(*) from Employee where ID='" + employee.getID() + "'", connection.getConnection());
-
-        int check = (int)command.ExecuteScalar();
-        connection.close();
-
-        if (check > 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-
 }

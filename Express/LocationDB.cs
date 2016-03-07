@@ -106,7 +106,7 @@ class LocationDB
         return reader;
     }
 
-    public SqlDataReader fillComboboxLocationNameWithoutCost()
+    public SqlDataReader fillComboboxLocationNameWithoutSalaryNull()
     {
         connection.open();
         command = new SqlCommand("select * from Location where securitySalary is null and aupervisorSalary is null and managerSalary is null", connection.getConnection());

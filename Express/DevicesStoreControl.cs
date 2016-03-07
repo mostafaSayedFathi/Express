@@ -171,14 +171,19 @@ class DevicesStoreControl
 
     public double deleteListViewItem(ListView listview, double total)
     {
-        double newTotal = 0;
-        foreach (ListViewItem checkedItem in listview.CheckedItems)
+        if (listview.CheckedItems.Count == 0)
+            return total;
+        else
         {
-            double totalItem = double.Parse(checkedItem.SubItems[3].Text);
-            newTotal = totalMinus(total, totalItem);
-            checkedItem.Remove();
+            double newTotal = 0;
+            foreach (ListViewItem checkedItem in listview.CheckedItems)
+            {
+                double totalItem = double.Parse(checkedItem.SubItems[3].Text);
+                newTotal = totalMinus(total, totalItem);
+                checkedItem.Remove();
+            }
+            return newTotal;
         }
-        return newTotal;
     }
 
     public void updateQuantityMinus(string deviceName , double quantity)
@@ -188,6 +193,15 @@ class DevicesStoreControl
         devicesStore.setName(deviceName);
         devicesStore.setQuantity(quantity);
         devicesStoreDB.updateQuantityMinus(devicesStore);
+    }
+
+    public void updateQuantityPlus(string deviceName, double quantity)
+    {
+        devicesStore = new DevicesStore();
+        devicesStoreDB = new DevicesStoreDB();
+        devicesStore.setName(deviceName);
+        devicesStore.setQuantity(quantity);
+        devicesStoreDB.updateQuantityPlus(devicesStore);
     }
 
     public bool checkItemQuantity(string itemName, double quantity)
@@ -206,6 +220,38 @@ class DevicesStoreControl
         }
     }
 
+    public double getQuantity(string itemName)
+    {
+        devicesStore = new DevicesStore();
+        devicesStoreDB = new DevicesStoreDB();
+        devicesStore.setName(itemName);
+        devicesStoreDB.selectQuantity(devicesStore);
+        return devicesStore.getQuantity();
+    }
+
+    public bool checkUpdatedQuantity(string itemName, double differenceQuantity)
+    {
+        double quantityInStore = this.getQuantity(itemName); ;
+        bool flag = true;
+        if (quantityInStore >= differenceQuantity)
+        {
+            flag = true;
+        }
+        else
+        {
+            flag = false;
+        }
+        return flag;
+    }
+
+    public bool checkItemInStore(string itemName)
+    {
+        devicesStore = new DevicesStore();
+        devicesStoreDB = new DevicesStoreDB();
+        devicesStore.setName(itemName);
+        bool check = devicesStoreDB.checkDevice(devicesStore);
+        return check;
+    }
 }
 
 

@@ -8,9 +8,7 @@ class DBConnection
     {
         string[] text = System.IO.File.ReadAllLines(@"C:\Server.txt");
         string serverName = text[0];
-       // connection = new SqlConnection("Data Source='"+serverName+"';Initial Catalog=Express;Integrated Security=True");
-        connection = new SqlConnection("Data Source=MOATAZ\\SQLEXPRESS;Initial Catalog=Express;Integrated Security=True");
-
+        connection = new SqlConnection("Data Source='"+serverName+"';Initial Catalog=Express;Integrated Security=True");
     }
 
     public void open()
