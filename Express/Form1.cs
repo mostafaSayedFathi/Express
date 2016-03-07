@@ -32,11 +32,16 @@ namespace Express
         private ArrayList listCheckDevices = new ArrayList();
         private string PreviousUpdateDeviceName = "";
         private string PreviousUpdateClotheType = "";
+        private HashSet<string> deletedClothes;
+        private HashSet<string> deletedDevices;
+        EmployeeSalaryControl employeeSalaryControl = new EmployeeSalaryControl();
 
         public Form1()
         {
             InitializeComponent();
             disaplePanels();
+            deletedClothes = new HashSet<string>();
+            deletedDevices = new HashSet<string>();
         }
 
         public List<string> getCompinations(int s)
@@ -70,6 +75,7 @@ namespace Express
             panelUpdateEmployee.Visible = false;
             panelSourceEvaluation.Visible = false;
             panelAttendance.Visible = false;
+            panelEmployeeSalary.Visible = false;
         }
 
         private void btnStartOperation_Click(object sender, EventArgs e)
@@ -184,7 +190,7 @@ namespace Express
                 }
                 else
                 {
-                    txtCostTotalSecurity.Text = (int.Parse(txtCostSecurityNumbers.Text) * double.Parse(txtCostSecuritySalary.Text)).ToString();
+                    txtCostTotalSecurity.Text = (int.Parse(txtCostSecurityNumbers.Text) * int.Parse(txtCostSecuritySalary.Text)).ToString();
                 }
             }
             catch(Exception ex)
@@ -203,7 +209,7 @@ namespace Express
                 }
                 else
                 {
-                    txtCostTotalSupervisor.Text = (int.Parse(txtCostSupervisorNumbers.Text) * double.Parse(txtCostSupervisorSalary.Text)).ToString();
+                    txtCostTotalSupervisor.Text = (int.Parse(txtCostSupervisorNumbers.Text) * int.Parse(txtCostSupervisorSalary.Text)).ToString();
                 }
             }
             catch (Exception ex)
@@ -222,7 +228,7 @@ namespace Express
                 }
                 else
                 {
-                    txtCostTotalManager.Text = (int.Parse(txtCostManagerNumbers.Text) * double.Parse(txtCostManagerSalary.Text)).ToString();
+                    txtCostTotalManager.Text = (int.Parse(txtCostManagerNumbers.Text) * int.Parse(txtCostManagerSalary.Text)).ToString();
                 }
             }
             catch (Exception ex)
@@ -250,6 +256,7 @@ namespace Express
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
+                panelEmployeeSalary.Visible = false;
                 employeeControl = new EmployeeControl();
                 locationControl = new LocationControl();
                 sourceControl = new SourceControl();
@@ -406,6 +413,7 @@ namespace Express
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
+                panelEmployeeSalary.Visible = false;
                 applicationControl = new ApplicationControl();
                 //InitializeComponent();
                 applicationControl.fillComboboxSex(comboBoxAppSex);
@@ -875,6 +883,7 @@ namespace Express
             panelUpdateEmployee.Visible = false;
             panelSourceEvaluation.Visible = false;
             panelAttendance.Visible = false;
+            panelEmployeeSalary.Visible = false;
         }
 
         private void تعديلToolStripMenuItem_Click(object sender, EventArgs e)
@@ -896,6 +905,7 @@ namespace Express
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
+                panelEmployeeSalary.Visible = false;
                 clothesStoreControl = new ClothesStoreControl();
                 clothesStoreControl.fillListViewClothesStore(listViewUpdateClothesStore);
                 txtUpdateTotalAllClothesStore.Text = clothesStoreControl.totalAllUpdate(listViewUpdateClothesStore).ToString();
@@ -1006,6 +1016,7 @@ namespace Express
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
+                panelEmployeeSalary.Visible = false;
                 clothesStoreControl = new ClothesStoreControl();
                 clothesStoreControl.fillListViewClothesStore(listViewDeleteClotheStore);
             }
@@ -1274,6 +1285,8 @@ namespace Express
             panelUpdateEmployee.Visible = false;
             panelSourceEvaluation.Visible = false;
             panelAttendance.Visible = false;
+            panelEmployeeSalary.Visible = false;
+
         }
 
         private void txtUpdateDevicePrice_TextChanged(object sender, EventArgs e)
@@ -1386,6 +1399,7 @@ namespace Express
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
+                panelEmployeeSalary.Visible = false;
                 devicesStoreControl = new DevicesStoreControl();
                 devicesStoreControl.fillListViewDevicesStore(listViewUpdateDeviceStore);
                 txtUpdateAllTotalDeviceStore.Text = devicesStoreControl.totalAllUpdate(listViewUpdateDeviceStore).ToString();
@@ -1544,6 +1558,7 @@ namespace Express
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
+                panelEmployeeSalary.Visible = false;
                 txtLocationName.Focus();
             }
             catch (Exception ex)
@@ -1554,30 +1569,24 @@ namespace Express
 
         private void تعديلToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                panelNewEmployee.Visible = false;
-                panelNewLocation.Visible = false;
-                panelLocationCosts.Visible = false;
-                panelUpdateLocationCosts.Visible = false;
-                PanelNewApplication.Visible = false;
-                PanelUpdateClotheStore.Visible = false;
-                PanelAddClothe.Visible = false;
-                PanelDeleteFromclothesStore.Visible = false;
-                PanelAddDevices.Visible = false;
-                PanelUpdateDeviceStore.Visible = false;
-                PanelDeleteFromDevicesStore.Visible = false;
-                panelUpdateLocation.Visible = true;
-                panelUpdateEmployee.Visible = false;
-                panelSourceEvaluation.Visible = false;
-                panelAttendance.Visible = false;
-                locationControl = new LocationControl();
-                locationControl.fillComboboxLocationName(comboBoxUpdateLocationName);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            panelNewEmployee.Visible = false;
+            panelNewLocation.Visible = false;
+            panelLocationCosts.Visible = false;
+            panelUpdateLocationCosts.Visible = false;
+            PanelNewApplication.Visible = false;
+            PanelUpdateClotheStore.Visible = false;
+            PanelAddClothe.Visible = false;
+            PanelDeleteFromclothesStore.Visible = false;
+            PanelAddDevices.Visible = false;
+            PanelUpdateDeviceStore.Visible = false;
+            PanelDeleteFromDevicesStore.Visible = false;
+            panelUpdateLocation.Visible = true;
+            panelUpdateEmployee.Visible = false;
+            panelSourceEvaluation.Visible = false;
+            panelAttendance.Visible = false;
+            panelEmployeeSalary.Visible = false;
+            locationControl = new LocationControl();
+            locationControl.fillComboboxLocationName(comboBoxUpdateLocationName);
         }
 
         private void اضافةتكاليفموقعToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1599,10 +1608,12 @@ namespace Express
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
+                panelEmployeeSalary.Visible = false;
+
                 locationControl = new LocationControl();
                 clothesStoreControl = new ClothesStoreControl();
                 devicesStoreControl = new DevicesStoreControl();
-                locationControl.fillComboboxLocationNameWithSalaryNull(comboBoxLocationName);
+                locationControl.fillComboboxLocationNameWithoutCost(comboBoxLocationName);
                 clothesStoreControl.fillComboboxClothesName(comboBoxCostClothesName);
                 devicesStoreControl.fillComboboxDevicesName(comboBoxCostDevicesName);
             }
@@ -1631,10 +1642,12 @@ namespace Express
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
+                panelEmployeeSalary.Visible = false;
+
                 locationControl = new LocationControl();
                 devicesStoreControl = new DevicesStoreControl();
                 clothesStoreControl = new ClothesStoreControl();
-                locationControl.fillComboboxLocationNameReady(comboBoxUpdateCostLocationName);
+                locationControl.fillComboboxLocationName(comboBoxUpdateCostLocationName);
                 clothesStoreControl.fillComboboxClothesName(comboBoxUpdateCostClothesName);
                 devicesStoreControl.fillComboboxDevicesName(comboBoxUpdateCostDevicesName);
             }
@@ -1809,13 +1822,26 @@ namespace Express
                 else
                 {
                     locationControl = new LocationControl();
+                    locationClothesControl = new LocationClothesControl();
+                    locationClothesContentControl = new LocationClothesContentControl();
+                    locationEquipsConrol = new LocationEquipsConrol();
+                    locationEquipsContentControl = new LocationEquipsContentControl();
                     string locationName = comboBoxUpdateCostLocationName.Text;
                     double securitySalary = double.Parse(txtUpdateCostSecurityCost.Text);
                     double supervisorSalary = double.Parse(txtUpdateCostSupervisorCost.Text);
                     double managerSalary = double.Parse(txtUpdateCostManagerCost.Text);
+                    double totalClothes = double.Parse(txtUpdateCostTotalClothes.Text);
+                    double totalDevices = double.Parse(txtUpdateCostTotalDevices.Text);
 
                     locationControl.updateLocationCost(locationName, securitySalary, supervisorSalary, managerSalary);
-                    
+                    locationClothesControl.update(totalClothes, locationName);
+                    locationClothesContentControl.updateInsert(locationName, listViewUpdateCostClothes);
+                    locationClothesContentControl.deletedClothesItems(deletedClothes, locationName);
+                    locationEquipsConrol.update(totalDevices, locationName);
+                    locationEquipsContentControl.updateInsert(locationName, listViewUpdateCostDevices);
+                    locationEquipsContentControl.deletedDevicesItems(deletedDevices, locationName);
+                    deletedDevices.Clear();
+                    deletedClothes.Clear();
                     MessageBox.Show("تم تعديل بيانات التكلفة بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -1853,6 +1879,112 @@ namespace Express
             }
         }
 
+        private void txtUpdateCostClothesQuantity_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+
+                    if (txtUpdateCostClothesQuantity.Text == "")
+                    {
+                        MessageBox.Show("من فضلك ادخل الكمية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (comboBoxUpdateCostClothesName.Text == "")
+                    {
+                        MessageBox.Show("من فضلك اختر اسم القطعة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        clothesStoreControl = new ClothesStoreControl();
+                        locationClothesControl = new LocationClothesControl();
+                        string name = comboBoxUpdateCostClothesName.Text;
+                        string price = txtUpdateCostClothesPrice.Text;
+                        string quantity = txtUpdateCostClothesQuantity.Text;
+                        string total = clothesStoreControl.total(double.Parse(price), double.Parse(quantity)).ToString();
+                        bool flag = clothesStoreControl.checkItemExistInListView(listViewUpdateCostClothes, name);
+                        double totalAll = double.Parse(txtUpdateCostTotalClothes.Text);
+                        if (flag == true)
+                        {
+                            MessageBox.Show("هذه القطعة تم اضافتها للفاتورة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else if (flag == false)
+                        {
+                            ListViewItem lvi = new ListViewItem(name);
+                            lvi.SubItems.Add(price);
+                            lvi.SubItems.Add(quantity);
+                            lvi.SubItems.Add(total);
+                            listViewUpdateCostClothes.Items.Add(lvi);
+                            double totalClothes = locationClothesControl.updateListViewTotal(listViewUpdateCostClothes);
+                            txtUpdateCostTotalClothes.Text = totalClothes.ToString();
+                            if (deletedClothes.Contains(name))
+                            {
+                                deletedClothes.Remove(name);
+                            }
+                        }
+                    }
+                    e.SuppressKeyPress = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtUpdateCostDeviceQuantity_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+
+                    if (txtUpdateCostDeviceQuantity.Text == "")
+                    {
+                        MessageBox.Show("من فضلك ادخل الكمية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (comboBoxUpdateCostDevicesName.Text == "")
+                    {
+                        MessageBox.Show("من فضلك اختر اسم الجهاز", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        devicesStoreControl = new DevicesStoreControl();
+                        locationEquipsConrol = new LocationEquipsConrol();
+                        string name = comboBoxUpdateCostDevicesName.Text;
+                        string price = txtUpdateCostDevicePrice.Text;
+                        string quantity = txtUpdateCostDeviceQuantity.Text;
+                        string total = devicesStoreControl.total(double.Parse(price), double.Parse(quantity)).ToString();
+                        bool flag = devicesStoreControl.checkItemExistInListView(listViewUpdateCostDevices, name);
+                        double totalAll = double.Parse(txtUpdateCostTotalDevices.Text);
+                        if (flag == true)
+                        {
+                            MessageBox.Show("هذه الجهاز تم اضافته للفاتورة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else if (flag == false)
+                        {
+                            ListViewItem lvi = new ListViewItem(name);
+                            lvi.SubItems.Add(price);
+                            lvi.SubItems.Add(quantity);
+                            lvi.SubItems.Add(total);
+                            listViewUpdateCostDevices.Items.Add(lvi);
+                            double totalDevices = locationEquipsConrol.updateListViewTotal(listViewUpdateCostDevices);
+                            txtUpdateCostTotalDevices.Text = totalDevices.ToString();
+                            if (deletedDevices.Contains(name))
+                            {
+                                deletedDevices.Remove(name);
+                            }
+                        }
+                    }
+                    e.SuppressKeyPress = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void btnUpdateCostUpdateClothes_Click(object sender, EventArgs e)
         {
             try
@@ -1868,71 +2000,19 @@ namespace Express
                 else
                 {
                     locationClothesControl = new LocationClothesControl();
-                    locationClothesContentControl = new LocationClothesContentControl();
-                    clothesStoreControl = new ClothesStoreControl();
-                    string locationName = comboBoxUpdateCostLocationName.Text;
                     foreach (ListViewItem item in listViewUpdateCostClothes.Items)
                     {
-                        string itemName = item.SubItems[0].Text;
-                        if (itemName == comboBoxUpdateCostClothesName.Text)
+                        if (item.SubItems[0].Text == comboBoxUpdateCostClothesName.Text)
                         {
                             double price = double.Parse(item.SubItems[1].Text);
                             double quantity = double.Parse(txtUpdateCostClothesQuantity.Text);
-                            double quantityInList = double.Parse(item.SubItems[2].Text);
-                            double difference;
-                            double total;
-                            bool check;
-                            if (quantity > quantityInList)
-                            {
-                                //decrease store quantity
-                                difference = quantity - quantityInList;
-                                check = clothesStoreControl.checkUpdatedQuantity(itemName, difference);
-                                if (check == true)
-                                {
-                                    //update listView
-                                    total = price * quantity;
-                                    item.SubItems[2].Text = txtUpdateCostClothesQuantity.Text;
-                                    item.SubItems[3].Text = total.ToString();
-                                    //update total listView
-                                    double totalClothes = locationClothesControl.updateListViewTotal(listViewUpdateCostClothes);
-                                    txtUpdateCostTotalClothes.Text = totalClothes.ToString();
-                                    //update store quantity
-                                    clothesStoreControl.updateQuantityMinus(itemName, difference);
-                                    //update location clothes
-                                    locationClothesControl.update(totalClothes, locationName);
-                                    //update location clothes content
-                                    locationClothesContentControl.updateItem(itemName, quantity, total, locationName);
-                                    MessageBox.Show("تم حفظ التعديل", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                }
-                                else
-                                {
-                                    MessageBox.Show("هذه الكمية غير متوفرة بالمخزن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                            }
-                            else if (quantityInList > quantity)
-                            {
-                                //increase store quantity
-                                difference = quantityInList - quantity;
-                                //update listView
-                                total = price * quantity;
-                                item.SubItems[2].Text = txtUpdateCostClothesQuantity.Text;
-                                item.SubItems[3].Text = total.ToString();
-                                //update total listView
-                                double totalClothes = locationClothesControl.updateListViewTotal(listViewUpdateCostClothes);
-                                txtUpdateCostTotalClothes.Text = totalClothes.ToString();
-                                //update store quantity
-                                clothesStoreControl.updateQuantityPlus(itemName, difference);
-                                //update location clothes
-                                locationClothesControl.update(totalClothes, locationName);
-                                //update location clothes content
-                                locationClothesContentControl.updateItem(itemName, quantity,total, locationName);
-                                MessageBox.Show("تم حفظ التعديل", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else
-                            {
-                            }
+                            double total = price * quantity;
+                            item.SubItems[2].Text = txtUpdateCostClothesQuantity.Text;
+                            item.SubItems[3].Text = total.ToString();
                         }
                     }
+                    double totalClothes = locationClothesControl.updateListViewTotal(listViewUpdateCostClothes);
+                    txtUpdateCostTotalClothes.Text = totalClothes.ToString();
                 }
             }
             catch (Exception ex)
@@ -1956,71 +2036,19 @@ namespace Express
                 else
                 {
                     locationEquipsConrol = new LocationEquipsConrol();
-                    locationEquipsContentControl = new LocationEquipsContentControl();
-                    devicesStoreControl = new DevicesStoreControl();
-                    string locationName = comboBoxUpdateCostLocationName.Text;
                     foreach (ListViewItem item in listViewUpdateCostDevices.Items)
                     {
-                        string itemName = item.SubItems[0].Text;
-                        if (itemName == comboBoxUpdateCostDevicesName.Text)
+                        if (item.SubItems[0].Text == comboBoxUpdateCostDevicesName.Text)
                         {
                             double price = double.Parse(item.SubItems[1].Text);
                             double quantity = double.Parse(txtUpdateCostDeviceQuantity.Text);
-                            double quantityInList = double.Parse(item.SubItems[2].Text);
-                            double difference;
-                            double total;
-                            bool check;
-                            if (quantity > quantityInList)
-                            {
-                                //decrease store quantity
-                                difference = quantity - quantityInList;
-                                check = devicesStoreControl.checkUpdatedQuantity(itemName, difference);
-                                if (check == true)
-                                {
-                                    //update listView
-                                    total = price * quantity;
-                                    item.SubItems[2].Text = txtUpdateCostDeviceQuantity.Text;
-                                    item.SubItems[3].Text = total.ToString();
-                                    //update total listView
-                                    double totalDevices = locationEquipsConrol.updateListViewTotal(listViewUpdateCostDevices);
-                                    txtUpdateCostTotalDevices.Text = totalDevices.ToString();
-                                    //update store quantity
-                                    devicesStoreControl.updateQuantityMinus(itemName, difference);
-                                    //update location clothes
-                                    locationEquipsConrol.update(totalDevices, locationName);
-                                    //update location clothes content
-                                    locationEquipsContentControl.updateItem(itemName, quantity , total, locationName);
-                                    MessageBox.Show("تم حفظ التعديل", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                }
-                                else
-                                {
-                                    MessageBox.Show("هذه الكمية غير متوفرة بالمخزن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                            }
-                            else if (quantityInList > quantity)
-                            {
-                                //increase store quantity
-                                difference = quantityInList - quantity;
-                                //update listView
-                                total = price * quantity;
-                                item.SubItems[2].Text = txtUpdateCostDeviceQuantity.Text;
-                                item.SubItems[3].Text = total.ToString();
-                                //update total listView
-                                double totalDevices = locationClothesControl.updateListViewTotal(listViewUpdateCostDevices);
-                                txtUpdateCostTotalDevices.Text = totalDevices.ToString();
-                                //update store quantity
-                                devicesStoreControl.updateQuantityPlus(itemName, difference);
-                                //update location clothes
-                                locationEquipsConrol.update(totalDevices, locationName);
-                                //update location clothes content
-                                locationEquipsContentControl.updateItem(itemName, quantity , total, locationName);
-                                MessageBox.Show("تم حفظ التعديل", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else
-                            {
-                            }
+                            double total = price * quantity;
+                            item.SubItems[2].Text = txtUpdateCostDeviceQuantity.Text;
+                            item.SubItems[3].Text = total.ToString();
                         }
                     }
+                    double totalDevices = locationEquipsConrol.updateListViewTotal(listViewUpdateCostDevices);
+                    txtUpdateCostTotalDevices.Text = totalDevices.ToString();
                 }
             }
             catch (Exception ex)
@@ -2033,27 +2061,21 @@ namespace Express
         {
             try
             {
-                if (comboBoxUpdateCostLocationName.Text == "")
+                if (listViewUpdateCostClothes.CheckedItems.Count == 0)
                 {
-                    MessageBox.Show("من فضلك اختر اسم الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    DialogResult result = MessageBox.Show("سيتم حذف العنصر من القائمة"+Environment.NewLine+"تأكيد؟", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (result == DialogResult.Yes)
+                    locationClothesControl = new LocationClothesControl();
+                    deletedClothes = new HashSet<string>();
+                    foreach (ListViewItem item in listViewUpdateCostClothes.CheckedItems)
                     {
-                        string locationName = comboBoxUpdateCostLocationName.Text;
-                        locationClothesContentControl = new LocationClothesContentControl();
-                        locationClothesControl = new LocationClothesControl();
-                        locationClothesContentControl.deleteCheckedItems(listViewUpdateCostClothes, locationName);
-                        double total = locationClothesControl.updateListViewTotal(listViewUpdateCostClothes);
-                        txtUpdateCostTotalClothes.Text = total.ToString();
-                        locationClothesControl.update(total, locationName);
-                        MessageBox.Show("تم حذف العنصر من القائمة", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string name = item.SubItems[0].Text;
+                        deletedClothes.Add(name);
+                        item.Remove();
                     }
-                    else
-                    {
-                    }
+                    double total = locationClothesControl.updateListViewTotal(listViewUpdateCostClothes);
+                    txtUpdateCostTotalClothes.Text = total.ToString();
                 }
             }
             catch (Exception ex)
@@ -2066,27 +2088,21 @@ namespace Express
         {
             try
             {
-                if (comboBoxUpdateCostLocationName.Text == "")
+                if (listViewUpdateCostDevices.CheckedItems.Count == 0)
                 {
-                    MessageBox.Show("من فضلك اختر اسم الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    DialogResult result = MessageBox.Show("سيتم حذف العنصر من القائمة" + Environment.NewLine + "تأكيد؟", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (result == DialogResult.Yes)
+                    deletedDevices = new HashSet<string>();
+                    locationEquipsConrol = new LocationEquipsConrol();
+                    foreach (ListViewItem item in listViewUpdateCostDevices.CheckedItems)
                     {
-                        string locationName = comboBoxUpdateCostLocationName.Text;
-                        locationEquipsContentControl = new LocationEquipsContentControl();
-                        locationEquipsConrol = new LocationEquipsConrol();
-                        locationEquipsContentControl.deleteCheckedItems(listViewUpdateCostDevices, locationName);
-                        double total = locationEquipsConrol.updateListViewTotal(listViewUpdateCostDevices);
-                        txtUpdateCostTotalDevices.Text = total.ToString();
-                        locationEquipsConrol.update(total, locationName);
-                        MessageBox.Show("تم حذف العنصر من القائمة", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string name = item.SubItems[0].Text;
+                        deletedDevices.Add(name);
+                        item.Remove();
                     }
-                    else
-                    {
-                    }
+                    double total = locationEquipsConrol.updateListViewTotal(listViewUpdateCostDevices);
+                    txtUpdateCostTotalDevices.Text = total.ToString();
                 }
             }
             catch (Exception ex)
@@ -2141,7 +2157,7 @@ namespace Express
                 }
                 else
                 {
-                    txtUpdateCostTotalSecurity.Text = (int.Parse(txtUpdateCostSecurityNumbers.Text) * double.Parse(txtUpdateCostSecurityCost.Text)).ToString();
+                    txtUpdateCostTotalSecurity.Text = (int.Parse(txtUpdateCostSecurityNumbers.Text) * int.Parse(txtUpdateCostSecurityCost.Text)).ToString();
                 }
             }
             catch (Exception ex)
@@ -2160,7 +2176,7 @@ namespace Express
                 }
                 else
                 {
-                    txtUpdateCostTotalSupervisor.Text = (int.Parse(txtUpdateCostSupervisorNumbers.Text) * double.Parse(txtUpdateCostSupervisorCost.Text)).ToString();
+                    txtUpdateCostTotalSupervisor.Text = (int.Parse(txtUpdateCostSupervisorNumbers.Text) * int.Parse(txtUpdateCostSupervisorCost.Text)).ToString();
                 }
             }
             catch (Exception ex)
@@ -2179,7 +2195,7 @@ namespace Express
                 }
                 else
                 {
-                    txtUpdateCostTotalManager.Text = (int.Parse(txtUpdateCostManagerNumbers.Text) * double.Parse(txtUpdateCostManagerCost.Text)).ToString();
+                    txtUpdateCostTotalManager.Text = (int.Parse(txtUpdateCostManagerNumbers.Text) * int.Parse(txtUpdateCostManagerCost.Text)).ToString();
                 }
             }
             catch (Exception ex)
@@ -2207,6 +2223,8 @@ namespace Express
                 panelUpdateEmployee.Visible = true;
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
+                panelEmployeeSalary.Visible = false;
+
                 sourceControl = new SourceControl();
                 locationControl = new LocationControl();
                 locationControl.fillComboboxLocationNameReady(ComboBoxUpdateEmployeeLocation);
@@ -2485,6 +2503,8 @@ namespace Express
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = true;
+                panelEmployeeSalary.Visible = false;
+
                 locationControl = new LocationControl();
                 locationControl.fillComboboxLocationNameReady(comboBoxAttendanceLocationName);
                 domainUpDownAttendanceMonth.Text = DateTime.Now.Month.ToString();
@@ -2809,19 +2829,6 @@ namespace Express
                     locationEquipsConrol.insert(totalDevices, locationName);
                     locationEquipsContentControl.insert(listViewCostDevices);
                     MessageBox.Show("تم حفظ التكاليف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtCostTotalClothes.Text = "0";
-                    txtCostTotalDevices.Text = "0";
-                    listViewCostClothes.Items.Clear();
-                    listViewCostDevices.Items.Clear();
-                    txtCostSecurityNumbers.Text = "";
-                    txtCostSupervisorNumbers.Text = "";
-                    txtCostManagerNumbers.Text = "";
-                    txtCostSecuritySalary.Text = "";
-                    txtCostSupervisorSalary.Text = "";
-                    txtCostManagerSalary.Text = "";
-                    txtCostTotalSecurity.Text = "0";
-                    txtCostTotalSupervisor.Text = "0";
-                    txtCostTotalManager.Text = "0";
                 }
             }
             catch (Exception ex)
@@ -2884,245 +2891,736 @@ namespace Express
             }
         }
 
-        private void txtUpdateCostClothesQuantity_KeyDown(object sender, KeyEventArgs e)
+        private void rTBComment_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelSalary_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
+        private void رواتبالافرادToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                panelNewEmployee.Visible = false;
+                panelNewLocation.Visible = false;
+                panelLocationCosts.Visible = false;
+                PanelNewApplication.Visible = false;
+                PanelUpdateClotheStore.Visible = false;
+                PanelAddClothe.Visible = false;
+                PanelDeleteFromclothesStore.Visible = false;
+                PanelAddDevices.Visible = false;
+                PanelUpdateDeviceStore.Visible = false;
+                PanelDeleteFromDevicesStore.Visible = false;
+                panelUpdateLocation.Visible = false;
+                panelUpdateLocationCosts.Visible = false;
+                panelUpdateEmployee.Visible = false;
+                panelSourceEvaluation.Visible = false;
+                panelAttendance.Visible = false;
+                panelEmployeeSalary.Visible = true;
+                dateSalaryMonth.Format = DateTimePickerFormat.Custom;
+                dateSalaryMonth.CustomFormat = "MM/yyyy";
+                dateSalaryEmployee.Format = DateTimePickerFormat.Custom;
+                dateSalaryEmployee.CustomFormat = "dd/MM/yyyy";
+                dateSalaryRecord.Format = DateTimePickerFormat.Custom;
+                dateSalaryRecord.CustomFormat = "dd/MM/yyyy";
+            }
+            catch(Exception ex){
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtIDEmployeeSalary_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    if (comboBoxUpdateCostLocationName.Text == "")
+                    employeeControl = new EmployeeControl();
+                    employeeSalaryControl = new EmployeeSalaryControl();
+                    int ID = int.Parse(txtSalaryEmployeeID.Text);
+                    Boolean check = employeeControl.checkEmployee(ID);
+                    if (check == false)
                     {
-                        MessageBox.Show("من فضلك اختر اسم الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else if (comboBoxUpdateCostClothesName.Text == "")
-                    {
-                        MessageBox.Show("من فضلك اختر اسم القطعة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else if (txtUpdateCostClothesQuantity.Text == "")
-                    {
-                        MessageBox.Show("من فضلك ادخل الكمية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("لايوجد موظف مسجل بهذا الرقم", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        string locationName = comboBoxUpdateCostLocationName.Text;
-                        clothesStoreControl = new ClothesStoreControl();
-                        locationClothesControl = new LocationClothesControl();
-                        locationClothesContentControl = new LocationClothesContentControl();
-                        string itemName = comboBoxUpdateCostClothesName.Text;
-                        double price = double.Parse(txtUpdateCostClothesPrice.Text);
-                        double quantity = double.Parse(txtUpdateCostClothesQuantity.Text);
-                        double total = price * quantity;
-                        bool flag = clothesStoreControl.checkItemExistInListView(listViewUpdateCostClothes, itemName);
-                        if (flag == true)
+                        int month = dateSalaryMonth.Value.Month;
+                        int year = dateSalaryMonth.Value.Year;
+                       
+                       
+                        check = employeeSalaryControl.checkEmployeeSalary(ID,month,year);
+                        if (check == false)
                         {
-                            MessageBox.Show("هذه القطعة تم اضافتها للفاتورة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("تم تسجيل مرتب الموظف من قبل", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        else if (flag == false)
+                        else
                         {
-                            //check quantity in store
-                            bool check = clothesStoreControl.checkItemQuantity(itemName, quantity);
-                            if (check == true)
-                            {
-                                //decrease quantity in store
-                                clothesStoreControl.updateQuantityMinus(itemName, quantity);
-                                //add item to location clothes content
-                                locationClothesContentControl.insertItem(itemName, price, quantity, total, locationName, listViewUpdateCostClothes);
-                                //update loction clothes total
-                                txtUpdateCostTotalClothes.Text = (double.Parse(txtUpdateCostTotalClothes.Text) + total).ToString();
-                                locationClothesControl.update(double.Parse(txtUpdateCostTotalClothes.Text), locationName);
-                            }
-                            else
-                            {
-                                MessageBox.Show("هذه الكمية غير متوفرة بالمخزن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+                            string employeeName = employeeControl.getEmployeeName(ID);
+                            string salary = employeeControl.getSalary(ID).ToString();
+                            string position = employeeControl.getPosition(ID);
+                            string location = employeeControl.getLocationName(ID);
+                            string locationAddress = employeeControl.getLocationAddress(ID);
+                            string employDate = employeeControl.getEmployDate(ID);
+                            txtSalaryEmployeeName.Text = employeeName;
+                            dateSalaryEmployee.Value = Convert.ToDateTime(employDate);
+                            txtSalaryLocationName.Text = location;
+                            txtSalaryLocationAddress.Text = locationAddress;
+                            txtSalaryEmloyeePostion.Text = position;
+                            txtSalaryLocation.Text = salary;
+                            txtSalaryEmployeeSalary.Text = salary;
+
+                            groupBox37.Enabled = true;
+                            groupBox31.Enabled = true;
+                            groupBox38.Enabled = true;
+                            groupBox40.Enabled = true;
+                            groupBox32.Enabled = true;
+                            groupBox33.Enabled = true;
+                            rTBSalaryComment.Enabled = true;
+
+                            txtSalaryEmployeeSalary.Focus();
+
+                            e.SuppressKeyPress = true;
                         }
+                        
                     }
-                    e.SuppressKeyPress = true;
+                   
+
                 }
             }
-            catch (Exception ex)
-            {
+            catch(Exception ex){
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void txtUpdateCostDeviceQuantity_KeyDown(object sender, KeyEventArgs e)
+        private void txtIDEmployeeSalary_TextChanged(object sender, EventArgs e)
         {
-            try
+
+
+        }
+
+        private void txtSalaryEmployeeSalary_TextChanged(object sender, EventArgs e)
+        {
+            employeeSalaryControl = new EmployeeSalaryControl();
+            employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax); 
+
+        }
+
+        private void txtSalaryEmployeeSalary_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    if (comboBoxUpdateCostLocationName.Text == "")
-                    {
-                        MessageBox.Show("من فضلك اختر اسم الموقع", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else if (comboBoxUpdateCostDevicesName.Text == "")
-                    {
-                        MessageBox.Show("من فضلك اختر اسم الجهاز", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else if (txtUpdateCostDeviceQuantity.Text == "")
-                    {
-                        MessageBox.Show("من فضلك ادخل الكمية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else
-                    {
-                        string locationName = comboBoxUpdateCostLocationName.Text;
-                        devicesStoreControl = new DevicesStoreControl();
-                        locationEquipsConrol = new LocationEquipsConrol();
-                        locationEquipsContentControl = new LocationEquipsContentControl();
-                        string itemName = comboBoxUpdateCostDevicesName.Text;
-                        double price = double.Parse(txtUpdateCostDevicePrice.Text);
-                        double quantity = double.Parse(txtUpdateCostDeviceQuantity.Text);
-                        double total = price * quantity;
-                        bool flag = devicesStoreControl.checkItemExistInListView(listViewUpdateCostDevices, itemName);
-                        if (flag == true)
-                        {
-                            MessageBox.Show("هذه القطعة تم اضافتها للفاتورة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        else if (flag == false)
-                        {
-                            //check quantity in store
-                            bool check = devicesStoreControl.checkItemQuantity(itemName, quantity);
-                            if (check == true)
-                            {
-                                //decrease quantity in store
-                                devicesStoreControl.updateQuantityMinus(itemName, quantity);
-                                //add item to location clothes content
-                                locationEquipsContentControl.insertItem(itemName, price, quantity, total, locationName, listViewUpdateCostDevices);
-                                //update loction clothes total
-                                txtUpdateCostTotalDevices.Text = (double.Parse(txtUpdateCostTotalDevices.Text) + total).ToString();
-                                locationEquipsConrol.update(double.Parse(txtUpdateCostTotalDevices.Text), locationName);
-                            }
-                            else
-                            {
-                                MessageBox.Show("هذه الكمية غير متوفرة بالمخزن", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                    }
-                    e.SuppressKeyPress = true;
-                }
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
             }
-            catch (Exception ex)
+           
+        }
+
+        private void txtSalaryWorkDayes_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                MessageBox.Show(ex.Message);
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax); 
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+
+            }
+
+        }
+
+        private void txtSalaryRestDays_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+
             }
         }
 
-        private void txtUpdateCostSecurityCost_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSalaryExtraDays_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+
+            }
+        }
+
+        private void txtSalaryFixedInsurances_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+
+            }
+        }
+
+        private void txtSalaryVaribaleInsurances_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+
+            }
+        }
+
+        private void txtSalaryMoneySanctions_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+
+            }
+        }
+
+        private void txtSalaryDaySanctions_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+
+            }
+        }
+
+        private void txtSalaryUniform_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+
+            }
+        }
+
+        private void txtSalaryInsurancePolicy_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+
+            }
+        }
+
+        private void txtSalaryMeal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+
+            }
+        }
+
+        private void txtSalaryHome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+
+            }
+        }
+
+        private void txtSalaryRewarding_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+
+            }
+        }
+
+        private void txtSalaryExtras_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtSalaryAdnace_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSalaryAdnace_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void rdBtnSalaryTax_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void rdBtnSalaryWithoutTax_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void rdBtnSalaryTax_CheckedChanged(object sender, EventArgs e)
+        {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax); 
+        }
+
+        private void rdBtnSalaryWithoutTax_CheckedChanged(object sender, EventArgs e)
+        {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax);
+           
+        }
+
+        public void intialValue()
+        {
+            if (txtSalaryWorkDayes.Text == "")
+            {
+                txtSalaryWorkDayes.Text = "0";
+            }
+            if (txtSalaryEmployeeSalary.Text == "")
+            {
+                txtSalaryEmployeeSalary.Text = "0";
+            }
+            if (txtSalaryRestDays.Text == "")
+            {
+                txtSalaryRestDays.Text = "0";
+            }
+            if (txtSalaryExtraDays.Text == "")
+            {
+                txtSalaryExtraDays.Text = "0";
+            }
+            if (txtSalaryHome.Text == "")
+            {
+                txtSalaryHome.Text = "0";
+            }
+            if (txtSalaryMeal.Text == "")
+            {
+                txtSalaryMeal.Text = "0";
+            }
+            if (txtSalaryRewarding.Text == "")
+            {
+                txtSalaryRewarding.Text = "0";
+            }
+            if (txtSalaryExtras.Text == "")
+            {
+                txtSalaryExtras.Text = "0";
+            }
+            if (txtSalaryFixedInsurances.Text == "")
+            {
+                txtSalaryFixedInsurances.Text = "0";
+            }
+            if (txtSalaryVaribaleInsurances.Text == "")
+            {
+                txtSalaryVaribaleInsurances.Text = "0";
+            }
+            if (txtSalaryMoneySanctions.Text == "")
+            {
+                txtSalaryMoneySanctions.Text = "0";
+            }
+            if (txtSalaryDaySanctions.Text == "")
+            {
+                txtSalaryDaySanctions.Text = "0";
+            }
+            if (txtSalaryUniform.Text == "")
+            {
+                txtSalaryUniform.Text = "0";
+            }
+            if (txtSalaryInsurancePolicy.Text == "")
+            {
+                txtSalaryInsurancePolicy.Text = "0";
+            }
+            if (txtSalaryTax.Text == "")
+            {
+                txtSalaryTax.Text = "0";
+            }
+            if (txtSalaryFixedCompany.Text == "")
+            {
+                txtSalaryFixedCompany.Text = "0";
+            }
+            if (txtSalaryFixedEmployee.Text == "")
+            {
+                txtSalaryFixedEmployee.Text = "0";
+            }
+            if (txtSalaryVarCompany.Text == "")
+            {
+                txtSalaryVarCompany.Text = "0";
+            }
+            if (txtSalaryVarEmployee.Text == "")
+            {
+                txtSalaryVarEmployee.Text = "0";
+            }
+            if (txtSalaryAdnace.Text == "")
+            {
+                txtSalaryAdnace.Text = "0";
+            }
+        }
+
+
+        public void restValue()
+        {
+            txtSalaryEmployeeID.Text = "";
+            dateSalaryRecord.Text = "";
+            dateSalaryEmployee.Text = "";
+            txtSalaryLocationName.Text = "";
+            txtSalaryLocationAddress.Text = "";
+            txtSalaryEmloyeePostion.Text = "";
+            txtSalaryLocation.Text = "";
+
+            txtSalaryEmployeeSalary.Text = "";
+
+            txtSalaryWorkDayes.Text = "";
+            txtSalaryRestDays.Text = "";
+            txtSalaryExtraDays.Text = "";
+
+            txtSalaryHome.Text = "";
+            txtSalaryMeal.Text = "";
+            txtSalaryRewarding.Text = "";
+            txtSalaryExtras.Text = "";
+            txtSalaryAdnace.Text = "";
+
+            txtSalaryFixedInsurances.Text = "";
+            txtSalaryVaribaleInsurances.Text = "";
+            txtSalaryMoneySanctions.Text = "";
+            txtSalaryDaySanctions.Text = "";
+            txtSalaryUniform.Text = "";
+            txtSalaryInsurancePolicy.Text = "";
+
+            txtSalaryBeforTax.Text = "";
+            txtSalaryTax.Text = "";
+            txtSalaryAfterTax.Text = "";
+            rTBSalaryComment.Text = "";
+
+            txtSalaryFixedCompany.Text = "";
+            txtSalaryFixedEmployee.Text = "";
+            txtSalaryVarCompany.Text = "";
+            txtSalaryVarEmployee.Text = "";
+        }
+
+        private void btnSalaryCash_Click(object sender, EventArgs e)
+        {
+            employeeSalaryControl = new EmployeeSalaryControl();
+            if(txtSalaryEmployeeID.Text=="")
+            {
+                MessageBox.Show("لم يتم تحديد رقم الموظف", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                intialValue();
+                int ID = int.Parse(txtSalaryEmployeeID.Text);
+                int month = dateSalaryMonth.Value.Month;
+                int year = dateSalaryMonth.Value.Year;
+                employeeSalaryControl.insertEmployeeSalary(ID, dateSalaryRecord.Value, txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax,rTBSalaryComment,"كاش",month,year);
+                restValue();
+                MessageBox.Show("تم اضافه المرتب بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            
+        }
+
+        private void label130_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalaryQuit_Click(object sender, EventArgs e)
+        {
+            employeeSalaryControl = new EmployeeSalaryControl();
+            if (txtSalaryEmployeeID.Text == "")
+            {
+                MessageBox.Show("لم يتم تحديد رقم الموظف", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                intialValue();
+                int ID = int.Parse(txtSalaryEmployeeID.Text);
+                int month = dateSalaryMonth.Value.Month;
+                int year = dateSalaryMonth.Value.Year;
+                employeeSalaryControl.insertEmployeeSalary(ID, dateSalaryRecord.Value, txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax, rTBSalaryComment, "كويت", month, year);
+                restValue();
+                MessageBox.Show("تم اضافه المرتب بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void btnSalaryExit_Click(object sender, EventArgs e)
+        {
+
+            employeeSalaryControl = new EmployeeSalaryControl();
+            if (txtSalaryEmployeeID.Text == "")
+            {
+                MessageBox.Show("لم يتم تحديد رقم الموظف", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                intialValue();
+                int ID = int.Parse(txtSalaryEmployeeID.Text);
+                int month = dateSalaryMonth.Value.Month;
+                int year = dateSalaryMonth.Value.Year;
+                employeeSalaryControl.insertEmployeeSalary(ID, dateSalaryRecord.Value, txtSalaryEmployeeSalary, txtSalaryWorkDayes, txtSalaryRestDays, txtSalaryExtraDays, txtSalaryFixedInsurances, txtSalaryVaribaleInsurances, txtSalaryFixedEmployee, txtSalaryFixedCompany, txtSalaryVarEmployee, txtSalaryVarCompany, txtSalaryMoneySanctions, txtSalaryDaySanctions, txtSalaryUniform, txtSalaryInsurancePolicy, txtSalaryMeal, txtSalaryHome, txtSalaryRewarding, txtSalaryExtras, txtSalaryAdnace, rdBtnSalaryTax, txtSalaryBeforTax, txtSalaryTax, txtSalaryAfterTax, rTBSalaryComment, "E", month, year);
+                restValue();
+                MessageBox.Show("تم اضافه المرتب بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void txtSalaryEmployeeSalary_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+
+            // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
         }
 
-        private void txtUpdateCostSupervisorCost_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSalaryWorkDayes_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+
+            // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
         }
 
-        private void txtUpdateCostManagerCost_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSalaryRestDays_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+
+            // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
         }
 
-        private void txtUpdateCostClothesQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSalaryExtraDays_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+
+            // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
         }
 
-        private void txtUpdateCostDeviceQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSalaryMeal_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+
+            // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
         }
 
-        private void txtCostSecuritySalary_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSalaryHome_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+
+            // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
         }
 
-        private void txtCostSupervisorSalary_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSalaryRewarding_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+
+            // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
         }
 
-        private void txtCostManagerSalary_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSalaryExtras_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+
+            // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
         }
 
-        private void txtCostClotheQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSalaryAdnace_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+
+            // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
         }
 
-        private void txtCostDeviceQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSalaryFixedInsurances_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+
+            // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalaryVaribaleInsurances_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalaryUniform_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalaryInsurancePolicy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalaryMoneySanctions_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalaryDaySanctions_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalaryEmployeeID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
