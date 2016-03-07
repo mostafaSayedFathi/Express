@@ -71,9 +71,6 @@
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeControl.cs" />
     <Compile Include="EmployeeDB.cs" />
-    <Compile Include="EmployeeSalary.cs" />
-    <Compile Include="EmployeeSalaryControl.cs" />
-    <Compile Include="EmployeeSalaryDB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

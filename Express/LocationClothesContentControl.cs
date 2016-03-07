@@ -53,6 +53,7 @@ class LocationClothesContentControl
         double total = locationClothesControl.getTotal(locationName);
         if (total == 0)
         {
+            listView.Items.Clear();
         }
         else
         {
@@ -73,18 +74,15 @@ class LocationClothesContentControl
         }
     }
 
-    public void deletedClothesItems(HashSet<string> deleted , string locationName)
+    public void deletedClothesItems(string itemName,string locationName)
     {
         locationClothesControl = new LocationClothesControl();
         locationClothesContent = new LocationClothesContent();
         locationClothesContentDB = new LocationClothesContentDB();
         int locationClothesID = locationClothesControl.getID(locationName);
-        foreach (String element in deleted)
-        {
-            locationClothesContent.setName(element);
-            locationClothesContent.setLocationClothesID(locationClothesID);
-            locationClothesContentDB.delete(locationClothesContent);
-        }
+        locationClothesContent.setName(itemName);
+        locationClothesContent.setLocationClothesID(locationClothesID);
+        locationClothesContentDB.delete(locationClothesContent);
     }
 
     public void updateInsert(string locationName, ListView listView)
@@ -100,6 +98,7 @@ class LocationClothesContentControl
             double price = double.Parse(item.SubItems[1].Text);
             double quantity = double.Parse(item.SubItems[2].Text);
             double total = double.Parse(item.SubItems[3].Text);
+
             locationClothesContent.setName(name);
             locationClothesContent.setLocationClothesID(locationClothesID);
             locationClothesContent.setQuantity(quantity);
@@ -117,4 +116,69 @@ class LocationClothesContentControl
             }
         }
     }
+
+    public void updateItem(string itemName, double quantity , double total, string locationName)
+    {
+        locationClothesControl = new LocationClothesControl();
+        locationClothesContent = new LocationClothesContent();
+        locationClothesContentDB = new LocationClothesContentDB();
+        int locationClothesID = locationClothesControl.getID(locationName);
+        locationClothesContent.setLocationClothesID(locationClothesID);
+        locationClothesContent.setName(itemName);
+        locationClothesContent.setQuantity(quantity);
+        locationClothesContent.setTotal(total);
+        locationClothesContentDB.updateItem(locationClothesContent);
+    }
+
+    public void insertItem(string itemName, double price , double quantity , double total, string locationName , ListView listview)
+    {
+        locationClothesControl = new LocationClothesControl();
+        locationClothesContent = new LocationClothesContent();
+        locationClothesContentDB = new LocationClothesContentDB();
+        int locationClothesID = locationClothesControl.getID(locationName);
+        locationClothesContent.setLocationClothesID(locationClothesID);
+        locationClothesContent.setName(itemName);
+        locationClothesContent.setPrice(price);
+        locationClothesContent.setQuantity(quantity);
+        locationClothesContent.setTotal(total);
+        locationClothesContentDB.insert(locationClothesContent);
+        //insert to listView
+        ListViewItem item = new ListViewItem(itemName);
+        item.SubItems.Add(price.ToString());
+        item.SubItems.Add(quantity.ToString());
+        item.SubItems.Add(total.ToString());
+        listview.Items.Add(item);
+    }
+
+    public void deleteCheckedItems(ListView listView , string locationName)
+    {
+        clothesStoreControl = new ClothesStoreControl();
+        locationClothesContent = new LocationClothesContent();
+        locationClothesContentDB = new LocationClothesContentDB();
+        if (listView.CheckedItems.Count == 0)
+            return;
+        else
+        {
+            foreach (ListViewItem item in listView.CheckedItems)
+            {
+                string name = item.SubItems[0].Text;
+                double price = double.Parse(item.SubItems[1].Text);
+                double quantity = double.Parse(item.SubItems[2].Text);
+                double total = double.Parse(item.SubItems[3].Text);
+                item.Remove();
+                this.deletedClothesItems(name, locationName);
+                bool flag = clothesStoreControl.insertClothes(name,price,quantity,total);
+                if (flag == true)
+                {
+                    //inserted in store
+                }
+                else
+                {
+                    //update quantity in store
+                    clothesStoreControl.updateQuantityPlus(name, quantity);
+                }
+            }
+        }
+    }
+
 }

@@ -7,7 +7,6 @@ using System.Windows.Forms;
 
 class LocationClothesControl
 {
-    
     LocationClothes locationClothes;
     LocationClothesDB locationClothesDB;
     LocationControl locationControl;

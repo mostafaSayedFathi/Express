@@ -53,6 +53,7 @@ class LocationEquipsContentControl
         //MessageBox.Show(total.ToString());
         if (total == 0)
         {
+            listView.Items.Clear();
         }
         else
         {
@@ -73,18 +74,15 @@ class LocationEquipsContentControl
         }
     }
 
-    public void deletedDevicesItems(HashSet<string> deleted, string locationName)
+    public void deletedDevicesItems(string itemName, string locationName)
     {
         locationEquipsConrol = new LocationEquipsConrol();
         locationEquipsContent = new LocationEquipsContent();
         locationEquipsContentDB = new LocationEquipsContentDB();
-        int locationClothesID = locationEquipsConrol.getID(locationName);
-        foreach (String element in deleted)
-        {
-            locationEquipsContent.setName(element);
-            locationEquipsContent.setLocationClothesID(locationClothesID);
-            locationEquipsContentDB.delete(locationEquipsContent);
-        }
+        int locationDevicesID = locationEquipsConrol.getID(locationName);
+        locationEquipsContent.setName(itemName);
+        locationEquipsContent.setLocationClothesID(locationDevicesID);
+        locationEquipsContentDB.delete(locationEquipsContent);
     }
 
     public void updateInsert(string locationName, ListView listView)
@@ -100,6 +98,7 @@ class LocationEquipsContentControl
             double price = double.Parse(item.SubItems[1].Text);
             double quantity = double.Parse(item.SubItems[2].Text);
             double total = double.Parse(item.SubItems[3].Text);
+
             locationEquipsContent.setName(name);
             locationEquipsContent.setLocationClothesID(locationClothesID);
             locationEquipsContent.setQuantity(quantity);
@@ -114,6 +113,70 @@ class LocationEquipsContentControl
                 locationEquipsContent.setQuantity(quantity);
                 locationEquipsContent.setTotal(total);
                 locationEquipsContentDB.insert(locationEquipsContent);
+            }
+        }
+    }
+
+    public void updateItem(string itemName, double quantity , double total, string locationName)
+    {
+        locationEquipsConrol = new LocationEquipsConrol();
+        locationEquipsContent = new LocationEquipsContent();
+        locationEquipsContentDB = new LocationEquipsContentDB();
+        int locationDevicesID = locationEquipsConrol.getID(locationName);
+        locationEquipsContent.setLocationClothesID(locationDevicesID);
+        locationEquipsContent.setName(itemName);
+        locationEquipsContent.setQuantity(quantity);
+        locationEquipsContent.setTotal(total);
+        locationEquipsContentDB.updateItem(locationEquipsContent);
+    }
+
+    public void insertItem(string itemName, double price, double quantity, double total, string locationName, ListView listview)
+    {
+        locationEquipsConrol = new LocationEquipsConrol();
+        locationEquipsContent = new LocationEquipsContent();
+        locationEquipsContentDB = new LocationEquipsContentDB();
+        int locationDevicesID = locationEquipsConrol.getID(locationName);
+        locationEquipsContent.setLocationClothesID(locationDevicesID);
+        locationEquipsContent.setName(itemName);
+        locationEquipsContent.setPrice(price);
+        locationEquipsContent.setQuantity(quantity);
+        locationEquipsContent.setTotal(total);
+        locationEquipsContentDB.insert(locationEquipsContent);
+        //insert to listView
+        ListViewItem item = new ListViewItem(itemName);
+        item.SubItems.Add(price.ToString());
+        item.SubItems.Add(quantity.ToString());
+        item.SubItems.Add(total.ToString());
+        listview.Items.Add(item);
+    }
+
+    public void deleteCheckedItems(ListView listView, string locationName)
+    {
+        devicesStoreControl = new DevicesStoreControl();
+        locationEquipsContent = new LocationEquipsContent();
+        locationEquipsContentDB = new LocationEquipsContentDB();
+        if (listView.CheckedItems.Count == 0)
+            return;
+        else
+        {
+            foreach (ListViewItem item in listView.CheckedItems)
+            {
+                string name = item.SubItems[0].Text;
+                double price = double.Parse(item.SubItems[1].Text);
+                double quantity = double.Parse(item.SubItems[2].Text);
+                double total = double.Parse(item.SubItems[3].Text);
+                item.Remove();
+                this.deletedDevicesItems(name, locationName);
+                bool flag = devicesStoreControl.insertDevices(name, price, quantity, total);
+                if (flag == true)
+                {
+                    //inserted in store
+                }
+                else
+                {
+                    //update quantity in store
+                    devicesStoreControl.updateQuantityPlus(name, quantity);
+                }
             }
         }
     }
