@@ -172,19 +172,14 @@ class ClothesStoreControl
 
     public double deleteListViewItem(ListView listview, double total)
     {
-        if (listview.CheckedItems.Count == 0)
-            return total;
-        else
+        double newTotal = 0;
+        foreach (ListViewItem checkedItem in listview.CheckedItems)
         {
-            double newTotal = 0;
-            foreach (ListViewItem checkedItem in listview.CheckedItems)
-            {
-                double totalItem = double.Parse(checkedItem.SubItems[3].Text);
-                newTotal = totalMinus(total, totalItem);
-                checkedItem.Remove();
-            }
-            return newTotal;
+            double totalItem = double.Parse(checkedItem.SubItems[3].Text);
+            newTotal = totalMinus(total, totalItem);
+            checkedItem.Remove();
         }
+        return newTotal;
     }
 
     public void updateQuantityMinus(string clothesName, double quantity)
@@ -194,15 +189,6 @@ class ClothesStoreControl
         clothesStore.setName(clothesName);
         clothesStore.setQuantity(quantity);
         clothesStoreDB.updateQuantityMinus(clothesStore);
-    }
-
-    public void updateQuantityPlus(string clothesName, double quantity)
-    {
-        clothesStore = new ClothesStore();
-        clothesStoreDB = new ClothesStoreDB();
-        clothesStore.setName(clothesName);
-        clothesStore.setQuantity(quantity);
-        clothesStoreDB.updateQuantityPlus(clothesStore);
     }
 
     public bool checkItemQuantity(string itemName , double quantity)
@@ -221,36 +207,4 @@ class ClothesStoreControl
         }
     }
 
-    public double getQuantity(string itemName)
-    {
-        clothesStore = new ClothesStore();
-        clothesStoreDB = new ClothesStoreDB();
-        clothesStore.setName(itemName);
-        clothesStoreDB.selectQuantity(clothesStore);
-        return clothesStore.getQuantity();
-    }
-
-    public bool checkUpdatedQuantity(string itemName, double differenceQuantity)
-    {
-        double quantityInStore = this.getQuantity(itemName); ;
-        bool flag = true;
-        if (quantityInStore >= differenceQuantity)
-        {
-            flag = true;
-        }
-        else
-        {
-            flag = false;
-        }
-        return flag;
-    }
-
-    public bool checkItemInStore(string itemName)
-    {
-        clothesStore = new ClothesStore();
-        clothesStoreDB = new ClothesStoreDB();
-        clothesStore.setName(itemName);
-        bool check = clothesStoreDB.checkCloth(clothesStore);
-        return check;
-    }
 }
