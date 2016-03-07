@@ -149,6 +149,17 @@ class EmployeeControl
         return locationControl.getLocationName(locationID);
     }
 
+    public string getLocationAddress(int ID)
+    {
+        employee = new Employee();
+        employeeDB = new EmployeeDB();
+        locationControl = new LocationControl();
+        employee.setID(ID);
+        employeeDB.selectLocationID(employee);
+        int locationID = employee.getLocationID();
+        return locationControl.getLocationAddress(locationControl.getLocationName(locationID));
+    }
+
     public string getSourceName(int ID)
     {
         employee = new Employee();
@@ -197,5 +208,22 @@ class EmployeeControl
             listView.Items.Add(lvi);
         }
         connection.close();
+    }
+
+    public Boolean checkEmployee(int ID)
+    {
+        employee = new Employee();
+        employeeDB = new EmployeeDB();
+        employee.setID(ID);
+        Boolean check = employeeDB.checkEmployee(employee);
+        if (check == true)
+        {
+            return true; 
+        }
+        else
+        {
+            return false; 
+        }
+        
     }
 }

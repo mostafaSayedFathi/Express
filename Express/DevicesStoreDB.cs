@@ -98,14 +98,6 @@ class DevicesStoreDB
         connection.close();
     }
 
-    public void updateQuantityPlus(DevicesStore devicesStore)
-    {
-        connection.open();
-        command = new SqlCommand("update EquipsStore set quantity=quantity+'" + devicesStore.getQuantity() + "' where name='" + devicesStore.getName() + "'", connection.getConnection());
-        command.ExecuteNonQuery();
-        connection.close();
-    }
-
     public void selectQuantity(DevicesStore devicesStore)
     {
         connection.open();

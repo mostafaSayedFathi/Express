@@ -43,14 +43,6 @@ class LocationClothesContentDB
         connection.close();
     }
 
-    public void updateItem(LocationClothesContent locationClothesContent)
-    {
-        connection.open();
-        command = new SqlCommand("update LocationClothesContent set quantity='" + locationClothesContent.getQuantity() + "' , total='"+locationClothesContent.getTotal()+"' where name='" + locationClothesContent.getName() + "' and locationClothesID='" + locationClothesContent.getLocationClothesID() + "'", connection.getConnection());
-        command.ExecuteNonQuery();
-        connection.close();
-    }
-
     public bool checkIfExist(LocationClothesContent locationClothesContent)
     {
         connection.open();
