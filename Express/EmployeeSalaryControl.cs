@@ -1,6 +1,7 @@
 ﻿using Express;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ class EmployeeSalaryControl
     private EmployeeSalaryDB employeeSalaryDB;
     private Employee employee ;
     private EmployeeDB employeeDB;
+    private DBConnection connection;
 
     public Boolean checkEmployeeSalary(int ID, int month,int year)
     {
@@ -311,7 +313,7 @@ class EmployeeSalaryControl
             double uniform = double.Parse(txtSalaryUniform.Text);
             double insurancePolicy = double.Parse(txtSalaryInsurancePolicy.Text);
             double BeforTax = double.Parse(txtSalaryBeforTax.Text);
-            double tax = double.Parse(txtSalaryBeforTax.Text);
+            double tax = double.Parse(txtSalaryTax.Text);
             double AftrTax = double.Parse(txtSalaryAfterTax.Text);
             string comment = rTBSalaryComment.Text;
             string typeEmployee = type;
@@ -357,5 +359,148 @@ class EmployeeSalaryControl
         {
             MessageBox.Show(ex.Message);
         }
+    }
+
+    public void fillEmployeeSalaries(int ID, DateTimePicker dateSalaryRecord, TextBox txtSalaryEmployeeSalary, TextBox txtSalaryWorkDayes, TextBox txtSalaryRestDays, TextBox txtSalaryExtraDays, TextBox txtSalaryFixedInsurances, TextBox txtSalaryVaribaleInsurances, TextBox txtSalaryFixedEmployee, TextBox txtSalaryFixedCompany, TextBox txtSalaryVarEmployee, TextBox txtSalaryVarCompany, TextBox txtSalaryMoneySanctions, TextBox txtSalaryDaySanctions, TextBox txtSalaryUniform, TextBox txtSalaryInsurancePolicy, TextBox txtSalaryMeal, TextBox txtSalaryHome, TextBox txtSalaryRewarding, TextBox txtSalaryExtras, TextBox txtSalaryAdnace, RadioButton rdBtnSalaryTax, RadioButton rdBtnWithoutTaxUpTextBox, TextBox txtSalaryBeforTax, TextBox txtSalaryTax, TextBox txtSalaryAfterTax, RichTextBox rTBSalaryComment, string type, int month, int year)
+
+    {
+        employeeSalaryDB = new EmployeeSalaryDB();
+        employeeSalary = new EmployeeSalary();
+        connection = new DBConnection();
+        employeeSalary.setSalaryID(SalaryID(ID, month, year));
+        SqlDataReader reader = employeeSalaryDB.fillInfoEmployeeSalary(employeeSalary);
+        while (reader.Read())
+        {    
+            dateSalaryRecord.Value = Convert.ToDateTime(reader["salaryDate"].ToString());
+            txtSalaryEmployeeSalary.Text = reader["EmployeeSalary"].ToString() ;
+            txtSalaryWorkDayes.Text = reader["workDay"].ToString() ;
+            txtSalaryRestDays.Text = reader["restDay"].ToString() ;
+            txtSalaryExtraDays.Text = reader["extraDay"].ToString() ;
+            txtSalaryFixedInsurances.Text = reader["FixedInsurances"].ToString() ;
+            txtSalaryVaribaleInsurances.Text = reader["variableInsurances"].ToString() ;
+            txtSalaryFixedEmployee.Text = reader["fixedEmployee"].ToString() ;
+            txtSalaryFixedCompany.Text = reader["fixedCompany"].ToString() ;
+            txtSalaryVarEmployee.Text = reader["variableEmployee"].ToString() ;
+            txtSalaryVarCompany.Text = reader["variableCompany"].ToString() ;
+            txtSalaryMoneySanctions.Text = reader["monySanctions"].ToString() ;
+            txtSalaryDaySanctions.Text = reader["daySanctions"].ToString() ;
+            txtSalaryUniform.Text = reader["uniform"].ToString() ;
+            txtSalaryInsurancePolicy.Text = reader["insurancePolicy"].ToString() ;
+            txtSalaryMeal.Text = reader["meal"].ToString() ;
+            txtSalaryHome.Text = reader["home"].ToString() ;
+            txtSalaryRewarding.Text = reader["rewarding"].ToString() ;
+            txtSalaryExtras.Text = reader["extras"].ToString() ;
+            txtSalaryAdnace.Text = reader["advance"].ToString() ;
+            txtSalaryBeforTax.Text = reader["finalSalaryBeforTax"].ToString() ;
+            txtSalaryTax.Text = reader["tax"].ToString() ;
+            txtSalaryAfterTax.Text = reader["finalSalaryAfterTax"].ToString() ;
+            rTBSalaryComment.Text = reader["comment"].ToString();
+            if (txtSalaryTax.Text == "0")
+            {
+                rdBtnSalaryTax.Checked = false;
+                rdBtnWithoutTaxUpTextBox.Checked = true;
+            }
+            else
+            {               
+                rdBtnSalaryTax.Checked = true;
+                rdBtnWithoutTaxUpTextBox.Checked = false;
+            }
+
+        }
+
+        connection.close();
+        
+    }
+    public void updateEmployeeSalary(int ID, DateTime dateSalaryRecord, TextBox txtSalaryEmployeeSalary, TextBox txtSalaryWorkDayes, TextBox txtSalaryRestDays, TextBox txtSalaryExtraDays, TextBox txtSalaryFixedInsurances, TextBox txtSalaryVaribaleInsurances, TextBox txtSalaryFixedEmployee, TextBox txtSalaryFixedCompany, TextBox txtSalaryVarEmployee, TextBox txtSalaryVarCompany, TextBox txtSalaryMoneySanctions, TextBox txtSalaryDaySanctions, TextBox txtSalaryUniform, TextBox txtSalaryInsurancePolicy, TextBox txtSalaryMeal, TextBox txtSalaryHome, TextBox txtSalaryRewarding, TextBox txtSalaryExtras, TextBox txtSalaryAdnace, RadioButton rdBtnSalaryTax, TextBox txtSalaryBeforTax, TextBox txtSalaryTax, TextBox txtSalaryAfterTax, RichTextBox rTBSalaryComment, string type, int monthh, int yearr)
+    {
+        try
+        {
+            employee = new Employee();
+            employeeDB = new EmployeeDB();
+            employeeSalary = new EmployeeSalary();
+            employeeSalaryDB = new EmployeeSalaryDB();
+
+            int employeeID = ID;
+            employee.setID(ID);
+            employeeDB.selectLocationID(employee);
+            int locationID = employee.getLocationID();
+            string SalaryDate = dateSalaryRecord.ToString("dd-MM-yyyy");
+            double EmployeeSalary = double.Parse(txtSalaryEmployeeSalary.Text);
+            double workDayes = double.Parse(txtSalaryWorkDayes.Text);
+            double extraDay = double.Parse(txtSalaryExtraDays.Text); ;
+            double RestDay = double.Parse(txtSalaryRestDays.Text);
+            double meal = double.Parse(txtSalaryMeal.Text);
+            double home = double.Parse(txtSalaryHome.Text);
+            double rewarding = double.Parse(txtSalaryRewarding.Text);
+            double extras = double.Parse(txtSalaryExtras.Text);
+            double advance = double.Parse(txtSalaryAdnace.Text);
+            double fixedInsurances = double.Parse(txtSalaryFixedInsurances.Text);
+            double varibaleInsurances = double.Parse(txtSalaryVaribaleInsurances.Text);
+            double moneySanctions = double.Parse(txtSalaryMoneySanctions.Text);
+            double daySanctions = double.Parse(txtSalaryDaySanctions.Text);
+            double uniform = double.Parse(txtSalaryUniform.Text);
+            double insurancePolicy = double.Parse(txtSalaryInsurancePolicy.Text);
+            double BeforTax = double.Parse(txtSalaryBeforTax.Text);
+            double tax = double.Parse(txtSalaryTax.Text);
+            double AftrTax = double.Parse(txtSalaryAfterTax.Text);
+            string comment = rTBSalaryComment.Text;
+            string typeEmployee = type;
+            double fixedEmployee = double.Parse(txtSalaryFixedEmployee.Text);
+            double fixedCompany = double.Parse(txtSalaryFixedCompany.Text);
+            double varEmployee = double.Parse(txtSalaryVarEmployee.Text);
+            double varCompany = double.Parse(txtSalaryVarCompany.Text);
+            int month = monthh;
+            int year = yearr;
+
+          
+
+            employeeSalary.setSalaryID(SalaryID(employeeID, month, year));
+            employeeSalary.setEmployeeID(employeeID);
+            employeeSalary.setLocationID(locationID);
+            employeeSalary.setSalaryDate(SalaryDate);
+            employeeSalary.setEmployeSalary(EmployeeSalary);
+            employeeSalary.setWorkDay(workDayes);
+            employeeSalary.setExtraDay(extraDay);
+            employeeSalary.setRestDay(RestDay);
+            employeeSalary.setMeal(meal);
+            employeeSalary.setHome(home);
+            employeeSalary.setRewarding(rewarding);
+            employeeSalary.setExtras(extras);
+            employeeSalary.setAdvance(advance);
+            employeeSalary.setFixedInsurances(fixedInsurances);
+            employeeSalary.setVariableInsurances(varibaleInsurances);
+            employeeSalary.setMoneySanctions(moneySanctions);
+            employeeSalary.setDaySanctions(daySanctions);
+            employeeSalary.setUniform(uniform);
+            employeeSalary.setInsurancePolicy(insurancePolicy);
+            employeeSalary.setFinalSalaryBeforTax(BeforTax);
+            employeeSalary.setTax(tax);
+            employeeSalary.setFinalSalaryAfterTax(AftrTax);
+            employeeSalary.setComment(comment);
+            employeeSalary.setType(type);
+            employeeSalary.setfixedEmployee(fixedEmployee);
+            employeeSalary.setfixedCompany(fixedCompany);
+            employeeSalary.setvarEmployee(varEmployee);
+            employeeSalary.setvarCompany(varCompany);
+            employeeSalary.setMonth(month);
+            employeeSalary.setYear(year);
+
+            employeeSalaryDB.update(employeeSalary);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message);
+        }
+    }
+
+    public int SalaryID(int ID , int month , int year)
+    {
+        employeeSalary = new EmployeeSalary();
+        employeeSalaryDB = new EmployeeSalaryDB();
+        employeeSalary.setEmployeeID(ID);
+        employeeSalary.setMonth(month);
+        employeeSalary.setYear(year);
+        employeeSalaryDB.selectSalaryEmployeeID(employeeSalary);
+        return employeeSalary.getSalaryID();
     }
 }

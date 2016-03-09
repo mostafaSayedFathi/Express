@@ -76,6 +76,7 @@ namespace Express
             panelSourceEvaluation.Visible = false;
             panelAttendance.Visible = false;
             panelEmployeeSalary.Visible = false;
+            panelUpdateEmployeeSalary.Visible = false;
         }
 
         private void btnStartOperation_Click(object sender, EventArgs e)
@@ -257,6 +258,7 @@ namespace Express
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
                 panelEmployeeSalary.Visible = false;
+                panelUpdateEmployeeSalary.Visible = false;
                 employeeControl = new EmployeeControl();
                 locationControl = new LocationControl();
                 sourceControl = new SourceControl();
@@ -414,6 +416,7 @@ namespace Express
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
                 panelEmployeeSalary.Visible = false;
+                panelUpdateEmployeeSalary.Visible = false;
                 applicationControl = new ApplicationControl();
                 //InitializeComponent();
                 applicationControl.fillComboboxSex(comboBoxAppSex);
@@ -884,6 +887,7 @@ namespace Express
             panelSourceEvaluation.Visible = false;
             panelAttendance.Visible = false;
             panelEmployeeSalary.Visible = false;
+            panelUpdateEmployeeSalary.Visible = false;
         }
 
         private void تعديلToolStripMenuItem_Click(object sender, EventArgs e)
@@ -906,6 +910,7 @@ namespace Express
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
                 panelEmployeeSalary.Visible = false;
+                panelUpdateEmployeeSalary.Visible = false;
                 clothesStoreControl = new ClothesStoreControl();
                 clothesStoreControl.fillListViewClothesStore(listViewUpdateClothesStore);
                 txtUpdateTotalAllClothesStore.Text = clothesStoreControl.totalAllUpdate(listViewUpdateClothesStore).ToString();
@@ -1017,6 +1022,7 @@ namespace Express
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
                 panelEmployeeSalary.Visible = false;
+                panelUpdateEmployeeSalary.Visible = false;
                 clothesStoreControl = new ClothesStoreControl();
                 clothesStoreControl.fillListViewClothesStore(listViewDeleteClotheStore);
             }
@@ -1286,6 +1292,7 @@ namespace Express
             panelSourceEvaluation.Visible = false;
             panelAttendance.Visible = false;
             panelEmployeeSalary.Visible = false;
+            panelUpdateEmployeeSalary.Visible = false;
 
         }
 
@@ -1400,6 +1407,7 @@ namespace Express
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
                 panelEmployeeSalary.Visible = false;
+                panelUpdateEmployeeSalary.Visible = false;
                 devicesStoreControl = new DevicesStoreControl();
                 devicesStoreControl.fillListViewDevicesStore(listViewUpdateDeviceStore);
                 txtUpdateAllTotalDeviceStore.Text = devicesStoreControl.totalAllUpdate(listViewUpdateDeviceStore).ToString();
@@ -1559,6 +1567,7 @@ namespace Express
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
                 panelEmployeeSalary.Visible = false;
+                panelUpdateEmployeeSalary.Visible = false;
                 txtLocationName.Focus();
             }
             catch (Exception ex)
@@ -1585,6 +1594,7 @@ namespace Express
             panelSourceEvaluation.Visible = false;
             panelAttendance.Visible = false;
             panelEmployeeSalary.Visible = false;
+            panelUpdateEmployeeSalary.Visible = false;
             locationControl = new LocationControl();
             locationControl.fillComboboxLocationName(comboBoxUpdateLocationName);
         }
@@ -1609,6 +1619,7 @@ namespace Express
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
                 panelEmployeeSalary.Visible = false;
+                panelUpdateEmployeeSalary.Visible = false;
 
                 locationControl = new LocationControl();
                 clothesStoreControl = new ClothesStoreControl();
@@ -1643,6 +1654,7 @@ namespace Express
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
                 panelEmployeeSalary.Visible = false;
+                panelUpdateEmployeeSalary.Visible = false;
 
                 locationControl = new LocationControl();
                 devicesStoreControl = new DevicesStoreControl();
@@ -2224,6 +2236,7 @@ namespace Express
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
                 panelEmployeeSalary.Visible = false;
+                panelUpdateEmployeeSalary.Visible = false;
 
                 sourceControl = new SourceControl();
                 locationControl = new LocationControl();
@@ -2398,6 +2411,10 @@ namespace Express
                 panelUpdateLocationCosts.Visible = false;
                 panelUpdateEmployee.Visible = false;
                 panelSourceEvaluation.Visible = true;
+                panelAttendance.Visible = false;
+                panelEmployeeSalary.Visible = false;
+                panelUpdateEmployeeSalary.Visible = false;
+
                 sourceControl = new SourceControl();
                 sourceControl.fillComboboxSourceName(comboBoxEvaluateSourceName);
             }
@@ -2504,6 +2521,7 @@ namespace Express
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = true;
                 panelEmployeeSalary.Visible = false;
+                panelUpdateEmployeeSalary.Visible = false;
 
                 locationControl = new LocationControl();
                 locationControl.fillComboboxLocationNameReady(comboBoxAttendanceLocationName);
@@ -2922,6 +2940,7 @@ namespace Express
                 panelSourceEvaluation.Visible = false;
                 panelAttendance.Visible = false;
                 panelEmployeeSalary.Visible = true;
+                panelUpdateEmployeeSalary.Visible = false;
                 dateSalaryMonth.Format = DateTimePickerFormat.Custom;
                 dateSalaryMonth.CustomFormat = "MM/yyyy";
                 dateSalaryEmployee.Format = DateTimePickerFormat.Custom;
@@ -3299,7 +3318,89 @@ namespace Express
                 txtSalaryAdnace.Text = "0";
             }
         }
-
+        public void intialValueUpdateSalary()
+        {
+            if (txtUpdateSalaryWorkDay.Text == "")
+            {
+                txtUpdateSalaryWorkDay.Text = "0";
+            }
+            if (txtUpdateSalaryEmployeeSalary.Text == "")
+            {
+                txtUpdateSalaryEmployeeSalary.Text = "0";
+            }
+            if (txtUpdateSalaryRestDay.Text == "")
+            {
+                txtUpdateSalaryRestDay.Text = "0";
+            }
+            if (txtUpdateSalaryExtraDay.Text == "")
+            {
+                txtUpdateSalaryExtraDay.Text = "0";
+            }
+            if (txtUpdateSalaryHome.Text == "")
+            {
+                txtUpdateSalaryHome.Text = "0";
+            }
+            if (txtUpdateSalaryMeal.Text == "")
+            {
+                txtUpdateSalaryMeal.Text = "0";
+            }
+            if (txtUpdateSalaryRewarding.Text == "")
+            {
+                txtUpdateSalaryRewarding.Text = "0";
+            }
+            if (txtUpdateSalaryExtras.Text == "")
+            {
+                txtUpdateSalaryExtras.Text = "0";
+            }
+            if (txtUpdateSalaryFixedInsurances.Text == "")
+            {
+                txtUpdateSalaryFixedInsurances.Text = "0";
+            }
+            if (txtUpdateSalaryVarInsurances.Text == "")
+            {
+                txtUpdateSalaryVarInsurances.Text = "0";
+            }
+            if (txtUpdateSalaryMoneySanctions.Text == "")
+            {
+                txtUpdateSalaryMoneySanctions.Text = "0";
+            }
+            if (txtUpdateSalaryDaySanctions.Text == "")
+            {
+                txtUpdateSalaryDaySanctions.Text = "0";
+            }
+            if (txtUpdateSalaryUniform.Text == "")
+            {
+                txtUpdateSalaryUniform.Text = "0";
+            }
+            if (txtUpdateSalaryInsurancePolicy.Text == "")
+            {
+                txtUpdateSalaryInsurancePolicy.Text = "0";
+            }
+            if (txtUpdateSalaryTax.Text == "")
+            {
+                txtUpdateSalaryTax.Text = "0";
+            }
+            if (txtUpdateSalaryFixedCompany.Text == "")
+            {
+                txtUpdateSalaryFixedCompany.Text = "0";
+            }
+            if (txtUpdateSalaryFiexdEmployee.Text == "")
+            {
+                txtUpdateSalaryFiexdEmployee.Text = "0";
+            }
+            if (txtUpdateSalaryVarCompany.Text == "")
+            {
+                txtUpdateSalaryVarCompany.Text = "0";
+            }
+            if (txtUpdateSalaryVarEmployee.Text == "")
+            {
+                txtUpdateSalaryVarEmployee.Text = "0";
+            }
+            if (txtUpdateSalaryAdvance.Text == "")
+            {
+                txtUpdateSalaryAdvance.Text = "0";
+            }
+        }
 
         public void restValue()
         {
@@ -3339,6 +3440,46 @@ namespace Express
             txtSalaryFixedEmployee.Text = "";
             txtSalaryVarCompany.Text = "";
             txtSalaryVarEmployee.Text = "";
+        }
+
+        public void restValueUpdateSalary()
+        {
+            txtUpdateSalaryEmployeeID.Text = "";
+            dateUpdateSalaryRecord.Text = "";
+            dateUpdateSalaryEmployee.Text = "";
+            txtUpdateSalaryLocationName.Text = "";
+            txtUpdateSalaryAddress.Text = "";
+            txtUpdateSalaryEmployeePosition.Text = "";
+            txtUpdateSalaryLocation.Text = "";
+
+            txtUpdateSalaryEmployeeSalary.Text = "";
+
+            txtUpdateSalaryWorkDay.Text = "";
+            txtUpdateSalaryRestDay.Text = "";
+            txtUpdateSalaryExtraDay.Text = "";
+
+            txtUpdateSalaryHome.Text = "";
+            txtUpdateSalaryMeal.Text = "";
+            txtUpdateSalaryRewarding.Text = "";
+            txtUpdateSalaryExtras.Text = "";
+            txtUpdateSalaryAdvance.Text = "";
+
+            txtUpdateSalaryFixedInsurances.Text = "";
+            txtUpdateSalaryVarInsurances.Text = "";
+            txtUpdateSalaryMoneySanctions.Text = "";
+            txtUpdateSalaryDaySanctions.Text = "";
+            txtUpdateSalaryUniform.Text = "";
+            txtUpdateSalaryInsurancePolicy.Text = "";
+
+            txtUpdateSalaryBeforTax.Text = "";
+            txtUpdateSalaryTax.Text = "";
+            txtUpdateSalaryAfterTax.Text = "";
+            rtxtUpdateComment.Text = "";
+
+            txtUpdateSalaryFixedCompany.Text = "";
+            txtUpdateSalaryFiexdEmployee.Text = "";
+            txtUpdateSalaryVarCompany.Text = "";
+            txtUpdateSalaryVarEmployee.Text = "";
         }
 
         private void btnSalaryCash_Click(object sender, EventArgs e)
@@ -3624,6 +3765,379 @@ namespace Express
             {
                 e.Handled = true;
             }
+        }
+
+        private void comboBoxLocationNam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxEmployeeName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label132_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label156_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void تعديلرواتبافرادToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelNewEmployee.Visible = false;
+            panelNewLocation.Visible = false;
+            panelLocationCosts.Visible = false;
+            PanelNewApplication.Visible = false;
+            PanelUpdateClotheStore.Visible = false;
+            PanelAddClothe.Visible = false;
+            PanelDeleteFromclothesStore.Visible = false;
+            PanelAddDevices.Visible = false;
+            PanelUpdateDeviceStore.Visible = false;
+            PanelDeleteFromDevicesStore.Visible = false;
+            panelUpdateLocation.Visible = false;
+            panelUpdateLocationCosts.Visible = false;
+            panelUpdateEmployee.Visible = false;
+            panelSourceEvaluation.Visible = false;
+            panelAttendance.Visible = false;
+            panelEmployeeSalary.Visible = false;
+            panelUpdateEmployeeSalary.Visible = true;
+            dateUpdateSalaryMonth.Format = DateTimePickerFormat.Custom;
+            dateUpdateSalaryMonth.CustomFormat = "MM/yyyy";
+            dateUpdateSalaryEmployee.Format = DateTimePickerFormat.Custom;
+            dateUpdateSalaryEmployee.CustomFormat = "dd/MM/yyyy";
+            dateUpdateSalaryRecord.Format = DateTimePickerFormat.Custom;
+            dateUpdateSalaryRecord.CustomFormat = "dd/MM/yyyy";
+        }
+
+        private void txtUpdateSalaryEmployeeID_KeyDown(object sender, KeyEventArgs e)
+        {
+            try{
+                if (e.KeyCode == Keys.Enter)
+                {
+                    employeeControl = new EmployeeControl();
+                    int ID = int.Parse(txtUpdateSalaryEmployeeID.Text);
+                    Boolean check = employeeControl.checkEmployee(ID);
+                    if (check == false)
+                    {
+                        MessageBox.Show("لايوجد موظف مسجل بهذا الرقم", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        int month = dateUpdateSalaryMonth.Value.Month;
+                        int year = dateUpdateSalaryMonth.Value.Year;
+                       
+                       
+                        check = employeeSalaryControl.checkEmployeeSalary(ID,month,year);
+                        if (check == true)
+                        {
+                            MessageBox.Show("لم يتم تسجيل مرتب الموظف لهذا الشهر", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            string employeeName = employeeControl.getEmployeeName(ID);
+                            string salary = employeeControl.getSalary(ID).ToString();
+                            string position = employeeControl.getPosition(ID);
+                            string location = employeeControl.getLocationName(ID);
+                            string locationAddress = employeeControl.getLocationAddress(ID);
+                            string employDate = employeeControl.getEmployDate(ID);
+                            txtUpdateSalaryEmployeeName.Text = employeeName;
+                            dateUpdateSalaryEmployee.Value = Convert.ToDateTime(employDate);
+                            txtUpdateSalaryLocationName.Text = location;
+                            txtUpdateSalaryAddress.Text = locationAddress;
+                            txtUpdateSalaryEmployeePosition.Text = position;
+                            txtUpdateSalaryLocation.Text = salary;
+                            txtUpdateSalaryEmployeeSalary.Text = salary;
+
+                            groupBoxInformation.Enabled = true;
+                            groupBoxMinus.Enabled = true;
+                            groupBoxExtras.Enabled = true;
+                            groupBoxUpdateDays.Enabled = true;
+                            groupBox46.Enabled = true;
+                            rtxtUpdateComment.Enabled = true;
+
+                            txtUpdateSalaryEmployeeSalary.Focus();
+                            employeeSalaryControl = new EmployeeSalaryControl();
+                            employeeSalaryControl.fillEmployeeSalaries(ID, dateUpdateSalaryRecord, txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp,rdBtnWithoutTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax, rtxtUpdateComment, "E", month, year);
+                            e.SuppressKeyPress = true;
+                        }
+                        
+                    }
+                
+            }
+        }
+            catch(Exception ex){
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtUpdateSalaryWorkDay_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryEmployeeSalary_TextChanged(object sender, EventArgs e)
+        {            
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+        }
+
+        private void txtUpdateSalaryRestDay_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryExtraDay_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryFixedInsurances_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryVarInsurances_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryMoneySanctions_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryDaySanctions_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryUniform_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryInsurancePolicy_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryMeal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtUpdateSalaryMeal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryHome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryRewarding_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryExtras_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryAdvance_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void rdBtnTaxUp_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void rdBtnWithoutTaxUp_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                employeeSalaryControl = new EmployeeSalaryControl();
+                employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtUpdateSalaryEmployeeName_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void btnUpdateSalaryCash_Click(object sender, EventArgs e)
+        {
+            employeeSalaryControl = new EmployeeSalaryControl();
+            if (txtUpdateSalaryEmployeeID.Text == "")
+            {
+                MessageBox.Show("لم يتم تحديد رقم الموظف", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                intialValueUpdateSalary();
+                int ID = int.Parse(txtUpdateSalaryEmployeeID.Text);
+                int month = dateUpdateSalaryMonth.Value.Month;
+                int year = dateUpdateSalaryMonth.Value.Year;
+                employeeSalaryControl.updateEmployeeSalary(ID, dateUpdateSalaryRecord.Value, txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp,txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax, rtxtUpdateComment, "كاش", month, year);
+                restValueUpdateSalary();
+                MessageBox.Show("تم تعديل المرتب بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnUpdateSalaryQuit_Click(object sender, EventArgs e)
+        {
+            employeeSalaryControl = new EmployeeSalaryControl();
+            if (txtUpdateSalaryEmployeeID.Text == "")
+            {
+                MessageBox.Show("لم يتم تحديد رقم الموظف", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                intialValue();
+                int ID = int.Parse(txtUpdateSalaryEmployeeID.Text);
+                int month = dateUpdateSalaryMonth.Value.Month;
+                int year = dateUpdateSalaryMonth.Value.Year;
+                employeeSalaryControl.updateEmployeeSalary(ID, dateUpdateSalaryRecord.Value, txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax, rtxtUpdateComment, "كويت", month, year);
+                restValue();
+                MessageBox.Show("تم تعديل المرتب بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void btnUpdateSalaryExit_Click(object sender, EventArgs e)
+        {
+            employeeSalaryControl = new EmployeeSalaryControl();
+            if (txtUpdateSalaryEmployeeID.Text == "")
+            {
+                MessageBox.Show("لم يتم تحديد رقم الموظف", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                intialValue();
+                int ID = int.Parse(txtUpdateSalaryEmployeeID.Text);
+                int month = dateUpdateSalaryMonth.Value.Month;
+                int year = dateUpdateSalaryMonth.Value.Year;
+                employeeSalaryControl.updateEmployeeSalary(ID, dateUpdateSalaryRecord.Value, txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax, rtxtUpdateComment, "E", month, year);
+                restValue();
+                MessageBox.Show("تم تعديل المرتب بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void rdBtnTaxUp_CheckedChanged(object sender, EventArgs e)
+        {
+            employeeSalaryControl = new EmployeeSalaryControl();
+            employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+  
+        }
+
+        private void rdBtnWithoutTaxUp_CheckedChanged(object sender, EventArgs e)
+        {
+            employeeSalaryControl = new EmployeeSalaryControl();
+            employeeSalaryControl.Calculation(txtUpdateSalaryEmployeeSalary, txtUpdateSalaryWorkDay, txtUpdateSalaryRestDay, txtUpdateSalaryExtraDay, txtUpdateSalaryFixedInsurances, txtUpdateSalaryVarInsurances, txtUpdateSalaryFiexdEmployee, txtUpdateSalaryFixedCompany, txtUpdateSalaryVarEmployee, txtUpdateSalaryVarCompany, txtUpdateSalaryMoneySanctions, txtUpdateSalaryDaySanctions, txtUpdateSalaryUniform, txtUpdateSalaryInsurancePolicy, txtUpdateSalaryMeal, txtUpdateSalaryHome, txtUpdateSalaryRewarding, txtUpdateSalaryExtras, txtUpdateSalaryAdvance, rdBtnTaxUp, txtUpdateSalaryBeforTax, txtUpdateSalaryTax, txtUpdateSalaryAfterTax);
+  
         }
 
     }

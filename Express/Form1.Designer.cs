@@ -64,6 +64,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
             this.رواتبالافرادToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تعديلرواتبافرادToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelStart = new System.Windows.Forms.Panel();
             this.panelNewLocation = new System.Windows.Forms.Panel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -517,6 +518,98 @@
             this.label138 = new System.Windows.Forms.Label();
             this.txtSalaryEmployeeName = new System.Windows.Forms.TextBox();
             this.btnSalaryCash = new System.Windows.Forms.Button();
+            this.panelUpdateEmployeeSalary = new System.Windows.Forms.Panel();
+            this.groupBox46 = new System.Windows.Forms.GroupBox();
+            this.groupBox47 = new System.Windows.Forms.GroupBox();
+            this.label183 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label184 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label185 = new System.Windows.Forms.Label();
+            this.label186 = new System.Windows.Forms.Label();
+            this.label187 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryAdvance = new System.Windows.Forms.TextBox();
+            this.label188 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label191 = new System.Windows.Forms.Label();
+            this.label192 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label189 = new System.Windows.Forms.Label();
+            this.label190 = new System.Windows.Forms.Label();
+            this.dateUpdateSalaryMonth = new System.Windows.Forms.DateTimePicker();
+            this.txtUpdateSalaryEmployeeID = new System.Windows.Forms.TextBox();
+            this.btnUpdateSalaryQuit = new System.Windows.Forms.Button();
+            this.btnUpdateSalaryExit = new System.Windows.Forms.Button();
+            this.btnUpdateSalaryCash = new System.Windows.Forms.Button();
+            this.groupBox42 = new System.Windows.Forms.GroupBox();
+            this.rdBtnWithoutTaxUp = new System.Windows.Forms.RadioButton();
+            this.rdBtnTaxUp = new System.Windows.Forms.RadioButton();
+            this.txtUpdateSalaryBeforTax = new System.Windows.Forms.TextBox();
+            this.txtUpdateSalaryTax = new System.Windows.Forms.TextBox();
+            this.label157 = new System.Windows.Forms.Label();
+            this.label158 = new System.Windows.Forms.Label();
+            this.label159 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryAfterTax = new System.Windows.Forms.TextBox();
+            this.groupBoxUpdateDays = new System.Windows.Forms.GroupBox();
+            this.txtUpdateSalaryWorkDay = new System.Windows.Forms.TextBox();
+            this.label160 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryRestDay = new System.Windows.Forms.TextBox();
+            this.label161 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryExtraDay = new System.Windows.Forms.TextBox();
+            this.label162 = new System.Windows.Forms.Label();
+            this.rtxtUpdateComment = new System.Windows.Forms.RichTextBox();
+            this.groupBoxMinus = new System.Windows.Forms.GroupBox();
+            this.groupBox43 = new System.Windows.Forms.GroupBox();
+            this.label163 = new System.Windows.Forms.Label();
+            this.label164 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryVarCompany = new System.Windows.Forms.TextBox();
+            this.txtUpdateSalaryVarEmployee = new System.Windows.Forms.TextBox();
+            this.txtUpdateSalaryVarInsurances = new System.Windows.Forms.TextBox();
+            this.label165 = new System.Windows.Forms.Label();
+            this.label166 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryInsurancePolicy = new System.Windows.Forms.TextBox();
+            this.label167 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryUniform = new System.Windows.Forms.TextBox();
+            this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.txtUpdateSalaryMoneySanctions = new System.Windows.Forms.TextBox();
+            this.label168 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryDaySanctions = new System.Windows.Forms.TextBox();
+            this.label169 = new System.Windows.Forms.Label();
+            this.groupBox45 = new System.Windows.Forms.GroupBox();
+            this.label170 = new System.Windows.Forms.Label();
+            this.label171 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryFixedCompany = new System.Windows.Forms.TextBox();
+            this.txtUpdateSalaryFiexdEmployee = new System.Windows.Forms.TextBox();
+            this.txtUpdateSalaryFixedInsurances = new System.Windows.Forms.TextBox();
+            this.label172 = new System.Windows.Forms.Label();
+            this.groupBoxExtras = new System.Windows.Forms.GroupBox();
+            this.label173 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryMeal = new System.Windows.Forms.TextBox();
+            this.txtUpdateSalaryRewarding = new System.Windows.Forms.TextBox();
+            this.txtUpdateSalaryHome = new System.Windows.Forms.TextBox();
+            this.label174 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryExtras = new System.Windows.Forms.TextBox();
+            this.label175 = new System.Windows.Forms.Label();
+            this.label176 = new System.Windows.Forms.Label();
+            this.groupBoxInformation = new System.Windows.Forms.GroupBox();
+            this.dateUpdateSalaryRecord = new System.Windows.Forms.DateTimePicker();
+            this.txtUpdateSalaryLocationName = new System.Windows.Forms.TextBox();
+            this.label156 = new System.Windows.Forms.Label();
+            this.label177 = new System.Windows.Forms.Label();
+            this.label132 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryEmployeeSalary = new System.Windows.Forms.TextBox();
+            this.txtUpdateSalaryEmployeePosition = new System.Windows.Forms.TextBox();
+            this.label178 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryLocation = new System.Windows.Forms.TextBox();
+            this.dateUpdateSalaryEmployee = new System.Windows.Forms.DateTimePicker();
+            this.label179 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryAddress = new System.Windows.Forms.TextBox();
+            this.label180 = new System.Windows.Forms.Label();
+            this.label181 = new System.Windows.Forms.Label();
+            this.label182 = new System.Windows.Forms.Label();
+            this.txtUpdateSalaryEmployeeName = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.panelNewLocation.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -577,6 +670,17 @@
             this.groupBox35.SuspendLayout();
             this.groupBox36.SuspendLayout();
             this.groupBox37.SuspendLayout();
+            this.panelUpdateEmployeeSalary.SuspendLayout();
+            this.groupBox46.SuspendLayout();
+            this.groupBox47.SuspendLayout();
+            this.groupBox42.SuspendLayout();
+            this.groupBoxUpdateDays.SuspendLayout();
+            this.groupBoxMinus.SuspendLayout();
+            this.groupBox43.SuspendLayout();
+            this.groupBox44.SuspendLayout();
+            this.groupBox45.SuspendLayout();
+            this.groupBoxExtras.SuspendLayout();
+            this.groupBoxInformation.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -873,7 +977,8 @@
             this.toolStripDropDownButton6.AutoSize = false;
             this.toolStripDropDownButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButton6.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.رواتبالافرادToolStripMenuItem});
+            this.رواتبالافرادToolStripMenuItem,
+            this.تعديلرواتبافرادToolStripMenuItem});
             this.toolStripDropDownButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton6.Image")));
             this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
@@ -886,6 +991,13 @@
             this.رواتبالافرادToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.رواتبالافرادToolStripMenuItem.Text = "تسجيل رواتب افراد";
             this.رواتبالافرادToolStripMenuItem.Click += new System.EventHandler(this.رواتبالافرادToolStripMenuItem_Click);
+            // 
+            // تعديلرواتبافرادToolStripMenuItem
+            // 
+            this.تعديلرواتبافرادToolStripMenuItem.Name = "تعديلرواتبافرادToolStripMenuItem";
+            this.تعديلرواتبافرادToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.تعديلرواتبافرادToolStripMenuItem.Text = "تعديل رواتب افراد";
+            this.تعديلرواتبافرادToolStripMenuItem.Click += new System.EventHandler(this.تعديلرواتبافرادToolStripMenuItem_Click);
             // 
             // panelStart
             // 
@@ -5820,7 +5932,7 @@
             // 
             this.label133.AutoSize = true;
             this.label133.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label133.Location = new System.Drawing.Point(321, 189);
+            this.label133.Location = new System.Drawing.Point(285, 187);
             this.label133.Name = "label133";
             this.label133.Size = new System.Drawing.Size(122, 23);
             this.label133.TabIndex = 24;
@@ -5830,7 +5942,7 @@
             // 
             this.txtSalaryEmployeeSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSalaryEmployeeSalary.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalaryEmployeeSalary.Location = new System.Drawing.Point(215, 187);
+            this.txtSalaryEmployeeSalary.Location = new System.Drawing.Point(179, 185);
             this.txtSalaryEmployeeSalary.Name = "txtSalaryEmployeeSalary";
             this.txtSalaryEmployeeSalary.Size = new System.Drawing.Size(101, 30);
             this.txtSalaryEmployeeSalary.TabIndex = 5;
@@ -5942,12 +6054,1068 @@
             this.btnSalaryCash.UseVisualStyleBackColor = false;
             this.btnSalaryCash.Click += new System.EventHandler(this.btnSalaryCash_Click);
             // 
+            // panelUpdateEmployeeSalary
+            // 
+            this.panelUpdateEmployeeSalary.AutoScroll = true;
+            this.panelUpdateEmployeeSalary.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelUpdateEmployeeSalary.Controls.Add(this.groupBox46);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.dateTimePicker1);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.label189);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.label190);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.dateUpdateSalaryMonth);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.txtUpdateSalaryEmployeeID);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.btnUpdateSalaryQuit);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.btnUpdateSalaryExit);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.btnUpdateSalaryCash);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.groupBox42);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.groupBoxUpdateDays);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.rtxtUpdateComment);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.groupBoxMinus);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.groupBoxExtras);
+            this.panelUpdateEmployeeSalary.Controls.Add(this.groupBoxInformation);
+            this.panelUpdateEmployeeSalary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelUpdateEmployeeSalary.Location = new System.Drawing.Point(0, 0);
+            this.panelUpdateEmployeeSalary.Name = "panelUpdateEmployeeSalary";
+            this.panelUpdateEmployeeSalary.Size = new System.Drawing.Size(885, 687);
+            this.panelUpdateEmployeeSalary.TabIndex = 61;
+            // 
+            // groupBox46
+            // 
+            this.groupBox46.Controls.Add(this.groupBox47);
+            this.groupBox46.Controls.Add(this.label187);
+            this.groupBox46.Controls.Add(this.txtUpdateSalaryAdvance);
+            this.groupBox46.Controls.Add(this.label188);
+            this.groupBox46.Controls.Add(this.textBox16);
+            this.groupBox46.Controls.Add(this.label191);
+            this.groupBox46.Controls.Add(this.label192);
+            this.groupBox46.Enabled = false;
+            this.groupBox46.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox46.Location = new System.Drawing.Point(12, 460);
+            this.groupBox46.Name = "groupBox46";
+            this.groupBox46.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox46.Size = new System.Drawing.Size(307, 66);
+            this.groupBox46.TabIndex = 10007;
+            this.groupBox46.TabStop = false;
+            this.groupBox46.Text = "سلف";
+            // 
+            // groupBox47
+            // 
+            this.groupBox47.Controls.Add(this.label183);
+            this.groupBox47.Controls.Add(this.textBox9);
+            this.groupBox47.Controls.Add(this.textBox10);
+            this.groupBox47.Controls.Add(this.textBox11);
+            this.groupBox47.Controls.Add(this.label184);
+            this.groupBox47.Controls.Add(this.textBox13);
+            this.groupBox47.Controls.Add(this.label185);
+            this.groupBox47.Controls.Add(this.label186);
+            this.groupBox47.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox47.Location = new System.Drawing.Point(299, 240);
+            this.groupBox47.Name = "groupBox47";
+            this.groupBox47.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox47.Size = new System.Drawing.Size(266, 200);
+            this.groupBox47.TabIndex = 37;
+            this.groupBox47.TabStop = false;
+            this.groupBox47.Text = "اضافيات";
+            // 
+            // label183
+            // 
+            this.label183.AutoSize = true;
+            this.label183.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label183.Location = new System.Drawing.Point(170, 89);
+            this.label183.Name = "label183";
+            this.label183.Size = new System.Drawing.Size(93, 23);
+            this.label183.TabIndex = 36;
+            this.label183.Text = "بدل سكن:";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox9.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(22, 51);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(142, 30);
+            this.textBox9.TabIndex = 19;
+            // 
+            // textBox10
+            // 
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox10.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Location = new System.Drawing.Point(22, 120);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(142, 30);
+            this.textBox10.TabIndex = 21;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox11.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(22, 86);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(142, 30);
+            this.textBox11.TabIndex = 20;
+            // 
+            // label184
+            // 
+            this.label184.AutoSize = true;
+            this.label184.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label184.Location = new System.Drawing.Point(170, 123);
+            this.label184.Name = "label184";
+            this.label184.Size = new System.Drawing.Size(105, 23);
+            this.label184.TabIndex = 30;
+            this.label184.Text = "حافز انتظام:";
+            // 
+            // textBox13
+            // 
+            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox13.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.Location = new System.Drawing.Point(22, 156);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(142, 30);
+            this.textBox13.TabIndex = 22;
+            // 
+            // label185
+            // 
+            this.label185.AutoSize = true;
+            this.label185.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label185.Location = new System.Drawing.Point(170, 53);
+            this.label185.Name = "label185";
+            this.label185.Size = new System.Drawing.Size(89, 23);
+            this.label185.TabIndex = 34;
+            this.label185.Text = "بدل وجبة:";
+            // 
+            // label186
+            // 
+            this.label186.AutoSize = true;
+            this.label186.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label186.Location = new System.Drawing.Point(170, 159);
+            this.label186.Name = "label186";
+            this.label186.Size = new System.Drawing.Size(127, 23);
+            this.label186.TabIndex = 32;
+            this.label186.Text = "أضافيات أخري:";
+            // 
+            // label187
+            // 
+            this.label187.AutoSize = true;
+            this.label187.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label187.Location = new System.Drawing.Point(185, 75);
+            this.label187.Name = "label187";
+            this.label187.Size = new System.Drawing.Size(0, 23);
+            this.label187.TabIndex = 36;
+            // 
+            // txtUpdateSalaryAdvance
+            // 
+            this.txtUpdateSalaryAdvance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryAdvance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryAdvance.Location = new System.Drawing.Point(39, 28);
+            this.txtUpdateSalaryAdvance.Name = "txtUpdateSalaryAdvance";
+            this.txtUpdateSalaryAdvance.Size = new System.Drawing.Size(142, 30);
+            this.txtUpdateSalaryAdvance.TabIndex = 23;
+            this.txtUpdateSalaryAdvance.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryAdvance_KeyDown);
+            // 
+            // label188
+            // 
+            this.label188.AutoSize = true;
+            this.label188.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label188.Location = new System.Drawing.Point(185, 109);
+            this.label188.Name = "label188";
+            this.label188.Size = new System.Drawing.Size(0, 23);
+            this.label188.TabIndex = 30;
+            // 
+            // textBox16
+            // 
+            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox16.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox16.Location = new System.Drawing.Point(22, 156);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(142, 30);
+            this.textBox16.TabIndex = 22;
+            // 
+            // label191
+            // 
+            this.label191.AutoSize = true;
+            this.label191.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label191.Location = new System.Drawing.Point(186, 30);
+            this.label191.Name = "label191";
+            this.label191.Size = new System.Drawing.Size(119, 23);
+            this.label191.TabIndex = 34;
+            this.label191.Text = "قيمة السلفة:";
+            // 
+            // label192
+            // 
+            this.label192.AutoSize = true;
+            this.label192.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label192.Location = new System.Drawing.Point(170, 159);
+            this.label192.Name = "label192";
+            this.label192.Size = new System.Drawing.Size(127, 23);
+            this.label192.TabIndex = 32;
+            this.label192.Text = "أضافيات أخري:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(488, -43);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(270, 30);
+            this.dateTimePicker1.TabIndex = 33;
+            // 
+            // label189
+            // 
+            this.label189.AutoSize = true;
+            this.label189.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label189.Location = new System.Drawing.Point(556, 81);
+            this.label189.Name = "label189";
+            this.label189.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label189.Size = new System.Drawing.Size(54, 23);
+            this.label189.TabIndex = 10006;
+            this.label189.Text = "شهر:";
+            // 
+            // label190
+            // 
+            this.label190.AutoSize = true;
+            this.label190.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label190.Location = new System.Drawing.Point(1087, 81);
+            this.label190.Name = "label190";
+            this.label190.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label190.Size = new System.Drawing.Size(111, 23);
+            this.label190.TabIndex = 10004;
+            this.label190.Text = "رقم الموظف:";
+            // 
+            // dateUpdateSalaryMonth
+            // 
+            this.dateUpdateSalaryMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateUpdateSalaryMonth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateUpdateSalaryMonth.Location = new System.Drawing.Point(418, 79);
+            this.dateUpdateSalaryMonth.Name = "dateUpdateSalaryMonth";
+            this.dateUpdateSalaryMonth.Size = new System.Drawing.Size(132, 29);
+            this.dateUpdateSalaryMonth.TabIndex = 10005;
+            // 
+            // txtUpdateSalaryEmployeeID
+            // 
+            this.txtUpdateSalaryEmployeeID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryEmployeeID.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryEmployeeID.Location = new System.Drawing.Point(965, 78);
+            this.txtUpdateSalaryEmployeeID.Name = "txtUpdateSalaryEmployeeID";
+            this.txtUpdateSalaryEmployeeID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtUpdateSalaryEmployeeID.Size = new System.Drawing.Size(116, 30);
+            this.txtUpdateSalaryEmployeeID.TabIndex = 10003;
+            this.txtUpdateSalaryEmployeeID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryEmployeeID_KeyDown);
+            // 
+            // btnUpdateSalaryQuit
+            // 
+            this.btnUpdateSalaryQuit.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnUpdateSalaryQuit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdateSalaryQuit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateSalaryQuit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdateSalaryQuit.Location = new System.Drawing.Point(124, 74);
+            this.btnUpdateSalaryQuit.Name = "btnUpdateSalaryQuit";
+            this.btnUpdateSalaryQuit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnUpdateSalaryQuit.Size = new System.Drawing.Size(97, 36);
+            this.btnUpdateSalaryQuit.TabIndex = 123;
+            this.btnUpdateSalaryQuit.Text = "كويت";
+            this.btnUpdateSalaryQuit.UseVisualStyleBackColor = false;
+            this.btnUpdateSalaryQuit.Click += new System.EventHandler(this.btnUpdateSalaryQuit_Click);
+            // 
+            // btnUpdateSalaryExit
+            // 
+            this.btnUpdateSalaryExit.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnUpdateSalaryExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdateSalaryExit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateSalaryExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdateSalaryExit.Location = new System.Drawing.Point(16, 73);
+            this.btnUpdateSalaryExit.Name = "btnUpdateSalaryExit";
+            this.btnUpdateSalaryExit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnUpdateSalaryExit.Size = new System.Drawing.Size(97, 36);
+            this.btnUpdateSalaryExit.TabIndex = 124;
+            this.btnUpdateSalaryExit.Text = "E";
+            this.btnUpdateSalaryExit.UseVisualStyleBackColor = false;
+            this.btnUpdateSalaryExit.Click += new System.EventHandler(this.btnUpdateSalaryExit_Click);
+            // 
+            // btnUpdateSalaryCash
+            // 
+            this.btnUpdateSalaryCash.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUpdateSalaryCash.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdateSalaryCash.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateSalaryCash.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdateSalaryCash.Location = new System.Drawing.Point(227, 74);
+            this.btnUpdateSalaryCash.Name = "btnUpdateSalaryCash";
+            this.btnUpdateSalaryCash.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnUpdateSalaryCash.Size = new System.Drawing.Size(96, 36);
+            this.btnUpdateSalaryCash.TabIndex = 122;
+            this.btnUpdateSalaryCash.Text = "كاش";
+            this.btnUpdateSalaryCash.UseVisualStyleBackColor = false;
+            this.btnUpdateSalaryCash.Click += new System.EventHandler(this.btnUpdateSalaryCash_Click);
+            // 
+            // groupBox42
+            // 
+            this.groupBox42.Controls.Add(this.rdBtnWithoutTaxUp);
+            this.groupBox42.Controls.Add(this.rdBtnTaxUp);
+            this.groupBox42.Controls.Add(this.txtUpdateSalaryBeforTax);
+            this.groupBox42.Controls.Add(this.txtUpdateSalaryTax);
+            this.groupBox42.Controls.Add(this.label157);
+            this.groupBox42.Controls.Add(this.label158);
+            this.groupBox42.Controls.Add(this.label159);
+            this.groupBox42.Controls.Add(this.txtUpdateSalaryAfterTax);
+            this.groupBox42.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox42.Location = new System.Drawing.Point(334, 350);
+            this.groupBox42.Name = "groupBox42";
+            this.groupBox42.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox42.Size = new System.Drawing.Size(346, 186);
+            this.groupBox42.TabIndex = 101;
+            this.groupBox42.TabStop = false;
+            this.groupBox42.Text = "نقديات";
+            // 
+            // rdBtnWithoutTaxUp
+            // 
+            this.rdBtnWithoutTaxUp.AutoSize = true;
+            this.rdBtnWithoutTaxUp.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtnWithoutTaxUp.Location = new System.Drawing.Point(28, 153);
+            this.rdBtnWithoutTaxUp.Name = "rdBtnWithoutTaxUp";
+            this.rdBtnWithoutTaxUp.Size = new System.Drawing.Size(120, 27);
+            this.rdBtnWithoutTaxUp.TabIndex = 46;
+            this.rdBtnWithoutTaxUp.Text = "بدون ضرائب";
+            this.rdBtnWithoutTaxUp.UseVisualStyleBackColor = true;
+            this.rdBtnWithoutTaxUp.CheckedChanged += new System.EventHandler(this.rdBtnWithoutTaxUp_CheckedChanged);
+            this.rdBtnWithoutTaxUp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rdBtnWithoutTaxUp_KeyDown);
+            // 
+            // rdBtnTaxUp
+            // 
+            this.rdBtnTaxUp.AutoSize = true;
+            this.rdBtnTaxUp.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtnTaxUp.Location = new System.Drawing.Point(70, 128);
+            this.rdBtnTaxUp.Name = "rdBtnTaxUp";
+            this.rdBtnTaxUp.Size = new System.Drawing.Size(78, 27);
+            this.rdBtnTaxUp.TabIndex = 45;
+            this.rdBtnTaxUp.Text = "ضرائب";
+            this.rdBtnTaxUp.UseVisualStyleBackColor = true;
+            this.rdBtnTaxUp.CheckedChanged += new System.EventHandler(this.rdBtnTaxUp_CheckedChanged);
+            this.rdBtnTaxUp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rdBtnTaxUp_KeyDown);
+            // 
+            // txtUpdateSalaryBeforTax
+            // 
+            this.txtUpdateSalaryBeforTax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryBeforTax.Enabled = false;
+            this.txtUpdateSalaryBeforTax.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryBeforTax.Location = new System.Drawing.Point(21, 23);
+            this.txtUpdateSalaryBeforTax.Name = "txtUpdateSalaryBeforTax";
+            this.txtUpdateSalaryBeforTax.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtUpdateSalaryBeforTax.Size = new System.Drawing.Size(127, 30);
+            this.txtUpdateSalaryBeforTax.TabIndex = 23;
+            // 
+            // txtUpdateSalaryTax
+            // 
+            this.txtUpdateSalaryTax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryTax.Enabled = false;
+            this.txtUpdateSalaryTax.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryTax.Location = new System.Drawing.Point(21, 59);
+            this.txtUpdateSalaryTax.Name = "txtUpdateSalaryTax";
+            this.txtUpdateSalaryTax.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtUpdateSalaryTax.Size = new System.Drawing.Size(127, 30);
+            this.txtUpdateSalaryTax.TabIndex = 25;
+            // 
+            // label157
+            // 
+            this.label157.AutoSize = true;
+            this.label157.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label157.Location = new System.Drawing.Point(154, 61);
+            this.label157.Name = "label157";
+            this.label157.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label157.Size = new System.Drawing.Size(62, 23);
+            this.label157.TabIndex = 42;
+            this.label157.Text = "ضريبة:";
+            // 
+            // label158
+            // 
+            this.label158.AutoSize = true;
+            this.label158.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label158.Location = new System.Drawing.Point(154, 98);
+            this.label158.Name = "label158";
+            this.label158.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label158.Size = new System.Drawing.Size(181, 23);
+            this.label158.TabIndex = 40;
+            this.label158.Text = "الاجمالي بعد الضريبه:";
+            // 
+            // label159
+            // 
+            this.label159.AutoSize = true;
+            this.label159.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label159.Location = new System.Drawing.Point(154, 26);
+            this.label159.Name = "label159";
+            this.label159.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label159.Size = new System.Drawing.Size(186, 23);
+            this.label159.TabIndex = 38;
+            this.label159.Text = "الاجمالي قبل الضريبة:";
+            // 
+            // txtUpdateSalaryAfterTax
+            // 
+            this.txtUpdateSalaryAfterTax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryAfterTax.Enabled = false;
+            this.txtUpdateSalaryAfterTax.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryAfterTax.Location = new System.Drawing.Point(21, 95);
+            this.txtUpdateSalaryAfterTax.Name = "txtUpdateSalaryAfterTax";
+            this.txtUpdateSalaryAfterTax.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtUpdateSalaryAfterTax.Size = new System.Drawing.Size(127, 30);
+            this.txtUpdateSalaryAfterTax.TabIndex = 24;
+            // 
+            // groupBoxUpdateDays
+            // 
+            this.groupBoxUpdateDays.Controls.Add(this.txtUpdateSalaryWorkDay);
+            this.groupBoxUpdateDays.Controls.Add(this.label160);
+            this.groupBoxUpdateDays.Controls.Add(this.txtUpdateSalaryRestDay);
+            this.groupBoxUpdateDays.Controls.Add(this.label161);
+            this.groupBoxUpdateDays.Controls.Add(this.txtUpdateSalaryExtraDay);
+            this.groupBoxUpdateDays.Controls.Add(this.label162);
+            this.groupBoxUpdateDays.Enabled = false;
+            this.groupBoxUpdateDays.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxUpdateDays.Location = new System.Drawing.Point(16, 118);
+            this.groupBoxUpdateDays.Name = "groupBoxUpdateDays";
+            this.groupBoxUpdateDays.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBoxUpdateDays.Size = new System.Drawing.Size(310, 142);
+            this.groupBoxUpdateDays.TabIndex = 1;
+            this.groupBoxUpdateDays.TabStop = false;
+            this.groupBoxUpdateDays.Text = "الأيام";
+            // 
+            // txtUpdateSalaryWorkDay
+            // 
+            this.txtUpdateSalaryWorkDay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryWorkDay.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryWorkDay.Location = new System.Drawing.Point(99, 25);
+            this.txtUpdateSalaryWorkDay.Name = "txtUpdateSalaryWorkDay";
+            this.txtUpdateSalaryWorkDay.Size = new System.Drawing.Size(82, 30);
+            this.txtUpdateSalaryWorkDay.TabIndex = 108;
+            this.txtUpdateSalaryWorkDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryWorkDay_KeyDown);
+            // 
+            // label160
+            // 
+            this.label160.AutoSize = true;
+            this.label160.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label160.Location = new System.Drawing.Point(188, 28);
+            this.label160.Name = "label160";
+            this.label160.Size = new System.Drawing.Size(95, 23);
+            this.label160.TabIndex = 19;
+            this.label160.Text = "أيام العمل:";
+            // 
+            // txtUpdateSalaryRestDay
+            // 
+            this.txtUpdateSalaryRestDay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryRestDay.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryRestDay.Location = new System.Drawing.Point(99, 61);
+            this.txtUpdateSalaryRestDay.Name = "txtUpdateSalaryRestDay";
+            this.txtUpdateSalaryRestDay.Size = new System.Drawing.Size(82, 30);
+            this.txtUpdateSalaryRestDay.TabIndex = 109;
+            this.txtUpdateSalaryRestDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryRestDay_KeyDown);
+            // 
+            // label161
+            // 
+            this.label161.AutoSize = true;
+            this.label161.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label161.Location = new System.Drawing.Point(187, 64);
+            this.label161.Name = "label161";
+            this.label161.Size = new System.Drawing.Size(97, 23);
+            this.label161.TabIndex = 20;
+            this.label161.Text = "أيام الراحة:";
+            // 
+            // txtUpdateSalaryExtraDay
+            // 
+            this.txtUpdateSalaryExtraDay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryExtraDay.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryExtraDay.Location = new System.Drawing.Point(99, 97);
+            this.txtUpdateSalaryExtraDay.Name = "txtUpdateSalaryExtraDay";
+            this.txtUpdateSalaryExtraDay.Size = new System.Drawing.Size(82, 30);
+            this.txtUpdateSalaryExtraDay.TabIndex = 110;
+            this.txtUpdateSalaryExtraDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryExtraDay_KeyDown);
+            // 
+            // label162
+            // 
+            this.label162.AutoSize = true;
+            this.label162.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label162.Location = new System.Drawing.Point(187, 100);
+            this.label162.Name = "label162";
+            this.label162.Size = new System.Drawing.Size(101, 23);
+            this.label162.TabIndex = 21;
+            this.label162.Text = "أيام اضافية:";
+            // 
+            // rtxtUpdateComment
+            // 
+            this.rtxtUpdateComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rtxtUpdateComment.Enabled = false;
+            this.rtxtUpdateComment.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtUpdateComment.Location = new System.Drawing.Point(334, 543);
+            this.rtxtUpdateComment.Name = "rtxtUpdateComment";
+            this.rtxtUpdateComment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rtxtUpdateComment.Size = new System.Drawing.Size(346, 54);
+            this.rtxtUpdateComment.TabIndex = 10001;
+            this.rtxtUpdateComment.Text = "";
+            // 
+            // groupBoxMinus
+            // 
+            this.groupBoxMinus.Controls.Add(this.groupBox43);
+            this.groupBoxMinus.Controls.Add(this.label166);
+            this.groupBoxMinus.Controls.Add(this.txtUpdateSalaryInsurancePolicy);
+            this.groupBoxMinus.Controls.Add(this.label167);
+            this.groupBoxMinus.Controls.Add(this.txtUpdateSalaryUniform);
+            this.groupBoxMinus.Controls.Add(this.groupBox44);
+            this.groupBoxMinus.Controls.Add(this.groupBox45);
+            this.groupBoxMinus.Enabled = false;
+            this.groupBoxMinus.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxMinus.Location = new System.Drawing.Point(686, 350);
+            this.groupBoxMinus.Name = "groupBoxMinus";
+            this.groupBoxMinus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBoxMinus.Size = new System.Drawing.Size(529, 242);
+            this.groupBoxMinus.TabIndex = 2;
+            this.groupBoxMinus.TabStop = false;
+            this.groupBoxMinus.Text = "خصومات";
+            // 
+            // groupBox43
+            // 
+            this.groupBox43.Controls.Add(this.label163);
+            this.groupBox43.Controls.Add(this.label164);
+            this.groupBox43.Controls.Add(this.txtUpdateSalaryVarCompany);
+            this.groupBox43.Controls.Add(this.txtUpdateSalaryVarEmployee);
+            this.groupBox43.Controls.Add(this.txtUpdateSalaryVarInsurances);
+            this.groupBox43.Controls.Add(this.label165);
+            this.groupBox43.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox43.Location = new System.Drawing.Point(6, 32);
+            this.groupBox43.Name = "groupBox43";
+            this.groupBox43.Size = new System.Drawing.Size(238, 96);
+            this.groupBox43.TabIndex = 3;
+            this.groupBox43.TabStop = false;
+            this.groupBox43.Text = "تأمينات";
+            // 
+            // label163
+            // 
+            this.label163.AutoSize = true;
+            this.label163.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label163.Location = new System.Drawing.Point(68, 67);
+            this.label163.Name = "label163";
+            this.label163.Size = new System.Drawing.Size(55, 19);
+            this.label163.TabIndex = 34;
+            this.label163.Text = "شركة:";
+            // 
+            // label164
+            // 
+            this.label164.AutoSize = true;
+            this.label164.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label164.Location = new System.Drawing.Point(189, 67);
+            this.label164.Name = "label164";
+            this.label164.Size = new System.Drawing.Size(36, 19);
+            this.label164.TabIndex = 33;
+            this.label164.Text = "فرد:";
+            // 
+            // txtUpdateSalaryVarCompany
+            // 
+            this.txtUpdateSalaryVarCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryVarCompany.Enabled = false;
+            this.txtUpdateSalaryVarCompany.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryVarCompany.Location = new System.Drawing.Point(6, 65);
+            this.txtUpdateSalaryVarCompany.Name = "txtUpdateSalaryVarCompany";
+            this.txtUpdateSalaryVarCompany.Size = new System.Drawing.Size(60, 27);
+            this.txtUpdateSalaryVarCompany.TabIndex = 14;
+            // 
+            // txtUpdateSalaryVarEmployee
+            // 
+            this.txtUpdateSalaryVarEmployee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryVarEmployee.Enabled = false;
+            this.txtUpdateSalaryVarEmployee.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryVarEmployee.Location = new System.Drawing.Point(125, 65);
+            this.txtUpdateSalaryVarEmployee.Name = "txtUpdateSalaryVarEmployee";
+            this.txtUpdateSalaryVarEmployee.Size = new System.Drawing.Size(58, 27);
+            this.txtUpdateSalaryVarEmployee.TabIndex = 13;
+            // 
+            // txtUpdateSalaryVarInsurances
+            // 
+            this.txtUpdateSalaryVarInsurances.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryVarInsurances.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryVarInsurances.Location = new System.Drawing.Point(6, 28);
+            this.txtUpdateSalaryVarInsurances.Name = "txtUpdateSalaryVarInsurances";
+            this.txtUpdateSalaryVarInsurances.Size = new System.Drawing.Size(177, 27);
+            this.txtUpdateSalaryVarInsurances.TabIndex = 112;
+            this.txtUpdateSalaryVarInsurances.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryVarInsurances_KeyDown);
+            // 
+            // label165
+            // 
+            this.label165.AutoSize = true;
+            this.label165.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label165.Location = new System.Drawing.Point(182, 30);
+            this.label165.Name = "label165";
+            this.label165.Size = new System.Drawing.Size(50, 19);
+            this.label165.TabIndex = 28;
+            this.label165.Text = "متغير:";
+            // 
+            // label166
+            // 
+            this.label166.AutoSize = true;
+            this.label166.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label166.Location = new System.Drawing.Point(411, 175);
+            this.label166.Name = "label166";
+            this.label166.Size = new System.Drawing.Size(106, 23);
+            this.label166.TabIndex = 36;
+            this.label166.Text = "وثيقة تأمين:";
+            // 
+            // txtUpdateSalaryInsurancePolicy
+            // 
+            this.txtUpdateSalaryInsurancePolicy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryInsurancePolicy.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryInsurancePolicy.Location = new System.Drawing.Point(270, 175);
+            this.txtUpdateSalaryInsurancePolicy.Name = "txtUpdateSalaryInsurancePolicy";
+            this.txtUpdateSalaryInsurancePolicy.Size = new System.Drawing.Size(135, 30);
+            this.txtUpdateSalaryInsurancePolicy.TabIndex = 116;
+            this.txtUpdateSalaryInsurancePolicy.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryInsurancePolicy_KeyDown);
+            // 
+            // label167
+            // 
+            this.label167.AutoSize = true;
+            this.label167.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label167.Location = new System.Drawing.Point(411, 139);
+            this.label167.Name = "label167";
+            this.label167.Size = new System.Drawing.Size(70, 23);
+            this.label167.TabIndex = 34;
+            this.label167.Text = "ملابس:";
+            // 
+            // txtUpdateSalaryUniform
+            // 
+            this.txtUpdateSalaryUniform.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryUniform.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryUniform.Location = new System.Drawing.Point(270, 137);
+            this.txtUpdateSalaryUniform.Name = "txtUpdateSalaryUniform";
+            this.txtUpdateSalaryUniform.Size = new System.Drawing.Size(135, 30);
+            this.txtUpdateSalaryUniform.TabIndex = 115;
+            this.txtUpdateSalaryUniform.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryUniform_KeyDown);
+            // 
+            // groupBox44
+            // 
+            this.groupBox44.Controls.Add(this.txtUpdateSalaryMoneySanctions);
+            this.groupBox44.Controls.Add(this.label168);
+            this.groupBox44.Controls.Add(this.txtUpdateSalaryDaySanctions);
+            this.groupBox44.Controls.Add(this.label169);
+            this.groupBox44.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox44.Location = new System.Drawing.Point(6, 130);
+            this.groupBox44.Name = "groupBox44";
+            this.groupBox44.Size = new System.Drawing.Size(238, 96);
+            this.groupBox44.TabIndex = 4;
+            this.groupBox44.TabStop = false;
+            this.groupBox44.Text = "جزاءات";
+            // 
+            // txtUpdateSalaryMoneySanctions
+            // 
+            this.txtUpdateSalaryMoneySanctions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryMoneySanctions.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryMoneySanctions.Location = new System.Drawing.Point(6, 26);
+            this.txtUpdateSalaryMoneySanctions.Name = "txtUpdateSalaryMoneySanctions";
+            this.txtUpdateSalaryMoneySanctions.Size = new System.Drawing.Size(160, 27);
+            this.txtUpdateSalaryMoneySanctions.TabIndex = 113;
+            this.txtUpdateSalaryMoneySanctions.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryMoneySanctions_KeyDown);
+            // 
+            // label168
+            // 
+            this.label168.AutoSize = true;
+            this.label168.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label168.Location = new System.Drawing.Point(172, 31);
+            this.label168.Name = "label168";
+            this.label168.Size = new System.Drawing.Size(44, 19);
+            this.label168.TabIndex = 26;
+            this.label168.Text = "مبلغ:";
+            // 
+            // txtUpdateSalaryDaySanctions
+            // 
+            this.txtUpdateSalaryDaySanctions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryDaySanctions.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryDaySanctions.Location = new System.Drawing.Point(6, 59);
+            this.txtUpdateSalaryDaySanctions.Name = "txtUpdateSalaryDaySanctions";
+            this.txtUpdateSalaryDaySanctions.Size = new System.Drawing.Size(160, 27);
+            this.txtUpdateSalaryDaySanctions.TabIndex = 114;
+            this.txtUpdateSalaryDaySanctions.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryDaySanctions_KeyDown);
+            // 
+            // label169
+            // 
+            this.label169.AutoSize = true;
+            this.label169.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label169.Location = new System.Drawing.Point(172, 61);
+            this.label169.Name = "label169";
+            this.label169.Size = new System.Drawing.Size(35, 19);
+            this.label169.TabIndex = 28;
+            this.label169.Text = "يوم:";
+            // 
+            // groupBox45
+            // 
+            this.groupBox45.Controls.Add(this.label170);
+            this.groupBox45.Controls.Add(this.label171);
+            this.groupBox45.Controls.Add(this.txtUpdateSalaryFixedCompany);
+            this.groupBox45.Controls.Add(this.txtUpdateSalaryFiexdEmployee);
+            this.groupBox45.Controls.Add(this.txtUpdateSalaryFixedInsurances);
+            this.groupBox45.Controls.Add(this.label172);
+            this.groupBox45.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox45.Location = new System.Drawing.Point(264, 34);
+            this.groupBox45.Name = "groupBox45";
+            this.groupBox45.Size = new System.Drawing.Size(258, 96);
+            this.groupBox45.TabIndex = 2;
+            this.groupBox45.TabStop = false;
+            this.groupBox45.Text = "تأمينات";
+            // 
+            // label170
+            // 
+            this.label170.AutoSize = true;
+            this.label170.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label170.Location = new System.Drawing.Point(68, 65);
+            this.label170.Name = "label170";
+            this.label170.Size = new System.Drawing.Size(55, 19);
+            this.label170.TabIndex = 30;
+            this.label170.Text = "شركة:";
+            // 
+            // label171
+            // 
+            this.label171.AutoSize = true;
+            this.label171.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label171.Location = new System.Drawing.Point(189, 65);
+            this.label171.Name = "label171";
+            this.label171.Size = new System.Drawing.Size(36, 19);
+            this.label171.TabIndex = 29;
+            this.label171.Text = "فرد:";
+            // 
+            // txtUpdateSalaryFixedCompany
+            // 
+            this.txtUpdateSalaryFixedCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryFixedCompany.Enabled = false;
+            this.txtUpdateSalaryFixedCompany.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryFixedCompany.Location = new System.Drawing.Point(6, 63);
+            this.txtUpdateSalaryFixedCompany.Name = "txtUpdateSalaryFixedCompany";
+            this.txtUpdateSalaryFixedCompany.Size = new System.Drawing.Size(60, 27);
+            this.txtUpdateSalaryFixedCompany.TabIndex = 11;
+            // 
+            // txtUpdateSalaryFiexdEmployee
+            // 
+            this.txtUpdateSalaryFiexdEmployee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryFiexdEmployee.Enabled = false;
+            this.txtUpdateSalaryFiexdEmployee.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryFiexdEmployee.Location = new System.Drawing.Point(125, 63);
+            this.txtUpdateSalaryFiexdEmployee.Name = "txtUpdateSalaryFiexdEmployee";
+            this.txtUpdateSalaryFiexdEmployee.Size = new System.Drawing.Size(58, 27);
+            this.txtUpdateSalaryFiexdEmployee.TabIndex = 10;
+            // 
+            // txtUpdateSalaryFixedInsurances
+            // 
+            this.txtUpdateSalaryFixedInsurances.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryFixedInsurances.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryFixedInsurances.Location = new System.Drawing.Point(6, 26);
+            this.txtUpdateSalaryFixedInsurances.Name = "txtUpdateSalaryFixedInsurances";
+            this.txtUpdateSalaryFixedInsurances.Size = new System.Drawing.Size(177, 27);
+            this.txtUpdateSalaryFixedInsurances.TabIndex = 111;
+            this.txtUpdateSalaryFixedInsurances.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryFixedInsurances_KeyDown);
+            // 
+            // label172
+            // 
+            this.label172.AutoSize = true;
+            this.label172.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label172.Location = new System.Drawing.Point(181, 28);
+            this.label172.Name = "label172";
+            this.label172.Size = new System.Drawing.Size(72, 19);
+            this.label172.TabIndex = 26;
+            this.label172.Text = "اساسي:";
+            // 
+            // groupBoxExtras
+            // 
+            this.groupBoxExtras.Controls.Add(this.label173);
+            this.groupBoxExtras.Controls.Add(this.txtUpdateSalaryMeal);
+            this.groupBoxExtras.Controls.Add(this.txtUpdateSalaryRewarding);
+            this.groupBoxExtras.Controls.Add(this.txtUpdateSalaryHome);
+            this.groupBoxExtras.Controls.Add(this.label174);
+            this.groupBoxExtras.Controls.Add(this.txtUpdateSalaryExtras);
+            this.groupBoxExtras.Controls.Add(this.label175);
+            this.groupBoxExtras.Controls.Add(this.label176);
+            this.groupBoxExtras.Enabled = false;
+            this.groupBoxExtras.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxExtras.Location = new System.Drawing.Point(16, 266);
+            this.groupBoxExtras.Name = "groupBoxExtras";
+            this.groupBoxExtras.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBoxExtras.Size = new System.Drawing.Size(307, 188);
+            this.groupBoxExtras.TabIndex = 3;
+            this.groupBoxExtras.TabStop = false;
+            this.groupBoxExtras.Text = "اضافيات";
+            // 
+            // label173
+            // 
+            this.label173.AutoSize = true;
+            this.label173.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label173.Location = new System.Drawing.Point(153, 74);
+            this.label173.Name = "label173";
+            this.label173.Size = new System.Drawing.Size(93, 23);
+            this.label173.TabIndex = 36;
+            this.label173.Text = "بدل سكن:";
+            // 
+            // txtUpdateSalaryMeal
+            // 
+            this.txtUpdateSalaryMeal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryMeal.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryMeal.Location = new System.Drawing.Point(24, 35);
+            this.txtUpdateSalaryMeal.Name = "txtUpdateSalaryMeal";
+            this.txtUpdateSalaryMeal.Size = new System.Drawing.Size(123, 30);
+            this.txtUpdateSalaryMeal.TabIndex = 117;
+            this.txtUpdateSalaryMeal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryMeal_KeyDown);
+            this.txtUpdateSalaryMeal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpdateSalaryMeal_KeyPress);
+            // 
+            // txtUpdateSalaryRewarding
+            // 
+            this.txtUpdateSalaryRewarding.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryRewarding.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryRewarding.Location = new System.Drawing.Point(24, 105);
+            this.txtUpdateSalaryRewarding.Name = "txtUpdateSalaryRewarding";
+            this.txtUpdateSalaryRewarding.Size = new System.Drawing.Size(123, 30);
+            this.txtUpdateSalaryRewarding.TabIndex = 119;
+            this.txtUpdateSalaryRewarding.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryRewarding_KeyDown);
+            // 
+            // txtUpdateSalaryHome
+            // 
+            this.txtUpdateSalaryHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryHome.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryHome.Location = new System.Drawing.Point(24, 71);
+            this.txtUpdateSalaryHome.Name = "txtUpdateSalaryHome";
+            this.txtUpdateSalaryHome.Size = new System.Drawing.Size(123, 30);
+            this.txtUpdateSalaryHome.TabIndex = 118;
+            this.txtUpdateSalaryHome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryHome_KeyDown);
+            // 
+            // label174
+            // 
+            this.label174.AutoSize = true;
+            this.label174.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label174.Location = new System.Drawing.Point(153, 108);
+            this.label174.Name = "label174";
+            this.label174.Size = new System.Drawing.Size(105, 23);
+            this.label174.TabIndex = 30;
+            this.label174.Text = "حافز انتظام:";
+            // 
+            // txtUpdateSalaryExtras
+            // 
+            this.txtUpdateSalaryExtras.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryExtras.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryExtras.Location = new System.Drawing.Point(24, 141);
+            this.txtUpdateSalaryExtras.Name = "txtUpdateSalaryExtras";
+            this.txtUpdateSalaryExtras.Size = new System.Drawing.Size(123, 30);
+            this.txtUpdateSalaryExtras.TabIndex = 120;
+            this.txtUpdateSalaryExtras.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryExtras_KeyDown);
+            // 
+            // label175
+            // 
+            this.label175.AutoSize = true;
+            this.label175.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label175.Location = new System.Drawing.Point(153, 38);
+            this.label175.Name = "label175";
+            this.label175.Size = new System.Drawing.Size(89, 23);
+            this.label175.TabIndex = 34;
+            this.label175.Text = "بدل وجبة:";
+            // 
+            // label176
+            // 
+            this.label176.AutoSize = true;
+            this.label176.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label176.Location = new System.Drawing.Point(154, 143);
+            this.label176.Name = "label176";
+            this.label176.Size = new System.Drawing.Size(127, 23);
+            this.label176.TabIndex = 32;
+            this.label176.Text = "أضافيات أخري:";
+            // 
+            // groupBoxInformation
+            // 
+            this.groupBoxInformation.Controls.Add(this.dateUpdateSalaryRecord);
+            this.groupBoxInformation.Controls.Add(this.txtUpdateSalaryLocationName);
+            this.groupBoxInformation.Controls.Add(this.label156);
+            this.groupBoxInformation.Controls.Add(this.label177);
+            this.groupBoxInformation.Controls.Add(this.label132);
+            this.groupBoxInformation.Controls.Add(this.txtUpdateSalaryEmployeeSalary);
+            this.groupBoxInformation.Controls.Add(this.txtUpdateSalaryEmployeePosition);
+            this.groupBoxInformation.Controls.Add(this.label178);
+            this.groupBoxInformation.Controls.Add(this.txtUpdateSalaryLocation);
+            this.groupBoxInformation.Controls.Add(this.dateUpdateSalaryEmployee);
+            this.groupBoxInformation.Controls.Add(this.label179);
+            this.groupBoxInformation.Controls.Add(this.txtUpdateSalaryAddress);
+            this.groupBoxInformation.Controls.Add(this.label180);
+            this.groupBoxInformation.Controls.Add(this.label181);
+            this.groupBoxInformation.Controls.Add(this.label182);
+            this.groupBoxInformation.Controls.Add(this.txtUpdateSalaryEmployeeName);
+            this.groupBoxInformation.Enabled = false;
+            this.groupBoxInformation.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxInformation.Location = new System.Drawing.Point(334, 116);
+            this.groupBoxInformation.Name = "groupBoxInformation";
+            this.groupBoxInformation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBoxInformation.Size = new System.Drawing.Size(874, 228);
+            this.groupBoxInformation.TabIndex = 0;
+            this.groupBoxInformation.TabStop = false;
+            this.groupBoxInformation.Text = "بيانات";
+            // 
+            // dateUpdateSalaryRecord
+            // 
+            this.dateUpdateSalaryRecord.Enabled = false;
+            this.dateUpdateSalaryRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateUpdateSalaryRecord.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateUpdateSalaryRecord.Location = new System.Drawing.Point(63, 26);
+            this.dateUpdateSalaryRecord.Name = "dateUpdateSalaryRecord";
+            this.dateUpdateSalaryRecord.Size = new System.Drawing.Size(220, 29);
+            this.dateUpdateSalaryRecord.TabIndex = 10007;
+            this.dateUpdateSalaryRecord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryEmployeeName_KeyDown);
+            // 
+            // txtUpdateSalaryLocationName
+            // 
+            this.txtUpdateSalaryLocationName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryLocationName.Enabled = false;
+            this.txtUpdateSalaryLocationName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryLocationName.Location = new System.Drawing.Point(434, 98);
+            this.txtUpdateSalaryLocationName.Name = "txtUpdateSalaryLocationName";
+            this.txtUpdateSalaryLocationName.Size = new System.Drawing.Size(306, 30);
+            this.txtUpdateSalaryLocationName.TabIndex = 108;
+            this.txtUpdateSalaryLocationName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryEmployeeName_KeyDown);
+            // 
+            // label156
+            // 
+            this.label156.AutoSize = true;
+            this.label156.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label156.Location = new System.Drawing.Point(291, 29);
+            this.label156.Name = "label156";
+            this.label156.Size = new System.Drawing.Size(128, 23);
+            this.label156.TabIndex = 34;
+            this.label156.Text = "تسجيل الراتب:";
+            // 
+            // label177
+            // 
+            this.label177.AutoSize = true;
+            this.label177.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label177.Location = new System.Drawing.Point(289, 169);
+            this.label177.Name = "label177";
+            this.label177.Size = new System.Drawing.Size(122, 23);
+            this.label177.TabIndex = 24;
+            this.label177.Text = "أساس الراتب:";
+            // 
+            // label132
+            // 
+            this.label132.AutoSize = true;
+            this.label132.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label132.Location = new System.Drawing.Point(746, 137);
+            this.label132.Name = "label132";
+            this.label132.Size = new System.Drawing.Size(76, 23);
+            this.label132.TabIndex = 32;
+            this.label132.Text = "الوظيفة:";
+            // 
+            // txtUpdateSalaryEmployeeSalary
+            // 
+            this.txtUpdateSalaryEmployeeSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryEmployeeSalary.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryEmployeeSalary.Location = new System.Drawing.Point(157, 169);
+            this.txtUpdateSalaryEmployeeSalary.Name = "txtUpdateSalaryEmployeeSalary";
+            this.txtUpdateSalaryEmployeeSalary.Size = new System.Drawing.Size(126, 30);
+            this.txtUpdateSalaryEmployeeSalary.TabIndex = 106;
+            this.txtUpdateSalaryEmployeeSalary.TextChanged += new System.EventHandler(this.txtUpdateSalaryEmployeeSalary_TextChanged);
+            // 
+            // txtUpdateSalaryEmployeePosition
+            // 
+            this.txtUpdateSalaryEmployeePosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryEmployeePosition.Enabled = false;
+            this.txtUpdateSalaryEmployeePosition.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryEmployeePosition.Location = new System.Drawing.Point(504, 134);
+            this.txtUpdateSalaryEmployeePosition.Name = "txtUpdateSalaryEmployeePosition";
+            this.txtUpdateSalaryEmployeePosition.Size = new System.Drawing.Size(236, 30);
+            this.txtUpdateSalaryEmployeePosition.TabIndex = 31;
+            this.txtUpdateSalaryEmployeePosition.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryEmployeeName_KeyDown);
+            // 
+            // label178
+            // 
+            this.label178.AutoSize = true;
+            this.label178.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label178.Location = new System.Drawing.Point(746, 173);
+            this.label178.Name = "label178";
+            this.label178.Size = new System.Drawing.Size(63, 23);
+            this.label178.TabIndex = 15;
+            this.label178.Text = "الراتب:";
+            // 
+            // txtUpdateSalaryLocation
+            // 
+            this.txtUpdateSalaryLocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryLocation.Enabled = false;
+            this.txtUpdateSalaryLocation.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryLocation.Location = new System.Drawing.Point(614, 170);
+            this.txtUpdateSalaryLocation.Name = "txtUpdateSalaryLocation";
+            this.txtUpdateSalaryLocation.Size = new System.Drawing.Size(126, 30);
+            this.txtUpdateSalaryLocation.TabIndex = 105;
+            this.txtUpdateSalaryLocation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryEmployeeName_KeyDown);
+            // 
+            // dateUpdateSalaryEmployee
+            // 
+            this.dateUpdateSalaryEmployee.Enabled = false;
+            this.dateUpdateSalaryEmployee.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateUpdateSalaryEmployee.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateUpdateSalaryEmployee.Location = new System.Drawing.Point(434, 62);
+            this.dateUpdateSalaryEmployee.Name = "dateUpdateSalaryEmployee";
+            this.dateUpdateSalaryEmployee.Size = new System.Drawing.Size(306, 30);
+            this.dateUpdateSalaryEmployee.TabIndex = 107;
+            this.dateUpdateSalaryEmployee.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryEmployeeName_KeyDown);
+            // 
+            // label179
+            // 
+            this.label179.AutoSize = true;
+            this.label179.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label179.Location = new System.Drawing.Point(289, 103);
+            this.label179.Name = "label179";
+            this.label179.Size = new System.Drawing.Size(80, 23);
+            this.label179.TabIndex = 13;
+            this.label179.Text = "المنطقة:";
+            // 
+            // txtUpdateSalaryAddress
+            // 
+            this.txtUpdateSalaryAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryAddress.Enabled = false;
+            this.txtUpdateSalaryAddress.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryAddress.Location = new System.Drawing.Point(6, 101);
+            this.txtUpdateSalaryAddress.Name = "txtUpdateSalaryAddress";
+            this.txtUpdateSalaryAddress.Size = new System.Drawing.Size(277, 30);
+            this.txtUpdateSalaryAddress.TabIndex = 104;
+            this.txtUpdateSalaryAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryEmployeeName_KeyDown);
+            // 
+            // label180
+            // 
+            this.label180.AutoSize = true;
+            this.label180.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label180.Location = new System.Drawing.Point(746, 65);
+            this.label180.Name = "label180";
+            this.label180.Size = new System.Drawing.Size(106, 23);
+            this.label180.TabIndex = 9;
+            this.label180.Text = "تاريخ التعين:";
+            // 
+            // label181
+            // 
+            this.label181.AutoSize = true;
+            this.label181.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label181.Location = new System.Drawing.Point(746, 29);
+            this.label181.Name = "label181";
+            this.label181.Size = new System.Drawing.Size(77, 23);
+            this.label181.TabIndex = 1;
+            this.label181.Text = "الموظف:";
+            // 
+            // label182
+            // 
+            this.label182.AutoSize = true;
+            this.label182.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label182.Location = new System.Drawing.Point(750, 100);
+            this.label182.Name = "label182";
+            this.label182.Size = new System.Drawing.Size(109, 23);
+            this.label182.TabIndex = 11;
+            this.label182.Text = "اسم الموقع:";
+            // 
+            // txtUpdateSalaryEmployeeName
+            // 
+            this.txtUpdateSalaryEmployeeName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUpdateSalaryEmployeeName.Enabled = false;
+            this.txtUpdateSalaryEmployeeName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateSalaryEmployeeName.Location = new System.Drawing.Point(434, 26);
+            this.txtUpdateSalaryEmployeeName.Name = "txtUpdateSalaryEmployeeName";
+            this.txtUpdateSalaryEmployeeName.Size = new System.Drawing.Size(306, 30);
+            this.txtUpdateSalaryEmployeeName.TabIndex = 102;
+            this.txtUpdateSalaryEmployeeName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUpdateSalaryEmployeeName_KeyDown);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(984, 687);
+            this.Controls.Add(this.panelUpdateEmployeeSalary);
             this.Controls.Add(this.panelEmployeeSalary);
             this.Controls.Add(this.panelNewLocation);
             this.Controls.Add(this.panelUpdateLocation);
@@ -6077,6 +7245,28 @@
             this.groupBox36.PerformLayout();
             this.groupBox37.ResumeLayout(false);
             this.groupBox37.PerformLayout();
+            this.panelUpdateEmployeeSalary.ResumeLayout(false);
+            this.panelUpdateEmployeeSalary.PerformLayout();
+            this.groupBox46.ResumeLayout(false);
+            this.groupBox46.PerformLayout();
+            this.groupBox47.ResumeLayout(false);
+            this.groupBox47.PerformLayout();
+            this.groupBox42.ResumeLayout(false);
+            this.groupBox42.PerformLayout();
+            this.groupBoxUpdateDays.ResumeLayout(false);
+            this.groupBoxUpdateDays.PerformLayout();
+            this.groupBoxMinus.ResumeLayout(false);
+            this.groupBoxMinus.PerformLayout();
+            this.groupBox43.ResumeLayout(false);
+            this.groupBox43.PerformLayout();
+            this.groupBox44.ResumeLayout(false);
+            this.groupBox44.PerformLayout();
+            this.groupBox45.ResumeLayout(false);
+            this.groupBox45.PerformLayout();
+            this.groupBoxExtras.ResumeLayout(false);
+            this.groupBoxExtras.PerformLayout();
+            this.groupBoxInformation.ResumeLayout(false);
+            this.groupBoxInformation.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6571,6 +7761,99 @@
         private System.Windows.Forms.DateTimePicker dateSalaryMonth;
         private System.Windows.Forms.DateTimePicker dateSalaryRecord;
         private System.Windows.Forms.Label label130;
+        private System.Windows.Forms.ToolStripMenuItem تعديلرواتبافرادToolStripMenuItem;
+        private System.Windows.Forms.Panel panelUpdateEmployeeSalary;
+        private System.Windows.Forms.Button btnUpdateSalaryQuit;
+        private System.Windows.Forms.Button btnUpdateSalaryExit;
+        private System.Windows.Forms.Button btnUpdateSalaryCash;
+        private System.Windows.Forms.GroupBox groupBox42;
+        private System.Windows.Forms.RadioButton rdBtnWithoutTaxUp;
+        private System.Windows.Forms.RadioButton rdBtnTaxUp;
+        private System.Windows.Forms.TextBox txtUpdateSalaryBeforTax;
+        private System.Windows.Forms.TextBox txtUpdateSalaryTax;
+        private System.Windows.Forms.Label label157;
+        private System.Windows.Forms.Label label158;
+        private System.Windows.Forms.Label label159;
+        private System.Windows.Forms.TextBox txtUpdateSalaryAfterTax;
+        private System.Windows.Forms.GroupBox groupBoxUpdateDays;
+        private System.Windows.Forms.TextBox txtUpdateSalaryWorkDay;
+        private System.Windows.Forms.Label label160;
+        private System.Windows.Forms.TextBox txtUpdateSalaryRestDay;
+        private System.Windows.Forms.Label label161;
+        private System.Windows.Forms.TextBox txtUpdateSalaryExtraDay;
+        private System.Windows.Forms.Label label162;
+        private System.Windows.Forms.RichTextBox rtxtUpdateComment;
+        private System.Windows.Forms.GroupBox groupBoxMinus;
+        private System.Windows.Forms.GroupBox groupBox43;
+        private System.Windows.Forms.Label label163;
+        private System.Windows.Forms.Label label164;
+        private System.Windows.Forms.TextBox txtUpdateSalaryVarCompany;
+        private System.Windows.Forms.TextBox txtUpdateSalaryVarEmployee;
+        private System.Windows.Forms.TextBox txtUpdateSalaryVarInsurances;
+        private System.Windows.Forms.Label label165;
+        private System.Windows.Forms.Label label166;
+        private System.Windows.Forms.TextBox txtUpdateSalaryInsurancePolicy;
+        private System.Windows.Forms.Label label167;
+        private System.Windows.Forms.TextBox txtUpdateSalaryUniform;
+        private System.Windows.Forms.GroupBox groupBox44;
+        private System.Windows.Forms.TextBox txtUpdateSalaryMoneySanctions;
+        private System.Windows.Forms.Label label168;
+        private System.Windows.Forms.TextBox txtUpdateSalaryDaySanctions;
+        private System.Windows.Forms.Label label169;
+        private System.Windows.Forms.GroupBox groupBox45;
+        private System.Windows.Forms.Label label170;
+        private System.Windows.Forms.Label label171;
+        private System.Windows.Forms.TextBox txtUpdateSalaryFixedCompany;
+        private System.Windows.Forms.TextBox txtUpdateSalaryFiexdEmployee;
+        private System.Windows.Forms.TextBox txtUpdateSalaryFixedInsurances;
+        private System.Windows.Forms.Label label172;
+        private System.Windows.Forms.GroupBox groupBoxExtras;
+        private System.Windows.Forms.Label label173;
+        private System.Windows.Forms.TextBox txtUpdateSalaryMeal;
+        private System.Windows.Forms.TextBox txtUpdateSalaryRewarding;
+        private System.Windows.Forms.TextBox txtUpdateSalaryHome;
+        private System.Windows.Forms.Label label174;
+        private System.Windows.Forms.TextBox txtUpdateSalaryExtras;
+        private System.Windows.Forms.Label label175;
+        private System.Windows.Forms.Label label176;
+        private System.Windows.Forms.GroupBox groupBoxInformation;
+        private System.Windows.Forms.Label label177;
+        private System.Windows.Forms.TextBox txtUpdateSalaryEmployeeSalary;
+        private System.Windows.Forms.Label label178;
+        private System.Windows.Forms.TextBox txtUpdateSalaryLocation;
+        private System.Windows.Forms.DateTimePicker dateUpdateSalaryEmployee;
+        private System.Windows.Forms.Label label179;
+        private System.Windows.Forms.TextBox txtUpdateSalaryAddress;
+        private System.Windows.Forms.Label label180;
+        private System.Windows.Forms.Label label181;
+        private System.Windows.Forms.Label label182;
+        private System.Windows.Forms.TextBox txtUpdateSalaryEmployeeName;
+        private System.Windows.Forms.TextBox txtUpdateSalaryLocationName;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label156;
+        private System.Windows.Forms.Label label189;
+        private System.Windows.Forms.Label label190;
+        private System.Windows.Forms.DateTimePicker dateUpdateSalaryMonth;
+        private System.Windows.Forms.TextBox txtUpdateSalaryEmployeeID;
+        private System.Windows.Forms.Label label132;
+        private System.Windows.Forms.TextBox txtUpdateSalaryEmployeePosition;
+        private System.Windows.Forms.DateTimePicker dateUpdateSalaryRecord;
+        private System.Windows.Forms.GroupBox groupBox46;
+        private System.Windows.Forms.GroupBox groupBox47;
+        private System.Windows.Forms.Label label183;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label184;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label185;
+        private System.Windows.Forms.Label label186;
+        private System.Windows.Forms.Label label187;
+        private System.Windows.Forms.TextBox txtUpdateSalaryAdvance;
+        private System.Windows.Forms.Label label188;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label191;
+        private System.Windows.Forms.Label label192;
 
 
 
